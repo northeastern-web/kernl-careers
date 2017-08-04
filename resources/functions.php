@@ -8,6 +8,20 @@ use Roots\Sage\Config;
 use Roots\Sage\Container;
 
 /**
+ * Ensure dependencies are loaded
+ */
+if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
+    $sage_error(
+        __('You must run <code>composer install</code> from the Sage directory.', 'sage'),
+        __('Autoloader not found.', 'sage')
+    );
+}
+require_once $composer;
+
+new Kernl\Site;
+
+
+/**
  * Helper function for prettying up errors
  * @param string $message
  * @param string $subtitle

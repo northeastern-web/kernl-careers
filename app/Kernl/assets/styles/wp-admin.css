@@ -1,0 +1,47 @@
+#wp-admin-bar-wp-logo,
+#wp-admin-bar-comments,
+#wp-admin-bar-wpseo-menu { display: none; }
+
+#login {
+    width: 400px;
+}
+
+.login h1 a {
+  /* height: 75px; */
+  width: 100%;
+  margin: 0 auto 25px;
+  padding: 45px 0 0px;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  line-height: 1.3em;
+  text-decoration: none;
+  text-indent: 0;
+  overflow: hidden;
+  display: block;
+  background-image: url('http://www.northeastern.edu/images/logo.png');
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
+.layout-sections {}
+.layout-sections > .acf-label { font-size: 110%; text-transform: uppercase; }
+.layout-sections .acf-flexible-content .layout { background: #d8d8d8; border-color: #d8d8d8; border-width: 1px; }
+.layout-sections .acf-tab-button { font-size: 12px; }
+.layout-grid .acf-actions li {}
+.layout-content .acf-actions li { float: none; text-align: left; }
+.layout-content .acf-button {
+    background: #666;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    color: #fff;
+}
+
+.acf-field-message {
+  background: #f7f7f7;
+  padding: 10px 12px 5px !important;
+}
+.acf-field-message .acf-label { font-size: 110%; }
