@@ -54,7 +54,7 @@
                     "min": 0,
                     "max": 0,
                     "layout": "block",
-                    "button_label": "Add Grid",
+                    "button_label": "Add Column",
                     "sub_fields": [
                         {
                             "key": "field_58dbe6886d63f",
@@ -756,9 +756,9 @@
             }
         ]
     ],
-    "menu_order": 3,
+    "menu_order": 4,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -770,5 +770,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1501707184
+    "modified": 1502116341
 }

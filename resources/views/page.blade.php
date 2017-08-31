@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<article {{ post_class('l --page') }}>
+<article {{ post_class() }}>
   @while(have_posts()) @php(the_post())
     @include('layouts.header-singular')
 

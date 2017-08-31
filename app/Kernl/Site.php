@@ -12,6 +12,7 @@ class Site
         new Navigation;
         new ShortcodePosts;
         new ShortcodeComponent;
+        new Taxonomies;
         new TinyMCE;
 
         add_action('after_setup_theme', [$this, 'setThemeSupports'], 100);

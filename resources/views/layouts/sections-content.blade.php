@@ -6,7 +6,7 @@
 
   @if(get_row_layout() == 'lay_toggle')
     <div id="component_{{ $i_component }}"
-        class="l__copy {{ get_sub_field('opt_type') }}"
+        class="__copy {{ get_sub_field('opt_type') }}"
         data-acf="lay_toggle|opt_type">
       @while((have_rows('lay_items')))
         @php(the_row())
@@ -46,7 +46,7 @@
     </div>
 
   @else
-    <div class="l__copy" data-acf="txt_copy">
+    <div class="__copy" data-acf="txt_copy">
       {!! the_sub_field('txt_copy') !!}
     </div>
 

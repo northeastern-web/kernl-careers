@@ -26,7 +26,7 @@ class PostTypes
             'public'                => true,
             'has_archive'           => true,
             'rewrite'               => ['slug' => 'article'],
-            'supports'              => ['title', 'editor'],
+            'supports'              => ['title', 'editor', 'excerpt'],
             'taxonomies'            => [],
             'hierarchical'          => true,
             'show_ui'               => true,
