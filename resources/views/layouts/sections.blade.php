@@ -11,7 +11,7 @@
   {{-- condition blocks if banner inside or outside container --}}
   @if(get_sub_field('bool_banner', $option) && !get_sub_field('bool_banner_contain', $option))<div {{ Kernl\Layout::structure('banner', ['class' => 'banner banner--outside']) }} data-acf="bool_banner">@endif
 
-    <section {{ Kernl\Layout::structure('section', ['class' => 'l']) }} id="section-{{ $i_section }}"
+    <section {{ Kernl\Layout::structure('section', ['class' => 'section']) }} id="section-{{ $i_section }}"
       data-section="{{ $i_section }}" data-acf="txt_class|etc">
 
       @if(get_sub_field('bool_banner', $option) && get_sub_field('bool_banner_contain', $option))<div {{ Kernl\Layout::structure('banner', ['class' => 'banner banner--inside']) }} data-acf="bool_banner">@endif

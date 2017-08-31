@@ -46,7 +46,7 @@ class Layout
         // If type is section
         if ($type == 'section') {
             if ($getfield('opt_container', $option))
-                $item['class'][] = '--contain';
+                $item['class'][] = '';
             if ($getfield('txt_class', $option))
                 $item['class'][] = $getfield('txt_class', $option) .' ';
         }
@@ -54,7 +54,7 @@ class Layout
         // If type is banner
         if ($type == 'banner') {
             if ($getfield('opt_banner', $option)) {
-                $item['class'][] = 'banner';
+                $item['class'][] = '--banner';
                 $item['class'][] = self::format($getfield('opt_banner', $option), '--');
             }
 
@@ -63,7 +63,7 @@ class Layout
             }
 
             if ($getfield('med_banner', $option)) {
-                $item['class'][] = '--has-image';
+                $item['class'][] = '+bgimg';
                 $item['style'][] = 'background-image:url(\''. $getfield('med_banner', $option)['url'] .'\');';
             }
         }
