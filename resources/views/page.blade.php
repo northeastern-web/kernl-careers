@@ -6,14 +6,12 @@
     @include('layouts.header-singular')
 
     @if (\Kernl\Navigation::display() && !get_field('bool_horizontal_nav'))
-      <div class="g-contain">
-        <div class="g-row">
-          <div class="g-12@xs g-3@lg">
-            @include('partials.nav-page')
-          </div>
-          <div class=" g-12@xs g-9@lg">
-            @include('layouts.sections')
-          </div>
+      <div class="g-row">
+        <div class="g-col --12@xs --3@lg">
+          @include('partials.nav-page')
+        </div>
+        <div class=" g-col --12@xs --9@lg">
+          @include('layouts.sections')
         </div>
       </div>
     @else
