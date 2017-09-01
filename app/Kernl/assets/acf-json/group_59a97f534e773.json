@@ -1,6 +1,6 @@
 {
     "key": "group_59a97f534e773",
-    "title": "[cpt] Article Actions",
+    "title": "__ Article Actions",
     "fields": [
         {
             "key": "field_59a97f534fe49",
@@ -77,8 +77,8 @@
                 },
                 {
                     "key": "field_59a97f92a1678",
-                    "label": "Link Label",
-                    "name": "txt_linklabel",
+                    "label": "Call to Action",
+                    "name": "txt_cta",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -122,7 +122,7 @@
             }
         ]
     ],
-    "menu_order": 4,
+    "menu_order": 5,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -130,5 +130,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1504280733
+    "modified": 1504290687
 }

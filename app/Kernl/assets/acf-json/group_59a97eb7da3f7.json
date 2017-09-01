@@ -1,6 +1,6 @@
 {
     "key": "group_59a97eb7da3f7",
-    "title": "[cpt] Article Content",
+    "title": "__ Article Content",
     "fields": [
         {
             "key": "field_59a97ebf39ada",
@@ -66,7 +66,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 3,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -74,5 +74,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1504280280
+    "modified": 1504290523
 }

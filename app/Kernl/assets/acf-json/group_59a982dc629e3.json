@@ -1,6 +1,6 @@
 {
     "key": "group_59a982dc629e3",
-    "title": "[cpt] Article Contact",
+    "title": "__ Article Contact",
     "fields": [
         {
             "key": "field_59a984f4ae597",
@@ -50,7 +50,7 @@
             }
         ]
     ],
-    "menu_order": 2,
+    "menu_order": 6,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1504281852
+    "modified": 1504290536
 }
