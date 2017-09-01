@@ -1,4 +1,4 @@
-<nav class="l__nav nav">
+<nav class="nav">
   <div class="hidden--up@md ta--c p--b-1@xs o--t-1@xs">
     <button class="nav__toggler btn btn--outline btn--sm btn--primary">
       <i class="ion-android-funnel"></i> &nbsp;Page Menu
