@@ -129,6 +129,6 @@
   "dependencies": {
     "jquery": "1.12.4 - 3",
     "feather-icons": "^3.2.2",
-    "kernl(ui)": "git+ssh://git@bitbucket.org/nupods/ui.kernl.git#develop"
+    "kernl-ui": "git+https://git@bitbucket.org/nupods/ui.kernl.git#develop"
   }
 }
