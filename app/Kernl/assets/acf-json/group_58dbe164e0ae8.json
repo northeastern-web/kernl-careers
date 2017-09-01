@@ -1,0 +1,774 @@
+{
+    "key": "group_58dbe164e0ae8",
+    "title": "[template] Section Layouts",
+    "fields": [
+        {
+            "key": "field_58dbe173baed0",
+            "label": "Sections",
+            "name": "lay_sections",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "layout-sections",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Section",
+            "sub_fields": [
+                {
+                    "key": "field_58dbe44b24140",
+                    "label": "Section Content",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_58dbe1cebaed2",
+                    "label": "Grid",
+                    "name": "lay_grid",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "layout-columns",
+                        "id": ""
+                    },
+                    "collapsed": "field_58dbe6886d63f",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "block",
+                    "button_label": "Add Column",
+                    "sub_fields": [
+                        {
+                            "key": "field_58dbe6886d63f",
+                            "label": "Column Sizes",
+                            "name": "opt_column",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "75",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "1@xs": "1@xs",
+                                "1@sm": "1@sm",
+                                "1@md": "1@md",
+                                "1@lg": "1@lg",
+                                "2@xs": "2@xs",
+                                "2@sm": "2@sm",
+                                "2@md": "2@md",
+                                "2@lg": "2@lg",
+                                "3@xs": "3@xs",
+                                "3@sm": "3@sm",
+                                "3@md": "3@md",
+                                "3@lg": "3@lg",
+                                "4@xs": "4@xs",
+                                "4@sm": "4@sm",
+                                "4@md": "4@md",
+                                "4@lg": "4@lg",
+                                "5@xs": "5@xs",
+                                "5@sm": "5@sm",
+                                "5@md": "5@md",
+                                "5@lg": "5@lg",
+                                "6@xs": "6@xs",
+                                "6@sm": "6@sm",
+                                "6@md": "6@md",
+                                "6@lg": "6@lg",
+                                "7@xs": "7@xs",
+                                "7@sm": "7@sm",
+                                "7@md": "7@md",
+                                "7@lg": "7@lg",
+                                "8@xs": "8@xs",
+                                "8@sm": "8@sm",
+                                "8@md": "8@md",
+                                "8@lg": "8@lg",
+                                "9@xs": "9@xs",
+                                "9@sm": "9@sm",
+                                "9@md": "9@md",
+                                "9@lg": "9@lg",
+                                "10@xs": "10@xs",
+                                "10@sm": "10@sm",
+                                "10@md": "10@md",
+                                "10@lg": "10@lg",
+                                "11@xs": "11@xs",
+                                "11@sm": "11@sm",
+                                "11@md": "11@md",
+                                "11@lg": "11@lg",
+                                "12@xs": "12@xs",
+                                "12@sm": "12@sm",
+                                "12@md": "12@md",
+                                "12@lg": "12@lg",
+                                "pull-0@xs": "pull-0@xs",
+                                "pull-1@xs": "pull-1@xs",
+                                "pull-2@xs": "pull-2@xs",
+                                "pull-3@xs": "pull-3@xs",
+                                "pull-4@xs": "pull-4@xs",
+                                "pull-5@xs": "pull-5@xs",
+                                "pull-6@xs": "pull-6@xs",
+                                "pull-7@xs": "pull-7@xs",
+                                "pull-8@xs": "pull-8@xs",
+                                "pull-9@xs": "pull-9@xs",
+                                "pull-10@xs": "pull-10@xs",
+                                "pull-11@xs": "pull-11@xs",
+                                "pull-12@xs": "pull-12@xs",
+                                "pull-0@sm": "pull-0@sm",
+                                "pull-1@sm": "pull-1@sm",
+                                "pull-2@sm": "pull-2@sm",
+                                "pull-3@sm": "pull-3@sm",
+                                "pull-4@sm": "pull-4@sm",
+                                "pull-5@sm": "pull-5@sm",
+                                "pull-6@sm": "pull-6@sm",
+                                "pull-7@sm": "pull-7@sm",
+                                "pull-8@sm": "pull-8@sm",
+                                "pull-9@sm": "pull-9@sm",
+                                "pull-10@sm": "pull-10@sm",
+                                "pull-11@sm": "pull-11@sm",
+                                "pull-12@sm": "pull-12@sm",
+                                "pull-0@md": "pull-0@md",
+                                "pull-1@md": "pull-1@md",
+                                "pull-2@md": "pull-2@md",
+                                "pull-3@md": "pull-3@md",
+                                "pull-4@md": "pull-4@md",
+                                "pull-5@md": "pull-5@md",
+                                "pull-6@md": "pull-6@md",
+                                "pull-7@md": "pull-7@md",
+                                "pull-8@md": "pull-8@md",
+                                "pull-9@md": "pull-9@md",
+                                "pull-10@md": "pull-10@md",
+                                "pull-11@md": "pull-11@md",
+                                "pull-12@md": "pull-12@md",
+                                "pull-0@lg": "pull-0@lg",
+                                "pull-1@lg": "pull-1@lg",
+                                "pull-2@lg": "pull-2@lg",
+                                "pull-3@lg": "pull-3@lg",
+                                "pull-4@lg": "pull-4@lg",
+                                "pull-5@lg": "pull-5@lg",
+                                "pull-6@lg": "pull-6@lg",
+                                "pull-7@lg": "pull-7@lg",
+                                "pull-8@lg": "pull-8@lg",
+                                "pull-9@lg": "pull-9@lg",
+                                "pull-10@lg": "pull-10@lg",
+                                "pull-11@lg": "pull-11@lg",
+                                "pull-12@lg": "pull-12@lg",
+                                "push-0@xs": "push-0@xs",
+                                "push-1@xs": "push-1@xs",
+                                "push-2@xs": "push-2@xs",
+                                "push-3@xs": "push-3@xs",
+                                "push-4@xs": "push-4@xs",
+                                "push-5@xs": "push-5@xs",
+                                "push-6@xs": "push-6@xs",
+                                "push-7@xs": "push-7@xs",
+                                "push-8@xs": "push-8@xs",
+                                "push-9@xs": "push-9@xs",
+                                "push-10@xs": "push-10@xs",
+                                "push-11@xs": "push-11@xs",
+                                "push-12@xs": "push-12@xs",
+                                "push-0@sm": "push-0@sm",
+                                "push-1@sm": "push-1@sm",
+                                "push-2@sm": "push-2@sm",
+                                "push-3@sm": "push-3@sm",
+                                "push-4@sm": "push-4@sm",
+                                "push-5@sm": "push-5@sm",
+                                "push-6@sm": "push-6@sm",
+                                "push-7@sm": "push-7@sm",
+                                "push-8@sm": "push-8@sm",
+                                "push-9@sm": "push-9@sm",
+                                "push-10@sm": "push-10@sm",
+                                "push-11@sm": "push-11@sm",
+                                "push-12@sm": "push-12@sm",
+                                "push-0@md": "push-0@md",
+                                "push-1@md": "push-1@md",
+                                "push-2@md": "push-2@md",
+                                "push-3@md": "push-3@md",
+                                "push-4@md": "push-4@md",
+                                "push-5@md": "push-5@md",
+                                "push-6@md": "push-6@md",
+                                "push-7@md": "push-7@md",
+                                "push-8@md": "push-8@md",
+                                "push-9@md": "push-9@md",
+                                "push-10@md": "push-10@md",
+                                "push-11@md": "push-11@md",
+                                "push-12@md": "push-12@md",
+                                "push-0@lg": "push-0@lg",
+                                "push-1@lg": "push-1@lg",
+                                "push-2@lg": "push-2@lg",
+                                "push-3@lg": "push-3@lg",
+                                "push-4@lg": "push-4@lg",
+                                "push-5@lg": "push-5@lg",
+                                "push-6@lg": "push-6@lg",
+                                "push-7@lg": "push-7@lg",
+                                "push-8@lg": "push-8@lg",
+                                "push-9@lg": "push-9@lg",
+                                "push-10@lg": "push-10@lg",
+                                "push-11@lg": "push-11@lg",
+                                "push-12@lg": "push-12@lg",
+                                "offset-1@xs": "offset-1@xs",
+                                "offset-2@xs": "offset-2@xs",
+                                "offset-3@xs": "offset-3@xs",
+                                "offset-4@xs": "offset-4@xs",
+                                "offset-5@xs": "offset-5@xs",
+                                "offset-6@xs": "offset-6@xs",
+                                "offset-7@xs": "offset-7@xs",
+                                "offset-8@xs": "offset-8@xs",
+                                "offset-9@xs": "offset-9@xs",
+                                "offset-10@xs": "offset-10@xs",
+                                "offset-11@xs": "offset-11@xs",
+                                "offset-12@xs": "offset-12@xs",
+                                "offset-0@sm": "offset-0@sm",
+                                "offset-1@sm": "offset-1@sm",
+                                "offset-2@sm": "offset-2@sm",
+                                "offset-3@sm": "offset-3@sm",
+                                "offset-4@sm": "offset-4@sm",
+                                "offset-5@sm": "offset-5@sm",
+                                "offset-6@sm": "offset-6@sm",
+                                "offset-7@sm": "offset-7@sm",
+                                "offset-8@sm": "offset-8@sm",
+                                "offset-9@sm": "offset-9@sm",
+                                "offset-10@sm": "offset-10@sm",
+                                "offset-11@sm": "offset-11@sm",
+                                "offset-12@sm": "offset-12@sm",
+                                "offset-0@md": "offset-0@md",
+                                "offset-1@md": "offset-1@md",
+                                "offset-2@md": "offset-2@md",
+                                "offset-3@md": "offset-3@md",
+                                "offset-4@md": "offset-4@md",
+                                "offset-5@md": "offset-5@md",
+                                "offset-6@md": "offset-6@md",
+                                "offset-7@md": "offset-7@md",
+                                "offset-8@md": "offset-8@md",
+                                "offset-9@md": "offset-9@md",
+                                "offset-10@md": "offset-10@md",
+                                "offset-11@md": "offset-11@md",
+                                "offset-12@md": "offset-12@md",
+                                "offset-0@lg": "offset-0@lg",
+                                "offset-1@lg": "offset-1@lg",
+                                "offset-2@lg": "offset-2@lg",
+                                "offset-3@lg": "offset-3@lg",
+                                "offset-4@lg": "offset-4@lg",
+                                "offset-5@lg": "offset-5@lg",
+                                "offset-6@lg": "offset-6@lg",
+                                "offset-7@lg": "offset-7@lg",
+                                "offset-8@lg": "offset-8@lg",
+                                "offset-9@lg": "offset-9@lg",
+                                "offset-10@lg": "offset-10@lg",
+                                "offset-11@lg": "offset-11@lg",
+                                "offset-12@lg": "offset-12@lg"
+                            },
+                            "default_value": [
+                                "12@xs"
+                            ],
+                            "allow_null": 1,
+                            "multiple": 1,
+                            "ui": 1,
+                            "ajax": 1,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_58dbf0ab50713",
+                            "label": "Add Header",
+                            "name": "bool_header",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "25",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_58dbf0c550714",
+                            "label": "Pre Title",
+                            "name": "txt_pretitle",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_58dbf0ab50713",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_58dbe68f6d640",
+                            "label": "Title",
+                            "name": "txt_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_58dbf0ab50713",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_58dbf0cc50715",
+                            "label": "Sub Title",
+                            "name": "txt_subtitle",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_58dbf0ab50713",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_58dbe6966d641",
+                            "label": "Content",
+                            "name": "lay_content",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "layout-content",
+                                "id": ""
+                            },
+                            "layouts": {
+                                "58dbe6a38d601": {
+                                    "key": "58dbe6a38d601",
+                                    "name": "lay_copy",
+                                    "label": "Copy",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_58dbe6a86d642",
+                                            "label": "Copy",
+                                            "name": "txt_copy",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "delay": 0
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                "58dbe6c56d644": {
+                                    "key": "58dbe6c56d644",
+                                    "name": "lay_toggle",
+                                    "label": "Toggle",
+                                    "display": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_58dbe6cc6d645",
+                                            "label": "Type",
+                                            "name": "opt_type",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "Accordion": "Accordion",
+                                                "Tabs": "Tabs"
+                                            },
+                                            "default_value": [],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 0,
+                                            "ajax": 0,
+                                            "return_format": "value",
+                                            "placeholder": ""
+                                        },
+                                        {
+                                            "key": "field_58dbe6dc6d646",
+                                            "label": "Items",
+                                            "name": "lay_items",
+                                            "type": "repeater",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "collapsed": "field_58dbe6e96d647",
+                                            "min": 0,
+                                            "max": 0,
+                                            "layout": "block",
+                                            "button_label": "Add Item",
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_58dbe6e96d647",
+                                                    "label": "Title",
+                                                    "name": "txt_title",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "30",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "maxlength": ""
+                                                },
+                                                {
+                                                    "key": "field_58dbe6f26d648",
+                                                    "label": "Copy",
+                                                    "name": "txt_copy",
+                                                    "type": "wysiwyg",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "70",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "tabs": "all",
+                                                    "toolbar": "full",
+                                                    "media_upload": 1,
+                                                    "delay": 0
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            },
+                            "button_label": "Add Content",
+                            "min": "",
+                            "max": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_58dbe41d2413e",
+                    "label": "Section Settings",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_58dbfaea20dc9",
+                    "label": "Container",
+                    "name": "opt_container",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "basic": "Basic",
+                        "fluid": "Fluid"
+                    },
+                    "default_value": [
+                        "basic"
+                    ],
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_58dbe5b482f7f",
+                    "label": "Class",
+                    "name": "txt_class",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_58dd1de883071",
+                    "label": "Add Banner",
+                    "name": "bool_banner",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_58dd1c06c2404",
+                    "label": "Place banner inside container?",
+                    "name": "bool_banner_contain",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_58dd1de883071",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_58dbe59082f7d",
+                    "label": "Banner Image",
+                    "name": "med_banner",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_58dd1de883071",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_58dbe5c582f80",
+                    "label": "Banner Options",
+                    "name": "opt_banner",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_58dd1de883071",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "sm": "Size small",
+                        "lg": "Size large",
+                        "xl": "Size extra large",
+                        "top": "Align top",
+                        "middle": "Align middle",
+                        "bottom": "Align bottom",
+                        "light": "Color light",
+                        "dark": "Color dark",
+                        "primary": "Color primary",
+                        "secondary": "Color secondary",
+                        "tertiary": "Color tertiary"
+                    },
+                    "default_value": [],
+                    "allow_null": 1,
+                    "multiple": 1,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_58dd1ecb54308",
+                    "label": "Banner Class",
+                    "name": "txt_banner_class",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_58dd1de883071",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-homepage"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1502116341
+}

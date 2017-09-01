@@ -1,5 +1,6 @@
 // import external dependencies
 import 'jquery';
+import 'kernl(ui)/resources/assets/scripts/kernl';
 
 // Import everything from autoload
 import "./autoload/**/*"
