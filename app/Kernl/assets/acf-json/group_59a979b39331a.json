@@ -1,6 +1,6 @@
 {
     "key": "group_59a979b39331a",
-    "title": "[cpt] Article Assets",
+    "title": "__ Article Assets",
     "fields": [
         {
             "key": "field_59a97dca9f564",
@@ -162,7 +162,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 4,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -170,5 +170,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1504280017
+    "modified": 1504290540
 }

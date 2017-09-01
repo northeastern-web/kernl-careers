@@ -71,7 +71,7 @@
         {
             "key": "field_59a9874a49f5f",
             "label": "Miscellaneous",
-            "name": "rel_miscellaneous",
+            "name": "rel_misc",
             "type": "taxonomy",
             "instructions": "",
             "required": 0,
@@ -93,7 +93,7 @@
         {
             "key": "field_59a974799e145",
             "label": "Add a section",
-            "name": "flx_section",
+            "name": "lay_section",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -106,7 +106,7 @@
             "layouts": {
                 "59a974830d0b2": {
                     "key": "59a974830d0b2",
-                    "name": "basic",
+                    "name": "lay_basic",
                     "label": "Basic",
                     "display": "block",
                     "sub_fields": [
@@ -201,13 +201,13 @@
                 },
                 "59a974b99e147": {
                     "key": "59a974b99e147",
-                    "name": "tab",
+                    "name": "lay_tab",
                     "label": "Tab",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_59a97549d0d0e",
-                            "label": "Add a Tab",
+                            "label": "Tabs",
                             "name": "lay_tab",
                             "type": "repeater",
                             "instructions": "",
@@ -339,5 +339,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1504283261
+    "modified": 1504290430
 }
