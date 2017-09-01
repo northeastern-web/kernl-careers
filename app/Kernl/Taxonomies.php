@@ -16,6 +16,7 @@ class Taxonomies
     public function registerTaxonomies()
     {
         register_taxonomy('group', 'article', [
+            'meta_box_cb'     => false,
             'show_ui'         => true,
             'query_var'       => true,
             'public'          => true,
@@ -46,6 +47,7 @@ class Taxonomies
         ]);
 
         register_taxonomy('audience', 'article', [
+            'meta_box_cb'     => false,
             'show_ui'         => true,
             'query_var'       => true,
             'public'          => true,
@@ -76,6 +78,7 @@ class Taxonomies
         ]);
 
         register_taxonomy('type', 'article', [
+            'meta_box_cb'     => false,
             'show_ui'         => true,
             'query_var'       => true,
             'public'          => true,
@@ -106,6 +109,7 @@ class Taxonomies
         ]);
 
         register_taxonomy('misc', 'article', [
+            'meta_box_cb'     => false,
             'show_ui'         => true,
             'query_var'       => true,
             'public'          => true,
