@@ -1,6 +1,6 @@
 {
     "key": "group_5980db2ac0f65",
-    "title": "[cpt] Article Layout",
+    "title": "Article Layout",
     "fields": [
         {
             "key": "field_59a986c649f5c",
@@ -339,5 +339,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1504290430
+    "modified": 1504887804
 }

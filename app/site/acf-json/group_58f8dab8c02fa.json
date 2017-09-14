@@ -1,6 +1,6 @@
 {
     "key": "group_58f8dab8c02fa",
-    "title": "[template] Custom Header",
+    "title": "[template] Header",
     "fields": [
         {
             "key": "field_58f8d89c05a98",
@@ -315,13 +315,16 @@
             }
         ]
     ],
-    "menu_order": 4,
+    "menu_order": 10,
     "position": "acf_after_title",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1501707483
+    "modified": 1505241896
 }

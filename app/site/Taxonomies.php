@@ -1,6 +1,6 @@
 <?php
 
-namespace Kernl;
+namespace App;
 
 class Taxonomies
 {

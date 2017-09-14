@@ -111,7 +111,7 @@
     "node": ">= 6.9.4"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.3",
+    "autoprefixer": "^7.1.4",
     "browser-sync": "~2.18",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
@@ -149,8 +149,8 @@
     "yargs": "~9.0.1"
   },
   "dependencies": {
-    "jquery": "1.12.4 - 3",
     "feather-icons": "^3.2.2",
-    "kernl-ui": "git+https://git@bitbucket.org/nupods/ui.kernl.git#develop"
+    "jquery": "1.12.4 - 3",
+    "kernl-ui": "git+https://git@bitbucket.org/nupods/kernl-ui.git#develop"
   }
 }

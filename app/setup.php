@@ -2,10 +2,38 @@
 
 namespace App;
 
+use Kernl\Config;
+use App\PostTypes;
+use App\Taxonomies;
+
 use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
+
+/**
+ * Configure Kernl
+ */
+if (class_exists('Kernl\\Config')) {
+    // Configure Kernl
+    new Config();
+
+    // Site level
+    new PostTypes;
+    new Taxonomies;
+
+    // ACF Save path
+    add_filter('acf/settings/save_json', function($path) {
+        return dirname(__FILE__) . '/site/acf-json';
+    });
+
+    // ACF Load path
+    add_filter('acf/settings/load_json', function($paths) {
+        unset($paths[0]);
+        $paths[] = dirname(__FILE__) . '/site/acf-json';
+        return $paths;
+    });
+}
 
 /**
  * Theme assets

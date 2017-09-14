@@ -1,13 +1,13 @@
 <header class="masthead">
   <a class="masthead__logo" href="{{ home_url('/') }}" data-ga-click="Home Logo">
-    <img class="masthead__logo__image" src="<?= get_field('img_logo','option')['url']; ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
+    <img class="masthead__logo__image" src="<?= get_field('med_logo','option'); ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
   </a>
   <button class="masthead__toggler hidden--up@lg"><i data-feather="menu"></i></button>
 
   <nav class="masthead__drawer" role="navigation">
     <div class="clearfix hidden--up@lg">
       <a class="masthead__logo" href="{{ home_url('/') }}" data-ga-click="Mobile Drawer Logo">
-        <img class="masthead__logo__image" src="<?= get_field('img_logo_inversed','option')['url']; ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
+        <img class="masthead__logo__image" src="<?= get_field('med_logo_white'); ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
       </a>
       <button class="masthead__toggler menu-is-open"><i data-feather="x"></i></button>
     </div>

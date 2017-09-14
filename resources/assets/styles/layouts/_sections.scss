@@ -1,0 +1,21 @@
+.section {
+  > .__header {
+    margin-bottom: 1rem;
+
+    .__title {
+      @include k_get_type($type-display-2);
+    }
+
+    .__pretitle {
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .__subtitle {
+      &,
+      * {
+        @include k_get_type($type-lead);
+      }
+    }
+  }
+}

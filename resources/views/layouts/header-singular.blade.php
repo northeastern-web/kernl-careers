@@ -1,4 +1,4 @@
-<header {{ \Kernl\Layout::structure('banner', ['class' => 'section'], 'get_field') }} data-acf="bool_banner">
+<header {{ \Kernl\Layout::structure('banner', ['class' => 'header section'], 'get_field') }} data-acf="bool_banner">
     @if(get_field('bool_header'))
 
       @if(get_field('txt_pretitle'))
@@ -15,7 +15,7 @@
 
     @else
 
-      @if(is_single())
+      @if(is_single('post'))
         <div class="__pretitle">{{ get_the_category()[0]->name }}</div>
       @endif
       <h1 class="__title">{{ the_title() }}</h1>
