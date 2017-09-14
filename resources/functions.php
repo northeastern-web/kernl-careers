@@ -7,6 +7,7 @@
 use Roots\Sage\Config;
 use Roots\Sage\Container;
 
+
 /**
  * Ensure dependencies are loaded
  */
@@ -17,9 +18,6 @@ if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
     );
 }
 require_once $composer;
-
-new Kernl\Site;
-
 
 /**
  * Helper function for prettying up errors

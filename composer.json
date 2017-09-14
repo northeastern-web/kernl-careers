@@ -28,8 +28,8 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "app/",
-      "Kernl\\": "app/Kernl/"
+      "App\\": "app/site",
+      "Kernl\\": "vendor/pods/kernl/src/"
     }
   },
   "require": {
