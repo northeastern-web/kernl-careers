@@ -377,8 +377,8 @@ better-assert@~1.0.0:
     callsite "1.0.0"
 
 big.js@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.1.3.tgz#4cada2193652eb3ca9ec8e55c9015669c9806978"
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/big.js/-/big.js-3.2.0.tgz#a5fc298b81b9e0dca2e458824784b65c52ba588e"
 
 bin-build@^2.0.0:
   version "2.2.0"
@@ -3440,7 +3440,7 @@ jsprim@^1.2.2:
 
 "kernl-ui@git+https://git@bitbucket.org/nupods/kernl-ui.git#develop":
   version "0.1.0"
-  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#8cea0f320d72cc5201d47d46422ea71a4d51371b"
+  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#f221a647def371559fbe37aace6cd445476facc9"
   dependencies:
     browser-sync "^2.18.13"
     browser-sync-webpack-plugin "^1.2.0"
