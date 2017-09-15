@@ -12,28 +12,30 @@ use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
 /**
- * Configure Kernl
+ * PODS basic setup
  */
+
+
+// ACF Save path
+add_filter('acf/settings/save_json', function($path) {
+    return dirname(__FILE__) . '/site/acf-json';
+});
+
+// ACF Load path
+add_filter('acf/settings/load_json', function($paths) {
+    unset($paths[0]);
+    $paths[] = dirname(__FILE__) . '/site/acf-json';
+    return $paths;
+});
+
 if (class_exists('Kernl\\Config')) {
-    // Configure Kernl
     new Config();
-
-    // Site level
-    new PostTypes;
-    new Taxonomies;
-
-    // ACF Save path
-    add_filter('acf/settings/save_json', function($path) {
-        return dirname(__FILE__) . '/site/acf-json';
-    });
-
-    // ACF Load path
-    add_filter('acf/settings/load_json', function($paths) {
-        unset($paths[0]);
-        $paths[] = dirname(__FILE__) . '/site/acf-json';
-        return $paths;
-    });
 }
+
+// Site level classes
+new PostTypes;
+new Taxonomies;
+
 
 /**
  * Theme assets
