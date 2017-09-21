@@ -2,39 +2,18 @@
 
 namespace App;
 
-use Kernl\Config;
-use App\PostTypes;
-use App\Taxonomies;
-
 use Roots\Sage\Container;
 use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
 /**
- * PODS basic setup
+ * Kernl setup
  */
-
-
-// ACF Save path
-add_filter('acf/settings/save_json', function($path) {
-    return dirname(__FILE__) . '/site/acf-json';
-});
-
-// ACF Load path
-add_filter('acf/settings/load_json', function($paths) {
-    unset($paths[0]);
-    $paths[] = dirname(__FILE__) . '/site/acf-json';
-    return $paths;
-});
-
 if (class_exists('Kernl\\Config')) {
-    new Config();
+    new \Kernl\Config(); // package
+    new \App\Site(); // theme
 }
-
-// Site level classes
-new PostTypes;
-new Taxonomies;
 
 
 /**
@@ -97,26 +76,6 @@ add_action('after_setup_theme', function () {
      */
     add_editor_style(asset_path('styles/main.css'));
 }, 20);
-
-/**
- * Register sidebars
- */
-add_action('widgets_init', function () {
-    $config = [
-        'before_widget' => '<section class="widget %1$s %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3>',
-        'after_title'   => '</h3>'
-    ];
-    register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
-    ] + $config);
-    register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
-    ] + $config);
-});
 
 /**
  * Updates the `$post` variable on each iteration of the loop.
