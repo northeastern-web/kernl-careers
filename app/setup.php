@@ -10,6 +10,19 @@ use Roots\Sage\Template\BladeProvider;
 /**
  * Kernl setup
  */
+
+// ACF Save path
+add_filter('acf/settings/save_json', function($path) {
+    return dirname(__FILE__) . '/site/acf-json';
+});
+
+// ACF Load path
+add_filter('acf/settings/load_json', function($paths) {
+    unset($paths[0]);
+    $paths[] = dirname(__FILE__) . '/site/acf-json';
+    return $paths;
+});
+
 if (class_exists('Kernl\\Config')) {
     new \Kernl\Config(); // package
     new \App\Site(); // theme
