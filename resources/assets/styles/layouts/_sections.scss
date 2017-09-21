@@ -3,7 +3,7 @@
     margin-bottom: 1rem;
 
     .__title {
-      @include k_get_type($type-display-2);
+      @include get_type($type-display-2);
     }
 
     .__pretitle {
@@ -14,7 +14,7 @@
     .__subtitle {
       &,
       * {
-        @include k_get_type($type-lead);
+        @include get_type($type-lead);
       }
     }
   }
