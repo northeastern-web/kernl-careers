@@ -9,11 +9,11 @@ class Site
 {
     public function __construct()
     {
-        add_shortcode('alert', [$this, 'shortcodeAlert']);
-
-        // Site level classes
         new PostTypes;
         new Taxonomies;
+
+        add_shortcode('alert', [$this, 'shortcodeAlert']);
+        add_action('pre_get_posts' , [$this, 'orderAdminPostTypes']);
     }
 
     /**
@@ -51,5 +51,22 @@ class Site
             . ($link ? '</a>' : '')
         . '</div>
         ';
+    }
+
+    /**
+     * Order post types on admin screens
+     * @param  WP_Query $query current WP query
+     * @return void
+     */
+    public function orderAdminPostTypes($query)
+    {
+        $post_types = ['article','action'];
+        $current_post_type = get_query_var('post_type');
+
+        if (is_admin() && in_array($current_post_type, $post_types)) {
+            $query->set('orderby', [
+                'title' => 'ASC'
+            ]);
+        }
     }
 }
