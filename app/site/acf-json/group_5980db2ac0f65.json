@@ -133,27 +133,6 @@
                             "prefix_name": 0
                         },
                         {
-                            "key": "field_59a97a53689e0",
-                            "label": "Assets",
-                            "name": "lay_assets",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_59a979b39331a"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        },
-                        {
                             "key": "field_59a97ff2f91e1",
                             "label": "Actions",
                             "name": "lay_actions",
@@ -246,27 +225,6 @@
                                     "prefix_name": 0
                                 },
                                 {
-                                    "key": "field_59a97aeef383a",
-                                    "label": "Assets",
-                                    "name": "lay_assets",
-                                    "type": "clone",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "clone": [
-                                        "group_59a979b39331a"
-                                    ],
-                                    "display": "seamless",
-                                    "layout": "block",
-                                    "prefix_label": 0,
-                                    "prefix_name": 0
-                                },
-                                {
                                     "key": "field_59a9800cf91e2",
                                     "label": "Actions",
                                     "name": "lay_actions",
@@ -339,5 +297,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1504887804
+    "modified": 1506088120
 }
