@@ -39,10 +39,10 @@
             "sub_fields": [
                 {
                     "key": "field_59c41c37e65a1",
-                    "label": "Choose an Action",
+                    "label": "Predefined Actions",
                     "name": "rel_action",
                     "type": "post_object",
-                    "instructions": "",
+                    "instructions": "<a href=\"http:\/\/registrar.northeastern.dev\/wp\/wp-admin\/edit.php?post_type=action\" target=\"blank\">Add a new ACTION<\/a>",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -61,7 +61,7 @@
                 },
                 {
                     "key": "field_59c41c99e65a2",
-                    "label": "Customize or Ad Hoc",
+                    "label": "Override or Ad Hoc",
                     "name": "bool_override",
                     "type": "true_false",
                     "instructions": "",
@@ -95,7 +95,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "33",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -104,6 +104,38 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
+                },
+                {
+                    "key": "field_59c515de86de2",
+                    "label": "Type",
+                    "name": "opt_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59c41c99e65a2",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "File": "File",
+                        "URL": "URL"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "URL",
+                    "layout": "horizontal",
+                    "return_format": "value"
                 },
                 {
                     "key": "field_59a97f53514fe",
@@ -118,11 +150,16 @@
                                 "field": "field_59c41c99e65a2",
                                 "operator": "==",
                                 "value": "1"
+                            },
+                            {
+                                "field": "field_59c515de86de2",
+                                "operator": "==",
+                                "value": "URL"
                             }
                         ]
                     ],
                     "wrapper": {
-                        "width": "33",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -130,10 +167,42 @@
                     "placeholder": ""
                 },
                 {
+                    "key": "field_59c5161686de3",
+                    "label": "File",
+                    "name": "med_file",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59c41c99e65a2",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_59c515de86de2",
+                                "operator": "==",
+                                "value": "File"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
                     "key": "field_59a97f53514cd",
                     "label": "Description",
                     "name": "txt_description",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -146,15 +215,15 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "33",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         }
@@ -176,5 +245,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1506025041
+    "modified": 1506088978
 }
