@@ -1,26 +1,7 @@
 {
     "key": "group_59b2c62a1839b",
-    "title": "__ Layout Header",
+    "title": "__ Header",
     "fields": [
-        {
-            "key": "field_59b2c78706819",
-            "label": "Add a Header",
-            "name": "bool_header",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
         {
             "key": "field_58dbf0c550714",
             "label": "Pre Title",
@@ -28,17 +9,9 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_59b2c78706819",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -55,17 +28,9 @@
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_59b2c78706819",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "35",
                 "class": "",
                 "id": ""
             },
@@ -82,17 +47,9 @@
             "type": "textarea",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_59b2c78706819",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -112,13 +69,13 @@
             }
         ]
     ],
-    "menu_order": 8,
+    "menu_order": 10,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1504888827
+    "modified": 1506628787
 }

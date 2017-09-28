@@ -1,80 +1,7 @@
 {
     "key": "group_59b2babdc8e6f",
-    "title": "__ Layout Banner",
+    "title": "__ Banner",
     "fields": [
-        {
-            "key": "field_59b2c9009396c",
-            "label": "Add Banner",
-            "name": "bool_banner",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "20",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_58dd1ecb54308",
-            "label": "Banner Class",
-            "name": "txt_banner_class",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_59b2c9009396c",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "45",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_58dd1c06c2404",
-            "label": "Container Banner?",
-            "name": "bool_banner_contain",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_59b2c9009396c",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "35",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "Yes, contain it",
-            "ui_off_text": "No, keep flush"
-        },
         {
             "key": "field_58dbe5c582f80",
             "label": "Banner Options",
@@ -82,17 +9,9 @@
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_59b2c9009396c",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "65",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -114,23 +33,34 @@
             "placeholder": ""
         },
         {
+            "key": "field_58dd1ecb54308",
+            "label": "Banner Class",
+            "name": "txt_banner_class",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_58dbe59082f7d",
             "label": "Banner Image",
             "name": "med_banner",
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_59b2c9009396c",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
-                "width": "35",
+                "width": "20",
                 "class": "",
                 "id": ""
             },
@@ -144,6 +74,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_58dd1c06c2404",
+            "label": "Place inside section",
+            "name": "bool_banner_contain",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
         }
     ],
     "location": [
@@ -155,7 +104,7 @@
             }
         ]
     ],
-    "menu_order": 10,
+    "menu_order": 11,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -163,5 +112,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1505333610
+    "modified": 1506632552
 }

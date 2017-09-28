@@ -58,7 +58,7 @@ class PostTypes
             'show_ui'               => true,
             'show_in_menu'          => true,
             'menu_position'         => 5,
-            'menu_icon'             => 'dashicons-media-document',
+            'menu_icon'             => 'dashicons-migrate',
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => false,
             'can_export'            => true,

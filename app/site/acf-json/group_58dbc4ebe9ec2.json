@@ -1,6 +1,6 @@
 {
     "key": "group_58dbc4ebe9ec2",
-    "title": "[cpt] Contacts",
+    "title": "[post type] Contacts",
     "fields": [
         {
             "key": "field_58dbc7b37dd14",
@@ -166,7 +166,7 @@
             }
         ]
     ],
-    "menu_order": 11,
+    "menu_order": 12,
     "position": "acf_after_title",
     "style": "seamless",
     "label_placement": "top",
@@ -188,5 +188,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1505319626
+    "modified": 1506627695
 }

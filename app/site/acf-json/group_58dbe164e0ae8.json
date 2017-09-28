@@ -1,6 +1,6 @@
 {
     "key": "group_58dbe164e0ae8",
-    "title": "[template] Sections",
+    "title": "[Layout] Sections",
     "fields": [
         {
             "key": "field_58dbe173baed0",
@@ -15,27 +15,30 @@
                 "class": "layout-sections",
                 "id": ""
             },
-            "collapsed": "field_58dbe44b24140",
+            "collapsed": "field_59b2c666b00d6",
             "min": 1,
             "max": 0,
             "layout": "block",
             "button_label": "Add Section",
             "sub_fields": [
                 {
-                    "key": "field_58dbe44b24140",
-                    "label": "Section Content",
-                    "name": "",
-                    "type": "tab",
+                    "key": "field_59cd530066f68",
+                    "label": "Section Settings",
+                    "name": "bool_settings",
+                    "type": "true_false",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "17",
                         "class": "",
                         "id": ""
                     },
-                    "placement": "top",
-                    "endpoint": 0
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 },
                 {
                     "key": "field_59b2c666b00d6",
@@ -44,35 +47,99 @@
                     "type": "clone",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59cd530066f68",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
                     "wrapper": {
-                        "width": "25",
+                        "width": "83",
                         "class": "",
                         "id": ""
                     },
                     "clone": [
                         "group_59b2c62a1839b"
                     ],
-                    "display": "seamless",
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_59cd6c4ee1670",
+                    "label": "Add Banner",
+                    "name": "bool_banner",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59cd530066f68",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "17",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_59b2bcce0913b",
+                    "label": "Banner",
+                    "name": "lay_banner",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_59cd6c4ee1670",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "83",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_59b2babdc8e6f"
+                    ],
+                    "display": "group",
                     "layout": "block",
                     "prefix_label": 0,
                     "prefix_name": 0
                 },
                 {
                     "key": "field_58dbe1cebaed2",
-                    "label": "Grid",
+                    "label": "Content",
                     "name": "lay_grid",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "100",
                         "class": "layout-columns",
                         "id": ""
                     },
                     "collapsed": "field_58dbe6886d63f",
-                    "min": 0,
+                    "min": 1,
                     "max": 0,
                     "layout": "block",
                     "button_label": "Add Column",
@@ -382,7 +449,7 @@
                                                     "required": 0,
                                                     "conditional_logic": 0,
                                                     "wrapper": {
-                                                        "width": "30",
+                                                        "width": "",
                                                         "class": "",
                                                         "id": ""
                                                     },
@@ -401,7 +468,7 @@
                                                     "required": 0,
                                                     "conditional_logic": 0,
                                                     "wrapper": {
-                                                        "width": "70",
+                                                        "width": "",
                                                         "class": "",
                                                         "id": ""
                                                     },
@@ -423,43 +490,6 @@
                             "max": ""
                         }
                     ]
-                },
-                {
-                    "key": "field_58dbe41d2413e",
-                    "label": "Section Settings",
-                    "name": "",
-                    "type": "tab",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "placement": "top",
-                    "endpoint": 0
-                },
-                {
-                    "key": "field_59b2bcce0913b",
-                    "label": "Settings",
-                    "name": "lay_settings",
-                    "type": "clone",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "clone": [
-                        "group_59b2babdc8e6f"
-                    ],
-                    "display": "seamless",
-                    "layout": "block",
-                    "prefix_label": 0,
-                    "prefix_name": 0
                 }
             ]
         }
@@ -480,7 +510,7 @@
             }
         ]
     ],
-    "menu_order": 7,
+    "menu_order": 9,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
@@ -494,5 +524,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1505322526
+    "modified": 1506634908
 }
