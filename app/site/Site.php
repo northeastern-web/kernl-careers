@@ -60,7 +60,7 @@ class Site
      */
     public function orderAdminPostTypes($query)
     {
-        $post_types = ['article','action'];
+        $post_types = ['article', 'action'];
         $current_post_type = get_query_var('post_type');
 
         if (is_admin() && in_array($current_post_type, $post_types)) {

@@ -1,6 +1,6 @@
 {
     "key": "group_59c41bb7c6375",
-    "title": "[cpt] Actions",
+    "title": "Actions",
     "fields": [
         {
             "key": "field_59c41bbe28d58",
@@ -47,7 +47,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 1,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
@@ -55,5 +55,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1506024480
+    "modified": 1506627616
 }

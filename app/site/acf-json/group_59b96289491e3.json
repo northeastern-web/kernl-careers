@@ -1,6 +1,6 @@
 {
     "key": "group_59b96289491e3",
-    "title": "Options",
+    "title": "[options] Customize",
     "fields": [
         {
             "key": "field_59b964b58e848",
@@ -132,7 +132,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 13,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
@@ -140,5 +140,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1505322498
+    "modified": 1506627589
 }
