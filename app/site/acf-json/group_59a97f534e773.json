@@ -3,7 +3,7 @@
     "title": "__ Article Actions",
     "fields": [
         {
-            "key": "field_59a97f534fe49__trashed",
+            "key": "field_59a97f534fe49",
             "label": "Actions",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59a97f534fe64__trashed",
+            "key": "field_59a97f534fe64",
             "label": "Add Actions",
             "name": "lay_actions",
             "type": "repeater",
@@ -41,61 +41,34 @@
                     "key": "field_59c41c37e65a1",
                     "label": "Predefined Actions",
                     "name": "rel_action",
-                    "type": "post_object",
-                    "instructions": "<a href=\"http:\/\/registrar.northeastern.dev\/wp\/wp-admin\/edit.php?post_type=action\" target=\"blank\">Add a new ACTION<\/a>",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "75",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "action"
-                    ],
-                    "taxonomy": [],
-                    "allow_null": 1,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
-                },
-                {
-                    "key": "field_59c41c99e65a2",
-                    "label": "Override or Ad Hoc",
-                    "name": "bool_override",
-                    "type": "true_false",
+                    "type": "taxonomy",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "25",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 1,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
+                    "taxonomy": "action",
+                    "field_type": "select",
+                    "allow_null": 1,
+                    "add_term": 1,
+                    "save_terms": 1,
+                    "load_terms": 1,
+                    "return_format": "object",
+                    "multiple": 0
                 },
                 {
                     "key": "field_59a97f53514bb",
-                    "label": "Title",
-                    "name": "txt_title",
+                    "label": "Label",
+                    "name": "txt_label",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_59c41c99e65a2",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
-                        "width": "30",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -112,17 +85,9 @@
                     "type": "radio",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_59c41c99e65a2",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
-                        "width": "20",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -147,11 +112,6 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_59c41c99e65a2",
-                                "operator": "==",
-                                "value": "1"
-                            },
-                            {
                                 "field": "field_59c515de86de2",
                                 "operator": "==",
                                 "value": "URL"
@@ -159,7 +119,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "50",
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
@@ -176,11 +136,6 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_59c41c99e65a2",
-                                "operator": "==",
-                                "value": "1"
-                            },
-                            {
                                 "field": "field_59c515de86de2",
                                 "operator": "==",
                                 "value": "File"
@@ -188,7 +143,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "50",
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
@@ -197,33 +152,6 @@
                     "min_size": "",
                     "max_size": "",
                     "mime_types": ""
-                },
-                {
-                    "key": "field_59a97f53514cd",
-                    "label": "Description",
-                    "name": "txt_description",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_59c41c99e65a2",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
                 }
             ]
         }
@@ -245,5 +173,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1506693559
+    "modified": 1506698278
 }
