@@ -1,23 +1,7 @@
 {
     "key": "group_59a97eb7da3f7",
-    "title": "__ Article Content ",
+    "title": "__ Article Content",
     "fields": [
-        {
-            "key": "field_59a97ebf39ada",
-            "label": "Content",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
         {
             "key": "field_59a97ec639adb",
             "label": "Title",
@@ -36,6 +20,22 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_59a97ebf39ada",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_59a97ecc39adc",
@@ -74,5 +74,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1504290523
+    "modified": 1506702785
 }
