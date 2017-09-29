@@ -39,14 +39,14 @@
             "sub_fields": [
                 {
                     "key": "field_59c41c37e65a1",
-                    "label": "Predefined Actions",
+                    "label": "Action Tags",
                     "name": "rel_action",
                     "type": "taxonomy",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "30",
                         "class": "",
                         "id": ""
                     },
@@ -61,14 +61,14 @@
                 },
                 {
                     "key": "field_59a97f53514bb",
-                    "label": "Label",
-                    "name": "txt_label",
+                    "label": "Title",
+                    "name": "txt_title",
                     "type": "text",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "70",
                         "class": "",
                         "id": ""
                     },
@@ -173,5 +173,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1506698278
+    "modified": 1506699024
 }
