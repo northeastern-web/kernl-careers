@@ -3,6 +3,7 @@
     @while(have_rows('lay_actions'))
       @php(the_row())
       <h6>Actions</h6>
+      @php(var_dump(get_sub_field('rel_action')))
       <ul>
         @if(get_sub_field('rel_action'))
           <li>{{ get_sub_field('rel_action')->post_title }}</li>
