@@ -26,6 +26,15 @@
                 "bg--gray": "Gray bg",
                 "bg--gray-light": "Gray light bg",
                 "bg--gray-dark": "Gray dark bg",
+                "bg--gray-100": "Gray 100 bg",
+                "bg--gray-200": "Gray 200 bg",
+                "bg--gray-300": "Gray 300 bg",
+                "bg--gray-400": "Gray 400 bg",
+                "bg--gray-500": "Gray 500 bg",
+                "bg--gray-600": "Gray 600 bg",
+                "bg--gray-700": "Gray 700 bg",
+                "bg--gray-800": "Gray 800 bg",
+                "bg--gray-900": "Gray 900 bg",
                 "bg--red": "Red bg",
                 "bg--red-light": "Red light bg",
                 "bg--red-dark": "Red dark bg",
@@ -139,5 +148,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1506716335
+    "modified": 1506716434
 }
