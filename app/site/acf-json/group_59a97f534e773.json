@@ -3,7 +3,7 @@
     "title": "__ Article Actions",
     "fields": [
         {
-            "key": "field_59a97f534fe49",
+            "key": "field_59a97f534fe49__trashed",
             "label": "Actions",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_59a97f534fe64",
+            "key": "field_59a97f534fe64__trashed",
             "label": "Add Actions",
             "name": "lay_actions",
             "type": "repeater",
@@ -245,5 +245,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1506088978
+    "modified": 1506693559
 }
