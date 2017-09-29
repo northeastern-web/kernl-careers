@@ -108,37 +108,6 @@ class Taxonomies
             ]
         ]);
 
-        register_taxonomy('misc', 'article', [
-            'meta_box_cb'     => false,
-            'show_ui'         => true,
-            'query_var'       => true,
-            'public'          => true,
-            'has_archive'     => true,
-            'hierarchical'    => true,
-            'rewrite'         => [
-                'slug'          => 'misc',
-                'with_front'    => true,
-                'heirarchical'  => true
-            ],
-            'labels' => [
-                'name'                       => _x('Miscellaneous', 'taxonomy general name'),
-                'singular_name'              => _x('Miscellaneous', 'taxonomy singular name'),
-                'search_items'               => __('Search Miscellaneous'),
-                'popular_items'              => __('Popular Miscellaneous'),
-                'all_items'                  => __('All Miscellaneous'),
-                'parent_item'                => null,
-                'parent_item_colon'          => null,
-                'edit_item'                  => __('Edit Miscellaneous'),
-                'update_item'                => __('Update Miscellaneous'),
-                'add_new_item'               => __('Add New Miscellaneous'),
-                'new_item_name'              => __('New Miscellaneous'),
-                'separate_items_with_commas' => __('Separate gallery tags with commas'),
-                'add_or_remove_items'        => __('Add or remove gallery tags'),
-                'choose_from_most_used'      => __('Choose from the most used gallery tags'),
-                'menu_name'                  => __('Miscellaneous'),
-            ]
-        ]);
-
         register_taxonomy('action', 'article', [
             'meta_box_cb'     => false,
             'show_ui'         => true,
