@@ -7,7 +7,7 @@
     </header>
     <div class="__body">
       <div class="__excerpt">
-        <ul class="list-group">
+        <ul class="list-group --sm">
           @foreach (get_field('rel_related') as $article)
             <li><a href="{{ get_permalink($article->ID) }}">{{ $article->post_title }}</a></li>
           @endforeach
