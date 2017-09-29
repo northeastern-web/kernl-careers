@@ -12,6 +12,7 @@
               @php(the_row())
 
               @if(get_row_layout() == 'lay_basic')
+                @include('partials.articles.actions')
                 {{ the_sub_field('txt_copy') }}
 
               @else
@@ -32,13 +33,21 @@
                       @php(the_row())
                       <div class="tab-pane {{ ($i == 0 ? 'active' : '') }}" id="tab_{{ $i }}" role="tabpanel">
                         @include('partials.articles.actions')
-
                         {{ the_sub_field('txt_copy') }}
+
+                        @include('partials.articles.contact')
                       </div>
                       @php($i++)
                     @endwhile
                   </div>
                 </div>
+              @endif
+            @endwhile
+
+            @while((have_rows('lay_section')))
+              @php(the_row())
+              @if(get_row_layout() == 'lay_basic')
+                @include('partials.articles.contact')
               @endif
             @endwhile
           </div>
