@@ -55,7 +55,7 @@
                     "allow_null": 1,
                     "add_term": 1,
                     "save_terms": 1,
-                    "load_terms": 1,
+                    "load_terms": 0,
                     "return_format": "object",
                     "multiple": 0
                 },
@@ -173,5 +173,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1506699024
+    "modified": 1506702712
 }
