@@ -41,30 +41,30 @@ class PostTypes
             'capability_type'       => 'post'
         ]);
 
-        register_post_type('action', [
-            'labels'                => [
-                'name'                => __('Actions'),
-                'singular_name'       => __('Action'),
-                'add_new'             => __('Add Action'),
-                'add_new_item'        => __('Add New Action'),
-                'edit_item'           => __('Edit Action'),
-            ],
-            'public'                => true,
-            'has_archive'           => true,
-            'rewrite'               => ['slug' => 'action'],
-            'supports'              => ['title'],
-            'taxonomies'            => [],
-            'hierarchical'          => false,
-            'show_ui'               => true,
-            'show_in_menu'          => true,
-            'menu_position'         => 5,
-            'menu_icon'             => 'dashicons-migrate',
-            'show_in_admin_bar'     => true,
-            'show_in_nav_menus'     => false,
-            'can_export'            => true,
-            'exclude_from_search'   => true,
-            'publicly_queryable'    => true,
-            'capability_type'       => 'post'
-        ]);
+        // register_post_type('action', [
+        //     'labels'                => [
+        //         'name'                => __('Actions'),
+        //         'singular_name'       => __('Action'),
+        //         'add_new'             => __('Add Action'),
+        //         'add_new_item'        => __('Add New Action'),
+        //         'edit_item'           => __('Edit Action'),
+        //     ],
+        //     'public'                => true,
+        //     'has_archive'           => true,
+        //     'rewrite'               => ['slug' => 'action'],
+        //     'supports'              => ['title'],
+        //     'taxonomies'            => [],
+        //     'hierarchical'          => false,
+        //     'show_ui'               => true,
+        //     'show_in_menu'          => true,
+        //     'menu_position'         => 5,
+        //     'menu_icon'             => 'dashicons-migrate',
+        //     'show_in_admin_bar'     => true,
+        //     'show_in_nav_menus'     => false,
+        //     'can_export'            => true,
+        //     'exclude_from_search'   => true,
+        //     'publicly_queryable'    => true,
+        //     'capability_type'       => 'post'
+        // ]);
     }
 }

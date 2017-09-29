@@ -138,5 +138,36 @@ class Taxonomies
                 'menu_name'                  => __('Miscellaneous'),
             ]
         ]);
+
+        register_taxonomy('action', 'article', [
+            'meta_box_cb'     => false,
+            'show_ui'         => true,
+            'query_var'       => true,
+            'public'          => true,
+            'has_archive'     => false,
+            'hierarchical'    => false,
+            'rewrite'         => [
+                'slug'          => 'action',
+                'with_front'    => true,
+                'heirarchical'  => true
+            ],
+            'labels' => [
+                'name'                       => _x('Action', 'taxonomy general name'),
+                'singular_name'              => _x('Action', 'taxonomy singular name'),
+                'search_items'               => __('Search Action'),
+                'popular_items'              => __('Popular Action'),
+                'all_items'                  => __('All Action'),
+                'parent_item'                => null,
+                'parent_item_colon'          => null,
+                'edit_item'                  => __('Edit Action'),
+                'update_item'                => __('Update Action'),
+                'add_new_item'               => __('Add New Action'),
+                'new_item_name'              => __('New Action'),
+                'separate_items_with_commas' => __('Separate gallery tags with commas'),
+                'add_or_remove_items'        => __('Add or remove gallery tags'),
+                'choose_from_most_used'      => __('Choose from the most used gallery tags'),
+                'menu_name'                  => __('Action'),
+            ]
+        ]);
     }
 }
