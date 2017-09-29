@@ -3,80 +3,6 @@
     "title": "[post type] Contacts",
     "fields": [
         {
-            "key": "field_58dbc7b37dd14",
-            "label": "Instructions",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "Fill in contact fields below. Post title should be last, first name",
-            "new_lines": "wpautop",
-            "esc_html": 0
-        },
-        {
-            "key": "field_58dbc4fd10a41",
-            "label": "First Name",
-            "name": "txt_firstname",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_58dbc50a10a42",
-            "label": "Last Name",
-            "name": "txt_lastname",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_58dbc58241d2f",
-            "label": "Title",
-            "name": "txt_title",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_58dbc58e41d30",
             "label": "Email",
             "name": "txt_email",
@@ -85,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -103,7 +29,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -114,10 +40,29 @@
             "maxlength": ""
         },
         {
-            "key": "field_58dbc5fe41d32",
-            "label": "Headshot",
-            "name": "img_headshot",
-            "type": "image",
+            "key": "field_59ce551b8bef0",
+            "label": "Fax",
+            "name": "txt_fax",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ce5615e3c22",
+            "label": "Note",
+            "name": "",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -126,21 +71,52 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "message": "Overwrite or remove default addresses are inaccurate.",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
-            "key": "field_59b95abb415ad",
-            "label": "Bio",
-            "name": "txt_bio",
+            "key": "field_59ce53498beee",
+            "label": "Mailing Address",
+            "name": "txt_address",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Northeastern University\r\nATTN: Office of the Registrar, 230-271\r\n360 Huntington Avenue\r\nBoston, MA 02115-5000",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 5,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59ce54778beef",
+            "label": "Office Location",
+            "name": "txt_location",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "271 Huntington Avenue\r\nBoston, MA 02115",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 5,
+            "new_lines": ""
+        },
+        {
+            "key": "field_59ce55668bef1",
+            "label": "Office Hours",
+            "name": "txt_hours",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -168,7 +144,7 @@
     ],
     "menu_order": 12,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -188,5 +164,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1506627695
+    "modified": 1506694785
 }
