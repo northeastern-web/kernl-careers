@@ -1,7 +1,6 @@
 @if(get_sub_field('rel_contact'))
   <aside>
-    <hr>
-    <h6>Contact</h6>
+    <h5>Contact</h5>
     @foreach (get_sub_field('rel_contact') as $contact)
         <ul class="list--unstyled">
           <li class="fw--700">{{ $contact->post_title }}</li>

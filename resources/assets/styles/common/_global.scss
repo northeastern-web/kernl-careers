@@ -1,0 +1,16 @@
+//
+// For now, all registrar specific styling should go here :O
+//
+
+.masthead {
+  border-bottom: 1px solid $gray-400;
+}
+
+.\--article {
+  .header {
+    .__title {
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid $gray-200;
+    }
+  }
+}
