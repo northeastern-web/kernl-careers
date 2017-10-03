@@ -8,6 +8,7 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 
+@import "common/global";
 @import "layouts/header";
 @import "layouts/footer";
 @import "layouts/sections";

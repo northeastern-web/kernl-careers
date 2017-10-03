@@ -42,7 +42,7 @@ class Site
             . ($link ? '<a href="'. $link .'" class="__link">' : '')
 
                 . '<div class="__body">'
-                    . ($title ? '<h2 class="__title">'. $title .'</h2>' : '')
+                    . ($title ? '<div class="__title">'. $title .'</div>' : '')
                     . '<div class="__excerpt">' .
                         \Kernl\Utility::removeEmptyParagraphs($content)
                     . '</div>
