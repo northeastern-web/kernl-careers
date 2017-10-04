@@ -13,13 +13,26 @@ class Site
         new Taxonomies;
 
         add_shortcode('alert', [$this, 'shortcodeAlert']);
-        add_action('pre_get_posts' , [$this, 'orderAdminPostTypes']);
 
+        //
+        // order certain post types by title
+        add_action('pre_get_posts' , function ($query) {
+            $post_types = ['article'];
+            $current_post_type = get_query_var('post_type');
+            if (is_admin() && in_array($current_post_type, $post_types)) {
+                $query->set('orderby', [
+                    'title' => 'ASC'
+                ]);
+            }
+        });
+
+        //
         // Filter to add articles to archives (taxonomies)
         add_filter('pre_get_posts', function ($query) {
-          if (is_archive() && !is_admin()) {
-            $query->set('post_type', ['post', 'nav_menu_item', 'article']);
-              return $query;
+            $post_types = ['post', 'nav_menu_item', 'article'];
+            if (is_archive() && !is_admin()) {
+                $query->set('post_type', $post_types);
+                return $query;
             }
         });
     }
@@ -59,22 +72,5 @@ class Site
             . ($link ? '</a>' : '')
         . '</div>
         ';
-    }
-
-    /**
-     * Order post types on admin screens
-     * @param  WP_Query $query current WP query
-     * @return void
-     */
-    public function orderAdminPostTypes($query)
-    {
-        $post_types = ['article', 'action'];
-        $current_post_type = get_query_var('post_type');
-
-        if (is_admin() && in_array($current_post_type, $post_types)) {
-            $query->set('orderby', [
-                'title' => 'ASC'
-            ]);
-        }
     }
 }
