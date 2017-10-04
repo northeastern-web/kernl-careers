@@ -14,6 +14,14 @@ class Site
 
         add_shortcode('alert', [$this, 'shortcodeAlert']);
         add_action('pre_get_posts' , [$this, 'orderAdminPostTypes']);
+
+        // Filter to add articles to archives (taxonomies)
+        add_filter('pre_get_posts', function ($query) {
+          if (is_archive() && !is_admin()) {
+            $query->set('post_type', ['post', 'article']);
+              return $query;
+            }
+        });
     }
 
     /**
