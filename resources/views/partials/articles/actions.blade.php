@@ -1,5 +1,5 @@
 @if(have_rows('lay_actions'))
-  <aside class="alert --outline f--r@sm col --12@sm pa--0@xs">
+  <aside class="alert --blue-light f--r@sm col --12@sm pa--0@xs">
     <div class="__body">
       @while(have_rows('lay_actions'))
         @php(the_row())

@@ -1,4 +1,4 @@
-<header {{ \Kernl\Layout::structure('banner', ['class' => 'l__header'], 'get_field') }} data-acf="bool_banner">
+<header {{ \Kernl\Layout::structure('banner', ['class' => 'header section'], 'get_field') }} data-acf="bool_banner">
   @if(get_field('bool_header', get_queried_object()))
 
     @if(get_field('txt_pretitle', get_queried_object()))

@@ -1,8 +1,8 @@
 @if(get_sub_field('rel_contact'))
-  <aside>
-    <h5>Contact</h5>
+  <aside class="">
+    <h6 class="fw--700 tt--u">Contact</h6>
     @foreach (get_sub_field('rel_contact') as $contact)
-        <ul class="list--unstyled">
+        <ul class="list--unstyled fs--sm">
           <li class="fw--700">{{ $contact->post_title }}</li>
           @if(get_field('txt_email', $contact->ID))
             <li>{{ get_field('txt_email', $contact->ID) }}</li>

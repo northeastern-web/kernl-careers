@@ -7,7 +7,7 @@
 
       <section class="section">
         <div class="row">
-          <div class="col --12@xs --9@md">
+          <div class="col --12@xs --9@md pr--3@md">
             @while((have_rows('lay_section')))
               @php(the_row())
 
