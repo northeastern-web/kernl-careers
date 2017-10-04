@@ -18,7 +18,7 @@ class Site
         // Filter to add articles to archives (taxonomies)
         add_filter('pre_get_posts', function ($query) {
           if (is_archive() && !is_admin()) {
-            $query->set('post_type', ['post', 'article']);
+            $query->set('post_type', ['post', 'nav_menu_item', 'article']);
               return $query;
             }
         });
