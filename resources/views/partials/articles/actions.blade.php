@@ -5,8 +5,8 @@
         @php(the_row())
         <ul class="list--unstyled">
           <li>
-            {!! (get_sub_field('rel_action') ? "<b>". get_sub_field('rel_action')->name .'</b>' : '') !!}
-            <a href="{{ get_sub_field('txt_url') }}">{{ get_sub_field('txt_title') }}</a><br>
+            <a class="fw--700" href="{{ get_sub_field('txt_url') }}">{{ get_sub_field('txt_title') }}</a>
+            {!! (get_sub_field('rel_action') ? ' <i>('. get_sub_field('rel_action')->name .')</i>' : '') !!}
           </li>
         </ul>
       @endwhile
