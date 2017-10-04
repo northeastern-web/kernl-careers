@@ -1,5 +1,5 @@
 {{-- <h6 class="mt--2@xs"><i>Information For:</i></h6> --}}
-<nav class="nav --tabbed --bordered py--1@xs mb--1@xs">
+<nav class="nav --tabbed --bordered">
   <ul class="__list" role="tablist">
     @php($i = 0)
     @while((have_rows('lay_tab')))
@@ -11,15 +11,16 @@
     @endwhile
   </ul>
 </nav>
+<div class="tabcontent">
+  @php($i = 0)
+  @while((have_rows('lay_tab')))
+    @php(the_row())
+    <div class="hidden {{ ($i == 0 ? 'active' : '') }}" id="tab_{{ $i }}" role="tabpanel">
+      @include('partials.articles.actions')
+      {{ the_sub_field('txt_copy') }}
 
-@php($i = 0)
-@while((have_rows('lay_tab')))
-  @php(the_row())
-  <div class="hidden {{ ($i == 0 ? 'active' : '') }}" id="tab_{{ $i }}" role="tabpanel">
-    @include('partials.articles.actions')
-    {{ the_sub_field('txt_copy') }}
-
-    @include('partials.articles.contact')
-  </div>
-  @php($i++)
-@endwhile
+      @include('partials.articles.contact')
+    </div>
+    @php($i++)
+  @endwhile
+</div>

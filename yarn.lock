@@ -3460,7 +3460,7 @@ jxLoader@*:
 
 "kernl-ui@git+https://git@bitbucket.org/nupods/kernl-ui.git#develop":
   version "0.1.0"
-  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#d7a84c54baa2919baff3c11627eab7732aa6ba0b"
+  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#7e7144b21f0161916ab925f7623233e196023a00"
   dependencies:
     feather-icons "^3.2.2"
     jquery "^3.0.0"
