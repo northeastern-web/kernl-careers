@@ -49,7 +49,7 @@ class Site
             shortcode_atts(
                 [
                     'type' => 'alert',
-                    'class' => '--outline',
+                    'class' => '--yellow --sm --note',
                     'link' => '',
                     'title' => ''
                 ],

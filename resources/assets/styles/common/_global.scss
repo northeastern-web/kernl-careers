@@ -16,4 +16,14 @@
       border-bottom: 1px solid $gray-200;
     }
   }
+
+  .alert {
+    &.\--note {
+      margin-bottom: 2rem;
+      .__body { padding: 1rem 0.75rem; }
+    }
+
+    &.\--yellow { background: rgba($yellow, 0.2); }
+    &.\--blue-light { background: rgba($blue-light, 0.2); }
+  }
 }
