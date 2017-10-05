@@ -1,5 +1,5 @@
 @if(have_rows('lay_actions'))
-  <aside class="alert --blue-light f--r@sm col --12@xs --4@sm px--0@xs mt--1@xs">
+  <aside class="alert --action f--r@sm col --12@xs --4@sm px--0@xs mt--1@xs">
     <div class="__header ta--c">Important Actions</div>
     <div class="__body">
       @while(have_rows('lay_actions'))

@@ -49,7 +49,7 @@ class Site
             shortcode_atts(
                 [
                     'type' => 'alert',
-                    'class' => '--yellow --sm --note',
+                    'class' => '--sm --note',
                     'link' => '',
                     'title' => ''
                 ],
@@ -72,5 +72,18 @@ class Site
             . ($link ? '</a>' : '')
         . '</div>
         ';
+    }
+
+    public static function getMenu($menu)
+    {
+        // var_dump(wp_get_nav_menu_items($menu));
+        return wp_get_nav_menu_items($menu);
+    }
+
+    public static function isActiveMenu($menu, $item)
+    {
+        $menu_items = wp_get_nav_menu_items($menu);
+        $current_item = current(wp_filter_object_list($menu_items, ['object_id' => get_queried_object_id()]));
+        return ($current_item->title == $item->title ? 'active' : false);
     }
 }

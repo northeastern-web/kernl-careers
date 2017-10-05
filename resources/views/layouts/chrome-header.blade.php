@@ -13,30 +13,12 @@
     </div>
 
     @if (has_nav_menu('primary_navigation'))
-      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => '__list']) !!}
-    @else
       <ul class="__list">
-        <li class="__item active">
-          <a class="__link" href="#">Lorem Ipsum</a>
-        </li>
-        <li class="__item +children">
-          <a class="__link" href="#">Bibendum</a>
-          <ul class="__submenu">
-            <li class="__item"><a class="__link" href="#">Quam Vulputate Nibh</a></li>
-            <li class="__item"><a class="__link" href="#">Tortor Fusce</a></li>
-          </ul>
-        </li>
-        <li class="__item +children">
-          <a class="__link" href="#">Pudgi Homunculi</a>
-          <ul class="__submenu">
-            <li class="__item"><a class="__link" href="#">Malesuada Bibendum</a></li>
-            <li class="__item"><a class="__link" href="#">Bibendum Mattis Dapibus</a></li>
-            <li class="__item"><a class="__link" href="#">Venenatis Pharetra Sit Dolor</a></li>
-          </ul>
-        </li>
-        <li class="__item">
-          <a class="__link" href="#">Malesuada Nucleus</a>
-        </li>
+        @foreach (\App\Site::getMenu('Primary Navigation') as $item)
+          <li class="__item {{ \App\Site::isActiveMenu('Primary Navigation', $item) }}">
+            <a class="__link" href="{{ $item->url }}">{{ $item->title }}</a>
+          </li>
+        @endforeach
       </ul>
     @endif
   </nav>
