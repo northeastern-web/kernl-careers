@@ -12,6 +12,15 @@
       <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
     </div>
 
+    @if (\App\Site::getMenu('Utility Navigaiton'))
+      <ul class="__list --utility">
+        @foreach (\App\Site::getMenu('Utility Navigaiton') as $item)
+          <li class="__item {{ (\App\Site::isActiveMenu('Utility Navigaiton', $item) ? '--active' : '') }}">
+            <a class="__link" href="{{ $item->url }}">{{ $item->title }}</a>
+          </li>
+        @endforeach
+      </ul>
+    @endif
     @if (has_nav_menu('primary_navigation'))
       <ul class="__list">
         @foreach (\App\Site::getMenu('Primary Navigation') as $item)

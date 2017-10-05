@@ -2,6 +2,8 @@
 // For now, all registrar specific styling should go here :O
 //
 
+.bg--canvas { background: #f7f7f7; }
+
 .masthead {
   border-bottom: 1px solid $gray-400;
 }
@@ -23,7 +25,9 @@
       .__body { padding: 1rem; }
     }
 
-    &.\--note { background: rgba($yellow, 0.2); }
-    &.\--action { background: rgba($blue-light, 0.2); }
+    &.\--note { background: rgba($yellow, 0.15); }
+    &.\--action { background: rgba($blue-light, 0.15); }
   }
+
+  .tabcontent { background: #fff; }
 }

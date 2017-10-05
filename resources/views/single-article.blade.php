@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  <article {{ post_class('--single --article') }}>
+  <article {{ post_class('post --single --article bg--canvas') }}>
     @while(have_posts()) @php(the_post())
       @include('partials.articles.header')
 

@@ -1,14 +1,14 @@
 @if(get_sub_field('rel_contact'))
   <aside class="card --extend">
-    <div class="__header bg--gray-100">
+    <div class="__header bg--gray-100 fw--700">
       <div class="__column">Contact</div>
     </div>
 
     <div class="__body pb--1@xs">
       @foreach (get_sub_field('rel_contact') as $contact)
         <div class="__title">{{ $contact->post_title }}</div>
-        <div class="__excerpt">
-          <ul class="list--unstyled fs--sm">
+        <div class="__excerpt fs--xs">
+          <ul class="list--unstyled">
             @if(get_field('txt_email', $contact->ID))
               <li><a href="mailto:{{ get_field('txt_email', $contact->ID) }}">{{ get_field('txt_email', $contact->ID) }}</a></li>
             @endif
