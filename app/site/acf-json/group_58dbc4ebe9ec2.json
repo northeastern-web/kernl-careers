@@ -1,6 +1,6 @@
 {
     "key": "group_58dbc4ebe9ec2",
-    "title": "[post type] Contacts",
+    "title": "[post type] Directory",
     "fields": [
         {
             "key": "field_58dbc58e41d30",
@@ -138,7 +138,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "contact"
+                "value": "directory"
             }
         ]
     ],
@@ -164,5 +164,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1506706297
+    "modified": 1507209828
 }
