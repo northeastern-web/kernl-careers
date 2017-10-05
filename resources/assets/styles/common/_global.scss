@@ -23,7 +23,7 @@
       .__body { padding: 1rem; }
     }
 
-    &.\--yellow { background: rgba($yellow, 0.2); }
-    &.\--blue-light { background: rgba($blue-light, 0.2); }
+    &.\--note { background: rgba($yellow, 0.2); }
+    &.\--action { background: rgba($blue-light, 0.2); }
   }
 }
