@@ -32,7 +32,7 @@
                 "id": ""
             },
             "post_type": [
-                "contact"
+                "directory"
             ],
             "taxonomy": [],
             "allow_null": 0,
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1506027850
+    "modified": 1507209890
 }
