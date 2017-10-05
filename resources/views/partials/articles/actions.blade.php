@@ -6,7 +6,10 @@
         @php(the_row())
         <ul class="fs--sm">
           <li>
-            <a class="fw--700" href="{{ get_sub_field('txt_url') }}">{{ get_sub_field('txt_title') }}</a>
+            {{-- @php(var_dump(get_sub_field('med_file')['url'])) --}}
+            <a class="fw--700" href="{!! (get_sub_field('opt_type') == 'File' ? get_sub_field('med_file')['url'] : get_sub_field('txt_url')) !!}">
+              {{ get_sub_field('txt_title') }}
+            </a>
             {!! (get_sub_field('rel_action') ? ' <i>('. get_sub_field('rel_action')->name .')</i>' : '') !!}
           </li>
         </ul>
