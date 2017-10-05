@@ -16,6 +16,18 @@
   }
 }
 
+.list-group {
+  .__item {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+
+    &:hover {
+      background: $gray-100;
+      color: inherit;
+    }
+  }
+}
+
 .\--article {
   .header {
     padding-top: 3rem;

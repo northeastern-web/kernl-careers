@@ -15,7 +15,7 @@
   @php($i = 0)
   @while((have_rows('lay_tab')))
     @php(the_row())
-    <div class="hidden {{ ($i == 0 ? 'active' : '') }}" id="tab_{{ $i }}" role="tabpanel">
+    <div class="hidden +clearfix {{ ($i == 0 ? 'active' : '') }}" id="tab_{{ $i }}" role="tabpanel">
       @include('partials.articles.actions')
       {{ the_sub_field('txt_copy') }}
 
