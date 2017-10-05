@@ -6,7 +6,7 @@
             "key": "field_59b964b58e848",
             "label": "Global",
             "name": "",
-            "type": "message",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,9 +15,8 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_59b9644d8e846",
@@ -87,10 +86,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_59b964c58e849",
-            "label": "Modules",
-            "name": "",
-            "type": "message",
+            "key": "field_59d6734510582",
+            "label": "Masthead Overylay",
+            "name": "bool_masthead_overylay",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -100,8 +99,45 @@
                 "id": ""
             },
             "message": "",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59d6736e10583",
+            "label": "Masthead Megamenu",
+            "name": "bool_megamenu",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59b964c58e849",
+            "label": "Modules",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_59b9629bc4b4e",
@@ -140,5 +176,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1506627589
+    "modified": 1507226492
 }
