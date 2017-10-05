@@ -763,12 +763,12 @@ caniuse-api@^2.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000187, caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000743"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000743.tgz#bc8df2a257cf91ba024322266295af3ded852306"
+  version "1.0.30000744"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000744.tgz#00758ff7dd5f7138d34a15608dccf71a59656ffe"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000718, caniuse-lite@^1.0.30000726:
-  version "1.0.30000743"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000743.tgz#f4f5c6750676ff8f6144ea40456c3729d5341769"
+  version "1.0.30000744"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000744.tgz#860fa5c83ba34fe619397d607f30bb474821671b"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -3460,7 +3460,7 @@ jxLoader@*:
 
 "kernl-ui@git+https://git@bitbucket.org/nupods/kernl-ui.git#develop":
   version "0.1.0"
-  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#337b6b1e035ead2c2b719594c5adfe5171027a53"
+  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#34363b671a3930354254e8edbd581a0a09f3bd08"
   dependencies:
     feather-icons "^3.2.2"
     jquery "^3.0.0"

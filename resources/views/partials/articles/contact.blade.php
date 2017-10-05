@@ -1,6 +1,6 @@
 @if(get_sub_field('rel_contact'))
-  <aside class="card --extend">
-    <div class="__header bg--gray-100 fw--700">
+  <aside class="card --outline --extend" style="border-color: #d0d0d0;">
+    <div class="__header fw--700">
       <div class="__column">Contact</div>
     </div>
 

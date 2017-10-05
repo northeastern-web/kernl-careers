@@ -1,4 +1,4 @@
-<header class="masthead">
+<header class="masthead {{ (get_field('bool_megamenu','option') ? '+megamenu' : '') }} {{ (get_field('bool_masthead_overylay','option') ? '--overlay' : '') }}">
   <a class="__logo" href="{{ home_url('/') }}" data-ga-click="Home Logo">
     <img class="__logo__image" src="<?= get_field('med_logo','option'); ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
   </a>

@@ -8,6 +8,14 @@
   border-bottom: 1px solid $gray-400;
 }
 
+.section {
+  > .__header {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $gray-200;
+  }
+}
+
 .\--article {
   .header {
     padding-top: 3rem;
