@@ -15,7 +15,7 @@
     @if (has_nav_menu('primary_navigation'))
       <ul class="__list">
         @foreach (\App\Site::getMenu('Primary Navigation') as $item)
-          <li class="__item {{ \App\Site::isActiveMenu('Primary Navigation', $item) }}">
+          <li class="__item {{ (\App\Site::isActiveMenu('Primary Navigation', $item) ? '--active' : '') }}">
             <a class="__link" href="{{ $item->url }}">{{ $item->title }}</a>
           </li>
         @endforeach

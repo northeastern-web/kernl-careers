@@ -84,6 +84,7 @@ class Site
     {
         $menu_items = wp_get_nav_menu_items($menu);
         $current_item = current(wp_filter_object_list($menu_items, ['object_id' => get_queried_object_id()]));
-        return ($current_item->title == $item->title ? 'active' : false);
+
+        return ($current_item && $current_item->title == $item->title ? true : false);
     }
 }
