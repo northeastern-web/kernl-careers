@@ -25,6 +25,7 @@
 
           <section class="section">
             <header class="__header">
+              <div class="f--r@xs fs--xs pt--1@xs"><a href="{{ get_term_link(get_term_by('term_id', $term_child, $taxonomy)) }}">View More</a></div>
               <h1 class="__title">{{ get_term_by('term_id', $term_child, $taxonomy)->name }}</h1>
             </header>
             <div class="list-group">
