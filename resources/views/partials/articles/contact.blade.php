@@ -6,7 +6,7 @@
 
     <div class="__body pb--1@xs">
       @foreach (get_sub_field('rel_contact') as $contact)
-        <div class="__title">{{ $contact->post_title }}</div>
+        <h4 class="__title">{{ $contact->post_title }}</h4>
         <div class="__excerpt fs--xs">
           <ul class="list--unstyled">
             @if(get_field('txt_email', $contact->ID))
