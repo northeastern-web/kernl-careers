@@ -35,5 +35,7 @@
         </div>
       </section>
     @endwhile
+
+    <?php edit_post_link('Edit Page', '', ''); ?>
   </article>
 @endsection
