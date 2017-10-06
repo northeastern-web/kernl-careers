@@ -3,6 +3,18 @@
  * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
  */
 
+.post-edit-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(#000, 0.5);
+  text-transform: uppercase;
+  font-size: 10px;
+  color: white;
+  &:hover { background: black; }
+}
+
 /** Media alignment */
 .alignnone {
   margin-left: 0;
@@ -13,44 +25,44 @@
 
 .aligncenter {
   display: block;
-  margin: ($spacer / 2) auto;
+  margin: 1rem auto;
   height: auto;
 }
 
 .alignleft,
 .alignright {
-  margin-bottom: ($spacer / 2);
+  margin-bottom: 1rem;
   height: auto;
 }
 
 @include media-breakpoint-up(sm) {
   .alignleft {
     float: left;
-    margin-right: ($spacer / 2);
+    margin-right: 1rem;
   }
 
   .alignright {
     float: right;
-    margin-left: ($spacer / 2);
+    margin-left: 1rem;
   }
 }
 
 /** Captions */
 .wp-caption {
-  @extend .figure;
+  // @extend .figure;
 }
 
 .wp-caption img {
-  @extend .figure-img;
-  @extend .img-fluid;
+  // @extend .figure-img;
+  // @extend .img-fluid;
 }
 
 .wp-caption-text {
-  @extend .figure-caption;
+  // @extend .figure-caption;
 }
 
 /** Text meant only for screen readers */
 .screen-reader-text {
-  @extend .sr-only;
-  @extend .sr-only-focusable;
+  // @extend .sr-only;
+  // @extend .sr-only-focusable;
 }
