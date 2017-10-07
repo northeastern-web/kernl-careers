@@ -26,7 +26,7 @@ class PostTypes
                 'menu_position'         => 5,
                 'menu_icon'             => 'dashicons-media-document',
                 'show_in_admin_bar'     => true,
-                'show_in_nav_menus'     => false,
+                'show_in_nav_menus'     => true,
                 'can_export'            => true,
                 'exclude_from_search'   => true,
                 'publicly_queryable'    => true,

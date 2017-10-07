@@ -28,7 +28,7 @@
               <div class="f--r@xs fs--xs pt--1@xs"><a href="{{ get_term_link(get_term_by('term_id', $term_child, $taxonomy)) }}">View More</a></div>
               <h1 class="__title">{{ get_term_by('term_id', $term_child, $taxonomy)->name }}</h1>
             </header>
-            <div class="list-group">
+            <div class="list-group +indent">
               @while ($query->have_posts())
                 @php($query->the_post())
                 @include('components.list-item')
@@ -39,12 +39,12 @@
 
       @else
         <section class="section">
-          <ul class="media__list">
-            @while (have_posts())
-              @php(the_post())
-              <li class="media">@include('components.media')</li>
-            @endwhile
-          </ul>
+          <div class="list-group +indent">
+            @while ($query->have_posts())
+              @php($query->the_post())
+              @include('components.list-item')
+            @endwhile @php(wp_reset_postdata())
+          </div>
         </section>
       @endif
     </div>

@@ -8,6 +8,6 @@
 
   .__subtitle {
     padding-top: 0.5rem;
-    * { @include get_type($type-lead); }
+    * { @include type-lead(); }
   }
 }
