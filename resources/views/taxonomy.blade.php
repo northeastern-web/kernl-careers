@@ -16,7 +16,7 @@
       @if ($term_children)
         @foreach ($term_children as $term_child)
           @php
-            $query = new WP_Query([
+            $query = new \WP_Query([
               'tax_query' => [
                 ['taxonomy' => $taxonomy, 'field' => 'term_id', 'terms' => $term_child]
               ]
@@ -28,6 +28,7 @@
               <div class="f--r@xs fs--xs pt--1@xs"><a href="{{ get_term_link(get_term_by('term_id', $term_child, $taxonomy)) }}">View More</a></div>
               <h1 class="__title">{{ get_term_by('term_id', $term_child, $taxonomy)->name }}</h1>
             </header>
+
             <div class="list-group +indent">
               @while ($query->have_posts())
                 @php($query->the_post())
@@ -40,15 +41,15 @@
       @else
         <section class="section">
           <div class="list-group +indent">
-            @while ($query->have_posts())
-              @php($query->the_post())
+            @while (have_posts())
+              @php(the_post())
               @include('components.list-item')
             @endwhile @php(wp_reset_postdata())
           </div>
         </section>
       @endif
     </div>
-    <div class="col --2@xs">
+    <div class="col --3@xs">
     </div>
   </div>
 @endsection

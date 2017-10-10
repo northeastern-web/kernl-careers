@@ -35,7 +35,7 @@
   height: auto;
 }
 
-@include media-breakpoint-up(sm) {
+@include mqbp-up(sm) {
   .alignleft {
     float: left;
     margin-right: 1rem;
