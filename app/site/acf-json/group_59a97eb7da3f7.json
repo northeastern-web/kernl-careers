@@ -129,7 +129,7 @@
         },
         {
             "key": "field_59a97ecc39adc",
-            "label": "Copy",
+            "label": "Section Copy",
             "name": "txt_copy",
             "type": "wysiwyg",
             "instructions": "",
@@ -164,5 +164,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1507836104
+    "modified": 1507837318
 }
