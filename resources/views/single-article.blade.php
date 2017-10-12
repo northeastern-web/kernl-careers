@@ -12,9 +12,14 @@
               @php(the_row())
 
               @if(get_row_layout() == 'lay_basic')
-                <div class="f--r@sm ml--1@sm col --12@xs --4@sm px--0@xs">
-                  @include('partials.articles.actions')
-                </div>
+                @include('partials.articles.alert')
+
+                @if(have_rows('lay_actions'))
+                  <div class="f--r@sm ml--1@sm col --12@xs --4@sm px--0@xs">
+                    @include('partials.articles.actions')
+                  </div>
+                @endif
+
                 {{ the_sub_field('txt_copy') }}
 
               @else
