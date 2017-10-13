@@ -20,7 +20,7 @@ class PostTypes
                 'rewrite'               => ['slug' => 'article'],
                 'supports'              => ['title', 'excerpt'],
                 'taxonomies'            => [],
-                'hierarchical'          => false,
+                'hierarchical'          => true,
                 'show_ui'               => true,
                 'show_in_menu'          => true,
                 'menu_position'         => 5,
