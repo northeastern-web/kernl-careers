@@ -9,10 +9,12 @@
 }
 
 .section {
-  > .__header {
+  > .__header.\--archive {
     padding-bottom: 1rem;
     border-bottom: 1px solid $gray-200;
   }
+
+  &.--header { background-color: $blue-dark; }
 }
 
 .list-group {
