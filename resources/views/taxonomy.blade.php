@@ -23,7 +23,7 @@
 
   <div class="section">
     <div class="row">
-      <div class="col --9@xs">
+      <div class="col --9@md --12@xs">
         @if ($term_children)
           @foreach ($term_children as $term)
             @php
@@ -71,19 +71,17 @@
         @endif
       </div>
 
-      <div class="col --3@xs">
+      <div class="col --3@md --12@xs">
         @if ($term_children)
-          <aside class="card --outline --extend" style="border-color: #d0d0d0;">
-            <div class="__header fw--700 bg--gray-100">
-              <div class="__column">Navigation</div>
+          <aside class="card --extend tt--caps +noshadow">
+            <div class="__header bg--gray-200">
+              <div class="__column">Jump to Section</div>
             </div>
             <div class="__body py--0@xs">
-              <div class="__excerpt fs--xs">
-                <div class="list-group --sm">
+              <div class="__excerpt">
+                <div class="list-group bg--gray-100 fs--xs">
                   @foreach ($term_children as $term_child)
-                    <div class="__item">
-                      <a href="#tax-{{ get_term_by('term_id', $term_child, $taxonomy)->slug }}">{{ get_term_by('term_id', $term_child, $taxonomy)->name }}</a>
-                    </div>
+                    <a href="#tax-{{ get_term_by('term_id', $term_child, $taxonomy)->slug }}">{{ get_term_by('term_id', $term_child, $taxonomy)->name }}</a>
                   @endforeach
                 </div>
               </div>
