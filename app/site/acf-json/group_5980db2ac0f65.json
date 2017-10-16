@@ -253,8 +253,8 @@
                 }
             },
             "button_label": "Add Section",
-            "min": 1,
-            "max": 2
+            "min": 0,
+            "max": 3
         }
     ],
     "location": [
@@ -276,5 +276,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1507837393
+    "modified": 1508181965
 }
