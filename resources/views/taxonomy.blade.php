@@ -60,7 +60,7 @@
           @endforeach
 
         @else
-          <section class="section px--0@xs">
+          <section class="section px--0@xs pt--0@xs">
             <div class="list-group +indent">
               @while (have_posts())
                 @php(the_post())
