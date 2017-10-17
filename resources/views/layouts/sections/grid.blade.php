@@ -7,7 +7,7 @@
     <div class="col {{ implode(' ', get_sub_field('opt_column')) }}"
       data-col="{{ $i_col }}" data-acf="opt_column">
 
-      @include('layouts.sections-content')
+      @include('layouts.sections.content')
     </div>
 
     @php($i_col++)
