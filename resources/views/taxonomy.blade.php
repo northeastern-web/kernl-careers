@@ -6,8 +6,10 @@
     $current_term = get_term_by('slug', get_query_var('term'), $current_taxonomy);
     $current_term_children = get_term_children($current_term->term_id, $current_taxonomy);
     $segment = '';
+    $count = 5;
 
     if (is_tax('type','form') || is_tax('audience','faculty-staff')) {
+      $count = 20;
       $taxonomy = 'group';
       $term_children = get_terms('group', ['parent' => 0, 'fields' => 'ids']);
       $segment = ['taxonomy' => $current_taxonomy, 'field' => 'term_id', 'terms' => $current_term];
@@ -16,7 +18,6 @@
       $term_children = $current_term_children;
     }
   @endphp
-
   <div {{ post_class('--archive') }}>
     @include('layouts.header-archive')
   </div>
@@ -27,10 +28,10 @@
         @if ($term_children)
           @foreach ($term_children as $term)
             @php
-              $query = new \WP_Query([
+              $q = new \WP_Query([
                 'orderby' => 'menu_order title',
                 'order' => 'ASC',
-                'posts_per_page' => 5,
+                'posts_per_page' => $count,
                 'tax_query' => [
                   ['taxonomy' => $taxonomy, 'field' => 'term_id', 'terms' => $term],
                   $segment
@@ -38,7 +39,7 @@
               ]);
             @endphp
 
-            @if ($query->have_posts())
+            @if ($q->have_posts())
               <section class="section px--0@xs" id="tax-{{ get_term_by('term_id', $term, $taxonomy)->slug }}">
                 <header class="__header --archive">
                   <div class="f--r@xs fs--xs pt--1@xs">
@@ -50,8 +51,8 @@
                 </header>
 
                 <div class="list-group +indent">
-                  @while ($query->have_posts())
-                    @php($query->the_post())
+                  @while ($q->have_posts())
+                    @php($q->the_post())
                     @include('components.list-item')
                   @endwhile @php(wp_reset_postdata())
                 </div>
