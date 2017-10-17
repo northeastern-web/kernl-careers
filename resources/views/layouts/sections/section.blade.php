@@ -20,8 +20,8 @@
 
       @if(get_sub_field('bool_banner') && get_sub_field('bool_banner_contain'))<div {{ Kernl\Layout::structure('banner', ['class' => 'section']) }} data-acf="bool_banner">@endif
 
-        @include('layouts.sections-header')
-        @include('layouts.sections-grid')
+        @include('layouts.sections.header')
+        @include('layouts.sections.grid')
 
       @if(get_sub_field('bool_banner') && get_sub_field('bool_banner_contain'))</div>@endif
     </section>

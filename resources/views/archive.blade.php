@@ -2,7 +2,7 @@
 
 @section('content')
   <div {{ post_class('--archive') }}>
-    @include('layouts.header-archive')
+    @include('layouts.chrome.header-archive')
   </div>
 
   <section class="section">

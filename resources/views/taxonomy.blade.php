@@ -5,6 +5,7 @@
     $current_taxonomy = get_query_var('taxonomy');
     $current_term = get_term_by('slug', get_query_var('term'), $current_taxonomy);
     $current_term_children = get_term_children($current_term->term_id, $current_taxonomy);
+    $type = get_query_var('type');
     $segment = '';
     $count = 5;
 
@@ -16,10 +17,13 @@
     } else {
       $taxonomy = $current_taxonomy;
       $term_children = $current_term_children;
+      if ($type) {
+        $segment = ['taxonomy' => 'type', 'field' => 'slug', 'terms' => $type];
+      }
     }
   @endphp
   <div {{ post_class('--archive') }}>
-    @include('layouts.header-archive')
+    @include('layouts.chrome.header-archive')
   </div>
 
   <div class="section">

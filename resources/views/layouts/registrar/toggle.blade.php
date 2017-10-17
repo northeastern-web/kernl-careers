@@ -16,17 +16,17 @@
   @while((have_rows('lay_tab')))
     @php(the_row())
     <div class="hidden +clearfix {{ ($i == 0 ? 'active' : '') }}" id="tab_{{ $i }}" role="tabpanel">
-      @include('partials.articles.alert')
+      @include('layouts.registrar.alert')
 
       @if(have_rows('lay_actions'))
         <div class="f--r@sm ml--1@sm col --12@xs --4@sm px--0@xs mt--1@xs">
-          @include('partials.articles.actions')
+          @include('layouts.registrar.actions')
         </div>
       @endif
 
       {{ the_sub_field('txt_copy') }}
 
-      @include('partials.articles.contact')
+      @include('layouts.registrar.contact')
     </div>
     @php($i++)
   @endwhile

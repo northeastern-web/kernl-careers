@@ -3,7 +3,7 @@
 @section('content')
   <article {{ post_class('post --single --article bg--canvas') }}>
     @while(have_posts()) @php(the_post())
-      @include('partials.articles.header')
+      @include('layouts.registrar.header')
 
       <section class="section">
         <div class="row">
@@ -12,18 +12,18 @@
               @php(the_row())
 
               @if(get_row_layout() == 'lay_basic')
-                @include('partials.articles.alert')
+                @include('layouts.registrar.alert')
 
                 @if(have_rows('lay_actions'))
                   <div class="f--r@sm ml--1@sm col --12@xs --4@sm px--0@xs">
-                    @include('partials.articles.actions')
+                    @include('layouts.registrar.actions')
                   </div>
                 @endif
 
                 {{ the_sub_field('txt_copy') }}
 
               @else
-                @include('partials.articles.toggle')
+                @include('layouts.registrar.toggle')
 
               @endif
             @endwhile
@@ -33,11 +33,11 @@
             @while((have_rows('lay_section')))
               @php(the_row())
               @if(get_row_layout() == 'lay_basic')
-                @include('partials.articles.contact')
+                @include('layouts.registrar.contact')
               @endif
             @endwhile
 
-            @include('partials.articles.related')
+            @include('layouts.registrar.related')
           </div>
         </div>
       </section>

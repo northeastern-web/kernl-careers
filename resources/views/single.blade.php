@@ -3,13 +3,14 @@
 @section('content')
   <article {{ post_class('--single') }}>
     @while(have_posts()) @php(the_post())
-      @include('layouts.header-singular')
+      @include('layouts.chrome.header-singular')
       <section class="section">
-        @include('partials.posts-video')
+        @include('layouts.posts.video')
         <div class="g-row">
           <div class="g-col --12@xs --8@lg --offset-2@lg">
-            @include('layouts.sections')
-            @include('partials.posts-external')
+            @include('layouts.sections.section')
+
+            @include('layouts.posts.external')
           </div>
         </div>
       </section>
