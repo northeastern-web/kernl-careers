@@ -15,10 +15,14 @@ class Site
         add_shortcode('alert', [$this, 'shortcodeAlert']);
 
         add_action('pre_get_posts', function ($query) {
+            global $wp_the_query;
             if(is_archive('taxonomy')) {
-               $query->set('posts_per_page', 50);
-               $query->set('order', 'ASC');
-               $query->set('orderby', 'menu_order title');
+                if ($wp_the_query === $query) {
+                  $query->set('posts_per_page', 50);
+                  $query->set('order', 'ASC');
+                  $query->set('orderby', 'menu_order title');
+                }
+                return $query;
             }
         });
 
