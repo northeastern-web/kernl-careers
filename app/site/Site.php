@@ -14,6 +14,14 @@ class Site
 
         add_shortcode('alert', [$this, 'shortcodeAlert']);
 
+        add_action('pre_get_posts', function ($query) {
+            if(is_archive('taxonomy')) {
+               $query->set('posts_per_page', 50);
+               $query->set('order', 'ASC');
+               $query->set('orderby', 'menu_order title');
+            }
+        });
+
         //
         // order certain post types by title
         // add_action('pre_get_posts' , function ($query) {
@@ -35,6 +43,7 @@ class Site
                 return $query;
             }
         });
+
     }
 
     /**
@@ -72,6 +81,18 @@ class Site
             . ($link ? '</a>' : '')
         . '</div>
         ';
+    }
+
+    public static function getTaxHierarchy($post_id, $taxonomy)
+    {
+        $terms = [];
+        $child = wp_get_post_terms($post_id, $taxonomy)[0];
+        $parent = get_term(get_ancestors($child->term_id, $taxonomy, 'taxonomy')[0], $taxonomy);
+        if ($parent) {
+            $terms[] = $parent;
+        }
+        $terms[] = $child;
+        return $terms;
     }
 
     public static function getMenu($menu)
