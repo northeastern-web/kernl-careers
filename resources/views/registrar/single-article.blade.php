@@ -1,6 +1,6 @@
 <article {{ post_class('post --single --article') }}>
   @while(have_posts()) @php(the_post())
-    @include('registrar.header')
+    @include('registrar.header-article')
 
     <section class="section">
       <div class="row">
