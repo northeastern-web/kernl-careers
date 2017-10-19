@@ -1,15 +1,14 @@
 @if(get_sub_field('rel_contact'))
-  <aside class="card --outline --extend" style="border-color: #d0d0d0;">
-    <div class="__header fw--700 bg--gray-100">
+  <aside class="card +noshadow --extend">
+    <div class="__header bg--gray-600 text--gray-100 tt--caps">
       <div class="__column">Contact Information</div>
     </div>
 
-    <div class="__body pb--1@xs">
+    <div class="__body pb--1@xs bg--gray-100">
       @foreach (get_sub_field('rel_contact') as $contact)
-        {{-- <h4 class="__title"></h4> --}}
-        <div class="__excerpt fs--xs">
+        <div class="__excerpt fs--sm">
           <ul class="list--unstyled">
-            <li>
+            <li class="mb--1@xs">
               <h6 class="fw--700 mb--0@xs">{{ $contact->post_title }}</h6>
               <ul class="list--unstyled mx--0@xs">
                 @if(get_field('txt_email', $contact->ID))
@@ -25,13 +24,13 @@
             </li>
 
             @if(get_field('txt_address', $contact->ID))
-              <li>
+              <li class="mb--1@xs">
                 <h6 class="fw--700 mb--0@xs">Mailing Address</h6>
                 {!! get_field('txt_address', $contact->ID) !!}
               </li>
             @endif
             @if(get_field('txt_location', $contact->ID))
-              <li>
+              <li class="mb--1@xs">
                 <h6 class="fw--700 mb--0@xs">Location</h6>
                 {!! get_field('txt_location', $contact->ID) !!}
               </li>
