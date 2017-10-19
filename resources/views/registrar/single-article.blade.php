@@ -1,4 +1,4 @@
-<article {{ post_class('post --single --article bg--canvas') }}>
+<article {{ post_class('post --single --article') }}>
   @while(have_posts()) @php(the_post())
     @include('registrar.header')
 
@@ -18,10 +18,10 @@
               {{ the_sub_field('txt_copy') }}
 
             @else
-              @if(isset($_GET['alt']))
-                @include('registrar.accordion')
-              @else
+              @if(isset($_GET['tab']))
                 @include('registrar.tabs')
+              @else
+                @include('registrar.accordion')
               @endif
             @endif
           @endwhile

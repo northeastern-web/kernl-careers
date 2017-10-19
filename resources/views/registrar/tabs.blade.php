@@ -1,5 +1,5 @@
 {{-- <h6 class="mt--2@xs"><i>Information For:</i></h6> --}}
-<nav class="nav --tabbed --bordered pt--2@xs">
+<nav class="nav --tabbed --bordered pt--1@xs">
   <ul class="__list" role="tablist">
     @php($i = 0)
     @while((have_rows('lay_tab')))
@@ -11,7 +11,7 @@
     @endwhile
   </ul>
 </nav>
-<div class="tabcontent">
+<div class="tabcontent mb--2@xs">
   @php($i = 0)
   @while((have_rows('lay_tab')))
     @php(the_row())

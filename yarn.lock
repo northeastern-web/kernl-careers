@@ -3460,7 +3460,7 @@ jxLoader@*:
 
 "kernl-ui@git+https://git@bitbucket.org/nupods/kernl-ui.git#develop":
   version "0.1.0"
-  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#47a7833025aee92579bc05599a42a8590a9fb4a6"
+  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#4887deae622f4c3c5fc5edc9291f0c333a195d9e"
   dependencies:
     feather-icons "^3.2.2"
     jquery "^3.0.0"
@@ -5179,8 +5179,8 @@ punycode@^1.2.4, punycode@^1.4.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
 q@^1.1.2:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/q/-/q-1.5.0.tgz#dd01bac9d06d30e6f219aecb8253ee9ebdc308f1"
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 
 qs@0.4.x:
   version "0.4.2"
