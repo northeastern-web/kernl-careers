@@ -57,7 +57,7 @@
                 <div class="list-group +indent">
                   @while ($q->have_posts())
                     @php($q->the_post())
-                    @include('components.list-item')
+                    @include('registrar.list-item')
                   @endwhile @php(wp_reset_postdata())
                 </div>
               </section>
@@ -69,7 +69,7 @@
             <div class="list-group +indent">
               @while (have_posts())
                 @php(the_post())
-                @include('components.list-item')
+                @include('registrar.list-item')
               @endwhile @php(wp_reset_postdata())
             </div>
           </section>

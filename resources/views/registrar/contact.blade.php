@@ -1,23 +1,29 @@
 @if(get_sub_field('rel_contact'))
   <aside class="card --outline --extend" style="border-color: #d0d0d0;">
     <div class="__header fw--700 bg--gray-100">
-      <div class="__column">Contact</div>
+      <div class="__column">Contact Information</div>
     </div>
 
     <div class="__body pb--1@xs">
       @foreach (get_sub_field('rel_contact') as $contact)
-        <h4 class="__title">{{ $contact->post_title }}</h4>
+        {{-- <h4 class="__title"></h4> --}}
         <div class="__excerpt fs--xs">
           <ul class="list--unstyled">
-            @if(get_field('txt_email', $contact->ID))
-              <li><a href="mailto:{{ get_field('txt_email', $contact->ID) }}">{{ get_field('txt_email', $contact->ID) }}</a></li>
-            @endif
-            @if(get_field('txt_phone', $contact->ID))
-              <li><a href="tel:{{ get_field('txt_phone', $contact->ID) }}">{{ get_field('txt_phone', $contact->ID) }}</a></li>
-            @endif
-            @if(get_field('txt_fax', $contact->ID))
-              <li><a href="tel:{{ get_field('txt_fax', $contact->ID) }}">{{ get_field('txt_fax', $contact->ID) }}</a></li>
-            @endif
+            <li>
+              <h6 class="fw--700 mb--0@xs">{{ $contact->post_title }}</h6>
+              <ul class="list--unstyled mx--0@xs">
+                @if(get_field('txt_email', $contact->ID))
+                  <li><a href="mailto:{{ get_field('txt_email', $contact->ID) }}">{{ get_field('txt_email', $contact->ID) }}</a></li>
+                @endif
+                @if(get_field('txt_phone', $contact->ID))
+                  <li><a href="tel:{{ get_field('txt_phone', $contact->ID) }}">{{ get_field('txt_phone', $contact->ID) }}</a></li>
+                @endif
+                @if(get_field('txt_fax', $contact->ID))
+                  <li><a href="tel:{{ get_field('txt_fax', $contact->ID) }}">{{ get_field('txt_fax', $contact->ID) }}</a></li>
+                @endif
+              </ul>
+            </li>
+
             @if(get_field('txt_address', $contact->ID))
               <li>
                 <h6 class="fw--700 mb--0@xs">Mailing Address</h6>
