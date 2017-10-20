@@ -3,7 +3,7 @@
 @section('content')
 <header class="section --banner">
   <div class="__header">
-    <h1 class="__title">Search</h1>
+    <h1 class="__title">Search Results</h1>
   </div>
 </header>
 
@@ -22,7 +22,6 @@
             Sorry, no results were found for your search.
           </div>
         </div>
-        {!! get_search_form(false) !!}
       @endif
 
       <div class="list-group +indent">
@@ -34,5 +33,4 @@
     </div>
 </section>
 
-{!! get_the_posts_navigation() !!}
 @endsection
