@@ -10,6 +10,20 @@
             <label for="exampleText" class="sr--only">Search</label>
             <input name="s" type="search" class="form__control mt--2@xs" id="exampleText" aria-describedby="textHelp" placeholder="Search by keyword">
           </div>
+          <div class="form__group">
+            <div class="form__check form__check--inline">
+              <label class="form__check__label">
+                <input checked type="radio" name="opt" class="form__check__input">
+                &nbsp;All content
+              </label>
+            </div>
+            <div class="form__check form__check--inline">
+              <label class="form__check__label">
+                <input type="radio" name="opt" class="form__check__input">
+                &nbsp;Current Academic Catalog
+              </label>
+            </div>
+          </div>
         </form>
       </div>
     </div>
