@@ -108,7 +108,7 @@ let webpackConfig = {
         loader: 'url',
         options: {
           limit: 4096,
-          outputPath: 'fonts/',
+          outputPath: '/fonts/',
           name: `${config.cacheBusting}.[ext]`,
         },
       },
