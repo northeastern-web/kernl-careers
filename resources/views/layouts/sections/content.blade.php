@@ -4,35 +4,25 @@
 @while((have_rows('lay_content')))
   @php(the_row())
 
-  @if(get_row_layout() == 'lay_toggle')
+  @if(get_row_layout() == 'lay_accordion')
     <div
       id="component_{{ $i_component }}"
-      class="{{ strtolower(get_sub_field('opt_type')) }}"
+      class="accordion {{ strtolower(get_sub_field('opt_type')) }} {{ the_sub_field('txt_class') }}"
       data-acf="lay_toggle|opt_type">
 
       @while((have_rows('lay_items')))
         @php(the_row())
-
-        <div class="toggle-wrap" data-acf="lay_items">
-          <div
-            class="__title {{ ($j_component == 0 ? : 'collapsed') }}"
+        <div class="__item" data-acf="lay_items">
+          <div class="__title collapsed mb--0@xs"
             data-toggle="collapse"
             data-parent="#component_{{ $i_component }}"
             data-target="#toggle_{{ $j_component }}"
-            @if($j_component == 0)
-               aria-expanded="true"
-            @else
-              aria-expanded="false"
-            @endif
+            aria-expanded="false"
             data-acf="txt_title">
               {!! the_sub_field('txt_title') !!}
           </div>
 
-          <div
-            class="collapse {{ ($j_component == 0 ? 'show' : '') }}"
-            id="toggle_{{ $j_component }}"
-            data-acf="txt_copy">
-
+          <div class="collapse" id="toggle_{{ $j_component }}" data-acf="txt_copy">
               <div class="__copy">
                 {!! the_sub_field('txt_copy') !!}
               </div>
