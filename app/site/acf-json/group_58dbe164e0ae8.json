@@ -422,6 +422,25 @@
                                     "display": "block",
                                     "sub_fields": [
                                         {
+                                            "key": "field_59ee581d84b51",
+                                            "label": "Class",
+                                            "name": "txt_class",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
                                             "key": "field_58dbe6dc6d646",
                                             "label": "Add Accordion Items",
                                             "name": "lay_items",
@@ -518,20 +537,11 @@
     "hide_on_screen": [
         "the_content",
         "excerpt",
-        "custom_fields",
         "discussion",
         "comments",
-        "revisions",
-        "slug",
-        "author",
-        "format",
-        "page_attributes",
-        "featured_image",
-        "categories",
-        "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1508529273
+    "modified": 1508792367
 }
