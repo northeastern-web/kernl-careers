@@ -10,25 +10,25 @@
 
   {{-- +if not inside container --}}
   @if(get_sub_field('bool_banner') && !get_sub_field('bool_banner_contain'))
-  <div {{ Kernl\Layout::structure('banner', ['class' => '']) }} data-acf="bool_banner">
-  @endif
-  {{-- /if not inside container --}}
-
+    <section {{ Kernl\Layout::structure('banner', ['class' => 'section']) }} data-acf="bool_banner">
+  @else
     <section {{ Kernl\Layout::structure('section', ['class' => 'section']) }}
       id="section-{{ $i_section }}"
       data-section="{{ $i_section }}" data-acf="txt_class|etc">
+  @endif
 
-      @if(get_sub_field('bool_banner') && get_sub_field('bool_banner_contain'))<div {{ Kernl\Layout::structure('banner', ['class' => 'section']) }} data-acf="bool_banner">@endif
+      @if(get_sub_field('bool_banner') && get_sub_field('bool_banner_contain'))
+        <div {{ Kernl\Layout::structure('banner', ['class' => 'section']) }} data-acf="bool_banner">
+      @endif
 
         @include('layouts.sections.header')
         @include('layouts.sections.grid')
 
-      @if(get_sub_field('bool_banner') && get_sub_field('bool_banner_contain'))</div>@endif
-    </section>
+      @if(get_sub_field('bool_banner') && get_sub_field('bool_banner_contain'))
+        </div>
+      @endif
 
-  {{-- +if inside container --}}
-  @if(get_sub_field('bool_banner') && !get_sub_field('bool_banner_contain'))</div>@endif
-  {{-- /if inside container --}}
+    </section>
 
   @php($i_section++)
 @endwhile
