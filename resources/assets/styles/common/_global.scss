@@ -13,8 +13,6 @@
     padding-bottom: 1rem;
     border-bottom: 1px solid $gray-200;
   }
-
-  &.--header { background-color: $gray-dark; }
 }
 
 .list-group {
@@ -30,15 +28,17 @@
 }
 
 .\--article {
-  .header {
+  .--header {
     padding-top: 3rem;
     padding-bottom: 0;
 
-    .__title {
-      padding-bottom: 1.25rem;
-      border-bottom: 1px solid $gray-200;
-      font-weight: 700;
-      margin-bottom: 0;
+    > .__header {
+      .__title {
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid $gray-200;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
     }
   }
 
