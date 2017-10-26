@@ -12,7 +12,7 @@
     if (is_tax('type','form') || is_tax('audience','faculty-staff')) {
       $count = 20;
       $taxonomy = 'group';
-      $term_children = get_terms('group', ['parent' => 0, 'fields' => 'ids']);
+      $term_children = get_terms('group', ['parent' => 0, 'fields' => 'ids', 'exclude' => [18,]]);
       $segment = ['taxonomy' => $current_taxonomy, 'field' => 'term_id', 'terms' => $current_term];
     } else {
       $taxonomy = $current_taxonomy;
