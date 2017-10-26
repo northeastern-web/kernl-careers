@@ -6,20 +6,21 @@
     <div class="__content">
       <div class="__body">
         <form action="{{ home_url() }}" method="GET">
-          <div class="form__group">
-            <label for="exampleText" class="sr--only">Search</label>
-            <input name="s" type="search" class="form__control mt--2@xs" id="exampleText" aria-describedby="textHelp" placeholder="Search by keyword">
+          <div class="__group __search --dark +line mt--5@xs">
+            <label for="modalSearch" class="sr--only">Search</label>
+            <input name="s" type="search" id="modalSearch" class="__control" placeholder="Search by keyword" aria-describedby="modalSearch">
+            <button type="submit" class="btn">Go</button>
           </div>
-          <div class="form__group">
-            <div class="form__check form__check--inline">
-              <label class="form__check__label">
-                <input checked type="radio" name="opt" class="form__check__input">
+          <div class="__group">
+            <div class="__check __check--inline">
+              <label class="__check__label">
+                <input checked type="radio" name="opt" class="__check__input">
                 &nbsp;All content
               </label>
             </div>
-            <div class="form__check form__check--inline">
-              <label class="form__check__label">
-                <input type="radio" name="opt" class="form__check__input">
+            <div class="__check __check--inline">
+              <label class="__check__label">
+                <input type="radio" name="opt" class="__check__input">
                 &nbsp;Current Academic Catalog
               </label>
             </div>
