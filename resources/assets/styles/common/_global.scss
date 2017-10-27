@@ -2,10 +2,48 @@
 // For now, all registrar specific styling should go here :O
 //
 
-.bg--canvas { background: #f7f7f7; }
-
 .masthead {
   border-bottom: 1px solid $gray-400;
+
+  &.\--megamenu {
+    .\+children {
+      &:hover {
+        > .__link {
+          border-bottom-color: transparent;
+
+          &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-bottom: 25px solid $blue-dark;
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .__submenu {
+        background: $blue-dark;
+
+        &::before { border-top: none; }
+
+        .__item > a,
+        .__link {
+          color: #fff;
+
+          &:hover {
+            color: #fff !important;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }
 
 .section {
