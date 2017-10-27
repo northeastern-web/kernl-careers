@@ -15,10 +15,10 @@
                   <li><a href="mailto:{{ get_field('txt_email', $contact->ID) }}">{{ get_field('txt_email', $contact->ID) }}</a></li>
                 @endif
                 @if(get_field('txt_phone', $contact->ID))
-                  <li><a href="tel:{{ get_field('txt_phone', $contact->ID) }}">{{ get_field('txt_phone', $contact->ID) }}</a></li>
+                  <li>tel: <a href="tel:{{ get_field('txt_phone', $contact->ID) }}">{{ get_field('txt_phone', $contact->ID) }}</a></li>
                 @endif
                 @if(get_field('txt_fax', $contact->ID))
-                  <li><a href="tel:{{ get_field('txt_fax', $contact->ID) }}">{{ get_field('txt_fax', $contact->ID) }}</a></li>
+                  <li>fax: <a href="tel:{{ get_field('txt_fax', $contact->ID) }}">{{ get_field('txt_fax', $contact->ID) }}</a></li>
                 @endif
               </ul>
             </li>
