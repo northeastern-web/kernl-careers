@@ -763,12 +763,12 @@ caniuse-api@^2.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000187, caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000751"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000751.tgz#1919a40bc17e91d87c8c09869577c680f9f1befd"
+  version "1.0.30000752"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000752.tgz#daa129d54ce700e94ad14388bdef514ec1e2dd54"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000744, caniuse-lite@^1.0.30000748:
-  version "1.0.30000751"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000751.tgz#298ad34182ca4359757b4a93afc681b7b917e358"
+  version "1.0.30000752"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000752.tgz#0a79df520669d92ddc7f57406eed935948263130"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -3359,8 +3359,8 @@ jsbn@~0.1.0:
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
 
 jschardet@^1.4.2:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-1.5.1.tgz#c519f629f86b3a5bedba58a88d311309eec097f9"
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-1.6.0.tgz#c7d1a71edcff2839db2f9ec30fc5d5ebd3c1a678"
 
 jsdom@^6.5.1:
   version "6.5.1"
@@ -3464,7 +3464,7 @@ jxLoader@*:
 
 "kernl-ui@git+https://git@bitbucket.org/nupods/kernl-ui.git#develop":
   version "0.1.0"
-  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#79bb34a77a488c67cb3b7430a5e0e14be91f77e2"
+  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#9e7175688175841f59e90c75c67251652bbae70e"
   dependencies:
     feather-icons "^3.2.2"
     jquery "^3.0.0"
