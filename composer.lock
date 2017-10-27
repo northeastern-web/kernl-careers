@@ -305,7 +305,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.5.16",
+            "version": "v5.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -349,7 +349,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.5.16",
+            "version": "v5.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -393,7 +393,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.5.16",
+            "version": "v5.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -437,7 +437,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v5.5.16",
+            "version": "v5.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -482,7 +482,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.5.16",
+            "version": "v5.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -532,16 +532,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.5.16",
+            "version": "v5.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "0e5db373f0046151af5842c55fa87150267f9649"
+                "reference": "132b06edaab3808f63943004911d58785f164ab4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/0e5db373f0046151af5842c55fa87150267f9649",
-                "reference": "0e5db373f0046151af5842c55fa87150267f9649",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/132b06edaab3808f63943004911d58785f164ab4",
+                "reference": "132b06edaab3808f63943004911d58785f164ab4",
                 "shasum": ""
             },
             "require": {
@@ -585,20 +585,20 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2017-10-13T20:25:55+00:00"
+            "time": "2017-10-17T12:18:29+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v5.5.16",
+            "version": "v5.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "250a3ed348023299bfd4d0a68ea2ab55ff9e902b"
+                "reference": "9c5590c2752f1ca0b0e62f6bca7bdea781a4f3d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/250a3ed348023299bfd4d0a68ea2ab55ff9e902b",
-                "reference": "250a3ed348023299bfd4d0a68ea2ab55ff9e902b",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/9c5590c2752f1ca0b0e62f6bca7bdea781a4f3d2",
+                "reference": "9c5590c2752f1ca0b0e62f6bca7bdea781a4f3d2",
                 "shasum": ""
             },
             "require": {
@@ -633,7 +633,7 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "https://laravel.com",
-            "time": "2017-10-11T12:23:21+00:00"
+            "time": "2017-10-16T16:47:50+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -694,7 +694,7 @@
             "source": {
                 "type": "git",
                 "url": "https://nupods@bitbucket.org/nupods/kernl-lib.git",
-                "reference": "4a5254fc48bc6e35051e6f6e468d5898ce0733d0"
+                "reference": "8692a775426555cb449bbf40af29b05f8b652c71"
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "~3.0"
@@ -711,7 +711,7 @@
                 ]
             },
             "description": "Kernl(WP) support.",
-            "time": "2017-10-16 20:48:20"
+            "time": "2017-10-23 21:06:03"
         },
         {
             "name": "psr/container",
@@ -1068,16 +1068,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
-                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
                 "shasum": ""
             },
             "require": {
@@ -1089,7 +1089,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -1123,7 +1123,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-06-14T15:44:48+00:00"
+            "time": "2017-10-11T12:05:26+00:00"
         },
         {
             "name": "symfony/translation",
@@ -1249,7 +1249,7 @@
     "packages-dev": [
         {
             "name": "illuminate/console",
-            "version": "v5.5.16",
+            "version": "v5.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",

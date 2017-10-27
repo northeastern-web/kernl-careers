@@ -1,18 +1,10 @@
-<article {{ post_class('card') }}>
+<article {{ post_class('card --tile') }}>
   <a href="{{ the_permalink() }}" class="__link">
     <header class="__header">
       @if (get_the_category())
-        <div class="__column"><div class="badge --{{ (get_field('radio_color', 'category_'.get_the_category()[0]->term_id) ? get_field('radio_color', 'category_'.get_the_category()[0]->term_id) : 'transparent' ) }}">{{ get_the_category()[0]->name }}</div></div>
+        <div class="__column"><div class="badge badge--{{ (get_field('radio_color', 'category_'.get_the_category()[0]->term_id) ? get_field('radio_color', 'category_'.get_the_category()[0]->term_id) : 'transparent' ) }}">{{ get_the_category()[0]->name }}</div></div>
       @endif
     </header>
-
-    @if (has_post_thumbnail())
-      <div class="__graphic">
-        <img class="__graphic__img" alt="{{ the_title() }}"
-          src="{{ the_post_thumbnail_url('large') }}"
-          data-src="{{ the_post_thumbnail_url('large') }}">
-      </div>
-    @endif
 
     <section class="__body">
       <h2 class="__title">{{ the_title() }}</h2>

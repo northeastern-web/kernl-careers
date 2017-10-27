@@ -1,5 +1,5 @@
 @if(get_sub_field('rel_contact'))
-  <aside class="card +noshadow --extend">
+  <aside class="card +noshadow --extend --sticky">
     <div class="__header bg--gray-600 text--gray-100 tt--caps">
       <div class="__column">Contact Information</div>
     </div>

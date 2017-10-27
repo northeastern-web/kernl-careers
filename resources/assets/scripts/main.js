@@ -1,5 +1,7 @@
 // import external dependencies
 import 'jquery';
+import 'waypoints/lib/jquery.waypoints.min.js'
+import 'waypoints/lib/shortcuts/sticky.min.js'
 
 // Import everything from autoload
 import "./autoload/**/*"

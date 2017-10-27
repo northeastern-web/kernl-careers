@@ -1,1 +1,1 @@
-import 'kernl-ui';
+import 'kernl-ui'
