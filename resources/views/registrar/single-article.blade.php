@@ -27,7 +27,7 @@
           @endwhile
         </div>
 
-        <div class="col --12@xs --3@md">
+        <div class="col --12@xs --3@md" id="waypoint">
           @include('registrar.sidebar-article')
         </div>
       </div>
