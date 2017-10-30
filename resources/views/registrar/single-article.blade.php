@@ -34,5 +34,34 @@
     </section>
   @endwhile
 
-  <?php edit_post_link('Edit Page', '', ''); ?>
+  @if(get_field('select_status'))
+    @php ($status = the_field('select_status'))
+    @php ($status_class = '')
+  @else
+    @php ($status = '<i>!! Assign Status !!</i>')
+    @php ($status_class = '')
+  @endif
+
+  @switch($status_class)
+    @case($status == "Incomplete (needs editing)")
+      @php($status_class = '--incomplete')
+      @break
+
+    @case($status == "Complete (needs review)")
+      @php($status_class = '--complete')
+      @break
+
+    @case($status == "Finalized (no further review needed)")
+      @php($status_class = '--finalized')
+      @break
+
+    @default
+      @php($status_class = '--assign')
+  @endswitch
+
+  {{ edit_post_link(
+    '<span class="edit-status ' . $status_class . '"><b>Status</b>: ' . $status . '</span> Edit Page',
+    '',
+    '')
+  }}
 </article>
