@@ -34,7 +34,7 @@
     </div>
 
   @else
-    @if(is_page(470))
+    @if(is_page('all'))
       @include('all')
     @else
       <div class="__copy" data-acf="txt_copy">
