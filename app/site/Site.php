@@ -27,26 +27,14 @@ class Site
         });
 
         //
-        // order certain post types by title
-        // add_action('pre_get_posts' , function ($query) {
-        //     $post_types = ['article'];
-        //     $current_post_type = get_query_var('post_type');
-        //     if (is_admin() && in_array($current_post_type, $post_types)) {
-        //         $query->set('orderby', [
-        //             'title' => 'ASC'
-        //         ]);
+        // Filter to add articles to archives (taxonomies)
+        // add_filter('pre_get_posts', function ($query) {
+        //     $post_types = ['post', 'nav_menu_item', 'article'];
+        //     if ((is_archive() || is_search()) && !is_admin()) {
+        //         $query->set('post_type', $post_types);
+        //         return $query;
         //     }
         // });
-
-        //
-        // Filter to add articles to archives (taxonomies)
-        add_filter('pre_get_posts', function ($query) {
-            $post_types = ['post', 'nav_menu_item', 'article'];
-            if ((is_archive() || is_search()) && !is_admin()) {
-                $query->set('post_type', $post_types);
-                return $query;
-            }
-        });
 
     }
 
