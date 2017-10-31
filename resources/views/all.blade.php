@@ -31,9 +31,12 @@
         <thead>
           <tr class="th--sm">
             <th width="20%">Status</th>
-            <th width="35%">Title</th>
-            <th width="20%">Owner/Editor</th>
-            <th class="ta--c" width="15%">Related Assigned</th>
+            <th width="40%">Title</th>
+            <th>Owner/Editor</th>
+            <th class="ta--c">Related<br>Assigned</th>
+            <th class="ta--c">Contact<br>Assigned</th>
+            <th class="ta--c">Faculty/Staff</th>
+            <th class="ta--c">Is Form</th>
           </tr>
         </thead>
         <tbody>
