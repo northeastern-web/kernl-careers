@@ -30,9 +30,10 @@
       <table class="table --all">
         <thead>
           <tr class="th--sm">
-            <th width="25%">Status</th>
-            <th width="45%">Title</th>
-            <th width="30%">Owner/Editor</th>
+            <th width="20%">Status</th>
+            <th width="35%">Title</th>
+            <th width="20%">Owner/Editor</th>
+            <th class="ta--c" width="15%">Related Assigned</th>
           </tr>
         </thead>
         <tbody>

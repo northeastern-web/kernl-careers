@@ -89,21 +89,23 @@ span.edit-status {
 td.edit-status {
   position: relative;
   padding-left: 0.75rem;
-  border-left: 4px solid $gray-100;
+  border-left: 7px solid $gray-100;
+  color: rgba(0, 0, 0, 0.7);
 
   &.\--assign {
+    border-left-color: $gray-800;
+    background-color: rgba($blue, 0.1);
+    font-style: italic;
+  }
+
+  &.\--incomplete {
     border-left-color: $red;
     background-color: rgba($red, 0.05);
   }
 
-  &.\--incomplete {
+  &.\--complete {
     border-left-color: $orange;
     background-color: rgba($orange-light, 0.05);
-  }
-
-  &.\--complete {
-    border-left-color: $yellow-light;
-    background-color: rgba($yellow-light, 0.05);
   }
 
   &.\--finalized {
@@ -113,6 +115,11 @@ td.edit-status {
 }
 
 .--all {
+  th {
+    font-size: $fs-xs;
+    color: $gray;
+  }
+
   td { position: relative; }
 
   .__excerpt {
@@ -124,8 +131,7 @@ td.edit-status {
   .post-edit-link {
     position: absolute;
     right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0.85rem;
     height: auto;
     background: transparent;
     padding: 0;
@@ -139,6 +145,14 @@ td.edit-status {
     }
 
     &:hover { color: rgba($type-link, 1); }
+  }
+
+  .\--related {
+    i,
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
   }
 }
 
