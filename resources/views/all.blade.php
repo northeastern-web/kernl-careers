@@ -4,7 +4,7 @@
   $terms = get_terms( [ 
     'taxonomy' => $taxonomy,
     'hide_empty' => 1,
-    // 'parent'   => 0
+    'parent'   => 0
   ] );
 @endphp
 
@@ -27,12 +27,16 @@
         <h2>{{ $term->name }}</h2>
       </header>
 
-      <table class="table +striped">
+      <table class="table --all">
         <thead>
           <tr class="th--sm">
-            <th width="25%">Status</th>
-            <th width="45%">Title</th>
-            <th width="30%">Owner/Editor</th>
+            <th width="20%">Status</th>
+            <th width="40%">Title</th>
+            <th>Owner/Editor</th>
+            <th class="ta--c">Related<br>Assigned</th>
+            <th class="ta--c">Contact<br>Assigned</th>
+            <th class="ta--c">Faculty/Staff</th>
+            <th class="ta--c">Is Form</th>
           </tr>
         </thead>
         <tbody>
