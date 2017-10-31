@@ -1,5 +1,5 @@
-<tr>
-  <td class="fs--xs edit-status {{ \App\Site::articleStatus()[1] }}">
+<tr class="edit-status {{ \App\Site::articleStatus()[1] }}">
+  <td class="fs--xs">
     {{ \App\Site::articleStatus()[0] }}
   </td>
   <td class="pr--3@xs">
@@ -16,7 +16,7 @@
       {{ implode(', ', $user) }}
     @else
       <i>!! Assign Owner !!</i>
-    @endif          
+    @endif
   </td>
   <td class="ta--c --related">
     @if (get_field('rel_related'))
