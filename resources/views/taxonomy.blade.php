@@ -46,7 +46,7 @@
             @if ($q->have_posts())
               <section class="section px--0@xs" id="tax-{{ get_term_by('term_id', $term, $taxonomy)->slug }}">
                 <header class="__header --archive">
-                  <div class="f--r@xs fs--xs pt--1@xs">
+                  <div class="f--r@xs fs--xs tt--caps pt--1@xs">
                     <a href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">View All
                       <span class="__icon --right"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
                     </a>
