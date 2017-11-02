@@ -1,7 +1,9 @@
+<?php /** (Article Dashboard) */ ?>
+
 @php
   $taxonomy = 'group';
   $count = -1;
-  $terms = get_terms( [ 
+  $terms = get_terms( [
     'taxonomy' => $taxonomy,
     'hide_empty' => 1,
     'parent'   => 0
@@ -9,7 +11,7 @@
 @endphp
 
 @foreach($terms as $term)
-  @php 
+  @php
     $q = new \WP_Query([
       'post_type' => ['article'],
       'orderby' => 'menu_order title',
@@ -42,7 +44,7 @@
         <tbody>
           @while($q->have_posts())
             @php($q->the_post())
-            @include('registrar.all-table')
+            @include('registrar.dashboard-table')
           @endwhile @php(wp_reset_postdata())
         </tbody>
       </table>

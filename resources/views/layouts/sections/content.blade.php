@@ -34,13 +34,9 @@
     </div>
 
   @else
-    @if(is_page('all'))
-      @include('all')
-    @else
-      <div class="__copy" data-acf="txt_copy">
-        {!! the_sub_field('txt_copy') !!}
-      </div>
-    @endif
+    <div class="__copy" data-acf="txt_copy">
+      {!! the_sub_field('txt_copy') !!}
+    </div>
 
   @endif
   @php($i_component++)
