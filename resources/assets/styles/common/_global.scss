@@ -145,10 +145,16 @@ h3.\--popular {
 ul.\--popular {
   @extend .list--unstyled;
 
-  li {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 
-    @include type-sm();
+  li {
+    margin-bottom: 0.75rem;
+
+    @include mqbp_up(lg) {
+      margin-bottom: 0.5rem;
+
+      @include type-sm();
+    }
 
     &:last-child {
       margin-bottom: 0;
