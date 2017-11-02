@@ -93,12 +93,6 @@
   .tabcontent { background: #fff; }
 }
 
-.\--sticky {
-  position: -webkit-sticky;  // explicit declaration required for Safari
-  position: sticky;
-  top: 0;
-}
-
 // homepage hero
 
 .\--banner.\+bgimg.\--hero {
