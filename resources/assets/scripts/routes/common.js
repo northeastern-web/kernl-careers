@@ -6,6 +6,9 @@ export default {
       element: $('#waypoint')[0],
     })
 */
+    /*$('#modal_search').on('shown.bs.modal', function () {
+       $('#modalSearch').focus();
+    })*/
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
