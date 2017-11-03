@@ -1,0 +1,186 @@
+//
+// For now, all registrar specific styling should go here :O
+//
+
+.masthead {
+  border-bottom: 1px solid $gray-400;
+
+  &.\--megamenu {
+    .\+children {
+      &:hover {
+        > .__link {
+          border-bottom-color: transparent;
+
+          &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 20px solid $blue-dark;
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .__submenu {
+        background: $blue-dark;
+
+        &::before { border-top: none; }
+
+        .__item > a,
+        .__link {
+          color: #fff;
+
+          &:hover {
+            color: #fff !important;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section {
+  > .__header.\--archive {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $gray-200;
+  }
+}
+
+.list-group {
+  .__item {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+
+    &:hover {
+      background: $gray-100;
+      color: inherit;
+    }
+  }
+}
+
+.\--article {
+  .--header {
+    padding-top: 3rem;
+    padding-bottom: 0;
+
+    > .__header {
+      .__title {
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid $gray-200;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .alert {
+    &.\--note {
+      margin-bottom: 1.5rem;
+      .__body { padding: 1rem; }
+    }
+
+    &.\--note { background: rgba($yellow, 0.25); }
+    &.\--action { background: rgba($blue-light, 0.4); }
+  }
+
+  .tabcontent { background: #fff; }
+}
+
+// homepage hero
+.\--banner.\+bgimg.\--hero {
+  &::after {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .__search {
+    background-color: rgba(255, 255, 255, 0.8);
+
+    .__control { color: $type-color; }
+
+    .btn {
+      background: transparent;
+
+      &:hover {
+        color: $blue;
+        border-color: $blue;
+      }
+    }
+  }
+}
+
+h3.\--popular {
+  font-weight: bold;
+  margin: 1.5rem 0;
+  padding-bottom: 1rem;
+  width: auto;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: $blue;
+    width: 30%;
+    height: 3px;
+    border-radius: 2px;
+    bottom: 0;
+    left: 35%;
+    transform: translateY(-50%);
+  }
+}
+
+ul.\--popular {
+  @extend .list--unstyled;
+
+  margin-bottom: 0.75rem;
+
+  li {
+    margin-bottom: 0.75rem;
+
+    @include mqbp_up(lg) {
+      margin-bottom: 0.5rem;
+
+      @include type-sm();
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    position: relative;
+    padding: 0 1.25rem 1px 0;
+    color: #fff;
+    border-bottom: 2px solid rgba($blue, 0.1);
+    font-weight: bold;
+    border-radius: 1px;
+    transition: border-bottom-color 0.2s ease;
+
+    &::after {
+      position: absolute;
+      font-family: "feathericons";
+      content: "\e90d";
+      right: 5px;
+      bottom: 0; // keeps arrow at end when line wraps
+      font-size: $fs-xs;
+      color: rgba(255, 255, 255, 0.6);
+      transition: right 0.2s ease;
+    }
+
+    &:hover {
+      border-bottom-color: rgba($blue, 0.8);
+
+      &::after {
+        color: rgba(255, 255, 255, 1);
+        right: 4px;
+      }
+    }
+  }
+}
