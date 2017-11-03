@@ -78,7 +78,7 @@
 
       <div class="col --3@md --12@xs">
         @if ($term_children)
-          <aside class="card --extend tt--caps +noshadow">
+          <aside class="card --sticky --extend tt--caps +noshadow">
             <div class="__header bg--blue-dark text--gray-100">
               <div class="__column">Jump to Section</div>
             </div>

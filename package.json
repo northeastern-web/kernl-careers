@@ -152,7 +152,6 @@
     "build": "^0.1.4",
     "feather-icons": "^3.2.2",
     "jquery": "^3.2.0",
-    "kernl-ui": "git+https://git@bitbucket.org/nupods/kernl-ui.git#develop",
-    "waypoints": "^4.0.1"
+    "kernl-ui": "git+https://git@bitbucket.org/nupods/kernl-ui.git#develop"
   }
 }
