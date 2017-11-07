@@ -86,7 +86,8 @@
       .__body { padding: 1rem; }
     }
 
-    &.\--note { background: rgba($yellow, 0.25); }
+    // &.\--note { background: rgba($yellow, 0.25); }
+    &.\--note { background: $yellow-light; }
     &.\--action { background: rgba($blue-light, 0.4); }
   }
 
