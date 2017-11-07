@@ -1,6 +1,6 @@
 @php($i = 0)
 
-<div id="accordion" class="accordion my--2@xs">
+<div id="accordion" class="accordion my--2@xs +clear">
   @while((have_rows('lay_tab')))
     @php(the_row())
     <div class="__item">
