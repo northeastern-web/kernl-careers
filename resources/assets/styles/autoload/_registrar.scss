@@ -7,22 +7,29 @@
 
   &.\--megamenu {
     .\+children {
+      > .__link {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 0;
+          bottom: -5px;
+          left: 0;
+          right: 0;
+          border-left: 15px solid transparent;
+          border-right: 15px solid transparent;
+          border-bottom: 0 none rgba($blue-dark, 0);
+          margin: 0 auto;
+          transition: border-bottom 0.2s ease;
+        }
+      }
+
       &:hover {
         > .__link {
           border-bottom-color: transparent;
 
           &::before {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 30px solid transparent;
-            border-right: 30px solid transparent;
-            border-bottom: 20px solid $blue-dark;
-            position: absolute;
-            bottom: -14px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
+            border-bottom: 10px solid rgba($blue-dark, 1);
           }
         }
       }
@@ -86,8 +93,7 @@
       .__body { padding: 1rem; }
     }
 
-    // &.\--note { background: rgba($yellow, 0.25); }
-    &.\--note { background: $yellow-light; }
+    &.\--note { background: rgba($yellow, 0.25); }
     &.\--action { background: rgba($blue-light, 0.4); }
   }
 
