@@ -9,7 +9,7 @@
     <div class="col --8@sm --12@xs">
       <form action="{{ home_url() }}" method="GET" class="mb--2@xs">
         <div class="__group __search +line">
-          <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}">
+          <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
           <button type="submit" class="btn btn--primary">Go</button>
         </div>
         <small class="fs--xs text--gray-500"><b>Returning:</b> XYZ results</small>

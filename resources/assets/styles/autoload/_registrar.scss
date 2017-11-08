@@ -107,11 +107,17 @@
   .alert {
     &.\--note {
       margin-bottom: 1.5rem;
+      background: $yellow-light;
+
+      a {
+        color: inherit;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(#000, 0.25);
+      }
+
       .__body { padding: 1rem; }
     }
 
-    // &.\--note { background: rgba($yellow, 0.25); }
-    &.\--note { background: $yellow-light; }
     &.\--action { background: rgba($blue-light, 0.4); }
   }
 
