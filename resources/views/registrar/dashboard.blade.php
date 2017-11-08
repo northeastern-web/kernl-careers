@@ -1,5 +1,28 @@
 <?php /** (Article Dashboard) */ ?>
 
+@php
+  $all = new \WP_Query([
+    'post_type' => ['article'],
+    'posts_per_page' => -1
+  ]);
+  $incomplete = new \WP_Query([
+    'post_type' => ['article'],
+    'posts_per_page' => -1,
+    'meta_query' => [['key' => 'select_status', 'value' => 'edit', 'compare' => 'LIKE']]
+  ]);
+  $complete = new \WP_Query([
+    'post_type' => ['article'],
+    'posts_per_page' => -1,
+    'meta_query' => [['key' => 'select_status', 'value' => 'review', 'compare' => 'LIKE']]
+  ]);
+  $finalized = new \WP_Query([
+    'post_type' => ['article'],
+    'posts_per_page' => -1,
+    'meta_query' => [['key' => 'select_status', 'value' => 'final', 'compare' => 'LIKE']]
+  ]);
+@endphp
+
+
 <section class="section">
   <div class="row">
     <div class="col --12@xs --2@sm">
@@ -38,6 +61,36 @@
     </div>
 
     <div class="col --12@xs --10@sm">
+      <div class="row --nogutters mb--2@xs">
+        <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}%;">
+          <article class="alert --red">
+            <div class="__body">
+              <div class="__excerpt">
+                <p>{{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}% Incomplete</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($complete->posts) / count($all->posts) * 100)) }}%;">
+          <article class="alert --orange">
+            <div class="__body">
+              <div class="__excerpt">
+                <p>{{ floor(abs(count($complete->posts) / count($all->posts) * 100)) }}% Complete</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}%;">
+          <article class="alert --green">
+            <div class="__body">
+              <div class="__excerpt">
+                <p>{{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}% Finalized</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
       @php
         $terms = get_terms([
           'taxonomy' => 'group',
