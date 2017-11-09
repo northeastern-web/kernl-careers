@@ -62,12 +62,12 @@
 
     <div class="col --12@xs --10@sm">
       <div class="row --nogutters mb--2@xs">
-        <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}%;">
-          <article class="alert --red fs--xs">
+        <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}%;">
+          <article class="alert --green fs--xs">
             <div class="__body">
               <div class="__excerpt">
-                <b>{{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}% Incomplete</b>
-                <i>({{ count($incomplete->posts) }} articles)</i>
+                <b>{{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}% Finalized</b>
+                <i>({{ count($finalized->posts) }} articles)</i>
               </div>
             </div>
           </article>
@@ -82,12 +82,12 @@
             </div>
           </article>
         </div>
-        <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}%;">
-          <article class="alert --green fs--xs">
+        <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}%;">
+          <article class="alert --red fs--xs">
             <div class="__body">
               <div class="__excerpt">
-                <b>{{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}% Finalized</b>
-                <i>({{ count($finalized->posts) }} articles)</i>
+                <b>{{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}% Incomplete</b>
+                <i>({{ count($incomplete->posts) }} articles)</i>
               </div>
             </div>
           </article>
