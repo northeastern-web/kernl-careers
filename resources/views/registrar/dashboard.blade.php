@@ -63,31 +63,37 @@
     <div class="col --12@xs --10@sm">
       <div class="row --nogutters mb--2@xs">
         <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}%;">
-          <article class="alert --red">
+          <article class="alert --red fs--xs">
             <div class="__body">
               <div class="__excerpt">
-                <p>{{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}% Incomplete</p>
+                <b>{{ floor(abs(count($incomplete->posts) / count($all->posts) * 100)) }}% Incomplete</b>
+                <i>({{ count($incomplete->posts) }} articles)</i>
               </div>
             </div>
           </article>
         </div>
         <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($complete->posts) / count($all->posts) * 100)) }}%;">
-          <article class="alert --orange">
+          <article class="alert --orange fs--xs">
             <div class="__body">
               <div class="__excerpt">
-                <p>{{ floor(abs(count($complete->posts) / count($all->posts) * 100)) }}% Complete</p>
+                <b>{{ floor(abs(count($complete->posts) / count($all->posts) * 100)) }}% Complete</b>
+                <i>({{ count($complete->posts) }} articles)</i>
               </div>
             </div>
           </article>
         </div>
         <div class="col" style="overflow-x: hidden; white-space: nowrap; flex: 0 0 {{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}%;">
-          <article class="alert --green">
+          <article class="alert --green fs--xs">
             <div class="__body">
               <div class="__excerpt">
-                <p>{{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}% Finalized</p>
+                <b>{{ floor(abs(count($finalized->posts) / count($all->posts) * 100)) }}% Finalized</b>
+                <i>({{ count($finalized->posts) }} articles)</i>
               </div>
             </div>
           </article>
+        </div>
+        <div class="col">
+          <p class="ta--r@xs fs--xs"><i>{{ count($all->posts) }} total articles</i></p>
         </div>
       </div>
 
