@@ -1,7 +1,7 @@
 <?php /** (Dates) */ ?>
 
 <h3 class="fs--root tt--caps ta--c mb--1@xs mb--2@md --popular">Important Dates</h3>
-<div class="row --nogutters">
+<div class="row">
   <div class="col --3@md --12@xs">
     <div class="__copy">
       <article class="card --tile --outline +scroll">
