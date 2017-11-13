@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@php
+  global $wp_query;
+@endphp
 
 @section('content')
 <section class="section">
@@ -12,7 +15,7 @@
           <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
           <button type="submit" class="btn btn--primary">Go</button>
         </div>
-        <small class="fs--xs text--gray-500"><b>Returning:</b> XYZ results</small>
+        <small class="fs--xs text--gray-500"><b>Returning:</b> {{ $wp_query->found_posts }} results</small>
       </form>
 
       @if (!have_posts())
@@ -31,5 +34,4 @@
       </div>
     </div>
 </section>
-
 @endsection

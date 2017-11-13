@@ -1,5 +1,5 @@
 @if(get_field('rel_related'))
-  <aside class="card +noshadow --extend ">
+  <aside class="card +noshadow --extend">
     <div class="__header bg--gray-200 tt--caps">
       <div class="__column">Related Articles</div>
     </div>
