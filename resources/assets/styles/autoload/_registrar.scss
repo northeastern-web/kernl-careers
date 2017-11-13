@@ -3,7 +3,7 @@
 //
 
 .masthead {
-  border-bottom: 1px solid $gray-400;
+  border-bottom: 1px solid $gray-dark;
 
   &.\--megamenu {
     .\+children {
@@ -18,7 +18,8 @@
           right: 0;
           border-left: 15px solid transparent;
           border-right: 15px solid transparent;
-          border-bottom: 0 none rgba($blue-dark, 0);
+          // border-bottom: 0 none rgba($blue-dark, 0);
+          border-bottom: 0 none rgba($black, 0);
           margin: 0 auto;
           transition: border-bottom 0.2s ease;
         }
@@ -26,19 +27,26 @@
 
       &:hover {
         > .__link {
-          color: $blue-dark;
+          // color: $blue-dark;
+          color: $black;
           border-bottom-color: transparent;
 
           &::before {
-            border-bottom: 10px solid rgba($blue-dark, 1);
+            // border-bottom: 10px solid rgba($blue-dark, 1);
+            border-bottom: 10px solid rgba($black, 1);
           }
         }
       }
 
       .__submenu {
-        background: $blue-dark;
+        // background: $blue-dark;
+        background: $black;
 
-        &::before { border-top: none; }
+        &::before {
+          border-top: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          bottom: 0;
+        }
 
         .__item > a,
         .__link {
@@ -58,6 +66,8 @@
           border-bottom: 1px solid rgba(255, 255, 255, 0.3);
           border-radius: 0;
           text-decoration: none;
+          font-size: $fs-d1;
+          font-weight: 900;
           transition: border-bottom 0.2s ease;
 
           &:hover {
@@ -126,9 +136,9 @@
 
 // homepage hero
 .\--banner.\+bgimg.\--hero {
-  &::after {
-    background: rgba(0, 0, 0, 0.6);
-  }
+  border-bottom: 1px solid rgba(123, 123, 123, 0.7);
+
+  &::after { background: rgba(0, 0, 0, 0.6); }
 
   .__search {
     background-color: rgba(255, 255, 255, 0.8);
@@ -139,15 +149,17 @@
       background: transparent;
 
       &:hover {
-        color: $blue;
-        border-color: $blue;
+        // color: $blue;
+        // border-color: $blue;
+        color: $red;
+        border-color: $red;
       }
     }
   }
 }
 
 h3.\--popular {
-  font-weight: bold;
+  font-weight: 900;
   margin: 1.5rem 0;
   padding-bottom: 1rem;
   width: auto;
@@ -156,7 +168,7 @@ h3.\--popular {
   &::after {
     position: absolute;
     content: "";
-    background: $blue;
+    background: $red;
     width: 30%;
     height: 3px;
     border-radius: 2px;
@@ -189,7 +201,8 @@ ul.\--popular {
     position: relative;
     padding: 0 1.25rem 1px 0;
     color: #fff;
-    border-bottom: 2px solid rgba($blue, 0.1);
+    // border-bottom: 2px solid rgba($blue, 0.1);
+    border-bottom: 2px solid rgba($red, 0.1);
     font-weight: bold;
     border-radius: 1px;
     transition: border-bottom-color 0.2s ease;
@@ -206,12 +219,89 @@ ul.\--popular {
     }
 
     &:hover {
-      border-bottom-color: rgba($blue, 0.8);
+      // border-bottom-color: rgba($blue, 0.8);
+      border-bottom-color: rgba($red, 0.8);
 
       &::after {
         color: rgba(255, 255, 255, 1);
         right: 4px;
       }
     }
+  }
+}
+
+.\--services {
+  background-color: #f5f4f0 !important;
+
+  h2 a {
+    color: $type-color;
+    font-weight: 300;
+    padding-left: 2.5rem;
+    position: relative;
+
+    .__icon {
+      // display: none;
+      width: $fs-d4;
+      height: $fs-d4;
+      color: $red;
+      stroke-width: 1;
+      position: absolute;
+      left: 0;
+      top: 10%;
+    }
+  }
+
+  h3 { color: $type-color; }
+
+  .list-group {
+    a,
+    .__link {
+      color: $gray-dark;
+
+      &:hover { color: $red !important; }
+    }
+  }
+}
+
+.\--topics,
+.\--services {
+  a { color: $gray-dark; }
+
+  .__icon.\--lg {
+    height: $fs-d5;
+    width: $fs-d5;
+    stroke-width: 1;
+    color: $red;
+  }
+}
+
+@include mqbp_up(lg) {
+  .\--dates,
+  .\--services,
+  .\--topics {
+    padding-top: 3rem !important;
+    padding-bottom: 2rem !important;
+
+    h3 {
+      width: 33%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.\+line {
+  position: relative;
+  padding-left: 1.25rem;
+  color: $type-color;
+  font-weight: 300;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    top: 5%;
+    left: 0;
+    bottom: 5%;
+    background-color: $red;
   }
 }

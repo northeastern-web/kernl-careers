@@ -19,7 +19,7 @@
   <div class="col --12@xs --10@sm --offset-1@sm --5@md --4@lg --offset-2@lg --3@xl --offset-3@xl">
     <ul class="--popular">
       <li>
-        <a href="{{ home_url() }}/article/2017-2018-academic-catalog/">2017-2018 Catalog &amp; Course Descriptions</a>
+        <a href="{{ home_url() }}/article/registration-dates/">Registration Dates and Deadlines</a>
       </li>
       <li>
         <a href="{{ home_url() }}/article/combined-majors/">Combined Majors</a>
@@ -32,10 +32,10 @@
     <div class="col --12@xs --10@sm --offset-1@sm --5@md --offset-0@md --4@lg --3@lg">
       <ul class="--popular">
         <li>
-          <a href="{{ home_url() }}/article/add-a-class/">Add a Class</a>
+          <a href="{{ home_url() }}/article/2017-2018-academic-catalog/">2017-2018 Catalog &amp; Course Descriptions</a>
         </li>
         <li>
-          <a href="{{ home_url() }}/article/petition-to-elect-passfail-grade/">Petition to Elect Pass/Fail Grade</a>
+          <a href="{{ home_url() }}/article/add-a-class/">Add a Class</a>
         </li>
         <li>
           <a href="{{ home_url() }}/article/request-a-room/">Request a Room</a>
