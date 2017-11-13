@@ -1,95 +1,48 @@
 <?php /** (Dates) */ ?>
+@php
+  global $query_string;
+  $display = 'D, M d';
+@endphp
 
-<h3 class="fs--root tt--caps ta--c mb--1@xs mb--3@md --popular">Important Dates</h3>
+<h3 class="fs--root tt--caps ta--c mb--1@xs mb--2@md --popular">Important Dates</h3>
+
 <div class="row">
-  <div class="col --2@md --12@xs">
-    <div class="__copy +equal">
-      <article class="card --tile +noshadow">
-        <div class="__date fs--xs tt--caps fw--700">Mon, Nov 13</div>
-        <div class="__body pl--0@md pt--0@md">
-          <div class="__excerpt">
-            <h2 class="__title">First day of spring class registration for continuing students</h2>
-            <p class="fs--sm">Undergraduate</p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-  <div class="col --2@md --12@xs">
-    <div class="__copy +equal">
-      <article class="card --tile +noshadow">
-        <div class="__date fs--xs tt--caps fw--700">Mon, Nov 13</div>
-        <div class="__body pl--0@md pt--0@md">
-          <div class="__excerpt">
-            <h2 class="__title">Last day to drop a second-half fall session class without a W grade</h2>
-            <p class="fs--sm">CPS Undergraduate</p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
+  @if(have_rows('lay_calendar', $query_string['id']))
+    @while(have_rows('lay_calendar', $query_string['id']))
+      @php
+        the_row();
+        // date manipulation
+        $date = DateTime::createFromFormat('Ymd', get_sub_field('date'));
+        $today = date($display);
 
-  <div class="col --2@md --12@xs">
-    <div class="__copy +equal">
-      <article class="card --tile +noshadow">
-        <div class="__date fs--xs tt--caps fw--700">Sun, Nov 19</div>
-        <div class="__body pl--0@md pt--0@md">
-          <div class="__excerpt">
-            <h2 class="__title">First day of Thanksgiving recess (no classes)</h2>
-            <p class="fs--sm">CPS Graduate</p>
-          </div>
+        // audience
+        $audiences = array_reduce(get_sub_field('rel_audience'), function($carry, $item) {
+          $carry .= $item->name .', ';
+          return $carry;
+        });
+      @endphp
+      <div class="col --2@md --12@xs">
+        <div class="__copy +equal">
+          <article class="card --tile +noshadow">
+            <div class="__date fs--xs tt--caps fw--700">{{ $date->format($display) }}</div>
+            <div class="__body pl--0@md pt--0@md">
+              <div class="__excerpt">
+                <h2 class="__title">{{ get_sub_field('txt_title') }}</h2>
+                <p class="fs--sm">
+                    {{ rtrim($audiences, ', ') }}
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
-      </article>
-    </div>
-  </div>
+      </div>
+    @endwhile
+  @endif
 
-  <div class="col --2@md --12@xs">
-    <div class="__copy +equal">
-      <article class="card --tile +noshadow">
-        <div class="__date fs--xs tt--caps fw--700"><b>Sun, Nov 22</b></div>
-        <div class="__body pl--0@md pt--0@md">
-          <div class="__excerpt">
-            <h2 class="__title">First day of Thanksgiving recess (no classes)</h2>
-            <p class="fs--sm">Undergraduate, Graduate, CPS Graduate</p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="col --2@md --12@xs">
-    <div class="__copy +equal">
-      <article class="card --tile +noshadow">
-        <div class="__date fs--xs tt--caps fw--700">Mon, Nov 27</div>
-        <div class="__body pl--0@md pt--0@md">
-          <div class="__excerpt">
-            <h2 class="__title">Classes Resume</h2>
-            <p class="fs--sm">All Students</p>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="col --2@md --12@xs">
-    <div class="__copy +equal">
-      <article class="card --tile +noshadow">
-        <div class="__date fs--xs tt--caps fw--700">Mon, Nov 27</div>
-        <div class="__body pl--0@md pt--0@md">
-          <div class="__excerpt">
-            <h2 class="__title">Classes Resume</h2>
-            <p class="fs--sm">All Students</p>
-
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="col --12@xs" data-col="5" data-acf="opt_column">
+  <div class="col --12@xs">
     <div class="__copy">
       <p class="ta--c fs--sm">
-        <a class="btn --sm" href="//localhost:3000/article/academic-year-2017-2018-current/">See All Dates</a>
+        <a class="btn --sm" href="{{ get_permalink($query_string['id']) }}">See All Dates</a>
       </p>
     </div>
   </div>
