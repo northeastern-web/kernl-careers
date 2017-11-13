@@ -1,11 +1,11 @@
 <?php /** (Services) */ ?>
 
-<h3 class="fs--root tt--caps ta--c mb--1@xs mb--2@md --popular">Registrar Services</h3>
+<h3 class="fs--root tt--caps ta--c mb--1@xs mb--3@md --popular">Registrar Services</h3>
 <div class="row">
   <div class="col --6@md --12@xs">
     <div class="__copy">
       <h2><a href="#"><i class="__icon" data-feather="copy"></i>Academic Catalog</a></h2>
-      <div class="list-group +indent mb--3@md">
+      <div class="list-group +indent mb--4@md">
         <a class="__item" href="/article/2017-2018-academic-catalog/">
           <h6 class="mb--0@xs">2017-2018 Catalog &amp; Course Descriptions</h6>
           <div class="text--gray-600 fs--xs">
@@ -30,7 +30,7 @@
   <div class="col --6@md --12@xs">
     <div class="__copy">
       <h2><a href="#"><i class="__icon" data-feather="layers"></i> Registration &amp; Classes</a></h2>
-      <div class="list-group +indent mb--3@md">
+      <div class="list-group +indent mb--4@md">
         <a class="__item" href="/article/registration-dates/">
           <h6 class="mb--0@xs">Registration Dates and Deadlines</h6>
           <div class="text--gray-600 fs--xs">

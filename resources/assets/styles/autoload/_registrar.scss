@@ -18,7 +18,6 @@
           right: 0;
           border-left: 15px solid transparent;
           border-right: 15px solid transparent;
-          // border-bottom: 0 none rgba($blue-dark, 0);
           border-bottom: 0 none rgba($black, 0);
           margin: 0 auto;
           transition: border-bottom 0.2s ease;
@@ -27,19 +26,16 @@
 
       &:hover {
         > .__link {
-          // color: $blue-dark;
           color: $black;
           border-bottom-color: transparent;
 
           &::before {
-            // border-bottom: 10px solid rgba($blue-dark, 1);
             border-bottom: 10px solid rgba($black, 1);
           }
         }
       }
 
       .__submenu {
-        // background: $blue-dark;
         background: $black;
 
         &::before {
@@ -149,10 +145,9 @@
       background: transparent;
 
       &:hover {
-        // color: $blue;
-        // border-color: $blue;
-        color: $red;
-        border-color: $red;
+        color: #fff;
+        border-color: transparent;
+        background: rgba($type-color, 0.9);
       }
     }
   }
@@ -187,21 +182,16 @@ ul.\--popular {
     margin-bottom: 0.75rem;
 
     @include mqbp_up(lg) {
-      margin-bottom: 0.5rem;
-
       @include type-sm();
     }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+    &:last-child { margin-bottom: 0; }
   }
 
   a {
     position: relative;
     padding: 0 1.25rem 1px 0;
     color: #fff;
-    // border-bottom: 2px solid rgba($blue, 0.1);
     border-bottom: 2px solid rgba($red, 0.1);
     font-weight: bold;
     border-radius: 1px;
@@ -219,7 +209,6 @@ ul.\--popular {
     }
 
     &:hover {
-      // border-bottom-color: rgba($blue, 0.8);
       border-bottom-color: rgba($red, 0.8);
 
       &::after {
@@ -240,7 +229,6 @@ ul.\--popular {
     position: relative;
 
     .__icon {
-      // display: none;
       width: $fs-d4;
       height: $fs-d4;
       color: $red;
@@ -279,29 +267,65 @@ ul.\--popular {
   .\--dates,
   .\--services,
   .\--topics {
-    padding-top: 3rem !important;
-    padding-bottom: 2rem !important;
-
     h3 {
       width: 33%;
       margin: 0 auto;
     }
   }
+
+  .\--dates {
+    .card.\--tile {
+      height: auto !important;
+
+      .__date {
+        padding-bottom: 0.75rem;
+        margin-bottom: 1rem;
+        position: relative;
+        color: $gray-700;
+        border-bottom: 1px solid $gray-200;
+        width: 92%;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 1.75rem;
+          height: 3px;
+          background-color: $red;
+          bottom: -3px;
+          left: 0;
+        }
+      }
+
+      .__body { padding-bottom: 1rem; }
+
+      .__title { font-size: $fs-sm; }
+
+      &:last-child { border-right: 0 none; }
+    }
+  }
 }
 
-.\+line {
+.__title.\+line {
   position: relative;
   padding-left: 1.25rem;
   color: $type-color;
-  font-weight: 300;
+  font-weight: 300 !important;
 
   &::before {
     position: absolute;
     content: "";
     width: 4px;
-    top: 5%;
+    top: 14%;
     left: 0;
     bottom: 5%;
     background-color: $red;
+  }
+}
+
+.inline-break {
+  display: inline;
+
+  @include mqbp_up(md) {
+    display: block;
   }
 }
