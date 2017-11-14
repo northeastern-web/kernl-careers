@@ -12,35 +12,19 @@
 </div>
 <div class="row">
   <div class="col --12@xs --10@sm --offset-1@sm --6@md --offset-3@md --4@lg --offset-4@lg">
-    <h3 class="ta--c tt--caps fs--root --popular">Trending Searches</h3>
+    <h3 class="ta--c tt--caps fs--root --popular">Trending Articles</h3>
   </div>
 </div>
+
 <div class="row">
-  <div class="col --12@xs --10@sm --offset-1@sm --5@md --4@lg --offset-2@lg --3@xl --offset-3@xl">
+  <div class="col --12@xs --10@sm --offset-1@sm --6@md --offset-3@md">
     <ul class="--popular">
-      <li>
-        <a href="{{ home_url() }}/article/registration-dates/">Registration Dates and Deadlines</a>
-      </li>
-      <li>
-        <a href="{{ home_url() }}/article/combined-majors/">Combined Majors</a>
-      </li>
-      <li>
-        <a href="{{ home_url() }}/article/university-withdrawal/">University Withdrawal</a>
-      </li>
+      @while(have_rows('lay_trending','option'))
+        @php(the_row())
+        <li>
+          <a href="{{ get_permalink(get_sub_field('rel_article')->ID) }}">{{ get_sub_field('txt_title') }}</a>
+        </li>
+      @endwhile
     </ul>
-    </div>
-    <div class="col --12@xs --10@sm --offset-1@sm --5@md --offset-0@md --4@lg --3@lg">
-      <ul class="--popular">
-        <li>
-          <a href="{{ home_url() }}/article/2017-2018-academic-catalog/">2017-2018 Catalog &amp; Course Descriptions</a>
-        </li>
-        <li>
-          <a href="{{ home_url() }}/article/add-a-class/">Add a Class</a>
-        </li>
-        <li>
-          <a href="{{ home_url() }}/article/request-a-room/">Request a Room</a>
-        </li>
-      </ul>
-    </div>
   </div>
 </div>

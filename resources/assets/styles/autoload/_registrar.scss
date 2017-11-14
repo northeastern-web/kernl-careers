@@ -177,6 +177,7 @@ ul.\--popular {
   @extend .list--unstyled;
 
   margin-bottom: 0.75rem;
+  column-count: 2;
 
   li {
     margin-bottom: 0.75rem;
