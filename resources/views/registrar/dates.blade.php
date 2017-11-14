@@ -1,4 +1,5 @@
 <?php /** (Dates) */ ?>
+
 @php
   global $query_string;
   $display = 'D, M d';
@@ -8,6 +9,10 @@
 
 <div class="row">
   @if(have_rows('lay_calendar', $query_string['id']))
+    @php
+      $date_count = 1;
+    @endphp
+
     @while(have_rows('lay_calendar', $query_string['id']))
       @php
         the_row();
@@ -21,21 +26,25 @@
           return $carry;
         });
       @endphp
-      <div class="col --2@md --12@xs">
-        <div class="__copy +equal">
-          <article class="card --tile +noshadow">
-            <div class="__date fs--xs tt--caps fw--700">{{ $date->format($display) }}</div>
-            <div class="__body pl--0@md pt--0@md">
-              <div class="__excerpt">
-                <h2 class="__title">{{ get_sub_field('txt_title') }}</h2>
-                <p class="fs--sm">
+
+      @if($date->format('Ymd') >= date('Ymd') && $date_count <= 6 )
+        <div class="col --2@md --12@xs +equal">
+          <div class="__copy">
+            <article class="card --tile +noshadow">
+              <div class="__date fs--xs tt--caps fw--700">{{ $date->format($display) }}</div>
+              <div class="__body pl--0@md pt--0@md">
+                <div class="__excerpt">
+                  <h2 class="__title">{{ get_sub_field('txt_title') }}</h2>
+                  <p class="fs--sm">
                     {{ rtrim($audiences, ', ') }}
-                </p>
+                  </p>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
-      </div>
+        @php($date_count++)
+      @endif
     @endwhile
   @endif
 

@@ -49,7 +49,7 @@
                   <h2 class="__title +line">
                     {{ get_term_by('term_id', $term, $taxonomy)->name }}
 
-                    @if($q->found_posts > 5)
+                    @if($q->found_posts > $count)
                       <span class="fs--xs">
                         (<a class="text--red fw--700" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">View {{ $q->found_posts }} Articles</a>)
                       </span>

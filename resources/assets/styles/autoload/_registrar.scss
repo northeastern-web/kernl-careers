@@ -303,6 +303,8 @@ ul.\--popular {
 
       &:last-child { border-right: 0 none; }
     }
+
+    .row .row { overflow-x: scroll; }
   }
 }
 
