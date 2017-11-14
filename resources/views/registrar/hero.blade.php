@@ -12,7 +12,7 @@
 </div>
 <div class="row">
   <div class="col --12@xs --10@sm --offset-1@sm --6@md --offset-3@md --4@lg --offset-4@lg">
-    <h3 class="ta--c tt--caps fs--root --popular">Trending Articles</h3>
+    <h3 class="ta--c tt--caps fs--root --popular">Popular Articles</h3>
   </div>
 </div>
 
