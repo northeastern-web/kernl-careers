@@ -46,12 +46,15 @@
             @if ($q->have_posts())
               <section class="section px--0@xs" id="tax-{{ get_term_by('term_id', $term, $taxonomy)->slug }}">
                 <header class="__header --archive">
-                  <div class="f--r@xs fs--xs tt--caps pt--1@xs">
-                    <a class="text--red" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">View All
-                      <span class="__icon --right"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg></span>
-                    </a>
-                  </div>
-                  <h2 class="__title +line">{{ get_term_by('term_id', $term, $taxonomy)->name }}</h2>
+                  <h2 class="__title +line">
+                    {{ get_term_by('term_id', $term, $taxonomy)->name }}
+
+                    @if($q->found_posts > 5)
+                      <span class="fs--xs">
+                        (<a class="text--red fw--700" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">View {{ $q->found_posts }} Articles</a>)
+                      </span>
+                    @endif
+                  </h2>
                 </header>
 
                 <div class="list-group +indent">
