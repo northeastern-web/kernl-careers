@@ -6,6 +6,21 @@
   border-bottom: 1px solid $gray-dark;
 
   &.\--megamenu {
+    #masthead-primary {
+      > .__item {
+        > a,
+        > .__link {
+          font-weight: 700;
+          color: $gray-800;
+        }
+
+        &:hover {
+          > a,
+          > .__link { color: $red !important; }
+        }
+      }
+    }
+
     .\+children {
       > .__link {
         &::before {
@@ -32,6 +47,10 @@
           &::before {
             border-bottom: 10px solid rgba($black, 1);
           }
+        }
+
+        .__submenu {
+          > .\--feature { background-color: rgba(255, 255, 255, 0.15); }
         }
       }
 
@@ -64,16 +83,57 @@
           text-decoration: none;
           font-size: $fs-d1;
           font-weight: 900;
-          transition: border-bottom 0.2s ease;
+          color: rgba(255, 255, 255, 0.85);
+          transition:
+            border-bottom 0.2s ease,
+            color 0.2s ease;
+
+          &::after {
+            font-family: "feathericons";
+            content: "\e922";
+            position: absolute;
+            top: 1px;
+            right: auto;
+            margin-left: 0.25rem;
+            vertical-align: middle;
+            font-size: $fs-d1;
+            line-height: 1.2;
+            color: rgba(255, 255, 255, 0.1);
+            transition: color 0.2s ease;
+          }
 
           &:hover {
+            color: rgba(255, 255, 255, 1);
             text-decoration: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+            &::after { color: rgba(255, 255, 255, 0.7); }
           }
         }
       }
     }
   }
+/* 
+  .\--utility {
+    a,
+    .__link {
+      color: $red;
+    }
+
+    .__item {
+      &:hover {
+        a,
+        .__link {
+          color: $type-color;
+        }
+      }
+
+      &.\--active {
+        > a,
+        > .__link { color: $red; }
+      }
+    }
+  } */
 }
 
 .section {
@@ -222,12 +282,54 @@ ul.\--popular {
   }
 }
 
+.\--dates {
+  .card.\--tile {
+    height: auto !important;
+    min-height: 0;
+    flex-basis: 14rem;
+    max-width: 14rem;
+
+    .__date {
+      padding-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      position: relative;
+      color: $gray-700;
+      border-bottom: 1px solid $gray-200;
+      width: 92%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1.75rem;
+        height: 3px;
+        background-color: $red;
+        bottom: -3px;
+        left: 0;
+      }
+    }
+
+    .__body { padding-bottom: 1rem; }
+
+    .__title { font-size: $fs-sm; }
+
+    &:last-child { border-right: 0 none; }
+  }
+
+  .row .row { overflow-x: scroll; }
+
+  .overflow {
+    width: 200%;
+  }
+}
+
 .\--services {
   h2 a {
     color: $type-color;
     font-weight: 300;
     padding-left: 2.5rem;
     position: relative;
+
+    &:hover { color: $red; }
 
     .__icon {
       width: $fs-d4;
@@ -249,6 +351,10 @@ ul.\--popular {
 
       &:hover { color: $red !important; }
     }
+  }
+
+  .\--more {
+    &:hover { text-decoration: underline; }
   }
 }
 
@@ -272,39 +378,6 @@ ul.\--popular {
       width: 33%;
       margin: 0 auto;
     }
-  }
-
-  .\--dates {
-    .card.\--tile {
-      height: auto !important;
-
-      .__date {
-        padding-bottom: 0.75rem;
-        margin-bottom: 1rem;
-        position: relative;
-        color: $gray-700;
-        border-bottom: 1px solid $gray-200;
-        width: 92%;
-
-        &::after {
-          content: "";
-          position: absolute;
-          width: 1.75rem;
-          height: 3px;
-          background-color: $red;
-          bottom: -3px;
-          left: 0;
-        }
-      }
-
-      .__body { padding-bottom: 1rem; }
-
-      .__title { font-size: $fs-sm; }
-
-      &:last-child { border-right: 0 none; }
-    }
-
-    .row .row { overflow-x: scroll; }
   }
 }
 

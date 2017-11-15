@@ -2,10 +2,10 @@
 
 <h3 class="fs--root tt--caps ta--c mb--1@xs mb--3@md --popular">Registrar Services</h3>
 <div class="row">
-  <div class="col --6@md --12@xs">
+  <div class="col --6@md --12@xs mb--3@xs mb--4@md">
     <div class="__copy">
-      <h2><a href="#"><i class="__icon" data-feather="copy"></i>Academic Catalog</a></h2>
-      <div class="list-group +indent mb--4@md">
+      <h2><a href="#"><i class="__icon" data-feather="layers"></i>Academic Catalog</a></h2>
+      <div class="list-group mb--0@xs +indent">
         <a class="__item" href="<?= home_url(); ?>/article/2017-2018-academic-catalog/">
           <h6 class="mb--0@xs">2017-2018 Catalog &amp; Course Descriptions</h6>
           <div class="text--gray-600 fs--xs">
@@ -25,12 +25,13 @@
           </div>
         </a>
       </div>
+      <a class="--more fs--xs text--red tt--caps" href="#">View More in Academic Catalog »</a>
     </div>
   </div>
-  <div class="col --6@md --12@xs">
+  <div class="col --6@md --12@xs mb--3@xs mb--4@md">
     <div class="__copy">
-      <h2><a href="#"><i class="__icon" data-feather="layers"></i> Registration &amp; Classes</a></h2>
-      <div class="list-group +indent mb--4@md">
+      <h2><a href="#"><i class="__icon" data-feather="book"></i> Registration &amp; Classes</a></h2>
+      <div class="list-group mb--0@xs +indent">
         <a class="__item" href="<?= home_url(); ?>/article/registration-dates/">
           <h6 class="mb--0@xs">Registration Dates and Deadlines</h6>
           <div class="text--gray-600 fs--xs">
@@ -50,12 +51,13 @@
           </div>
         </a>
       </div>
+      <a class="--more fs--xs text--red tt--caps" href="#">View More in Registration &amp; Classes »</a>
     </div>
   </div>
-  <div class="col --6@md --12@xs">
+  <div class="col --6@md --12@xs mb--3@xs mb--0@md">
     <div class="__copy">
-      <h2><a href="#"><i class="__icon" data-feather="book"></i>Academic Records</a></h2>
-      <div class="list-group +indent">
+      <h2><a href="#"><i class="__icon" data-feather="folder"></i>Academic Records</a></h2>
+      <div class="list-group mb--0@xs +indent">
         <a class="__item" href="<?= home_url(); ?>/article/transcript-requests/">
           <h6 class="mb--0@xs">Transcript Requests</h6>
           <div class="text--gray-600 fs--xs">
@@ -75,12 +77,13 @@
           </div>
         </a>
       </div>
+      <a class="--more fs--xs text--red tt--caps" href="#">View More in Academic Records »</a>
     </div>
   </div>
-  <div class="col --6@md --12@xs">
+  <div class="col --6@md --12@xs mb--3@xs mb--0@md">
     <div class="__copy">
-      <h2><a href="#"><i class="__icon" data-feather="calendar"></i> Faculty &amp; Staff</a></h2>
-      <div class="list-group +indent">
+      <h2><a href="#"><i class="__icon" data-feather="users"></i> Faculty &amp; Staff</a></h2>
+      <div class="list-group mb--0@xs +indent">
         <a class="__item" href="<?= home_url(); ?>/article/fact/">
           <h6 class="mb--0@xs">Faculty-Advisor Communication Tool (FACT)</h6>
           <div class="text--gray-600 fs--xs">
@@ -100,6 +103,7 @@
           </div>
         </a>
       </div>
+      <a class="--more fs--xs text--red tt--caps" href="#">View More in Faculty &amp; Staff »</a>
     </div>
   </div>
 </div>
