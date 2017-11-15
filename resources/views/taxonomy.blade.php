@@ -46,7 +46,10 @@
             @if ($q->have_posts())
               <section class="section px--0@xs" id="tax-{{ get_term_by('term_id', $term, $taxonomy)->slug }}">
                 <header class="__header --archive">
-                  <h2 class="__title +line">
+                  <h2 class="__title">
+                    @if(get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)))
+                      <i class="__icon" data-feather="{{ get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)) }}"></i>
+                    @endif
                     {{ get_term_by('term_id', $term, $taxonomy)->name }}
 
                     @if($q->found_posts > $count)
@@ -94,6 +97,12 @@
                 </div>
               </div>
             </div>
+          </aside>
+        @endif
+
+        @if(get_field('txt_ad', get_queried_object()))
+          <aside>
+            {!! get_field('txt_ad', get_queried_object()) !!}
           </aside>
         @endif
       </div>
