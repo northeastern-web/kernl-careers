@@ -51,7 +51,7 @@
   <div class="col --12@xs">
     <div class="__copy">
       <p class="ta--c fs--sm">
-        <a class="btn --sm" href="{{ get_permalink($query_string['id']) }}">View Full Calendar</a>
+        <a class="btn" href="{{ get_permalink($query_string['id']) }}">View Current Calendar</a>
       </p>
     </div>
   </div>
