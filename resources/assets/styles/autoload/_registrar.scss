@@ -283,11 +283,25 @@ ul.\--popular {
 }
 
 .\--dates {
+  .row .row {
+    width: 100%;
+    overflow-x: scroll;
+
+    .overflow {
+      display: flex;
+      width: 200%;
+    }
+
+    .\--2\@md { max-width: 13.25rem; }
+  }
+
   .card.\--tile {
     height: auto !important;
     min-height: 0;
-    flex-basis: 14rem;
-    max-width: 14rem;
+
+    @include mqbp_up(md) {
+      margin-bottom: 10px;
+    }
 
     .__date {
       padding-bottom: 0.75rem;
@@ -313,12 +327,6 @@ ul.\--popular {
     .__title { font-size: $fs-sm; }
 
     &:last-child { border-right: 0 none; }
-  }
-
-  .row .row { overflow-x: scroll; }
-
-  .overflow {
-    width: 200%;
   }
 }
 

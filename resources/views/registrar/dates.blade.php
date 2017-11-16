@@ -8,7 +8,7 @@
 <h3 class="fs--root tt--caps ta--c mb--1@xs mb--2@md --popular">Important Dates</h3>
 
 <div class="row">
-  {{-- <div class="overflow"> --}}
+  <div class="overflow">
   @if(have_rows('lay_calendar', $query_string['id']))
     @php
       $date_count = 0;
@@ -28,8 +28,8 @@
         });
       @endphp
 
-      @if($date->format('Ymd') >= date('Ymd') && $date_count <= 5 )
-        <div class="col --2@md --12@xs +equal">
+      @if($date->format('Ymd') >= date('Ymd') && $date_count <= 11 )
+        <div class="col --2@md --12@xs">
           <article class="card --tile +noshadow">
             <div class="__date fs--xs tt--caps fw--700">{{ $date->format($display) }}</div>
             <div class="__body pl--0@xs pt--0@xs">
@@ -46,12 +46,9 @@
       @endif
     @endwhile
   @endif
-  {{-- </div> --}}
-  <div class="col --12@xs">
-    <div class="__copy">
-      <p class="ta--c fs--sm">
-        <a class="btn" href="{{ get_permalink($query_string['id']) }}">Current Calendar</a>
-      </p>
-    </div>
   </div>
 </div>
+
+<p class="ta--c fs--sm mt--1@xs mb--0@xs">
+  <a class="btn" href="{{ get_permalink($query_string['id']) }}">Current Calendar</a>
+</p>
