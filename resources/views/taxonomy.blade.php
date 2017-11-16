@@ -55,9 +55,7 @@
                     {{ get_term_by('term_id', $term, $taxonomy)->name }}
 
                     @if($q->found_posts > $count)
-                      <span class="fs--xs">
-                        <i><a class="text--red" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">View {{ $q->found_posts }} Articles</a></i>
-                      </span>
+                      <a class="btn --red --outline --xs f--r@xs mt--1@xs" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">View {{ $q->found_posts }} Articles</a>
                     @endif
                   </h2>
                 </header>
