@@ -7,6 +7,7 @@
     $current_term_children = get_term_children($current_term->term_id, $current_taxonomy);
     $type = get_query_var('type');
     $segment = '';
+    $orderby = 'menu_order title';
     $count = 5;
 
     if (is_tax('type','form') || is_tax('audience','faculty-staff')) {
@@ -14,6 +15,7 @@
       $taxonomy = 'group';
       $term_children = get_terms('group', ['parent' => 0, 'fields' => 'ids', 'exclude' => [18]]);
       $segment = ['taxonomy' => $current_taxonomy, 'field' => 'term_id', 'terms' => $current_term];
+      $orderby = 'title';
     } else {
       $taxonomy = $current_taxonomy;
       $term_children = $current_term_children;
@@ -33,7 +35,7 @@
           @foreach ($term_children as $term)
             @php
               $q = new \WP_Query([
-                'orderby' => 'menu_order title',
+                'orderby' => $orderby,
                 'order' => 'ASC',
                 'posts_per_page' => $count,
                 'tax_query' => [
