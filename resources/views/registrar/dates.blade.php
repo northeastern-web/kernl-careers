@@ -3,17 +3,13 @@
 @php
   global $query_string;
   $display = 'D, M d';
+  $date_count = 0;
 @endphp
 
 <h3 class="fs--root tt--caps ta--c mb--1@xs mb--2@md --popular">Important Dates</h3>
-
 <div class="row">
   <div class="overflow">
   @if(have_rows('lay_calendar', $query_string['id']))
-    @php
-      $date_count = 0;
-    @endphp
-
     @while(have_rows('lay_calendar', $query_string['id']))
       @php
         the_row();
