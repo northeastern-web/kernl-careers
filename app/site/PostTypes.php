@@ -19,7 +19,7 @@ class PostTypes
                 'has_archive'           => true,
                 'rewrite'               => ['slug' => 'article'],
                 'supports'              => ['title', 'excerpt'],
-                'taxonomies'            => [],
+                'taxonomies'            => ['post_tag'],
                 'hierarchical'          => true,
                 'show_ui'               => true,
                 'show_in_menu'          => true,
