@@ -48,11 +48,13 @@
             @if ($q->have_posts())
               <section class="section px--0@xs" id="tax-{{ get_term_by('term_id', $term, $taxonomy)->slug }}">
                 <header class="__header --archive">
-                  <h2 class="__title">
-                    @if(get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)))
-                      <i class="__icon" data-feather="{{ get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)) }}"></i>
-                    @endif
-                    {{ get_term_by('term_id', $term, $taxonomy)->name }}
+                  <h2 class="__title{{ get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)) ? ' +icon' : '' }}">
+                    <a class="__link" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">
+                      @if(get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)))
+                        <i class="__icon" data-feather="{{ get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)) }}"></i> 
+                      @endif
+                      {{ get_term_by('term_id', $term, $taxonomy)->name }}
+                    </a>
 
                     @if($q->found_posts > $count)
                       <a class="btn --red --outline --xs f--r@xs mt--1@xs" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">View {{ $q->found_posts }} Articles</a>

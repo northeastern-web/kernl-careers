@@ -1,10 +1,14 @@
 <?php /** (Services) */ ?>
 
 <h3 class="fs--root tt--caps ta--c mb--1@xs mb--3@md --popular">Registrar Services</h3>
-<div class="row">
+<div class="row --archive">
   <div class="col --6@md --12@xs mb--3@xs mb--4@md">
     <div class="__copy">
-      <h2><a href="#"><i class="__icon" data-feather="layers"></i>Academic Catalog</a></h2>
+      <h2 class="__title +icon">
+        <a class="__link" href="<?= home_url(); ?>/group/catalog/">
+          <i class="__icon" data-feather="layers"></i> Academic Catalog
+        </a>
+      </h2>
       <div class="list-group mb--0@xs +indent">
         <a class="__item" href="<?= home_url(); ?>/article/2017-2018-academic-catalog/">
           <h6 class="mb--0@xs">2017-2018 Catalog &amp; Course Descriptions</h6>
@@ -30,7 +34,11 @@
   </div>
   <div class="col --6@md --12@xs mb--3@xs mb--4@md">
     <div class="__copy">
-      <h2><a href="#"><i class="__icon" data-feather="book"></i> Registration &amp; Classes</a></h2>
+      <h2 class="__title +icon">
+        <a class="__link" href="<?= home_url(); ?>/group/registration-classes/">
+          <i class="__icon" data-feather="book"></i> Registration &amp; Classes
+        </a>
+      </h2>
       <div class="list-group mb--0@xs +indent">
         <a class="__item" href="<?= home_url(); ?>/article/registration-dates/">
           <h6 class="mb--0@xs">Registration Dates and Deadlines</h6>
@@ -56,7 +64,11 @@
   </div>
   <div class="col --6@md --12@xs mb--3@xs mb--0@md">
     <div class="__copy">
-      <h2><a href="#"><i class="__icon" data-feather="folder"></i>Academic Records</a></h2>
+      <h2 class="__title +icon">
+        <a class="__link" href="<?= home_url(); ?>/group/academic-records/">
+          <i class="__icon" data-feather="folder"></i> Academic Records
+        </a>
+      </h2>
       <div class="list-group mb--0@xs +indent">
         <a class="__item" href="<?= home_url(); ?>/article/transcript-requests/">
           <h6 class="mb--0@xs">Transcript Requests</h6>
@@ -82,7 +94,11 @@
   </div>
   <div class="col --6@md --12@xs mb--3@xs mb--0@md">
     <div class="__copy">
-      <h2><a href="#"><i class="__icon" data-feather="users"></i> Faculty &amp; Staff</a></h2>
+      <h2 class="__title +icon">
+        <a class="__link" href="<?= home_url(); ?>/audience/faculty-staff/">
+          <i class="__icon" data-feather="users"></i> Faculty &amp; Staff
+        </a>
+      </h2>
       <div class="list-group mb--0@xs +indent">
         <a class="__item" href="<?= home_url(); ?>/article/fact/">
           <h6 class="mb--0@xs">Faculty-Advisor Communication Tool (FACT)</h6>

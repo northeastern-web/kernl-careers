@@ -330,11 +330,10 @@ ul.\--popular {
   }
 }
 
-.\--services {
-  h2 a {
-    color: $type-color;
+.\--archive .__title {
+  .__link {
+    color: $gray-dark;
     font-weight: 300;
-    padding-left: 2.5rem;
     position: relative;
 
     &:hover { color: $red; }
@@ -348,6 +347,10 @@ ul.\--popular {
       left: 0;
       top: 10%;
     }
+  }
+
+  &.\+icon {
+    .__link { padding-left: 2.5rem; }
   }
 
   h3 { color: $type-color; }
@@ -366,8 +369,7 @@ ul.\--popular {
   }
 }
 
-.\--topics,
-.\--services {
+.\--topics {
   a { color: $gray-dark; }
 
   .__icon.\--lg {

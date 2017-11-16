@@ -963,7 +963,7 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.12",
+            "version": "v3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -1019,7 +1019,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.3.12",
+            "version": "v3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -1127,7 +1127,7 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v3.3.12",
+            "version": "v3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
@@ -1192,7 +1192,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.3.12",
+            "version": "v3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -1299,16 +1299,16 @@
         },
         {
             "name": "roots/sage-installer",
-            "version": "1.3.1",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/sage-installer.git",
-                "reference": "dca019cfa6f1f2cb2e155dfc6574829b80c689b7"
+                "reference": "b6d941d49dd6730b0e1bc428638611d51ebce7d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/sage-installer/zipball/dca019cfa6f1f2cb2e155dfc6574829b80c689b7",
-                "reference": "dca019cfa6f1f2cb2e155dfc6574829b80c689b7",
+                "url": "https://api.github.com/repos/roots/sage-installer/zipball/b6d941d49dd6730b0e1bc428638611d51ebce7d0",
+                "reference": "b6d941d49dd6730b0e1bc428638611d51ebce7d0",
                 "shasum": ""
             },
             "require": {
@@ -1344,7 +1344,7 @@
                     "homepage": "https://github.com/qwp6t"
                 }
             ],
-            "description": "Sage installer.",
+            "description": "Sage starter theme installer",
             "keywords": [
                 "FontAwesome",
                 "bootstrap",
@@ -1354,7 +1354,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2017-08-12T00:16:45+00:00"
+            "time": "2017-11-13T22:09:50+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1436,16 +1436,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.12",
+            "version": "v3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "099302cc53e57cbb7414fd9f3ace40e5e2767c0b"
+                "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/099302cc53e57cbb7414fd9f3ace40e5e2767c0b",
-                "reference": "099302cc53e57cbb7414fd9f3ace40e5e2767c0b",
+                "url": "https://api.github.com/repos/symfony/console/zipball/63cd7960a0a522c3537f6326706d7f3b8de65805",
+                "reference": "63cd7960a0a522c3537f6326706d7f3b8de65805",
                 "shasum": ""
             },
             "require": {
@@ -1500,11 +1500,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-12T16:53:41+00:00"
+            "time": "2017-11-16T15:24:32+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v3.3.12",
+            "version": "v3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
