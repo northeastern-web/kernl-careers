@@ -33,6 +33,7 @@
       </div>
     </section>
   @endwhile
+
   {{ edit_post_link(
     __('<span class="edit-status ' . \App\Site::articleStatus()[1] . '"><b>Status</b>: ' . \App\Site::articleStatus()[0] . '</span> Edit Page','textdomain'),
     '',

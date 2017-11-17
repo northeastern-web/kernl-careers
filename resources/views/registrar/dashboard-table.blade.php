@@ -26,11 +26,18 @@
     @endif
   </td>
   <td class="ta--c --related">
-    @if (get_sub_field('rel_contact'))
-      <i class="text--green-dark" data-feather="check"></i>
-    @else
-      <i class="text--red-light" data-feather="x"></i>
-    @endif
+    @php($i = 0)
+    @while((have_rows('lay_section')))
+      @php(the_row())
+      @if(get_row_layout() == 'lay_basic' && $i == 0)
+        @if(get_sub_field('rel_contact'))
+          <i class="text--green-dark" data-feather="check"></i>
+        @else
+          <i class="text--red-light" data-feather="x"></i>
+        @endif
+      @endif
+      @php($i++)
+    @endwhile
   </td>
   <td class="ta--c --related">
     @if (has_term('faculty-staff','audience'))
