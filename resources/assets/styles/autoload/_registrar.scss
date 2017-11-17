@@ -114,26 +114,12 @@
     }
   }
 
-  /* .\--utility {
+  .\--utility {
     a,
     .__link {
-      color: $red;
+      color: rgba($type-color, 0.9);
     }
-
-    .__item {
-      &:hover {
-        a,
-        .__link {
-          color: $type-color;
-        }
-      }
-
-      &.\--active {
-        > a,
-        > .__link { color: $red; }
-      }
-    }
-  } */
+  }
 }
 
 .section {
@@ -346,6 +332,7 @@ ul.\--popular {
       position: absolute;
       left: 0;
       top: 10%;
+      z-index: 1;
     }
   }
 
@@ -377,6 +364,7 @@ ul.\--popular {
     width: $fs-d5;
     stroke-width: 1;
     color: $red;
+    z-index: 1;
   }
 }
 
