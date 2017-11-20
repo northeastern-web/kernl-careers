@@ -5,13 +5,15 @@
   $taxonomy = (isset($query_string['taxonomy']) ? $query_string['taxonomy'] : 'group');
   $term = (isset($query_string['term']) ? $query_string['term'] : 'catalog');
   $count = (isset($query_string['count']) ? $query_string['count'] : 3);
+
+  $term = get_term_by('slug', $term, $taxonomy)->term_id;
   $q = new \WP_Query([
     'post_type' => 'article',
     'orderby' => 'menu_order title',
     'order' => 'ASC',
     'posts_per_page' => $count,
     'tax_query' => [
-      ['taxonomy' => $taxonomy, 'field' => 'slug', 'terms' => $term]
+      ['taxonomy' => $taxonomy, 'field' => 'term_id', 'terms' => $term]
     ]
   ]);
 @endphp
