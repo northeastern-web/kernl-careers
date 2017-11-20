@@ -51,7 +51,6 @@ let webpackConfig = {
       },
       {
         test: /\.js$/,
-        exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
         use: [
           { loader: 'cache' },
           { loader: 'buble', options: { objectAssign: 'Object.assign' } },
@@ -112,16 +111,6 @@ let webpackConfig = {
           name: `${config.cacheBusting}.[ext]`,
         },
       },
-    ],
-    loaders: [
-      {
-        test: /\.js$/,
-        loader: 'babel',
-        query: {
-          cacheDirectory: true,
-          presets: ['es2015'],
-        }
-      }
     ],
   },
   resolve: {
