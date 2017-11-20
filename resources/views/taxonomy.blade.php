@@ -93,7 +93,7 @@
         @if ($term_children)
           <aside class="card --sticky --extend tt--caps +noshadow">
             <div class="__header bg--gray-dark text--gray-100">
-              <div class="__column">Jump to Section</div>
+              <div class="__column">On this page</div>
             </div>
             <div class="__body py--0@xs">
               <div class="__excerpt">
