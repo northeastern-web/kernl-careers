@@ -32,6 +32,11 @@
           @include('registrar.list-item')
         @endwhile @php(wp_reset_postdata())
       </div>
+
+      <div class="py--2@xs">
+        <?= \Kernl\Pagination::display(); ?>
+      </div>
     </div>
+  </div>
 </section>
 @endsection
