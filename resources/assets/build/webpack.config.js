@@ -113,6 +113,16 @@ let webpackConfig = {
         },
       },
     ],
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        query: {
+          cacheDirectory: true,
+          presets: ['es2015'],
+        }
+      }
+    ],
   },
   resolve: {
     modules: [
