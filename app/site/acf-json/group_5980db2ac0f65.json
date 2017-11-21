@@ -178,7 +178,7 @@
                             },
                             "collapsed": "field_59a97d36bae06",
                             "min": 1,
-                            "max": 5,
+                            "max": 50,
                             "layout": "block",
                             "button_label": "Add Tab",
                             "sub_fields": [
@@ -253,7 +253,7 @@
                 }
             },
             "button_label": "Add Section",
-            "min": 0,
+            "min": 1,
             "max": 3
         }
     ],
@@ -276,5 +276,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1508181965
+    "modified": 1511280717
 }
