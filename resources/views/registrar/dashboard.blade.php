@@ -35,16 +35,16 @@
           <li class="__item +children">
             <a class="__link" href="#">Status</a>
             <ul class="__list --child">
-              <li class="__item {{ ($_GET['status'] == 'edit' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('status', 'edit')) }}">Incomplete</a></li>
-              <li class="__item {{ ($_GET['status'] == 'review' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('status', 'review')) }}">Complete</a></li>
-              <li class="__item {{ ($_GET['status'] == 'final' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('status', 'final')) }}">Finalized</a></li>
+              <li class="__item {{ (isset($_GET['status']) && $_GET['status'] == 'edit' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('status', 'edit')) }}">Incomplete</a></li>
+              <li class="__item {{ (isset($_GET['status']) && $_GET['status'] == 'review' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('status', 'review')) }}">Complete</a></li>
+              <li class="__item {{ (isset($_GET['status']) && $_GET['status'] == 'final' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('status', 'final')) }}">Finalized</a></li>
             </ul>
           </li>
           <li class="__item +children">
             <a class="__link" href="#">Owner/Editor</a>
             <ul class="__list --child">
               @foreach(get_users(['exclude' => [1,2]]) as $u)
-                <li class="__item {{ ($_GET['user'] == $u->ID ? '--active' : '') }}">
+                <li class="__item {{ (isset($_GET['user']) && $_GET['user'] == $u->ID ? '--active' : '') }}">
                   <a class="__link" href="{{ esc_url(add_query_arg('user', $u->ID)) }}">{{ $u->user_login }}</a></li>
               @endforeach
             </ul>
@@ -52,8 +52,8 @@
           <li class="__item +children">
             <a class="__link" href="#">Misc</a>
             <ul class="__list --child">
-              <li class="__item {{ ($_GET['audience'] == 'faculty-staff' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('audience', 'faculty-staff')) }}">Faculty/Staff</a></li>
-              <li class="__item {{ ($_GET['type'] == 'form' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('type', 'form')) }}">Form</a></li>
+              <li class="__item {{ (isset($_GET['audience']) && $_GET['audience'] == 'faculty-staff' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('audience', 'faculty-staff')) }}">Faculty/Staff</a></li>
+              <li class="__item {{ (isset($_GET['type']) && $_GET['type'] == 'form' ? '--active' : '') }}"><a class="__link" href="{{ esc_url(add_query_arg('type', 'form')) }}">Form</a></li>
             </ul>
           </li>
         </ul>
