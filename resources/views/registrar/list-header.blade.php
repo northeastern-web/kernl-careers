@@ -1,5 +1,5 @@
 <header class="__header --archive mb--1@xs">
-  <h2 class="__title{{ get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)) ? ' +icon' : '' }}">
+  <h2 class="__title{{ get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)) ? ' +icon' : '' }} +oh--x">
     <a class="__link mr--1@xs" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">
       @if(get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)))
         <i class="__icon --thin text--red" data-feather="{{ get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)) }}"></i>

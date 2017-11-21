@@ -8,7 +8,7 @@
   <nav class="__drawer" role="navigation">
     <div class="clearfix hidden--up@lg">
       <a class="__logo" href="{{ home_url('/') }}" data-ga-click="Mobile Drawer Logo">
-        <img class="__logo__image" src="<?= get_field('med_logo_white'); ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
+        <img class="__logo__image" src="<?= get_field('med_logo_white','option'); ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
       </a>
       <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
     </div>
