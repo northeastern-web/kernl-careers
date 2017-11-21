@@ -31,7 +31,7 @@
 
   <div class="section">
     <div class="row">
-      <div class="col --9@md --12@xs">
+      <div class="col --12@xs --8@md --9@lg">
         @if(isset($_GET['type']) || isset($_GET['audience']))
           <div class="alert --btn --yellow">
             <div class="__body">
@@ -89,7 +89,7 @@
         @endif
       </div>
 
-      <div class="col --3@md --12@xs pl--3@md">
+      <div class="col --12@xs --4@md --3@lg pl--3@md">
         @if ($term_children)
           <aside class="card --sticky --extend tt--caps +noshadow">
             <div class="__header bg--gray-dark text--gray-100">

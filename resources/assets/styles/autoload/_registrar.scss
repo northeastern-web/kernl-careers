@@ -128,6 +128,21 @@
   }
 }
 
+.modal .__search {
+  &.\--dark {
+    &::before { color: rgba(255, 255, 255, 0.3); }
+  }
+
+  > .__control {
+    padding-bottom: 0;
+    border-bottom: 0 none;
+
+    @include mqbp_up(md) {
+      padding-bottom: 0.25rem;
+    }
+  }
+}
+
 .section {
   > .__header.\--archive {
     padding-bottom: 1rem;
@@ -147,7 +162,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      width: 100%;
+      width: 96%;
     }
 
     &:hover {

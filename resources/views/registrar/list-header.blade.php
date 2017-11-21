@@ -1,4 +1,4 @@
-<header class="__header --archive mb--1@xs">
+<header class="__header --archive">
   <h2 class="__title{{ get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)) ? ' +icon' : '' }} +oh--x">
     <a class="__link mr--1@xs" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">
       @if(get_field('txt_icon', get_term_by('term_id', $term, $taxonomy)))
