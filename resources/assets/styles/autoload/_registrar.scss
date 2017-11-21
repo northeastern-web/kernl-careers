@@ -2,6 +2,11 @@
 // For now, all registrar specific styling should go here :O
 //
 
+body { background-color: $gray-dark; }
+
+.masthead,
+main { background-color: #fff; }
+
 .masthead {
   border-bottom: 1px solid $gray-dark;
 
@@ -448,5 +453,13 @@ ul.\--popular {
 
   @include mqbp_up(md) {
     display: block;
+  }
+}
+
+@include mqbp_up(xx) {
+  body {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-width: 1700px;
   }
 }
