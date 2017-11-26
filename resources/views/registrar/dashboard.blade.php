@@ -13,12 +13,12 @@
   $complete = new \WP_Query([
     'post_type' => ['article'],
     'posts_per_page' => -1,
-    'meta_query' => [['key' => 'select_status', 'value' => 'review', 'compare' => 'LIKE']]
+    'meta_query' => [['key' => 'select_status', 'value' => 'needs review', 'compare' => 'LIKE']]
   ]);
   $finalized = new \WP_Query([
     'post_type' => ['article'],
     'posts_per_page' => -1,
-    'meta_query' => [['key' => 'select_status', 'value' => 'final', 'compare' => 'LIKE']]
+    'meta_query' => [['key' => 'select_status', 'value' => 'no further', 'compare' => 'LIKE']]
   ]);
 @endphp
 
