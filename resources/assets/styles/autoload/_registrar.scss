@@ -87,6 +87,31 @@ main { background-color: #fff; }
             }
           }
 
+          .btn {
+            background: none;
+            margin: 0;
+            padding: 0;
+            border: 0 none;
+
+            > a,
+            > .__link {
+              font-size: $fs-xs;
+              background: transparent;
+              border: 1px solid rgba(255, 255, 255, 0.5);
+              margin-top: 0.5rem;
+              padding: 0.125rem 0.25rem !important;
+              transition:
+                color 0.2s ease,
+                background 0.2s ease;
+
+              &:hover {
+                background: rgba(255, 255, 255, 0.9) !important;
+                color: $type-color !important;
+                text-decoration: none;
+              }
+            }
+          }
+
           .\--heading {
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 0;
@@ -321,7 +346,6 @@ ul.\--popular {
 
 .\--dates {
   .row .row {
-    width: 100%;
     overflow-x: scroll;
 
     .overflow {
@@ -330,6 +354,26 @@ ul.\--popular {
     }
 
     .\--2\@md { max-width: 13.25rem; }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 2rem;
+      height: 100%;
+      z-index: 1;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 55%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 55%);
+    }
   }
 
   .card.\--tile {
