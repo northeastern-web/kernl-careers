@@ -32,7 +32,7 @@
               <div class="__excerpt">
                 <h2 class="__title">{{ get_sub_field('txt_title') }}</h2>
                 <p class="fs--sm">
-                  {{ rtrim($audiences, ', ') }}
+                  {{ (rtrim($audiences, ', ') == 'Students') ? 'All Students' : rtrim($audiences, ', ') }}
                 </p>
               </div>
             </div>
@@ -48,5 +48,5 @@
 <p class="ta--c fs--sm mt--1@xs mb--0@xs">
   <a class="btn" href="{{ get_permalink($query_string['id']) }}">Current Calendar</a>
 </p>
-<p class="ta--c fs--xs mt--1@xs text--gray-500 mb--0@xs"><i>* See complete calendar for semester-specific details.</i></p>
+<p class="ta--c fs--xs text--gray-500 mt--1@xs mb--0@xs"><i>* See complete calendar for semester-specific details.</i></p>
 
