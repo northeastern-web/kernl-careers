@@ -1,10 +1,11 @@
 @php($i = 0)
 
+{{-- https://www.w3.org/TR/wai-aria-practices/#accordion --}}
 <div id="accordion" class="accordion my--2@xs +clear">
   @while((have_rows('lay_tab')))
     @php(the_row())
     <div class="__item">
-      <div class="__title collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#accordion_{{ $i }}" aria-expanded="false">{{ the_sub_field('txt_title') }}</div>
+      <div class="__title collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#accordion_{{ $i }}" role="button" aria-expanded="false">{{ the_sub_field('txt_title') }}</div>
       <div class="collapse" id="accordion_{{ $i }}">
         <div class="__copy +clearfix pr--1@xs">
           @include('registrar.alert')

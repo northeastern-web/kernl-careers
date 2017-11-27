@@ -18,6 +18,8 @@
 
     @include('components.modal-search')
 
+    @include('components.feedback')
+
     @php(do_action('get_footer'))
     @include('layouts.chrome.footer')
     @php(wp_footer())
