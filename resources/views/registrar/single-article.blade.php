@@ -40,5 +40,7 @@
     ''
   ) }}
 
-  <a class="all-articles-link" href="{{ home_url('/all') }}">All Articles</a>
+  @if (is_user_logged_in())
+    <a class="all-articles-link" href="{{ home_url('/all') }}">All Articles</a>
+  @endif
 </article>
