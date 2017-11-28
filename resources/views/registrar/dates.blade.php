@@ -48,5 +48,5 @@
 <p class="ta--c fs--sm mt--1@xs mb--0@xs">
   <a class="btn" href="{{ get_permalink($query_string['id']) }}">Current Calendar</a>
 </p>
-<p class="ta--c fs--xs text--gray-500 mt--1@xs mb--0@xs"><i>* See complete calendar for semester-specific details.</i></p>
+<p class="ta--c fs--xs text--gray-600 mt--1@xs mb--0@xs"><i>* See complete calendar for semester-specific details.</i></p>
 

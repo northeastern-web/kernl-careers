@@ -1,4 +1,4 @@
-<div class="modal fade --dark --search" id="modal_search" tabindex="-1" role="dialog" aria-labelledby="modal_search_label" aria-hidden="true">
+<div class="modal fade --dark --search" id="modal_search" tabindex="-1" role="dialog" aria-labelledby="modalSearch" aria-hidden="true">
   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -11,16 +11,17 @@
             <input name="s" type="search" id="modalSearch" class="__control" placeholder="Search by keyword" aria-describedby="modalSearch" autocomplete="off">
             <button type="submit" class="btn">Go</button>
           </div>
-          <div class="__group">
+          <div class="__group" role="radiogroup" aria-labelledby="searchOptions">
+            <div id="searchOptions" class="sr--only">Search Options</div>
             <div class="__check __check--inline">
-              <label class="__check__label">
-                <input checked type="radio" name="opt" class="__check__input">
+              <label for="optAll" class="__check__label">
+                <input checked type="radio" name="opt" class="__check__input" id="optAll" aria-checked="true">
                 &nbsp;All content
               </label>
             </div>
             <div class="__check __check--inline">
-              <label class="__check__label">
-                <input type="radio" name="opt" class="__check__input">
+              <label for="optCatalog" class="__check__label">
+                <input type="radio" name="opt" class="__check__input" id="optCatalog" aria-checked="false">
                 &nbsp;Current Academic Catalog
               </label>
             </div>

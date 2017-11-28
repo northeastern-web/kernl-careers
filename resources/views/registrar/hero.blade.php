@@ -4,7 +4,7 @@
   <div class="col --12@xs --10@sm --offset-1@sm --8@md --offset-2@md --6@lg --offset-3@lg">
     <form action="" method="GET">
       <div class="__group __search">
-        <input class="__control" name="s" type="text" placeholder="Search by keyword" autocomplete="off" />
+        <input class="__control" name="s" type="text" placeholder="Search by keyword" autocomplete="off" aria-label="Search" />
         <button class="btn btn--primary" type="submit">Go</button>
       </div>
     </form>

@@ -163,18 +163,24 @@ main { background-color: #fff; }
   }
 }
 
-.modal .__search {
-  &.\--dark {
-    &::before { color: rgba(255, 255, 255, 0.3); }
+.modal {
+  .__search {
+    &.\--dark {
+      &::before { color: rgba(255, 255, 255, 0.3); }
+    }
+
+    > .__control {
+      padding-bottom: 0;
+      border-bottom: 0 none;
+
+      @include mqbp_up(md) {
+        padding-bottom: 0.25rem;
+      }
+    }
   }
 
-  > .__control {
-    padding-bottom: 0;
-    border-bottom: 0 none;
-
-    @include mqbp_up(md) {
-      padding-bottom: 0.25rem;
-    }
+  &.\--search {
+    .__group .__check__label { color: $gray-400 !important; }
   }
 }
 

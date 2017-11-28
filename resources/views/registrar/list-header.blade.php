@@ -9,7 +9,7 @@
     </a>
 
     @if($q->found_posts > $count)
-      <a class="btn --gray-500 --outline --xs" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">{{ $q->found_posts }} Articles</a>
+      <a class="btn --gray-600 --outline --xs" href="{{ get_term_link(get_term_by('term_id', $term, $taxonomy)) }}">{{ $q->found_posts }} Articles</a>
     @endif
   </h2>
 </header>
