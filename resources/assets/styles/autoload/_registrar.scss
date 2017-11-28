@@ -505,9 +505,17 @@ ul.\--popular {
   }
 }
 
-.--feedback {
+.btn.\--feedback {
   position: fixed;
   bottom: 0.5rem;
   right: 0.75rem;
   z-index: 4000;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+
+  .__icon {
+    top: 3px;
+    left: -2px;
+    width: 16px;
+    height: 16px;
+  }
 }
