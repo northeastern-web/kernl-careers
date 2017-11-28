@@ -22,7 +22,9 @@
       @while(have_rows('lay_trending','option'))
         @php(the_row())
         <li>
-          <a href="{{ get_permalink(get_sub_field('rel_article')->ID) }}">{{ get_sub_field('txt_title') }}</a>
+          <a href="{{ (get_sub_field('opt_type') == 'Article' ?
+            get_permalink(get_sub_field('rel_article')->ID) :
+            get_sub_field('txt_url')) }}">{{ get_sub_field('txt_title') }}</a>
         </li>
       @endwhile
     </ul>
