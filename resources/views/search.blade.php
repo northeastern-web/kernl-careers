@@ -56,6 +56,11 @@
                     </ul>
                   </li>
                   <li>Try using the navigation (above)</li>
+                  <li>Some general terms are ignored.
+                    <ul class="list--unstyled">
+                      <li><small><i>e.g.</i>, "registrar", "northeastern", etc.</small></li>
+                    </ul>
+                  </li>
                   <li>If all else fails, <a class="text--red" href="{{ home_url() }}/contact/">contact us</a>!</li>
                 </ul>
               </div>

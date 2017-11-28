@@ -5,8 +5,10 @@
   @while((have_rows('lay_tab')))
     @php(the_row())
     <div class="__item">
-      <div class="__title collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#accordion_{{ $i }}" role="button" aria-expanded="false">{{ the_sub_field('txt_title') }}</div>
-      <div class="collapse" id="accordion_{{ $i }}">
+      <div class="__title collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#accordion_{{ $i }}" role="header" aria-expanded="false">
+        <div role="button">{{ the_sub_field('txt_title') }}</div>
+      </div>
+      <div class="collapse" id="accordion_{{ $i }}" role="region">
         <div class="__copy +clearfix pr--1@xs">
           @include('registrar.alert')
           @if(have_rows('lay_actions'))
