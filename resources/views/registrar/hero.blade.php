@@ -17,7 +17,7 @@
 </div>
 
 <div class="row">
-  <div class="col --12@xs --10@sm --offset-1@sm --6@md --offset-3@md">
+  <div class="col --12@xs --10@sm --offset-1@sm --8@md --offset-2@md --6@xl --offset-3@xl">
     <ul class="--popular">
       @while(have_rows('lay_trending','option'))
         @php(the_row())

@@ -259,6 +259,7 @@ main { background-color: #fff; }
 // homepage hero
 .\--banner.\+bgimg.\--hero {
   border-bottom: 1px solid rgba(123, 123, 123, 0.9);
+  overflow: hidden;
 
   &::after { background: rgba(60, 30, 30, 0.5); }
 
@@ -268,7 +269,7 @@ main { background-color: #fff; }
     .__control {
       color: $type-color;
 
-      &::placeholder { color: rgba(0, 0, 0, 0.35); }
+      &::placeholder { color: rgba(0, 0, 0, 0.5); }
     }
 
     &.\--focus {
@@ -310,11 +311,29 @@ h3.\--popular {
   }
 }
 
+//
+// Popular Links animation
+@keyframes links_up {
+  0% {
+    opacity: 0.3;
+    transform: translate(0, 30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
 ul.\--popular {
   @extend .list--unstyled;
 
   margin-bottom: 0.75rem;
-  column-count: 2;
+
+  @include mqbp_up(md) {
+    column-count: 2;
+    animation: links_up 1.2s ease forwards;
+  }
 
   li {
     margin-bottom: 0.75rem;
@@ -329,10 +348,9 @@ ul.\--popular {
   a {
     position: relative;
     padding: 0 1.25rem 1px 0;
-    color: #fff;
-    border-bottom: 2px solid rgba($red, 0.1);
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid rgba($red, 0);
     font-weight: bold;
-    border-radius: 1px;
     transition: border-bottom-color 0.2s ease;
 
     &::after {
