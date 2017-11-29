@@ -261,6 +261,18 @@ main { background-color: #fff; }
   border-bottom: 1px solid rgba(123, 123, 123, 0.9);
   overflow: hidden;
 
+  .__title {
+    // prevent orphans on xs
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mqbp_up(sm) {
+      // release orphan prevention sm+
+      max-width: none;
+    }
+  }
+
   &::after { background: rgba(60, 30, 30, 0.5); }
 
   .__search {
@@ -315,13 +327,17 @@ h3.\--popular {
 // Popular Links animation
 @keyframes links_up {
   0% {
-    opacity: 0.3;
-    transform: translate(0, 30px);
+    opacity: 0.1;
+    transform:
+      translate(0, 20px)
+      scale(1.05);
   }
 
   100% {
     opacity: 1;
-    transform: translate(0, 0);
+    transform:
+      translate(0, 0)
+      scale(1);
   }
 }
 
@@ -329,10 +345,12 @@ ul.\--popular {
   @extend .list--unstyled;
 
   margin-bottom: 0.75rem;
+  transform: translateZ(0);
+  backface-visibility: hidden; // req for Chrome else shifts
+  animation: links_up 1.2s ease forwards;
 
   @include mqbp_up(md) {
     column-count: 2;
-    animation: links_up 1.2s ease forwards;
   }
 
   li {

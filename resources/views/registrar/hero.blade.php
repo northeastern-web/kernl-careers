@@ -1,7 +1,7 @@
 <?php /** (Hero) */ ?>
 
 <div class="row">
-  <div class="col --12@xs --10@sm --offset-1@sm --8@md --offset-2@md --6@lg --offset-3@lg">
+  <div class="col --12@xs --10@sm --offset-1@sm --8@md --offset-2@md --6@xl --offset-3@xl">
     <form action="" method="GET">
       <div class="__group __search">
         <input class="__control" name="s" type="text" placeholder="Search by keyword" autocomplete="off" aria-label="Search" />
