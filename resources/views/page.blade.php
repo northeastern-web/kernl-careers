@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<article {{ post_class() }}>
+<article class="article --page">
   @while(have_posts()) @php(the_post())
     @include('layouts.chrome.header-singular')
 
