@@ -1,6 +1,6 @@
 @php
   $option = (is_home() ? 'option' : get_the_ID());
-  $class = (get_field('bool_megamenu', 'option') ? ' --megamenu' : '');
+  $class = (get_field('bool_megamenu', 'option') ? ' --megamenu +chevron' : '');
   $class .= (\Kernl\Masthead::getMenu('Utility Navigation') ? ' +utility' : '');
   $class .= (get_field('bool_customize', $option) && get_field('bool_masthead_overylay', $option) ? ' --overlay' : '');
 @endphp
