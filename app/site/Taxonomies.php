@@ -16,7 +16,7 @@ class Taxonomies
     public function register()
     {
         add_action('init', function() {
-            register_taxonomy('group', 'article', [
+            register_taxonomy('example', 'post_type', [
                 'meta_box_cb'     => false,
                 'show_ui'         => true,
                 'query_var'       => true,
@@ -24,7 +24,7 @@ class Taxonomies
                 'has_archive'     => true,
                 'hierarchical'    => true,
                 'rewrite'         => [
-                    'slug'          => 'group',
+                    'slug'          => 'example',
                     'with_front'    => true,
                     'heirarchical'  => true
                 ],
