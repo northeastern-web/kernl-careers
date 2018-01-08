@@ -2,10 +2,9 @@
 
 @section('content')
 <article class="article --page">
-  @while(have_posts()) @php(the_post())
     @include('layouts.chrome.header-singular')
 
-    @if (\Kernl\Navigation::display() && !get_field('bool_horizontal_nav'))
+    @if (\Kernl\Navigation::display() && !get_field('bool_header_nav'))
       <section class="section">
         <div class="row">
           <div class="col --12@xs --3@lg">
@@ -19,6 +18,5 @@
     @else
       @include('layouts.sections.section')
     @endif
-  @endwhile
 </article>
 @endsection
