@@ -747,11 +747,11 @@
         },
         {
             "name": "nupods/kernl-lib",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://nupods@bitbucket.org/nupods/kernl-lib.git",
-                "reference": "f120bd993c2fcc551dfdb5727975841a31576f3d"
+                "reference": "e1aa0317335f2821aae725ec77118b0260275eb4"
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "~3.0"
@@ -768,7 +768,7 @@
                 ]
             },
             "description": "Kernl(WP) support.",
-            "time": "2018-01-11T15:00:48+00:00"
+            "time": "2018-01-11T21:23:48+00:00"
         },
         {
             "name": "psr/container",
