@@ -1,0 +1,12 @@
+body { background-color: $gray-900; }
+
+@include mqbp_up(xx) {
+  body {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    max-width: 1700px;
+  }
+}
+
+.masthead,
+main { background-color: #fff; }
