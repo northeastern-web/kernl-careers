@@ -22,52 +22,6 @@
     "android 4",
     "opera 12"
   ],
-  "eslintConfig": {
-    "root": true,
-    "extends": "eslint:recommended",
-    "globals": {
-      "wp": true
-    },
-    "env": {
-      "node": true,
-      "es6": true,
-      "amd": true,
-      "browser": true,
-      "jquery": true
-    },
-    "parserOptions": {
-      "ecmaFeatures": {
-        "globalReturn": true,
-        "generators": false,
-        "objectLiteralDuplicateProperties": false,
-        "experimentalObjectRestSpread": true
-      },
-      "ecmaVersion": 2016,
-      "sourceType": "module"
-    },
-    "plugins": [
-      "import"
-    ],
-    "settings": {
-      "import/core-modules": [],
-      "import/ignore": [
-        "node_modules",
-        "\\.(coffee|scss|css|less|hbs|svg|json)$"
-      ]
-    },
-    "rules": {
-      "comma-dangle": [
-        "error",
-        {
-          "arrays": "always-multiline",
-          "objects": "always-multiline",
-          "imports": "always-multiline",
-          "exports": "always-multiline",
-          "functions": "ignore"
-        }
-      ]
-    }
-  },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "rules": {
@@ -111,7 +65,7 @@
     "node": ">= 6.9.4"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
+    "autoprefixer": "~7.1",
     "browser-sync": "~2.18",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
@@ -119,16 +73,16 @@
     "cache-loader": "~1.1.0",
     "clean-webpack-plugin": "^0.1.16",
     "copy-globs-webpack-plugin": "^0.2.0",
-    "css-loader": "^0.28.7",
-    "cssnano": "^4.0.0-rc.2",
-    "eslint": "~4.2",
+    "css-loader": "^0.28.4",
+    "cssnano": "~v4.0.0-rc.2",
+    "eslint": "~4.9.0",
     "eslint-loader": "~1.9",
-    "eslint-plugin-import": "~2.7",
+    "eslint-plugin-import": "~2.8.0",
     "extract-text-webpack-plugin": "~3.0",
     "file-loader": "^1.1.5",
     "friendly-errors-webpack-plugin": "^1.6.1",
     "imagemin-mozjpeg": "~6.0",
-    "imagemin-webpack-plugin": "^1.5.1",
+    "imagemin-webpack-plugin": "~1.5.0-beta.0",
     "import-glob": "~1.5",
     "node-sass": "~4.5",
     "postcss-loader": "~2.0",
