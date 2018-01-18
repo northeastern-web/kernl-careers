@@ -1,5 +1,5 @@
 <!doctype html>
-<html @php(language_attributes()) @php(body_class())>
+<html @php(language_attributes()) @php(body_class()) id="html">
   @include('layouts.chrome.head')
   <body>
     <a class="skip alert" href="#main_content">Skip to main content</a>
