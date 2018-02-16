@@ -5,6 +5,22 @@
 
 body.mce-content-body { background: #fff; }
 
+.post-edit-link {
+  right: 90px;
+  padding: 1rem 1rem 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.all-articles-link {
+  text-transform: none;
+  right: 0;
+  width: 90px;
+  text-align: center;
+  padding: 1rem;
+  background: rgba($blue-dark, 0.7);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .post-edit-link,
 .all-articles-link {
   position: fixed;
@@ -21,22 +37,6 @@ body.mce-content-body { background: #fff; }
 
     .edit-status { color: #fff; }
   }
-}
-
-.post-edit-link {
-  right: 90px;
-  padding: 1rem 1rem 1rem 2rem;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.all-articles-link {
-  text-transform: none;
-  right: 0;
-  width: 90px;
-  text-align: center;
-  padding: 1rem;
-  background: rgba($blue-dark, 0.7);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 span.edit-status {
