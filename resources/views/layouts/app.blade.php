@@ -1,7 +1,7 @@
 <!doctype html>
 <html @php(language_attributes()) @php(body_class()) id="html">
   @include('layouts.chrome.head')
-  <body>
+  <body {!! (get_field('bool_global_contain', 'option') ? 'class="contain"' : '') !!}>
     <a class="skip alert" href="#main_content">Skip to main content</a>
     <!--[if IE]>
       <div class="alert bg--yellow-light fs--sm pa--1@xs pa--2@md">
