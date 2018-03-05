@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('chrome.app')
 
 @section('content')
   <div {{ post_class('--archive') }}>
-    @include('layouts.chrome.header-archive')
+    @include('templates.banner')
   </div>
 
   <section class="section">
@@ -12,11 +12,11 @@
         @php(the_post())
         @if ($i == 0)
           <div class="col --12@xs --9@lg">
-            @include('components.card')
+            @include('templates.single._card')
           </div>
         @else
           <div class="col --12@xs --3@lg">
-            @include('components.card')
+            @include('templates.single._card')
           </div>
         @endif
         @php($i++)

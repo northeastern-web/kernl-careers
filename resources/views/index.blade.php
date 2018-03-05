@@ -1,5 +1,5 @@
-@extends('layouts.app')
+@extends('chrome.app')
 
 @section('content')
-  @include('layouts.sections.section')
+  @include('templates.section')
 @endsection

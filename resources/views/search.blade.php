@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('chrome.app')
 @php
   global $wp_query;
   $count = $wp_query->found_posts;
@@ -30,7 +30,7 @@
       <div class="list-group +indent">
         @while (have_posts())
           @php(the_post())
-          @include('components.list-item')
+          @include('templates.single._list')
         @endwhile @php(wp_reset_postdata())
       </div>
 
