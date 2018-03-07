@@ -1,8 +1,9 @@
-<article {{ post_class('card') }}>
+<?php $i == 0 ? $orientation = ' --h@lg' : $orientation = ''; ?>
+<article {{ post_class('card'. $orientation) }}>
   <a href="{{ the_permalink() }}" class="__link">
     <header class="__header">
       @if (get_the_category())
-        <div class="__column"><div class="badge --{{ (get_field('radio_color', 'category_'.get_the_category()[0]->term_id) ? get_field('radio_color', 'category_'.get_the_category()[0]->term_id) : 'transparent' ) }}">{{ get_the_category()[0]->name }}</div></div>
+        <div class="__column"><div class="badge --left {{ (get_field('radio_color', 'category_'.get_the_category()[0]->term_id) ? get_field('radio_color', 'category_'.get_the_category()[0]->term_id) : '' ) }}">{{ get_the_category()[0]->name }}</div></div>
       @endif
     </header>
 
@@ -16,13 +17,11 @@
 
     <section class="__body">
       <h2 class="__title">{{ the_title() }}</h2>
-      <div class="__excerpt">
-        @if (has_excerpt())
-          {{ get_the_excerpt() }}
-        @else
-          {{ wp_trim_words(get_the_content(), 20) }}
-        @endif
-      </div>
+      @if (has_excerpt())
+        {!! get_the_excerpt() !!}
+      @else
+        {!! wp_trim_words(get_the_content(), 20) !!}
+      @endif
     </section>
     <footer class="__footer">
       <div class="__column">by <b>{{ get_the_author() }}</b></div>
