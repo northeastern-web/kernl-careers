@@ -1,1 +1,20 @@
 @import "~kernl-ui/src/styles/main";
+
+@include mqbp-up(md) {
+  .share-buttons {
+    padding-left: 0;
+
+    li {
+      float: none;
+      margin: 0 0 -1px 0;
+    }
+  }
+}
+
+.single {
+  .masthead { border-bottom: 1px solid $gray-200; }
+}
+
+.\--single {
+  .\--banner { background-color: transparent; }
+}

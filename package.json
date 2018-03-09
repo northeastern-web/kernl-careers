@@ -71,7 +71,7 @@
     "bs-html-injector": "~3.0",
     "buble-loader": "^0.4.1",
     "cache-loader": "^1.2.2",
-    "clean-webpack-plugin": "^0.1.18",
+    "clean-webpack-plugin": "^0.1.19",
     "copy-globs-webpack-plugin": "^0.2.0",
     "css-loader": "^0.28.9",
     "cssnano": "~v4.0.0-rc.2",
@@ -90,7 +90,7 @@
     "resolve-url-loader": "~2.2.1",
     "rimraf": "~2.6",
     "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.1",
+    "style-loader": "^0.20.3",
     "stylelint": "^8.4.0",
     "stylelint-config-standard": "~18.0.0",
     "stylelint-webpack-plugin": "^0.10.1",
@@ -105,6 +105,6 @@
   "dependencies": {
     "feather-icons": "^3.2.2",
     "jquery": "^3.2.0",
-    "kernl-ui": "git+https://git@bitbucket.org/nupods/kernl-ui.git#hotfix/1.0.7"
+    "kernl-ui": "git+https://git@bitbucket.org/nupods/kernl-ui.git"
   }
 }
