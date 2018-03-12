@@ -695,16 +695,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.24.1",
+            "version": "1.24.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41"
+                "reference": "bba6c6e410c6b4317e37a9474aeaa753808c3875"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41",
-                "reference": "ef12cbd8ba5ce624f0a6a95e0850c4cc13e71e41",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bba6c6e410c6b4317e37a9474aeaa753808c3875",
+                "reference": "bba6c6e410c6b4317e37a9474aeaa753808c3875",
                 "shasum": ""
             },
             "require": {
@@ -744,7 +744,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-03-09T15:49:34+00:00"
+            "time": "2018-03-10T10:10:14+00:00"
         },
         {
             "name": "nupods/kernl-lib",
@@ -752,7 +752,7 @@
             "source": {
                 "type": "git",
                 "url": "https://nupods@bitbucket.org/nupods/kernl-lib.git",
-                "reference": "907e723a55bd8f1be425f1e121118d7ca5103bca"
+                "reference": "39e3e1f1bf8c35c60f25092aa493999f5f46268f"
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "~3.0"
@@ -769,7 +769,7 @@
                 ]
             },
             "description": "Kernl(WP) support.",
-            "time": "2018-03-09 14:16:38"
+            "time": "2018-03-12 20:31:48"
         },
         {
             "name": "psr/container",

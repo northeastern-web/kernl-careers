@@ -19,5 +19,7 @@
       @else
         @include('templates.section')
       @endif
+
+      @include('templates.single._edit')
   </article>
 @endsection
