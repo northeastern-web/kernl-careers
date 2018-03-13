@@ -1,5 +1,4 @@
-<?php $i == 0 ? $orientation = ' --h@lg' : $orientation = ''; ?>
-<article {{ post_class('card'. $orientation) }}>
+<article class="card {{ ($class ? $class : '') }}">
   <a href="{{ the_permalink() }}" class="__link">
     <header class="__header">
       @if (get_the_category())
@@ -23,9 +22,5 @@
         {!! wp_trim_words(get_the_content(), 20) !!}
       @endif
     </section>
-    <footer class="__footer">
-      <div class="__column">by <b>{{ get_the_author() }}</b></div>
-      <div class="__column">&raquo;</div>
-    </footer>
   </a>
 </article>
