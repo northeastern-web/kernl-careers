@@ -14,7 +14,7 @@
         @php(the_post())
         @if ($i == 0)
           <div class="col --12@xs --8@lg">
-            @include('templates.single._card', ['class' => '--overlay --bottom fs--d1'])
+            @include('templates.single._card', ['class' => ' fs--d1 --overlay --bottom +shade'])
           </div>
         @else
           <div class="col --12@xs --4@lg">

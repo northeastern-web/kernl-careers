@@ -362,7 +362,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.6.11",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -406,7 +406,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.6.11",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -450,7 +450,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.6.11",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -494,7 +494,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v5.6.11",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -539,7 +539,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.6.11",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -590,30 +590,30 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.6.11",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "259f6f17a11b0379340ec5311fcba27bc2a04070"
+                "reference": "f0776f5bbfeeb9d4c4cac8f64d96f8f0cbe4f3f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/259f6f17a11b0379340ec5311fcba27bc2a04070",
-                "reference": "259f6f17a11b0379340ec5311fcba27bc2a04070",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/f0776f5bbfeeb9d4c4cac8f64d96f8f0cbe4f3f7",
+                "reference": "f0776f5bbfeeb9d4c4cac8f64d96f8f0cbe4f3f7",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "~1.1",
                 "ext-mbstring": "*",
                 "illuminate/contracts": "5.6.*",
-                "nesbot/carbon": "^1.20",
+                "nesbot/carbon": "^1.24.1",
                 "php": "^7.1.3"
             },
             "conflict": {
                 "tightenco/collect": "<5.5.33"
             },
             "suggest": {
-                "illuminate/filesystem": "Required to use the composer class (5.2.*).",
+                "illuminate/filesystem": "Required to use the composer class (5.6.*).",
                 "symfony/process": "Required to use the composer class (~4.0).",
                 "symfony/var-dumper": "Required to use the dd function (~4.0)."
             },
@@ -643,11 +643,11 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-03-09T16:52:54+00:00"
+            "time": "2018-03-14T12:56:14+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v5.6.11",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -1356,16 +1356,16 @@
     "packages-dev": [
         {
             "name": "illuminate/console",
-            "version": "v5.6.11",
+            "version": "v5.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
-                "reference": "70cbf81da7bdf2fe1c31f6da56071469f1c00d16"
+                "reference": "19fe0ef2ef6b73d32c9101708d56adb489ebdbb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/console/zipball/70cbf81da7bdf2fe1c31f6da56071469f1c00d16",
-                "reference": "70cbf81da7bdf2fe1c31f6da56071469f1c00d16",
+                "url": "https://api.github.com/repos/illuminate/console/zipball/19fe0ef2ef6b73d32c9101708d56adb489ebdbb3",
+                "reference": "19fe0ef2ef6b73d32c9101708d56adb489ebdbb3",
                 "shasum": ""
             },
             "require": {
@@ -1402,7 +1402,7 @@
             ],
             "description": "The Illuminate Console package.",
             "homepage": "https://laravel.com",
-            "time": "2018-03-04T02:06:37+00:00"
+            "time": "2018-03-10T19:46:22+00:00"
         },
         {
             "name": "roots/sage-installer",

@@ -12,7 +12,9 @@ class App extends Controller
             // return get_the_archive_title();
         }
         if (is_single()) {
-            return get_the_category()[0]->name;
+            $category_link = get_category_link( get_the_category()[0] );
+            $category_name = get_the_category()[0]->name;
+            return '<a href="' . esc_url( $category_link ) . '" title="' . $category_name . '">' . $category_name . '</a>';
         }
     }
 
@@ -26,7 +28,7 @@ class App extends Controller
             return get_field('txt_subtitle', $current_top);
         }
         if (is_single()) {
-            return get_the_author();
+            return '<i class="ff--sans">by</i> ' . get_the_author() . ' <span class="fw--300 px--0h@xs">|</span> ' . get_the_date();
         }
     }
 
@@ -61,10 +63,10 @@ class App extends Controller
             return get_the_archive_title();
         }
         if (is_search()) {
-            return sprintf(__('Search Results for %s', 'sage'), get_search_query());
+            return sprintf(__('Search Results for <i>%s</i>', 'sage'), get_search_query());
         }
         if (is_404()) {
-            return __('Not Found', 'sage');
+            return __('Page Not Found', 'sage');
         }
         if (is_singular('tribe_events') || is_post_type_archive('tribe_events')) {
             return __('Events', 'sage');
