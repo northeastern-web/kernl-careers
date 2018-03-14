@@ -8,7 +8,7 @@ class App extends Controller
 {
     public static function pretitle()
     {
-        if (is_archive()) {
+        if (is_category()) {
             // return get_the_archive_title();
         }
         if (is_single()) {
@@ -18,8 +18,12 @@ class App extends Controller
 
     public static function subtitle()
     {
-        if (is_archive()) {
-            // return get_the_archive_title();
+        if (is_category()) {
+            $current = get_category(get_query_var('cat'));
+            $parent = get_category($current->category_parent);
+            $current_top = (!is_wp_error($parent) ? $parent : $current);
+            // var_dump(get_field('txt_subtitle', $current_top));
+            return get_field('txt_subtitle', $current_top);
         }
         if (is_single()) {
             return get_the_author();
@@ -36,7 +40,11 @@ class App extends Controller
         }
         if (is_archive()) {
             if (is_category()) {
-                return single_cat_title('', false);
+                $current = get_category(get_query_var('cat'));
+                $parent = get_category($current->category_parent);
+                $current_top = (!is_wp_error($parent) ? $parent : $current);
+                // var_dump($current_top->name);
+                return $current_top->name;
             }
             if (is_tag()) {
                 return single_tag_title('', false);
@@ -57,6 +65,9 @@ class App extends Controller
         }
         if (is_404()) {
             return __('Not Found', 'sage');
+        }
+        if (is_singular('tribe_events') || is_post_type_archive('tribe_events')) {
+            return __('Events', 'sage');
         }
 
         return get_the_title();
