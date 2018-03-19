@@ -1,75 +1,10 @@
-@include mqbp-up(md) {
-  .share-buttons {
-    padding-left: 0;
-
-    li {
-      float: none;
-      margin: 0 0 -1px 0;
-    }
-  }
-}
-
-.single,
-.archive,
-.search,
-.error404 {
-  .masthead { border-bottom: 1px solid $gray-200; }
-
-  .\--banner {
-    background-color: transparent;
-    text-align: center;
-
-    .__title { font-weight: 300; }
-  }
-}
-
-.archive,
-.search,
-.error404 {
-  .\--banner {
-    .__title { margin: 2rem 0; }
-  }
-}
-
-.\--single {
-  .\--banner {
-    .__pretitle {
-      position: relative;
-      padding: 1rem 0 1.5rem;
-      margin: 1rem 0;
-      font-size: $fs-xs;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-
-      a {
-        color: inherit;
-        background-color: rgba(0, 0, 0, 0.1);
-        padding: 0.5rem 0.75rem;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-    }
-
-    .__subtitle {
-      font-size: $fs-root;
-      font-weight: 400;
-      padding-bottom: 1.25rem;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 5rem;
-        border-bottom: 1px dashed rgba($black, 0.25);
-      }
-    }
+.section.\--banner {
+  &.ta--c {
+    margin-bottom: 0;
 
     .__title {
+      margin: 2rem 0;
+
       @include mqbp-up(md) {
         margin: 0 auto 0.75rem;
         max-width: 90%;
@@ -82,46 +17,32 @@
       }
     }
 
+    .__pretitle {
+      position: relative;
+      padding: 1rem 0 1.5rem;
+      margin: 1rem 0;
+      font-size: $fs-xs;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      a {
+        color: inherit;
+        background-color: rgba(#000, 0.05);
+        padding: 0.5rem 0.75rem;
+
+        &:hover { background-color: rgba(#000, 0.1); }
+      }
+    }
+
     &.\+bgimg {
       .__pretitle {
         a {
           color: inherit;
-          background-color: rgba(255, 255, 255, 0.4);
-          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+          background-color: rgba(#fff, 0.25);
+          text-shadow: 0 1px 1px rgba(#000, 0.5);
+
+          &:hover { background-color: rgba(#fff, 0.5); }
         }
-      }
-
-      .__subtitle {
-        &::after { display: none; }
-      }
-
-      &::after { background-color: rgba(0, 0, 0, 0.4); }
-    }
-  }
-}
-
-.\--error404 {
-  .\--banner {
-    margin-bottom: 0;
-
-    .__title {
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-  }
-}
-
-@include mqbp-up(md) {
-  .share-buttons {
-    margin-top: 0.25rem;
-  }
-}
-
-@include mqbp-up(lg) {
-  .\--archive + .section {
-    .card.fs--d1 {
-      .__body {
-        padding: 1.25rem 1.75rem !important;
       }
     }
   }
