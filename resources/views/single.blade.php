@@ -3,7 +3,7 @@
 @section('content')
   <article class="article --single">
     @while(have_posts()) @php(the_post())
-      @include('templates.banner')
+      @include('templates.banner', ['class' => 'ta--c'])
 
       <section class="section">
         @include('templates.single.video')
@@ -18,6 +18,7 @@
           </div>
         </div>
       </section>
+
       @include('templates.single._edit')
     @endwhile
   </article>

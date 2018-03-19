@@ -2,7 +2,7 @@
 
 @section('content')
   <div {{ post_class('--archive') }}>
-    @include('templates.banner')
+    @include('templates.banner', ['class' => '--md'])
   </div>
 
   <section class="section pt--0@xs">
@@ -14,7 +14,7 @@
         @php(the_post())
         @if ($i == 0)
           <div class="col --12@xs --8@lg">
-            @include('templates.single._card', ['class' => ' fs--d1 --overlay --bottom +shade'])
+            @include('templates.single._card', ['class' => '--overlay --bottom fs--d1'])
           </div>
         @else
           <div class="col --12@xs --4@lg">
