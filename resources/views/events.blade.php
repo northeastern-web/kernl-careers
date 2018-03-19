@@ -1,9 +1,10 @@
 @extends('chrome.app')
 
 @section('content')
-  @include('templates.banner')
+  @php($class = (is_singular('tribe_events') ? ['class' => '--md'] : ['class' => '--md']))
+  @include('templates.banner', $class)
 
-  <div id="tribe-events-pg-template" class="section tribe-events-style-skeleton">
+  <div id="tribe-events-pg-template" class="section tribe">
     @if(tribe_is_month())
       @php(tribe_get_view())
     @else

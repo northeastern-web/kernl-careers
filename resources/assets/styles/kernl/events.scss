@@ -11,11 +11,13 @@
   .tribe-events-ical,
   .tribe-bar-submit { @extend .sr--only; }
 
-  .tribe-bar-views { float: left; }
+  #tribe-bar-views { float: left; }
 
   .tribe-bar-views-list {
     padding: 0;
     margin: 0;
+    position: relative;
+    z-index: 1;
 
     li { display: inline; }
 
@@ -31,10 +33,11 @@
     }
   }
 
-  .tribe-bar-views-option-month,
   .tribe-bar-views-option-list,
-  .tribe-bar-views-option-day {
-    float: left;
+  .tribe-bar-views-option-day { float: left; }
+
+  .tribe-bar-views-option-month {
+    float: right;
     margin-left: -1px;
   }
 
@@ -75,7 +78,7 @@
 
   .tribe-events-list-separator-month {
     width: 100%;
-    padding-top: 0.25rem;
+    padding-top: 1.25rem;
     padding-bottom: 0.5rem;
     margin: 0 1rem 2rem;
     font-size: $fs-d4;
@@ -83,6 +86,12 @@
     text-transform: initial;
     display: block;
     clear: both;
+  }
+
+  .tribe-events-page-title {
+    font-weight: 700;
+
+    @include mqbp_up(lg) { top: -3.2rem; }
   }
 
   .tribe-events-calendar {

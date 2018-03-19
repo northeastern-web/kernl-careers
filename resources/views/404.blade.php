@@ -2,7 +2,7 @@
 
 @section('content')
   @if (!have_posts())
-    @include('templates.banner', ['class' => 'ta--c'])
+    @include('templates.banner', ['class' => 'ta--c --lg'])
 
     <section class="section ta--c pt--0@xs pb--5@xs">
       <div class="row">

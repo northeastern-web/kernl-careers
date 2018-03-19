@@ -4,7 +4,9 @@
   $args = [
     'title' => App::title(),
     'pretitle' => App::pretitle(),
-    'subtitle' => App::subtitle()
+    'subtitle' => App::subtitle(),
+    'nav_parent' => true,
+    'class' => (isset($class) ? $class : '')
   ];
 @endphp
 

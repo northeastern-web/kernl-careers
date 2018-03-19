@@ -1,4 +1,15 @@
+.single,
+.archive,
+.search,
+.error404 {
+  .masthead { border-bottom: 1px solid $gray-100; }
+}
+
 .section.\--banner {
+  background-color: transparent;
+
+  .__title { font-weight: 300; }
+
   &.ta--c {
     margin-bottom: 0;
 

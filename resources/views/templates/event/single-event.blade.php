@@ -18,12 +18,17 @@
 
 @while(have_posts()) @php(the_post())
   <div class="row">
-    <div class="col --12@xs --10@lg offset-1@lg">
-      {{ the_content() }}
+    <div class="col --12@xs --1@md --1-offset@lg ta--c">
+      @include('templates.single._sharing')
+    </div>
 
+    <div class="col --12@xs --10@md --8@lg">
       {{ tribe_the_notices() }}
+      @include('templates.section')
 
-      <div class="mb-2@xs fs--sm">{{ tribe_get_venue() . (tribe_address_exists() ? ', '. tribe_get_full_address() : '') }}</div>
+      <div class="mb-2@xs fs--sm">
+        {{ tribe_get_venue() . (tribe_address_exists() ? ', '. tribe_get_full_address() : '') }}
+      </div>
 
       @if(tribe_get_event_website_url())
         <p><a target="_blank" class="btn --xs" href="<?= tribe_get_event_website_url(); ?>">Event Website</a></p>
