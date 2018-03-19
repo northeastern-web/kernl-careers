@@ -94,3 +94,8 @@ body.mce-content-body { background: #fff; }
   // @extend .sr-only;
   // @extend .sr-only-focusable;
 }
+
+#tinymce {
+  margin: 12px !important;
+  font-family: $type-sans;
+}

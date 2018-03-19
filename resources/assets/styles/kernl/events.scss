@@ -1,0 +1,105 @@
+.tribe {
+  a { color: #000; }
+
+  #tribe-bar-collapse-toggle,
+  .tribe-bar-views-select,
+  .tribe-events-visuallyhidden { display: none; }
+
+  label,
+  .tribe-bar-date-filter,
+  .label-tribe-bar-search,
+  .tribe-events-ical,
+  .tribe-bar-submit { @extend .sr--only; }
+
+  .tribe-bar-views { float: left; }
+
+  .tribe-bar-views-list {
+    padding: 0;
+    margin: 0;
+
+    li { display: inline; }
+
+    a {
+      @extend .btn;
+
+      border-radius: 0;
+    }
+
+    .tribe-bar-active a {
+      background: rgba(#000, 0.1);
+      font-weight: bold;
+    }
+  }
+
+  .tribe-bar-views-option-month,
+  .tribe-bar-views-option-list,
+  .tribe-bar-views-option-day {
+    float: left;
+    margin-left: -1px;
+  }
+
+  .tribe-bar-search-filter {
+    float: right;
+
+    input { padding: 0.25rem 0.75rem; }
+  }
+
+  .tribe-events-sub-nav {
+    padding: 0;
+    text-align: initial;
+
+    .tribe-events-nav-previous,
+    .tribe-events-nav-next {
+      width: 50%;
+      margin: 0 !important;
+
+      > a {
+        color: #000;
+        font-weight: 700;
+
+        &:hover { text-decoration: underline; }
+      }
+    }
+
+    .tribe-events-nav-previous {
+      text-align: left;
+      float: left;
+    }
+
+    .tribe-events-nav-next {
+      text-align: right;
+      margin-left: -4px;
+      float: right;
+    }
+  }
+
+  .tribe-events-list-separator-month {
+    width: 100%;
+    padding-top: 0.25rem;
+    padding-bottom: 0.5rem;
+    margin: 0 1rem 2rem;
+    font-size: $fs-d4;
+    border-bottom: 1px solid $gray-200;
+    text-transform: initial;
+    display: block;
+    clear: both;
+  }
+
+  .tribe-events-calendar {
+    th {
+      padding: 0.5rem;
+      background: $gray-100;
+      font-size: $fs-xs;
+      border-left: 1px solid;
+    }
+
+    &,
+    th,
+    td { border-color: $gray-200 !important; }
+  }
+
+  .tribe-events-month-event-title {
+    font-size: $fs-root;
+    line-height: 1;
+  }
+}

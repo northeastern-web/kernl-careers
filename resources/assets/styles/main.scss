@@ -1,14 +1,8 @@
-/** Import everything from autoload */
-@import "./autoload/**/*";
+/** Import everything from app */
+@import "./kernl/_ui";
+@import "./kernl/_wp";
+@import "./kernl/wordpress";
+@import "./kernl/events";
 
-/**
- * Import npm dependencies
- *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
- */
-
-@import "common/global";
-@import "common/wp-classes";
-@import "layouts/header";
-@import "layouts/tinymce";
+/** Import everything from app */
+@import "./app/**/*";
