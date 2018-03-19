@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "604eda8c07c4f6bddb835ca2de480a1e",
+    "content-hash": "db8323a8747a623a00e150ad9d0e390f",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -748,11 +748,11 @@
         },
         {
             "name": "nupods/kernl-lib",
-            "version": "dev-hotfix/1.0.11",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://nupods@bitbucket.org/nupods/kernl-lib.git",
-                "reference": "39e3e1f1bf8c35c60f25092aa493999f5f46268f"
+                "reference": "11b0c31b14b661140842301263bb5a86e6758d49"
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "~3.0"
@@ -769,7 +769,7 @@
                 ]
             },
             "description": "Kernl(WP) support.",
-            "time": "2018-03-12 20:31:48"
+            "time": "2018-03-19T17:45:21+00:00"
         },
         {
             "name": "psr/container",
@@ -1663,8 +1663,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "roots/sage-lib": 10,
-        "soberwp/controller": 10,
-        "nupods/kernl-lib": 20
+        "soberwp/controller": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
