@@ -3,6 +3,7 @@
 
   body {
     background-color: #fff;
+    position: relative; // to contain overlay masthead
 
     @include mqbp_up(xx) {
       margin-right: auto !important;
