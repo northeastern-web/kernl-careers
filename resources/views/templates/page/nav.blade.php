@@ -7,6 +7,12 @@
   </div>
 
   <ul class="__list">
-    <?= \Kernl\Navigation::display(); ?>
+    @if(\Kernl\Navigation::isBanner())
+      {!! \Kernl\Navigation::display('', 2) !!}
+
+    @else
+      {!! \Kernl\Navigation::display() !!}
+
+    @endif
   </ul>
 </nav>
