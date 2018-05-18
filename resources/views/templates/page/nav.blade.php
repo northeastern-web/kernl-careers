@@ -11,7 +11,7 @@
       {!! \Kernl\Navigation::display('', 2) !!}
 
     @else
-      {!! \Kernl\Navigation::display() !!}
+      {!! \Kernl\Navigation::display('top', 1, false, 'parent') !!}
 
     @endif
   </ul>
