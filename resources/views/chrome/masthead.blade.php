@@ -8,7 +8,7 @@
 
 <header class="masthead{{ $class }}" role="banner">
   <a class="__logo" href="{{ home_url('/') }}" data-ga-click="Home Logo">
-    <img class="__logo__image" src="{{ (get_field('bool_customize', $option) && get_field('bool_masthead_overylay', $option) || \Kernl\Layout::getParentValues('bool_masthead_overylay') ? get_field('med_logo_white','option') : get_field('med_logo','option')) }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
+    <img class="__logo__image" src="{{ (get_field('bool_masthead_overylay', $option) || \Kernl\Layout::getParentValues('bool_masthead_overylay') ? get_field('med_logo_white','option') : get_field('med_logo','option')) }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
   </a>
   <button class="__toggler hidden--up@lg"><i data-feather="menu"></i></button>
 
