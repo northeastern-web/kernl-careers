@@ -32,7 +32,7 @@
       @include mqbp-up(md) {
         margin: 0 auto 0.75rem;
         max-width: 90%;
-        font-size: $fs-d7;
+        font-size: $fs-d6;
         line-height: 0.9;
       }
 
@@ -59,6 +59,8 @@
     }
 
     &.\+bgimg {
+      margin-bottom: 2rem;
+
       .__pretitle {
         a {
           color: inherit;
