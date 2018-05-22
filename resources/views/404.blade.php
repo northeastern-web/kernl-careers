@@ -2,7 +2,7 @@
 
 @section('content')
   @if (!have_posts())
-    @include('templates.banner', ['class' => 'ta--c --lg'])
+    @include('templates.banner', ['class' => 'ta--c'])
 
     <section class="section ta--c pt--0@xs pb--5@xs">
       <div class="row">
@@ -15,10 +15,10 @@
             Please try browsing the site, or search below.</p>
           @endif
 
-          <form action="{{ home_url() }}" method="GET">
-            <label for="search" class="sr--only">Search</label>
-            <div class="__group __search mb--2@xs">
-              <input name="s" type="search" id="search" class="__control" placeholder="Search by keyword">
+          <form class="form" action="{{ home_url() }}" method="GET">
+            <div class="__group --enclosed mb--3@md">
+              <label class="sr--only">Search</label>
+              <input type="text" placeholder="Search by keyword">
               <button type="submit" class="btn btn--primary">Go</button>
             </div>
           </form>
