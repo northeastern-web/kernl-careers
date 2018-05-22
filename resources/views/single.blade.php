@@ -9,13 +9,10 @@
         @include('templates.single.video')
 
         <div class="row">
-          <div class="col --1@md --1-offset@lg ta--c">
-            @include('templates.single._sharing')
-          </div>
-          <div class="col --10@md --8@lg">
-            @include('templates.section')
-
+          <div class="col --10@md --1-offset@md --8@lg --2-offset@lg">
             @include('templates.single.external')
+            @include('templates.section')
+            @include('templates.single._sharing')
           </div>
         </div>
       </section>
