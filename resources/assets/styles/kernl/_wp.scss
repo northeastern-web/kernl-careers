@@ -17,15 +17,13 @@
 .archive,
 .search,
 .error404 {
-  .masthead { border-bottom: 1px solid $gray-100; }
+  .masthead { border-bottom: 1px solid rgba(177, 177, 177, 0.2); }
 }
 
 .section.\--banner {
   background-color: transparent;
 
   &.ta--c {
-    margin-bottom: 0;
-
     .__title {
       margin: 2rem 0;
 
@@ -59,8 +57,6 @@
     }
 
     &.\+bgimg {
-      margin-bottom: 2rem;
-
       .__pretitle {
         a {
           color: inherit;
@@ -72,24 +68,4 @@
       }
     }
   }
-}
-
-.aligncenter {
-  max-width: 1000px;
-  width: 100vw !important;
-  height: auto;
-  margin-left: 50% !important;
-  transform: translateX(-50%);
-  text-align: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-.wp-caption-text {
-  padding-top: 10px;
-  font-size: $fs-sm;
-  color: $gray-400;
 }
