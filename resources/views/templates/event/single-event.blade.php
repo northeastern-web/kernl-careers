@@ -18,11 +18,11 @@
 
 @while(have_posts()) @php(the_post())
   <div class="row">
-    <div class="col --12@xs --1@md --1-offset@lg ta--c">
+    <div class="col --1@md --1-offset@lg ta--c">
       @include('templates.single._sharing')
     </div>
 
-    <div class="col --12@xs --10@md --8@lg">
+    <div class="col --10@md --8@lg">
       {{ tribe_the_notices() }}
       @include('templates.section')
 

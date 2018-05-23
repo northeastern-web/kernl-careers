@@ -1342,9 +1342,9 @@ commander@^2.2.0, commander@^2.9.0:
   version "2.15.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.15.1.tgz#df46e867d0fc2aec66a34662b406a9ccafff5b0f"
 
-commander@~2.14.1:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
+commander@~2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
 
 commander@~2.8.1:
   version "2.8.1"
@@ -4375,8 +4375,8 @@ jsprim@^1.2.2:
     verror "1.10.0"
 
 "kernl-ui@git+https://git@bitbucket.org/nupods/kernl-ui.git":
-  version "1.1.0"
-  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#76db42fb0b2397f717a8ec5870c3366a488f4595"
+  version "1.1.1"
+  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#f533e7640828326c854555e7e7ee6e39b21e4344"
   dependencies:
     bstyles "^0.3.1"
     feather-icons "^3.2.2"
@@ -7942,10 +7942,10 @@ ua-parser-js@0.7.12:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.12.tgz#04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb"
 
 uglify-es@^3.3.4:
-  version "3.3.10"
-  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.10.tgz#8b0b7992cebe20edc26de1bf325cef797b8f3fa5"
+  version "3.3.9"
+  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.9.tgz#0c1c4f0700bed8dbc124cdb304d2592ca203e677"
   dependencies:
-    commander "~2.14.1"
+    commander "~2.13.0"
     source-map "~0.6.1"
 
 uglify-js@^2.8.29:
