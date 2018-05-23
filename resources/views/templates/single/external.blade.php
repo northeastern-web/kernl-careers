@@ -1,4 +1,4 @@
-<?php if (get_field('bool_nunews')) : ?>
+@if (get_field('bool_nunews'))
 <div class="alert --sm bg--gray-700 ta--c">
   <a href="{{ the_field('txt_external_url') }}" class="__link">
     <div class="__body">
@@ -10,4 +10,4 @@
     </div>
   </a>
 </div>
-<?php endif; ?>
+@endif
