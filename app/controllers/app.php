@@ -41,7 +41,7 @@ class App extends Controller
         }
 
         if (is_404()) {
-            return __('Not Found', 'sage');
+            return __('Page Not Found', 'sage');
         }
 
         return get_the_title();
@@ -100,12 +100,24 @@ class App extends Controller
             $current = get_category(get_query_var('cat'));
             $parent = get_category($current->category_parent);
             $current_top = (!is_wp_error($parent) ? $parent : $current);
-            // var_dump(get_field('txt_subtitle', $current_top));
             return get_field('txt_subtitle', $current_top);
         }
 
         if (is_single()) {
-            return get_the_author();
+            $output = '';
+
+            if (! get_field('bool_hide_author')) {
+                $output .= '
+                <div class="tt--caps fw--700 fs--sm pt--0h@xs">by '
+                    . (get_field('bool_override_author') ? get_field('txt_author') : get_the_author()) .
+                '</div>';
+            }
+
+            if (get_field('bool_date')) {
+                $output .= '<div class="tt--caps fw--400 fs--sm">'. get_the_date() .'</div>';
+            }
+
+            return $output;
         }
     }
 }

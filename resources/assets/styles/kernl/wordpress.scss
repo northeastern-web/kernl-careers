@@ -52,9 +52,17 @@ body.mce-content-body { background: #fff; }
 }
 
 .aligncenter {
-  display: block;
-  margin: 1rem auto;
+  max-width: 1000px;
+  width: 100vw !important;
   height: auto;
+  margin-left: 50% !important;
+  transform: translateX(-50%);
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .alignleft,
@@ -86,7 +94,9 @@ body.mce-content-body { background: #fff; }
 }
 
 .wp-caption-text {
-  // @extend .figure-caption;
+  padding-top: 10px;
+  font-size: $fs-sm;
+  color: $gray-400;
 }
 
 /** Text meant only for screen readers */

@@ -1,1 +1,1 @@
-@php( edit_post_link('<span class="__icon"><i data-feather="edit"></i></span><span class="edit-text">Edit ' . (is_single() ? 'Post' : 'Page') . '</span>', '', '', 0, 'post-edit-link btn --sm bg--blue') )
+@php( edit_post_link('<i class="__icon" data-feather="edit"></i></span><span class="edit-text">Edit ' . (is_single() ? 'Post' : 'Page') . '', '', '', 0, 'post-edit-link btn --sm bg--blue') )

@@ -17,22 +17,20 @@
 .archive,
 .search,
 .error404 {
-  .masthead { border-bottom: 1px solid $gray-100; }
+  .masthead { border-bottom: 1px solid rgba(177, 177, 177, 0.2); }
 }
 
 .section.\--banner {
   background-color: transparent;
 
   &.ta--c {
-    margin-bottom: 0;
-
     .__title {
       margin: 2rem 0;
 
       @include mqbp-up(md) {
         margin: 0 auto 0.75rem;
         max-width: 90%;
-        font-size: $fs-d7;
+        font-size: $fs-d6;
         line-height: 0.9;
       }
 

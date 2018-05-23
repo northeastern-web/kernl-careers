@@ -21,10 +21,10 @@
 </div>
 
 <div class="modal --contact fade" id="modal_profile-{{ get_the_ID() }}" tabindex="-1" role="dialog" aria-labelledby="modal_contact_label">
-  <div class="modal-dialog __dialog" role="document">
+  <div class="__dialog" role="document">
     <div class="__content">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">×</span>
+        <i class="__icon" data-feather="x-circle"></i>
       </button>
       <div class="row">
         <div class="col --12@xs --4@md">
