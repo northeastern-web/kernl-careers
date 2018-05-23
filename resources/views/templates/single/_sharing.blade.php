@@ -7,26 +7,28 @@
   define( 'SHARE_URL', url_elements() );
 @endphp
 
-<ul class="share-buttons">
-  <li>
-    <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
-      <span class="__icon --thin"><i data-feather="facebook"></i></span>
-    </a>
-    </a>
-  </li>
-  <li>
-    <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
-      <span class="__icon --thin"><i data-feather="twitter"></i></span>
-    </a>
-  </li>
-  <li>
-    <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
-      <span class="__icon --thin"><i data-feather="briefcase"></i></span>
-    </a>
-  </li>
-  <li>
-    <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
-      <span class="__icon --thin"><i data-feather="mail"></i></span>
-    </a>
-  </li>
-</ul>
+<div class="ta--c pt--1@xs">
+  <ul class="share-buttons">
+    <li>
+      <a href="javascript:PODShare('facebook', '<?php echo SHARE_URL; ?>', 555, 350)">
+        <i class="__icon --thin" data-feather="facebook"></i>
+      </a>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:PODShare('twitter', '<?php echo SHARE_URL; ?>', 520, 442)">
+        <i class="__icon --thin" data-feather="twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a href="javascript:PODShare('linkedin', '<?php echo SHARE_URL; ?>', 550, 442)">
+        <i class="__icon --thin" data-feather="briefcase"></i>
+      </a>
+    </li>
+    <li>
+      <a id="podshare_email" href="javascript:PODShare('email', '<?php echo SHARE_URL; ?>', 100, 100)">
+        <i class="__icon --thin" data-feather="mail"></i>
+      </a>
+    </li>
+  </ul>
+</div>
