@@ -9,7 +9,7 @@
 
   <section class="section pt--0@xs">
     <div class="row">
-      <div class="col --12@xs --8@md --2-offset@md">
+      <div class="col --8@md --2-offset@md">
         <form action="{{ home_url() }}" method="GET" class="mb--2@xs">
           <div class="__group __search +line mb--0@xs">
             <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">

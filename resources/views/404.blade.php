@@ -6,7 +6,7 @@
 
     <section class="section ta--c pt--0@xs pb--5@xs">
       <div class="row">
-        <div class="col --12@xs --10@sm --1-offset@sm --8@lg --2-offset@lg --6@xl --3-offset@xl">
+        <div class="col --10@sm --1-offset@sm --8@lg --2-offset@lg --6@xl --3-offset@xl">
           @if(get_field('txt_404', 'option'))
             {!! get_field('txt_404', 'option') !!}
 
