@@ -18,9 +18,6 @@
 
 @while(have_posts()) @php(the_post())
   <div class="row">
-    <div class="col --1@md --1-offset@lg ta--c">
-      @include('templates.single._sharing')
-    </div>
 
     <div class="col --10@md --8@lg">
       {{ tribe_the_notices() }}
@@ -33,6 +30,9 @@
       @if(tribe_get_event_website_url())
         <p><a target="_blank" class="btn --xs" href="<?= tribe_get_event_website_url(); ?>">Event Website</a></p>
       @endif
+    </div>
+    <div class="col ta--c">
+      @include('templates.single._sharing')
     </div>
   </div>
 @endwhile
