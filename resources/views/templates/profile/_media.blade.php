@@ -22,10 +22,10 @@
 
 <div class="modal --grid fade" id="modal_profile-{{ get_the_ID() }}" tabindex="-1" role="dialog" aria-labelledby="modal_contact_label">
   <div class="__dialog" role="document">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <i class="__icon" data-feather="x-circle"></i>
+    </button>
     <div class="__content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <i class="__icon" data-feather="x-circle"></i>
-      </button>
       <div class="row">
         <div class="col --4@md">
           @if(get_field('med_headshot'))
@@ -43,13 +43,13 @@
       </div>
       <div class="row">
         <div class="col --4@md">
-          <div class="__body">
-            <ul class="__list ls--none">
+          <div class="__meta">
+            <ul class="ls--none">
               @if(get_field('txt_email'))
-                <li class="__item"><a class="__link" href="mailto:{{ the_field('txt_email') }}">{{ the_field('txt_email') }}</a></li>
+                <li><a class="__link" href="mailto:{{ the_field('txt_email') }}">{{ the_field('txt_email') }}</a></li>
               @endif
               @if(get_field('txt_phone'))
-                <li class="__item"><a class="__link" href="tel:{{ the_field('txt_phone') }}">{{ the_field('txt_phone') }}</a></li>
+                <li><a class="__link" href="tel:{{ the_field('txt_phone') }}">{{ the_field('txt_phone') }}</a></li>
               @endif
             </ul>
           </div>
