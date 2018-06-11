@@ -15,10 +15,10 @@
             Please try browsing the site, or search below.</p>
           @endif
 
-          <form class="form" action="{{ home_url() }}" method="GET">
-            <div class="__group --enclosed mb--3@md">
-              <label class="sr--only">Search</label>
-              <input type="text" placeholder="Search by keyword">
+
+          <form action="{{ home_url() }}" method="GET" class="form pt--2@xs">
+            <div class="__group --enclosed +line mb--0@xs">
+              <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
               <button type="submit" class="btn btn--primary">Go</button>
             </div>
           </form>

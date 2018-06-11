@@ -1,17 +1,19 @@
 @extends('chrome.app')
 @section('content')
-  @include('templates.banner', ['class' => 'ta--c --lg'])
-
   @php
     global $wp_query;
     $count = $wp_query->found_posts;
   @endphp
 
-  <section class="section pt--0@xs">
+  <header class="section --banner ta--c">
+    <h1 class="__title mb--3@xs">Search Results</h1>
+  </header>
+
+  <section class="section pt--1@xs">
     <div class="row">
-      <div class="col --8@md --2-offset@md">
-        <form action="{{ home_url() }}" method="GET" class="mb--2@xs">
-          <div class="__group __search +line mb--0@xs">
+      <div class="col --12@xs --8@md --2-offset@md">
+        <form action="{{ home_url() }}" method="GET" class="form mb--2@xs">
+          <div class="__group --enclosed +line mb--0@xs">
             <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
             <button type="submit" class="btn btn--primary">Go</button>
           </div>
