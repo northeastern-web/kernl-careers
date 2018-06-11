@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a113b73d4cda22c153e9288eb022e6a6",
+    "content-hash": "e6d47a02f572080ff68ec6ec1f9762f9",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -362,7 +362,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.6.23",
+            "version": "v5.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -406,16 +406,16 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.6.23",
+            "version": "v5.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec"
+                "reference": "1f0757cae8749400aeda730f6438a081fc3c082d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec",
-                "reference": "1a29b314dd5c7a5a5bce3dd7b9da924cc1ec22ec",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/1f0757cae8749400aeda730f6438a081fc3c082d",
+                "reference": "1f0757cae8749400aeda730f6438a081fc3c082d",
                 "shasum": ""
             },
             "require": {
@@ -446,11 +446,11 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2018-05-14T12:49:42+00:00"
+            "time": "2018-05-24T13:16:56+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.6.23",
+            "version": "v5.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -494,7 +494,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v5.6.23",
+            "version": "v5.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -539,7 +539,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.6.23",
+            "version": "v5.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -591,16 +591,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.6.23",
+            "version": "v5.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "7ba15bb00ac57c621e8291ce737ae7ea497ba02b"
+                "reference": "b13296a75443797d6a71d0ccd437ca801b12d300"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/7ba15bb00ac57c621e8291ce737ae7ea497ba02b",
-                "reference": "7ba15bb00ac57c621e8291ce737ae7ea497ba02b",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/b13296a75443797d6a71d0ccd437ca801b12d300",
+                "reference": "b13296a75443797d6a71d0ccd437ca801b12d300",
                 "shasum": ""
             },
             "require": {
@@ -615,6 +615,7 @@
             },
             "suggest": {
                 "illuminate/filesystem": "Required to use the composer class (5.6.*).",
+                "ramsey/uuid": "Required to use Str::uuid() (^3.7).",
                 "symfony/process": "Required to use the composer class (~4.0).",
                 "symfony/var-dumper": "Required to use the dd function (~4.0)."
             },
@@ -644,20 +645,20 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2018-05-18T13:51:23+00:00"
+            "time": "2018-06-02T14:30:18+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v5.6.23",
+            "version": "v5.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "5054771a82030fe72c245101a2d57904cac2972b"
+                "reference": "db03656227e70c67af7fa81fbbfda086f6e6820b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/5054771a82030fe72c245101a2d57904cac2972b",
-                "reference": "5054771a82030fe72c245101a2d57904cac2972b",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/db03656227e70c67af7fa81fbbfda086f6e6820b",
+                "reference": "db03656227e70c67af7fa81fbbfda086f6e6820b",
                 "shasum": ""
             },
             "require": {
@@ -692,20 +693,20 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "https://laravel.com",
-            "time": "2018-05-17T13:48:32+00:00"
+            "time": "2018-05-31T15:18:49+00:00"
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.28.0",
+            "version": "1.29.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "00149d95fc91ef10f19d3a66889bc3bb7500fa7b"
+                "reference": "ed6aa898982f441ccc9b2acdec51490f2bc5d337"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/00149d95fc91ef10f19d3a66889bc3bb7500fa7b",
-                "reference": "00149d95fc91ef10f19d3a66889bc3bb7500fa7b",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/ed6aa898982f441ccc9b2acdec51490f2bc5d337",
+                "reference": "ed6aa898982f441ccc9b2acdec51490f2bc5d337",
                 "shasum": ""
             },
             "require": {
@@ -740,15 +741,15 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-05-18T15:26:18+00:00"
+            "time": "2018-05-29T15:23:46+00:00"
         },
         {
             "name": "nupods/kernl-lib",
-            "version": "1.1.0",
+            "version": "dev-hotfix/1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://nupods@bitbucket.org/nupods/kernl-lib.git",
-                "reference": "50b59fe769464b209b20ec4bb6227a358abfb89b"
+                "reference": "6ee582c0ce77fed34ef66c801262145fcb63a748"
             },
             "require-dev": {
                 "squizlabs/php_codesniffer": "~3.0"
@@ -765,7 +766,7 @@
                 ]
             },
             "description": "Kernl(WP) support.",
-            "time": "2018-05-23T19:36:49+00:00"
+            "time": "2018-06-11 19:27:48"
         },
         {
             "name": "psr/container",
@@ -1060,16 +1061,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.0.10",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "4e7c98de67cc4171d4c986554e09a511da40f3d8"
+                "reference": "449f8b00b28ab6e6912c3e6b920406143b27193b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/4e7c98de67cc4171d4c986554e09a511da40f3d8",
-                "reference": "4e7c98de67cc4171d4c986554e09a511da40f3d8",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/449f8b00b28ab6e6912c3e6b920406143b27193b",
+                "reference": "449f8b00b28ab6e6912c3e6b920406143b27193b",
                 "shasum": ""
             },
             "require": {
@@ -1085,7 +1086,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1112,20 +1113,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-16T09:05:32+00:00"
+            "time": "2018-05-16T14:33:22+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.0.10",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "8c633f5a815903a1fe6e3fc135f207267a8a79af"
+                "reference": "087e2ee0d74464a4c6baac4e90417db7477dc238"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/8c633f5a815903a1fe6e3fc135f207267a8a79af",
-                "reference": "8c633f5a815903a1fe6e3fc135f207267a8a79af",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/087e2ee0d74464a4c6baac4e90417db7477dc238",
+                "reference": "087e2ee0d74464a4c6baac4e90417db7477dc238",
                 "shasum": ""
             },
             "require": {
@@ -1134,7 +1135,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1161,7 +1162,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-16T09:05:32+00:00"
+            "time": "2018-05-16T14:33:22+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1279,16 +1280,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.0.10",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "e1f5863d0a9e79cfec7f031421ced3fe1d403e66"
+                "reference": "16328f5b217cebc8dd4adfe4aeeaa8c377581f5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/e1f5863d0a9e79cfec7f031421ced3fe1d403e66",
-                "reference": "e1f5863d0a9e79cfec7f031421ced3fe1d403e66",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/16328f5b217cebc8dd4adfe4aeeaa8c377581f5a",
+                "reference": "16328f5b217cebc8dd4adfe4aeeaa8c377581f5a",
                 "shasum": ""
             },
             "require": {
@@ -1303,6 +1304,7 @@
             "require-dev": {
                 "psr/log": "~1.0",
                 "symfony/config": "~3.4|~4.0",
+                "symfony/console": "~3.4|~4.0",
                 "symfony/dependency-injection": "~3.4|~4.0",
                 "symfony/finder": "~2.8|~3.0|~4.0",
                 "symfony/intl": "~3.4|~4.0",
@@ -1316,7 +1318,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1343,11 +1345,11 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-21T10:09:47+00:00"
+            "time": "2018-05-30T07:26:09+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.4.10",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -1408,16 +1410,16 @@
     "packages-dev": [
         {
             "name": "illuminate/console",
-            "version": "v5.6.23",
+            "version": "v5.6.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
-                "reference": "80fda6b3fddc07e81351260fa21e92496fc13b7e"
+                "reference": "7e4725f3badd6d9f57bd12240077dd223d2ced21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/console/zipball/80fda6b3fddc07e81351260fa21e92496fc13b7e",
-                "reference": "80fda6b3fddc07e81351260fa21e92496fc13b7e",
+                "url": "https://api.github.com/repos/illuminate/console/zipball/7e4725f3badd6d9f57bd12240077dd223d2ced21",
+                "reference": "7e4725f3badd6d9f57bd12240077dd223d2ced21",
                 "shasum": ""
             },
             "require": {
@@ -1454,7 +1456,7 @@
             ],
             "description": "The Illuminate Console package.",
             "homepage": "https://laravel.com",
-            "time": "2018-05-02T14:47:56+00:00"
+            "time": "2018-06-04T13:58:00+00:00"
         },
         {
             "name": "roots/sage-installer",
@@ -1594,16 +1596,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.0.10",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "058f120b8e06ebcd7b211de5ffae07b2db00fbdd"
+                "reference": "2d5d973bf9933d46802b01010bd25c800c87c242"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/058f120b8e06ebcd7b211de5ffae07b2db00fbdd",
-                "reference": "058f120b8e06ebcd7b211de5ffae07b2db00fbdd",
+                "url": "https://api.github.com/repos/symfony/console/zipball/2d5d973bf9933d46802b01010bd25c800c87c242",
+                "reference": "2d5d973bf9933d46802b01010bd25c800c87c242",
                 "shasum": ""
             },
             "require": {
@@ -1631,7 +1633,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1658,11 +1660,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-16T09:05:32+00:00"
+            "time": "2018-05-30T07:26:09+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.10",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -1714,7 +1716,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "roots/sage-lib": 10,
-        "soberwp/controller": 10
+        "soberwp/controller": 10,
+        "nupods/kernl-lib": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
