@@ -1,5 +1,5 @@
 #html {
-  background-color: $gray-900;
+  background-color: $black;
 
   body {
     background-color: #fff;
@@ -30,7 +30,7 @@
       @include mqbp-up(md) {
         margin: 0 auto 0.75rem;
         max-width: 90%;
-        font-size: $fs-d6;
+        font-size: $fs-d5;
         line-height: 0.9;
       }
 
