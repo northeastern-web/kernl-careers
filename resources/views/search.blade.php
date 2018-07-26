@@ -6,14 +6,14 @@
   @endphp
 
   <header class="section --banner ta--c">
-    <h1 class="__title mb--3@xs">Search Results</h1>
+    <h1 class="__title mb--3">Search Results</h1>
   </header>
 
-  <section class="section pt--1@xs">
+  <section class="section">
     <div class="row">
-      <div class="col --12@xs --8@md --2-offset@md">
-        <form action="{{ home_url() }}" method="GET" class="form mb--2@xs">
-          <div class="__group --enclosed +line mb--0@xs">
+      <div class="col w--2/3@t ow--1/6@t">
+        <form action="{{ home_url() }}" method="GET" class="form mb--1">
+          <div class="form__enclosed --search mb--0">
             <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
             <button type="submit" class="btn btn--primary">Go</button>
           </div>
@@ -43,7 +43,7 @@
           </ul>
 
         @else
-          <div class="list-group +indent">
+          <div class="list-group --indent">
             @while (have_posts())
               @php(the_post())
               @include('templates.single._list')

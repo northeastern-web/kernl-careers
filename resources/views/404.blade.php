@@ -4,9 +4,9 @@
   @if (!have_posts())
     @include('templates.banner', ['class' => 'ta--c'])
 
-    <section class="section ta--c pt--0@xs pb--5@xs">
+    <section class="section ta--c pt--0 pb--5">
       <div class="row">
-        <div class="col --10@sm --1-offset@sm --8@lg --2-offset@lg --6@xl --3-offset@xl">
+        <div class="col w--1/2@t ow--1/4@t">
           @if(get_field('txt_404', 'option'))
             {!! get_field('txt_404', 'option') !!}
 
@@ -16,9 +16,9 @@
           @endif
 
 
-          <form action="{{ home_url() }}" method="GET" class="form pt--2@xs">
-            <div class="__group --enclosed +line mb--0@xs">
-              <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
+          <form action="{{ home_url() }}" method="GET" class="pt--2">
+            <div class="form__enclosed --search">
+              <input name="s" type="text" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
               <button type="submit" class="btn btn--primary">Go</button>
             </div>
           </form>
