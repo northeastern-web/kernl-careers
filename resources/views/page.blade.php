@@ -25,6 +25,6 @@
         @include('templates.section')
       @endif
 
-      @include('templates._common.edit')
+      @include('templates.edit')
   </article>
 @endsection
