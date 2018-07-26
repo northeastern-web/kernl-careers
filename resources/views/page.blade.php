@@ -12,7 +12,7 @@
           <div class="section">
             <div class="row">
               <div class="col w--1/4@t">
-                @include('templates.page.nav')
+                @include('templates.page._nav')
               </div>
               <div class="col w--3/4@t">
                 @include('templates.section')
