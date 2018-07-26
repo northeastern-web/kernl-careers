@@ -21,7 +21,7 @@
       @yield('content')
     </main>
 
-    @include('chrome.search-modal')
+    @include('templates.search._modal')
 
     @php(do_action('get_footer'))
     @include('chrome.footer')

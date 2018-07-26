@@ -21,7 +21,7 @@
         </form>
 
         @if (!have_posts())
-          <div class="alert bg--yellow ta--c mb--2@xs">
+          <div class="bg--yellow pa--1 my--2 ta--c">
             <div class="__body">
               Sorry, no results were found for your search.
             </div>

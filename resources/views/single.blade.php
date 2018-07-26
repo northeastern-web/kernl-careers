@@ -17,7 +17,7 @@
         </div>
       </section>
 
-      @include('templates.single._edit')
+      @include('templates._common.edit')
     @endwhile
   </article>
 @endsection
