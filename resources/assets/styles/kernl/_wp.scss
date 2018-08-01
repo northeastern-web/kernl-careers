@@ -1,3 +1,9 @@
+// kernl
+// wp
+//
+// styles specific to kernl(wp)
+
+
 #html {
   background-color: $black;
 
@@ -10,13 +16,5 @@
       margin-left: auto !important;
       max-width: 1700px;
     }
-  }
-}
-
-.section {
-  // --
-  // Immediate section header
-  > .__header {
-    .__title { font-weight: 300; }
   }
 }
