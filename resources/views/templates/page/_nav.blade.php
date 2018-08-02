@@ -1,6 +1,6 @@
-<div class="hidden--up@d ta--c pb--1">
+<div class="hidden--up@t ta--c pb--1 np">
   <button class="btn --block bc--gray-600" data-toggle="nav" data-swap-target="#nav-interior">
-    <i class="__icon" data-feather="align-left"></i> Page Menu
+    <i data-feather="align-left"></i> Page Menu
   </button>
 </div>
 
