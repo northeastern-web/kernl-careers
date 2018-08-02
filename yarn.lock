@@ -4443,7 +4443,7 @@ jsprim@^1.2.2:
 
 "kernl-ui@git+https://git@bitbucket.org/nupods/kernl-ui.git#feature/1.2":
   version "1.1.2"
-  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#9e7cb6a4f19e16be08a1c9981a3a858c2725e16a"
+  resolved "git+https://git@bitbucket.org/nupods/kernl-ui.git#74011e4e9dc7011e96703b6c8b0911bb5f2b06c0"
   dependencies:
     bstyles "^0.3.1"
     feather-icons "^4.7.3"
