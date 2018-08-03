@@ -5,8 +5,10 @@
     $count = $wp_query->found_posts;
   @endphp
 
-  <header class="section --banner ta--c">
-    <h1 class="__title mb--3">Search Results</h1>
+  <header class="section --banner --center bg--black">
+    <div class="__header">
+      <h1 class="__title">Search Results</h1>
+    </div>
   </header>
 
   <section class="section">
