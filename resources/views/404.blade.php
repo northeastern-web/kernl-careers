@@ -2,9 +2,9 @@
 
 @section('content')
   @if (!have_posts())
-    @include('templates.banner', ['class' => 'ta--c'])
+    @include('templates.banner', ['class' => '--center bg--black'])
 
-    <section class="section ta--c pt--0 pb--5">
+    <section class="section ta--c pb--5">
       <div class="row">
         <div class="col w--1/2@t ow--1/4@t">
           @if(get_field('txt_404', 'option'))
