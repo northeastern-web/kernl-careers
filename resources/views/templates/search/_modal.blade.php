@@ -8,7 +8,7 @@
   <div class="__content w--100@d">
     <div class="__body">
       <form action="{{ home_url() }}" method="GET">
-        <div class="form__enclosed --search --search --dark --line">
+        <div class="form__enclosed --search --dark --line">
           <label for="modalSearch" class="sr--only">Search</label>
           <input autocomplete="off" class="fs--d3 fw--300" name="s" type="search" id="modalSearch" aria-describedby="modalSearch" placeholder="Search by keyword">
           <button type="submit" class="btn">Go</button>
