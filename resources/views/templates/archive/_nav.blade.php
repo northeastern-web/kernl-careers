@@ -10,7 +10,7 @@
 @endphp
 
 @if($current_children)
-  <nav class="nav --tabbed --buttons fs--sm pb--2@xs pb--4@md">
+  <nav class="nav --tabbed --buttons fs--sm pb--2 pb--4@d">
     <ul class="__list">
       <li class="__item">
         <a class="{{ ($current == $current_top) ? '__link --active' : '__link' }}" href="{{ get_category_link($current_top) }}">View All</a>
