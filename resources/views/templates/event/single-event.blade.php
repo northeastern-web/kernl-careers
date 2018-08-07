@@ -21,7 +21,7 @@
 
     <div class="col --10@md --8@lg">
       {{ tribe_the_notices() }}
-      @include('templates.section')
+      @include('templates._section')
 
       <div class="mb-2@xs fs--sm">
         {{ tribe_get_venue() . (tribe_address_exists() ? ', '. tribe_get_full_address() : '') }}

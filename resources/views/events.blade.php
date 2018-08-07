@@ -2,7 +2,7 @@
 
 @section('content')
   @php($class = (is_singular('tribe_events') ? ['class' => '--md'] : ['class' => '--md']))
-  @include('templates.banner', $class)
+  @include('templates._banner', $class)
 
   <div id="tribe-events-pg-template" class="section tribe">
     @if(tribe_is_month())

@@ -2,7 +2,7 @@
 
 @section('content')
   <div {{ post_class('--archive') }}>
-    @include('templates.banner', ['class' => '--md'])
+    @include('templates._banner', ['class' => '--md'])
   </div>
 
   <section class="section pt--0@xs">
