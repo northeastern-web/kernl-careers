@@ -14,11 +14,11 @@
         @php(the_post())
         @if ($i == 0)
           <div class="col --8@lg">
-            @include('templates.single._card', ['class' => '--overlay --bottom fs--d1'])
+            @include('templates.single.card', ['class' => '--overlay --bottom fs--d1'])
           </div>
         @else
           <div class="col --4@lg">
-            @include('templates.single._card')
+            @include('templates.single.card')
           </div>
         @endif
         @php($i++)
