@@ -108,13 +108,13 @@ class App extends Controller
 
             if (! get_field('bool_hide_author')) {
                 $output .= '
-                <div class="tt--caps fw--700 fs--sm pt--0h@xs">by '
+                <div class="tt--caps fw--700 fs--sm pt--0h">by '
                     . (get_field('bool_override_author') ? get_field('txt_author') : get_the_author()) .
                 '</div>';
             }
 
             if (get_field('bool_date')) {
-                $output .= '<div class="tt--caps fw--400 fs--sm">'. get_the_date() .'</div>';
+                $output .= '<div class="tt--caps fw--400 fs--sm pt--0h">'. get_the_date() .'</div>';
             }
 
             return $output;
