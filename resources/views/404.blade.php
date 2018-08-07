@@ -2,7 +2,7 @@
 
 @section('content')
   @if (!have_posts())
-    @include('templates.banner', ['class' => '--center bg--black'])
+    @include('templates._banner', ['class' => '--center bg--black', 'pre'])
 
     <section class="section ta--c pb--5">
       <div class="row">

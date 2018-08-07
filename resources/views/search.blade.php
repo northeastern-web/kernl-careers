@@ -48,7 +48,7 @@
           <div class="list-group --indent">
             @while (have_posts())
               @php(the_post())
-              @include('templates.single._list')
+              @include('templates.search.list-group-item')
             @endwhile
           </div>
 
