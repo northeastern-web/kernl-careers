@@ -24,11 +24,11 @@
       {{ (is_singular() ? edit_post_link('<i data-feather="edit"></i></span><span class="edit-text">Edit ' . (is_single() ? 'Post' : 'Page') . '', '', '', 0, 'post-edit-link btn --sm bg--blue') : '') }}
     </main>
 
-    @include('templates.search._modal')
-
     @php(do_action('get_footer'))
 
     @include('chrome._footer')
+
+    @include('templates.search._modal')
 
     @php(wp_footer())
 
