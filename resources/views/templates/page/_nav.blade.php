@@ -1,5 +1,5 @@
 <div class="hidden--up@t ta--c pb--1 np">
-  <button class="btn --block bc--gray-600" data-toggle="nav" data-swap-target="#nav-interior">
+  <button class="btn bc--gray-600" data-toggle="nav" data-swap-target="#nav-interior">
     <i data-feather="align-left"></i> Page Menu
   </button>
 </div>

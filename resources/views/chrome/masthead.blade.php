@@ -17,7 +17,7 @@
       <a class="__logo" href="{{ home_url('/') }}" data-ga-click="Mobile Drawer Logo">
         <img class="__logo__image" src="<?= get_field('med_logo_white', 'option'); ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
       </a>
-      <button class="__toggler menu-is-open"><i data-feather="x"></i></button>
+      <button class="__toggler"><i data-feather="x"></i></button>
     </div>
 
     @if (has_nav_menu('primary_navigation'))
