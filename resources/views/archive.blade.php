@@ -13,11 +13,11 @@
       @while (have_posts())
         @php(the_post())
         @if ($i == 0)
-          <div class="col --8@d">
+          <div class="col w--2/3@d">
             @include('templates.single.card', ['class' => '--overlay --bottom fs--d1'])
           </div>
         @else
-          <div class="col --4@d">
+          <div class="col w--1/3@d">
             @include('templates.single.card')
           </div>
         @endif
