@@ -13,6 +13,7 @@
     <![endif]-->
 
     {!! \Kernl\Utility::getTagManager(\WP_ENV) !!}
+
     @php(do_action('get_header'))
 
     @include('chrome._masthead')
@@ -24,7 +25,9 @@
     @include('templates.search._modal')
 
     @php(do_action('get_footer'))
+
     @include('chrome._footer')
+
     @php(wp_footer())
 
     {!! \Kernl\Utility::getGoogleAnalytics(\WP_ENV, get_field('txt_analytics','option')) !!}
