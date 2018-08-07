@@ -15,9 +15,7 @@
           </div>
         </div>
 
-        <div class="ta--c">
-          @include('templates.single._sharing')
-        </div>
+        @include('templates.single._sharing')
       </section>
     @endwhile
   </article>

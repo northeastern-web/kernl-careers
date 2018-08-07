@@ -7,7 +7,7 @@
   define( 'SHARE_URL', url_elements() );
 @endphp
 
-<ul class="share">
+<ul class="share flex--middle">
   <li>
     <a href="javascript:PODShare('facebook', '{{ SHARE_URL }}', 555, 350)">
       <i class="__icon --thin" data-feather="facebook"></i>
