@@ -7,8 +7,8 @@
     <a class="skip alert" href="#main_content">Skip to main content</a>
 
     <!--[if IE]>
-      <div class="alert bg--yellow-light fs--sm pa--1 pa--2@d">
-        <?php _e('<b><i>Note</i></b>: You are using an <strong>outdated</strong> browser. Please <a class="text--red" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'sage'); ?>
+      <div class="bg--beige fs--sm pa--1 pa--2@d">
+        <b><i>Note</i></b>: You are using an <strong>outdated</strong> browser. Please <a class="tc--red" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
       </div>
     <![endif]-->
 
