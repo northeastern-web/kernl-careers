@@ -2,11 +2,11 @@
 
 @section('content')
   <article class="article --page">
-      @include('templates.banner')
+      @include('templates._banner')
 
       @if(\Kernl\Navigation::display())
         @if(\Kernl\Navigation::isBanner() && !\Kernl\Navigation::isBannerSubnav())
-          @include('templates.section')
+          @include('templates._section')
 
         @else
           <div class="section">
@@ -15,16 +15,14 @@
                 @include('templates.page._nav')
               </div>
               <div class="col w--3/4@t">
-                @include('templates.section')
+                @include('templates._section')
               </div>
             </div>
           </div>
         @endif
 
       @else
-        @include('templates.section')
+        @include('templates._section')
       @endif
-
-      @include('templates.edit')
   </article>
 @endsection
