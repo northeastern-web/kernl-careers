@@ -1,4 +1,4 @@
-<article class="card {{ (isset($class) ? $class : '--h@sm --v@lg') }}">
+<article class="card{{ (isset($class) ? ' ' . $class : '') }}">
   <a href="{{ the_permalink() }}" class="__link">
     @if (get_the_category() && $has_badge)
       <header class="__header">
