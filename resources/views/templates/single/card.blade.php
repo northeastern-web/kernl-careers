@@ -1,10 +1,5 @@
-<article class="card {{ (isset($class) ? $class : '--h@sm --v@lg') }}">
+<article class="card{{ (isset($class) ? ' ' . $class : '') }}">
   <a href="{{ the_permalink() }}" class="__link">
-    <header class="__header">
-      @if (get_the_category())
-        <div class="__column"><div class="badge --left {{ (get_field('radio_color', 'category_'.get_the_category()[0]->term_id) ? get_field('radio_color', 'category_'.get_the_category()[0]->term_id) : '' ) }}">{{ get_the_category()[0]->name }}</div></div>
-      @endif
-    </header>
 
     @if (has_post_thumbnail())
       <div class="__graphic">
@@ -13,6 +8,12 @@
           data-src="{{ the_post_thumbnail_url('large') }}">
       </div>
     @endif
+
+    <header class="__header">
+      @if (get_the_category())
+        <div class="__column"><div class="badge {{ (get_field('radio_color', 'category_'.get_the_category()[0]->term_id) ? get_field('radio_color', 'category_'.get_the_category()[0]->term_id) : '' ) }}">{{ get_the_category()[0]->name }}</div></div>
+      @endif
+    </header>
 
     <section class="__body">
       <h2 class="__title">{{ the_title() }}</h2>
