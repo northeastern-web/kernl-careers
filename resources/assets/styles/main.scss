@@ -1,8 +1,13 @@
-/** Import everything from app */
-@import "./kernl/_ui";
-@import "./kernl/_wp";
-@import "./kernl/wordpress";
-@import "./kernl/events";
+// Styles
+// main
+//
+// imports styles for the project
 
-/** Import everything from app */
+// import kernl(ui)
+@import "~kernl-ui/src/styles/main";
+
+// basic styling for kernl(wp) specifics
+@import "./kernl-wp";
+
+// Import everything from app
 @import "./app/**/*";
