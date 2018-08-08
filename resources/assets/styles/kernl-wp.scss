@@ -3,6 +3,7 @@
 //
 // styles specific to kernl(wp)
 
+// Create a canvas effect with black backdrop and max width
 #html {
   background-color: $black;
 
@@ -16,4 +17,9 @@
       max-width: 1700px;
     }
   }
+}
+
+// Adjust Banner when masthead is overlaying content
+.masthead.\--overlay ~ main .\--banner {
+  padding-top: 10rem;
 }

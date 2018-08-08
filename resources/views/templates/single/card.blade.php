@@ -25,6 +25,7 @@
 
     <section class="__body">
       <h2 class="__title">{{ the_title() }}</h2>
+
       @if (has_excerpt() && $has_excerpt)
         {!! get_the_excerpt() !!}
       @else
