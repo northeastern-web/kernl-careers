@@ -1,10 +1,14 @@
 <article class="card {{ (isset($class) ? $class : '--h@sm --v@lg') }}">
   <a href="{{ the_permalink() }}" class="__link">
-    <header class="__header">
-      @if (get_the_category())
-        <div class="__column"><div class="badge --left {{ (get_field('radio_color', 'category_'.get_the_category()[0]->term_id) ? get_field('radio_color', 'category_'.get_the_category()[0]->term_id) : '' ) }}">{{ get_the_category()[0]->name }}</div></div>
-      @endif
-    </header>
+    @if (get_the_category() && $has_badge)
+      <header class="__header">
+        <div class="__column">
+          <div class="badge --left {{ (get_field('radio_color', 'category_'.get_the_category()[0]->term_id) ? get_field('radio_color', 'category_'.get_the_category()[0]->term_id) : '' ) }}">
+              {{ get_the_category()[0]->name }}
+          </div>
+        </div>
+      </header>
+    @endif
 
     @if (has_post_thumbnail())
       <div class="__graphic">
