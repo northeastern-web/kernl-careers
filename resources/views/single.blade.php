@@ -15,7 +15,9 @@
           </div>
         </div>
 
-        @include('templates.single._sharing')
+        @if(! post_password_required())
+          @include('templates.single._sharing')
+        @endif
       </section>
     @endwhile
   </article>
