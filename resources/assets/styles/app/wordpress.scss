@@ -16,16 +16,12 @@ body.mce-content-body { background: #fff; }
 
   .edit-text { display: none; }
 
-  @include mqbp-up(sm) {
-    top: 1rem;
-  }
-
-  @include mqbp-up(md) {
+  @include mqbp-up(t) {
     right: 20%;
     top: 1.25rem;
   }
 
-  @include mqbp-up(lg) {
+  @include mqbp-up(d) {
     top: 1px;
     right: 1px;
     padding: 0.5rem 1rem !important;
@@ -71,7 +67,7 @@ body.mce-content-body { background: #fff; }
   height: auto;
 }
 
-@include mqbp-up(sm) {
+@include mqbp-up(t) {
   .alignleft {
     float: left;
     margin-right: 1rem;
