@@ -28,8 +28,8 @@ if (! defined('ABSPATH')) {
 
         <?php tribe_events_list_the_date_headers(); ?>
 
-        <div class="col --3@lg">
-          <?php include \App\template_path(locate_template('views/templates/event/_card.blade.php')); ?>
+        <div class="col w--1/4@t">
+          <?php include \App\template_path(locate_template('views/templates/event/card.blade.php')); ?>
         </div>
 
         <?php do_action('tribe_events_inside_after_loop'); ?>

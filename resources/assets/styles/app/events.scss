@@ -89,14 +89,12 @@
 
   .tribe-events-list-separator-month {
     width: 100%;
-    padding-top: 1.25rem;
-    padding-bottom: 0.5rem;
-    margin: 0 1rem 2rem;
-    font-size: $fs-d4;
-    border-bottom: 1px solid $gray-200;
-    text-transform: initial;
+    padding: 0 0 1.75rem;
     display: block;
-    clear: both;
+    font-size: $fs-d3;
+    font-weight: 300;
+    text-transform: initial;
+    text-align: center;
   }
 
   .tribe-events-page-title,
@@ -118,6 +116,7 @@
     .hentry { padding: 0 0.5rem; }
   }
 
+  // Custom month title
   .tribe-month-title {
     position: absolute;
     top: 2.5%;
@@ -128,10 +127,12 @@
     text-transform: uppercase;
   }
 
+  // Event title within thable
   .tribe-events-month-event-title {
     font-size: $fs-root;
     line-height: 1;
   }
 
+  // Generic padding around calendar
   #tribe-events-content { padding: 1rem 0; }
 }
