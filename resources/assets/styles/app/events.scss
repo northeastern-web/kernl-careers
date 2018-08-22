@@ -4,20 +4,26 @@
 // styles for tribe events calendar
 
 .tribe {
-  a { color: #000; }
+  // default link color
+  a { color: $gray-500; }
 
+  // elements to hide
   #tribe-bar-collapse-toggle,
   .tribe-bar-views-select,
   .tribe-events-visuallyhidden { display: none; }
 
+  // elements to show only for screen readers
   label,
   .tribe-bar-date-filter,
   .label-tribe-bar-search,
   .tribe-events-ical,
   .tribe-bar-submit { @extend .sr--only; }
 
-  #tribe-bar-views { float: left; }
+  #tribe-bar-views,
+  .tribe-bar-views-option-list,
+  .tribe-bar-views-option-day { float: left; }
 
+  // Toggle buttons for different views
   .tribe-bar-views-list {
     padding: 0;
     margin: 0;
@@ -28,30 +34,30 @@
 
     a {
       @extend .btn;
+      @extend .btn.\--sm;
 
       border-radius: 0;
     }
 
     .tribe-bar-active a {
-      background: rgba(#000, 0.1);
+      background: rgba($black, 0.1);
       font-weight: bold;
     }
   }
-
-  .tribe-bar-views-option-list,
-  .tribe-bar-views-option-day { float: left; }
 
   .tribe-bar-views-option-month {
     float: right;
     margin-left: -1px;
   }
 
+  // Search bar
   .tribe-bar-search-filter {
     float: right;
 
     input { padding: 0.25rem 0.75rem; }
   }
 
+  // Previous & Next navigation items
   .tribe-events-sub-nav {
     padding: 0;
     text-align: initial;
@@ -62,7 +68,7 @@
       margin: 0 !important;
 
       > a {
-        color: #000;
+        color: $black;
         font-weight: 700;
 
         &:hover { text-decoration: underline; }
@@ -93,12 +99,10 @@
     clear: both;
   }
 
-  .tribe-events-page-title {
-    font-weight: 700;
+  .tribe-events-page-title,
+  #tribe-events-header { display: none; }
 
-    @include mqbp_up(lg) { top: -3.2rem; }
-  }
-
+  // Wrapper for month view
   .tribe-events-calendar {
     th {
       padding: 0.5rem;
@@ -110,10 +114,24 @@
     &,
     th,
     td { border-color: $gray-200 !important; }
+
+    .hentry { padding: 0 0.5rem; }
+  }
+
+  .tribe-month-title {
+    position: absolute;
+    top: 2.5%;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   .tribe-events-month-event-title {
     font-size: $fs-root;
     line-height: 1;
   }
+
+  #tribe-events-content { padding: 1rem 0; }
 }
