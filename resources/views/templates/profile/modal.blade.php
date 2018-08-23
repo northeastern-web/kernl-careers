@@ -5,28 +5,26 @@
     <div class="row">
       <div class="col w--2/3@t ow--1/6@t">
         @if(get_field('med_headshot'))
-          <div class="__graphic ar--1x1 w--1/3@d f--r@d">
-            <img class="__graphic__img" src="{{ get_field('med_headshot')['url'] }}" alt="{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}">
+          <div class="w--1/3@d f--r@d pt--3@d ml--1@d mb--1@d ta--c">
+            <img src="{{ get_field('med_headshot')['url'] }}" alt="{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}">
           </div>
         @endif
 
         <div class="__body">
-          <h3 class="__title">{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}</h3>
+          <h2>{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}</h2>
 
           @if(get_field('txt_title'))
-            <div class="__subtitle">{{ the_field('txt_title') }}</div>
+            <h3 class="fs--d1 fs--italic">{{ the_field('txt_title') }}</h3>
           @endif
 
-          <div class="__meta">
-            <ul class="ls--none">
-              @if(get_field('txt_email'))
-                <li><a class="__link" href="mailto:{{ the_field('txt_email') }}">{{ the_field('txt_email') }}</a></li>
-              @endif
-              @if(get_field('txt_phone'))
-                <li><a class="__link" href="tel:{{ the_field('txt_phone') }}">{{ the_field('txt_phone') }}</a></li>
-              @endif
-            </ul>
-          </div>
+          <ul class="ls--none fs--sm">
+            @if(get_field('txt_email'))
+              <li><a class="__link" href="mailto:{{ the_field('txt_email') }}"><i data-feather="mail" class="--sm --thin mr--0h tc--gray-900"></i> {{ the_field('txt_email') }}</a></li>
+            @endif
+            @if(get_field('txt_phone'))
+              <li><a class="__link" href="tel:{{ the_field('txt_phone') }}"><i data-feather="phone" class="--sm --thin mr--0h tc--gray-900"></i> {{ the_field('txt_phone') }}</a></li>
+            @endif
+          </ul>
 
           {{ the_content() }}
         </div>
