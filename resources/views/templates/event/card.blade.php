@@ -3,7 +3,7 @@
   $has_excerpt = (!empty($hide_excerpt) ? false : true);
 @endphp
 
-<article class="card {{ (isset($class) ? $class : '--v') }}">
+<article class="card fs--xs hover:bb--2-red{{ (isset($class) ? ' ' . $class : '') }}">
   <a href="{{ the_permalink() }}" class="__link">
     @if(get_the_category() && $has_badge)
       <header class="__header">
@@ -31,8 +31,14 @@
       <h2 class="__title">{{ the_title() }}</h2>
 
       @if($has_excerpt)
-        {!! (has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 20)) !!}
+        {!! (has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 15)) !!}
       @endif
     </section>
+
+    <footer class="__footer">
+      <div class="__column tc--gray">
+        View Event <i data-feather="arrow-right" class="--sm"></i>
+      </div>
+    </footer>
   </a>
 </article>
