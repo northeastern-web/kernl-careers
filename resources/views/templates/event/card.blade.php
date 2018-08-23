@@ -24,11 +24,11 @@
     @endif
 
     <section class="__body">
-      <h2 class="__title">{{ the_title() }}</h2>
-
-      <div class="mb--0h@xs">
+      <div class="mb--0h tt--u fs--xs">
         {{ tribe_get_start_date(get_the_id(), false, 'M j') }} at {{ tribe_get_start_time() }}
       </div>
+
+      <h2 class="__title">{{ the_title() }}</h2>
 
       @if($has_excerpt)
         {!! (has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 20)) !!}
