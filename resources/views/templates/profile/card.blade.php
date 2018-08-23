@@ -18,3 +18,7 @@
     </div>
   </a>
 </article>
+
+@php
+  include \App\template_path(locate_template('views/templates/profile/modal.blade.php'));
+@endphp
