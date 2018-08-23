@@ -1,7 +1,7 @@
 @extends('chrome.app')
 
 @section('content')
-  @include('templates._banner')
+  @include('templates._banner', ['class' => '--measure-wide'])
 
   <div id="tribe-events-pg-template" class="section tribe">
     @if(tribe_is_month())
