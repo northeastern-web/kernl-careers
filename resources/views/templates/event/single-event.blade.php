@@ -10,7 +10,7 @@
     </div>
 
     <div class="col w--1/3@t w--1/4@w">
-      <div class="card bg--red h--auto mb--1">
+      <div class="card bg--black h--auto mb--1">
         <div class="__body">
           <div class="__title mb--1">{!! tribe_get_start_date(get_the_id(), false, 'F j, Y') !!}</div>
           {!! '<b>' . tribe_get_venue() . '</b>' . (tribe_address_exists() ? '<br>'. tribe_get_full_address() : '') !!}
