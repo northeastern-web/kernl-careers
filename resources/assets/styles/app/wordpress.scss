@@ -16,6 +16,8 @@ body.mce-content-body { background: #fff; }
 
   .edit-text { display: none; }
 
+  &.btn .feather { margin-right: 0; }
+
   @include mqbp-up(t) {
     right: 20%;
     top: 1.25rem;
