@@ -3,7 +3,7 @@
   $has_excerpt = (!empty($hide_excerpt) ? false : true);
 @endphp
 
-<article class="card fs--xs hover:bb--2-red{{ (isset($class) ? ' ' . $class : '') }}">
+<article class="card fs--xs hover:bb--2-red {{ (isset($class) ? $class : '') }}">
   <a href="{{ the_permalink() }}" class="__link">
     @if(get_the_category() && $has_badge)
       <header class="__header">

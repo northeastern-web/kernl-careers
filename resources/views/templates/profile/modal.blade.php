@@ -1,5 +1,6 @@
 <div class="modal --base" id="modal_profile-{{ get_the_ID() }}" tabindex="-1" role="dialog" aria-labelledby="modal_base_label" aria-hidden="true">
   <div class="__screen" data-dismiss="modal"></div>
+
   <div class="__content bg--white pa--0">
     <div class="row">
       <div class="col w--2/3@t ow--1/6@t">
