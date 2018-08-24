@@ -4,9 +4,6 @@
 // styles for tribe events calendar
 
 .tribe {
-  // default link color
-  a { color: $gray-500; }
-
   // elements to hide
   #tribe-bar-collapse-toggle,
   .tribe-bar-views-select,
@@ -22,6 +19,24 @@
   #tribe-bar-views,
   .tribe-bar-views-option-list,
   .tribe-bar-views-option-day { float: left; }
+
+  // Wrapper for month view
+  .tribe-events-calendar {
+    a { color: $gray-500; }
+
+    th {
+      padding: 0.5rem;
+      background: $gray-100;
+      font-size: $fs-xs;
+      border-left: 1px solid;
+    }
+
+    &,
+    th,
+    td { border-color: $gray-200 !important; }
+
+    .hentry { padding: 0 0.5rem; }
+  }
 
   // Toggle buttons for different views
   .tribe-bar-views-list {
@@ -99,22 +114,6 @@
 
   .tribe-events-page-title,
   #tribe-events-header { display: none; }
-
-  // Wrapper for month view
-  .tribe-events-calendar {
-    th {
-      padding: 0.5rem;
-      background: $gray-100;
-      font-size: $fs-xs;
-      border-left: 1px solid;
-    }
-
-    &,
-    th,
-    td { border-color: $gray-200 !important; }
-
-    .hentry { padding: 0 0.5rem; }
-  }
 
   // Custom month title
   .tribe-month-title {
