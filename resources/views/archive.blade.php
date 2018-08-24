@@ -2,7 +2,7 @@
 
 @section('content')
   <div {{ post_class('--archive') }}>
-    @include('templates._banner', ['class' => ''])
+    @include('templates._banner')
   </div>
 
   <section class="section">
@@ -12,7 +12,7 @@
       @php($i = 0)
       @while (have_posts())
         @php(the_post())
-        @if ($i == 0)
+        @if ($i == 0 && get_query_var('paged') < 2)
           <div class="col">
             @include('templates.single.card', ['class' => '--h@t fs--root', 'hide_badge' => true])
           </div>
