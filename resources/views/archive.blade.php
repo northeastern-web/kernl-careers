@@ -5,7 +5,7 @@
     @include('templates._banner')
   </div>
 
-  <section class="section">
+  <section class="section col--stretch">
     @include('templates.archive._nav')
 
     <div class="row">
