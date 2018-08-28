@@ -22,6 +22,8 @@
 
   // Wrapper for month view
   .tribe-events-calendar {
+    border: 0 none !important;
+
     a { color: $gray-500; }
 
     th {
