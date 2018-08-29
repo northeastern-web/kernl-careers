@@ -1,20 +1,13 @@
-@php
-  $option = (is_home() ? 'option' : get_the_ID());
-  $class = (get_field('bool_megamenu', 'option') ? ' --megamenu +chevron' : '');
-  $class .= (\Kernl\Masthead::getMenu('Utility Navigation') ? ' +utility' : '');
-  $class .= (get_field('bool_masthead_overylay', $option) || \Kernl\Layout::getParentValues('bool_masthead_overylay') ? ' --overlay' : '');
-@endphp
-{{ \Kernl\Layout::getParentValues('bool_megamenu') }}
-
-<header class="masthead{{ $class }}" role="banner">
-  <a class="__logo" href="{{ home_url('/') }}" data-ga-click="Home Logo">
-    <img class="__logo__image" src="{{ (get_field('bool_masthead_overylay', $option) || \Kernl\Layout::getParentValues('bool_masthead_overylay') ? get_field('med_logo_white','option') : get_field('med_logo','option')) }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
+<header class="{{ \Kernl\Masthead::getClass() }}" role="banner">
+  <a class="__logo" href="{{ home_url('/') }}">
+    <img class="__logo__image" src="{{ \Kernl\Masthead::getLogo() }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
   </a>
+
   <button class="__toggler hidden--up@d"><i data-feather="menu"></i></button>
 
   <nav class="__drawer" role="navigation">
     <div class="w--100 d--flex justify--between hidden--up@d">
-      <a class="__logo" href="{{ home_url('/') }}" data-ga-click="Mobile Drawer Logo">
+      <a class="__logo" href="{{ home_url('/') }}">
         <img class="__logo__image" src="<?= get_field('med_logo_white', 'option'); ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
       </a>
       <button class="__toggler"><i data-feather="x"></i></button>
