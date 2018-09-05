@@ -105,6 +105,6 @@
   "dependencies": {
     "feather-icons": "^4.7.3",
     "jquery": "^3.2.0",
-    "kernl-ui": "git+https://git@bitbucket.org/nupods/kernl-ui.git#semver:^1.2"
+    "kernl-ui": "git+https://git@bitbucket.org/nupods/kernl-ui.git"
   }
 }
