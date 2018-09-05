@@ -5,6 +5,73 @@
 
 body.mce-content-body { background: #fff; }
 
+/** Media alignment */
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  max-width: 1000px;
+  width: 100vw !important;
+  height: auto;
+  margin-left: 50% !important;
+  transform: translateX(-50%);
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.alignleft,
+.alignright {
+  margin-bottom: 1rem;
+  height: auto;
+}
+
+@include mqbp-up(t) {
+  .alignleft {
+    @extend .f--l\@t;
+    @extend .mr--1\@t;
+  }
+
+  .alignright {
+    @extend .f--r\@t;
+    @extend .ml--1\@t;
+  }
+}
+
+/** Captions */
+.wp-caption {
+  // comment to keep stylelint happy
+}
+
+.wp-caption img {
+  // comment to keep stylelint happy
+}
+
+.wp-caption-text {
+  @extend .fs--sm;
+
+  padding-top: 10px;
+  color: $gray-400;
+}
+
+/** Text meant only for screen readers */
+.screen-reader-text {
+  @extend .sr--only;
+}
+
+#tinymce {
+  margin: 12px !important;
+  font-family: $type-sans;
+}
+
+/** "Edit" button */
 .post-edit-link {
   position: fixed;
   top: 0.825rem;
@@ -39,71 +106,4 @@ body.mce-content-body { background: #fff; }
     background: $blue;
     color: #fff;
   }
-}
-
-/** Media alignment */
-.alignnone {
-  margin-left: 0;
-  margin-right: 0;
-  max-width: 100%;
-  height: auto;
-}
-
-.aligncenter {
-  max-width: 1000px;
-  width: 100vw !important;
-  height: auto;
-  margin-left: 50% !important;
-  transform: translateX(-50%);
-  text-align: center;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-.alignleft,
-.alignright {
-  margin-bottom: 1rem;
-  height: auto;
-}
-
-@include mqbp-up(t) {
-  .alignleft {
-    float: left;
-    margin-right: 1rem;
-  }
-
-  .alignright {
-    float: right;
-    margin-left: 1rem;
-  }
-}
-
-/** Captions */
-.wp-caption {
-  // @extend .figure;
-}
-
-.wp-caption img {
-  // @extend .figure-img;
-  // @extend .img-fluid;
-}
-
-.wp-caption-text {
-  padding-top: 10px;
-  font-size: $fs-sm;
-  color: $gray-400;
-}
-
-/** Text meant only for screen readers */
-.screen-reader-text {
-  // @extend .sr-only;
-  // @extend .sr-only-focusable;
-}
-
-#tinymce {
-  margin: 12px !important;
-  font-family: $type-sans;
 }
