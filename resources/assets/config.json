@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/app/themes/kernl-wp",
-  "devUrl": "http://faculty.northeastern.test",
+  "devUrl": "https://learning.northeastern.test",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [

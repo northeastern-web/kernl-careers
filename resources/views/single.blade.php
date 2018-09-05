@@ -3,21 +3,22 @@
 @section('content')
   <article class="article --single">
     @while(have_posts()) @php(the_post())
-      @include('templates.banner', ['class' => 'ta--c'])
+      @include('templates._banner', ['class' => '--measure-wide --center'])
 
-      <section class="section pb--2@xs">
-        @include('templates.single.video')
+      <section class="section">
+        @include('templates.single._video')
 
         <div class="row">
-          <div class="col --10@md --1-offset@md --8@lg --2-offset@lg">
-            @include('templates.single.external')
-            @include('templates.section')
-            @include('templates.single._sharing')
+          <div class="col w--2/3@t ow--1/6@t">
+            @include('templates.single._external')
+            @include('templates._section')
           </div>
         </div>
-      </section>
 
-      @include('templates.single._edit')
+        @if(! post_password_required())
+          @include('templates.single._sharing')
+        @endif
+      </section>
     @endwhile
   </article>
 @endsection

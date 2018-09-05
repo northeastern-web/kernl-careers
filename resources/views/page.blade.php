@@ -2,29 +2,27 @@
 
 @section('content')
   <article class="article --page">
-      @include('templates.banner')
+      @include('templates._banner')
 
       @if(\Kernl\Navigation::display())
         @if(\Kernl\Navigation::isBanner() && !\Kernl\Navigation::isBannerSubnav())
-          @include('templates.section')
+          @include('templates._section')
 
         @else
           <div class="section">
             <div class="row">
-              <div class="col --3@lg">
-                @include('templates.page.nav')
+              <div class="col w--1/4@t">
+                @include('templates.page._nav')
               </div>
-              <div class="col --9@lg">
-                @include('templates.section')
+              <div class="col w--3/4@t">
+                @include('templates._section')
               </div>
             </div>
           </div>
         @endif
 
       @else
-        @include('templates.section')
+        @include('templates._section')
       @endif
-
-      @include('templates.single._edit')
   </article>
 @endsection

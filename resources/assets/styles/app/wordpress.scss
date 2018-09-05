@@ -1,0 +1,109 @@
+// kernl
+// WordPress Generated Classes
+//
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+body.mce-content-body { background: #fff; }
+
+/** Media alignment */
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  max-width: 1000px;
+  width: 100vw !important;
+  height: auto;
+  margin-left: 50% !important;
+  transform: translateX(-50%);
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.alignleft,
+.alignright {
+  margin-bottom: 1rem;
+  height: auto;
+}
+
+@include mqbp-up(t) {
+  .alignleft {
+    @extend .f--l\@t;
+    @extend .mr--1\@t;
+  }
+
+  .alignright {
+    @extend .f--r\@t;
+    @extend .ml--1\@t;
+  }
+}
+
+/** Captions */
+.wp-caption {
+  // comment to keep stylelint happy
+}
+
+.wp-caption img {
+  // comment to keep stylelint happy
+}
+
+.wp-caption-text {
+  @extend .fs--sm;
+
+  padding-top: 10px;
+  color: $gray-400;
+}
+
+/** Text meant only for screen readers */
+.screen-reader-text {
+  @extend .sr--only;
+}
+
+#tinymce {
+  margin: 12px !important;
+  font-family: $type-sans;
+}
+
+/** "Edit" button */
+.post-edit-link {
+  position: fixed;
+  top: 0.825rem;
+  right: 15%;
+  font-weight: 700;
+  z-index: 4000;
+  padding: 0.5rem !important;
+  border-radius: 2rem !important;
+
+  .edit-text { display: none; }
+
+  &.btn .feather { margin-right: 0; }
+
+  @include mqbp-up(t) {
+    right: 20%;
+    top: 1.25rem;
+  }
+
+  @include mqbp-up(d) {
+    top: 1px;
+    right: 1px;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0 !important;
+
+    .edit-text {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &:hover {
+    background: $blue;
+    color: #fff;
+  }
+}

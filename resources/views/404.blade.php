@@ -2,11 +2,11 @@
 
 @section('content')
   @if (!have_posts())
-    @include('templates.banner', ['class' => 'ta--c'])
+    @include('templates._banner', ['class' => '--center bg--black', 'pre'])
 
-    <section class="section ta--c pt--0@xs pb--5@xs">
+    <section class="section ta--c pb--5">
       <div class="row">
-        <div class="col --10@sm --1-offset@sm --8@lg --2-offset@lg --6@xl --3-offset@xl">
+        <div class="col w--1/2@t ow--1/4@t">
           @if(get_field('txt_404', 'option'))
             {!! get_field('txt_404', 'option') !!}
 
@@ -15,10 +15,10 @@
             Please try browsing the site, or search below.</p>
           @endif
 
-          <form class="form" action="{{ home_url() }}" method="GET">
-            <div class="__group --enclosed mb--3@md">
-              <label class="sr--only">Search</label>
-              <input type="text" placeholder="Search by keyword">
+
+          <form action="{{ home_url() }}" method="GET" class="pt--2">
+            <div class="form__enclosed --search">
+              <input name="s" type="text" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
               <button type="submit" class="btn btn--primary">Go</button>
             </div>
           </form>

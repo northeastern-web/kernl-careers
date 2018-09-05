@@ -3,6 +3,6 @@
 
 <div id="tribe-events-footer">
   @php(do_action('tribe_events_before_footer_nav'))
-    @include('templates.event.list.nav-footer')
+    @include('templates.event.list.nav')
   @php(do_action('tribe_events_after_footer_nav'))
 </div>

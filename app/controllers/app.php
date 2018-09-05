@@ -82,11 +82,11 @@ class App extends Controller
             $end_time = tribe_get_end_date(get_the_id(), false, 'g:i a');
 
             if (tribe_event_is_multiday()) {
-                $event_date = $start_date .' &mdash; '. $end_date;
+                $event_date = '<i data-feather="clock" class="tc--red --thin pos--relative" style="top: 2px"></i> ' . $start_date .' &mdash; '. $end_date;
             } elseif (tribe_event_is_all_day()) {
-                $event_date = $start_date .' &bull; All Day';
+                $event_date = '<i data-feather="clock" class="tc--red --thin pos--relative" style="top: 2px"></i> ' . $start_date .' &bull; All Day';
             } else {
-                $event_date = $start_date .' &bull; '. $start_time .' - '. $end_time;
+                $event_date = '<i data-feather="clock" class="tc--red --thin pos--relative" style="top: 2px"></i> ' . $start_date .' &bull; '. $start_time .' - '. $end_time;
             }
 
             return $event_date;
@@ -108,13 +108,13 @@ class App extends Controller
 
             if (! get_field('bool_hide_author')) {
                 $output .= '
-                <div class="tt--caps fw--700 fs--sm pt--0h@xs">by '
+                <div class="tt--caps fw--700 fs--sm pt--0h">by '
                     . (get_field('bool_override_author') ? get_field('txt_author') : get_the_author()) .
                 '</div>';
             }
 
             if (get_field('bool_date')) {
-                $output .= '<div class="tt--caps fw--400 fs--sm">'. get_the_date() .'</div>';
+                $output .= '<div class="tt--caps fw--400 fs--sm pt--0h">'. get_the_date() .'</div>';
             }
 
             return $output;

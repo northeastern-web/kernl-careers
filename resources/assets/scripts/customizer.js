@@ -1,3 +1,8 @@
+// Customizer
+//
+// wp customizer scripts
+
+
 import $ from 'jquery';
 
 wp.customize('blogname', (value) => {

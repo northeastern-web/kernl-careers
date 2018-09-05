@@ -1,17 +1,21 @@
 @extends('chrome.app')
 @section('content')
-  @include('templates.banner', ['class' => 'ta--c --lg'])
-
   @php
     global $wp_query;
     $count = $wp_query->found_posts;
   @endphp
 
-  <section class="section pt--0@xs">
+  <header class="section --banner --center bg--black">
+    <div class="__header">
+      <h1 class="__title">Search Results</h1>
+    </div>
+  </header>
+
+  <section class="section">
     <div class="row">
-      <div class="col --8@md --2-offset@md">
-        <form action="{{ home_url() }}" method="GET" class="mb--2@xs">
-          <div class="__group __search +line mb--0@xs">
+      <div class="col w--2/3@t ow--1/6@t">
+        <form action="{{ home_url() }}" method="GET" class="form mb--1">
+          <div class="form__enclosed --search mb--0">
             <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
             <button type="submit" class="btn btn--primary">Go</button>
           </div>
@@ -19,7 +23,7 @@
         </form>
 
         @if (!have_posts())
-          <div class="alert bg--yellow ta--c mb--2@xs">
+          <div class="bg--yellow pa--1 my--2 ta--c">
             <div class="__body">
               Sorry, no results were found for your search.
             </div>
@@ -41,10 +45,10 @@
           </ul>
 
         @else
-          <div class="list-group +indent">
+          <div class="list-group --indent">
             @while (have_posts())
               @php(the_post())
-              @include('templates.single._list')
+              @include('templates.search.list-group-item')
             @endwhile
           </div>
 
