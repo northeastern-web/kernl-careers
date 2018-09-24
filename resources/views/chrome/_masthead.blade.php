@@ -3,14 +3,14 @@
     <img class="__logo__image" src="{{ \Kernl\Masthead::getLogo() }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
   </a>
 
-  <button class="__toggler hidden--up@d"><i data-feather="menu"></i></button>
+  <button class="__toggler hidden--up@d" aria-label="Open"><i data-feather="menu"></i></button>
 
   <nav class="__drawer" role="navigation">
     <div class="w--100 d--flex justify--between hidden--up@d">
       <a class="__logo" href="{{ home_url('/') }}">
         <img class="__logo__image" src="<?= get_field('med_logo_white', 'option'); ?>" alt="<?= get_bloginfo('name', 'display'); ?> logo">
       </a>
-      <button class="__toggler"><i data-feather="x"></i></button>
+      <button class="__toggler" aria-label="Close"><i data-feather="x"></i></button>
     </div>
 
     @if (has_nav_menu('primary_navigation'))
