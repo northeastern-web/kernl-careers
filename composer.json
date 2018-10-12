@@ -1,29 +1,18 @@
 {
-  "name": "roots/sage",
+  "name": "nupods/kernl-wp",
   "type": "wordpress-theme",
   "license": "MIT",
-  "description": "WordPress starter theme with a modern development workflow",
-  "homepage": "https://roots.io/sage/",
+  "description": "Northeastern WP starter theme",
+  "homepage": "http://nuweb28dev.neu.edu/kernl-docs/wp",
   "authors": [
     {
-      "name": "Ben Word",
-      "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
-    },
-    {
-      "name": "Scott Walkinshaw",
-      "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
-    },
-    {
-      "name": "QWp6t",
-      "email": "hi@qwp6t.me",
-      "homepage": "https://github.com/qwp6t"
+      "name": "NU PODS",
+      "email": "provost-digital@northeastern.edu",
+      "homepage": "http://nuweb28dev.neu.edu/kernl-docs"
     }
   ],
   "support": {
-    "issues": "https://github.com/roots/sage/issues",
-    "forum": "https://discourse.roots.io/"
+    "documentation": "http://nuweb28dev.neu.edu/kernl-docs/wp"
   },
   "repositories": [
     {
@@ -50,9 +39,6 @@
     "roots/sage-installer": "~1.3"
   },
   "scripts": {
-    "test": ["phpcs"],
-    "post-create-project-cmd": [
-      "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
-    ]
+    "test": ["phpcs"]
   }
 }

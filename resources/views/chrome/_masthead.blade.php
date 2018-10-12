@@ -1,4 +1,4 @@
-<header class="{{ \Kernl\Masthead::getClass() }}" role="banner">
+<header class="{{ \Kernl\Masthead::getClass() }} {{ (has_nav_menu('utility_navigation') ? '+utility' : '') }}" role="banner">
   <a class="__logo" href="{{ home_url('/') }}">
     <img class="__logo__image" src="{{ \Kernl\Masthead::getLogo() }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
   </a>
@@ -15,17 +15,17 @@
 
     @if (has_nav_menu('primary_navigation'))
       @php
-      wp_nav_menu([
-        'theme_location' => 'primary_navigation',
-        'depth' => 10,
-        'menu_id' => 'masthead-primary',
-        'menu_class' => '__list',
-        'walker' => new \Kernl\Masthead()
-      ]);
+        wp_nav_menu([
+          'theme_location' => 'primary_navigation',
+          'depth' => 10,
+          'menu_id' => 'masthead-primary',
+          'menu_class' => '__list',
+          'walker' => new \Kernl\Masthead()
+        ]);
       @endphp
     @endif
 
-    @if (\Kernl\Masthead::getMenu('Utility Navigation'))
+    @if (has_nav_menu('utility_navigation'))
       <ul class="__list --utility">
         @foreach (\Kernl\Masthead::getMenu('Utility Navigation') as $item)
           <li class="__item {{ (\Kernl\Masthead::isActiveMenu('Utility Navigation', $item) ? '--active' : '') }}">
