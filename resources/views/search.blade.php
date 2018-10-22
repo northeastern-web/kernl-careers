@@ -52,7 +52,7 @@
             @endwhile
           </div>
 
-          <div class="py--2@xs">
+          <div class="py--2">
             {!! \Kernl\Pagination::display() !!}
           </div>
 
