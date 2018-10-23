@@ -1,6 +1,7 @@
 @php
   $has_badge = (!empty($hide_badge) ? false : true);
   $has_excerpt = (!empty($hide_excerpt) ? false : true);
+  $alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true)
 @endphp
 
 <article class="card {{ (isset($class) ? $class : '') }}">
@@ -17,7 +18,7 @@
 
     @if(has_post_thumbnail())
       <div class="__graphic ar--16x9">
-        <img class="__graphic__img" alt="{{ the_title() }}"
+        <img class="__graphic__img" alt="{{ $alt ? $alt : the_title() }}"
           src="{{ the_post_thumbnail_url('large') }}"
           data-src="{{ the_post_thumbnail_url('large') }}">
       </div>
