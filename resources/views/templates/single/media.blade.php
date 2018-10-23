@@ -1,12 +1,13 @@
 @php
   $has_excerpt = (!empty($hide_excerpt) ? false : true);
+  $alt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true)
 @endphp
 
 <div class="media {{ (isset($class) ? $class : '') }}">
   <a class="__link" href="{{ the_permalink() }}">
     @if(has_post_thumbnail())
       <div class="__graphic">
-        <img class="__graphic__img" alt="{{ the_title() }}"
+        <img class="__graphic__img" alt="{{ $alt ? $alt : the_title() }}"
           src="{{ the_post_thumbnail_url('thumbnail') }}"
           data-src="{{ the_post_thumbnail_url('thumbnail') }}">
       </div>
