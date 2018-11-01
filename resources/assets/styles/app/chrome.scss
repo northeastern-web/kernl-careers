@@ -1,0 +1,18 @@
+// kernl/app
+// chrome
+
+// Create a canvas effect with black backdrop and max width
+#html {
+  background-color: $black;
+
+  body {
+    background-color: #fff;
+    position: relative; // to contain overlay masthead
+
+    @include mqbp_up(xx) {
+      margin-right: auto !important;
+      margin-left: auto !important;
+      max-width: 1700px;
+    }
+  }
+}

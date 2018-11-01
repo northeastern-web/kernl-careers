@@ -8,7 +8,6 @@
 
 // import kernl(ui) baseline styles and functions
 @import "~kernl-ui/src/styles/01.global/variables/colors";
-@import "~kernl-ui/src/styles/01.global/variables/icons";
 @import "~kernl-ui/src/styles/01.global/variables/layout";
 @import "~kernl-ui/src/styles/01.global/variables/misc";
 @import "~kernl-ui/src/styles/01.global/variables/sizing";
@@ -25,16 +24,10 @@
 // Baseline
 @import "~kernl-ui/src/styles/02.baseline/document";
 @import "~kernl-ui/src/styles/02.baseline/typography";
-// @import "~kernl-ui/src/styles/02.baseline/lists";
-// @import "~kernl-ui/src/styles/02.baseline/tables";
 @import "~kernl-ui/src/styles/02.baseline/forms";
-// @import "~kernl-ui/src/styles/02.baseline/media";
 
 // Structure
-// @import "~kernl-ui/src/styles/03.structure/column";
-// @import "~kernl-ui/src/styles/03.structure/footer";
 @import "~kernl-ui/src/styles/03.structure/form";
-// @import "~kernl-ui/src/styles/03.structure/section";
 @import "~kernl-ui/src/styles/05.utilities/typography/style-decoration";
 
 // You can't keep DRY *and* satisfy stylelint 'no-descending-specificity'

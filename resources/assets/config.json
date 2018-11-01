@@ -8,11 +8,11 @@
       "./scripts/customizer.js"
     ],
     "login": [
-      "./styles/app/login.scss"
+      "./styles/login.scss"
     ]
   },
   "publicPath": "/app/themes/kernl-wp",
-  "devUrl": "https://learning.northeastern.test",
+  "devUrl": "https://kernl-bedrock.test",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
