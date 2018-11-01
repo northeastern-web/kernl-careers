@@ -1,0 +1,253 @@
+// kernl
+// login
+//
+// custom login screen
+
+// get the font [normally called in kernl(wp) head]
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i');
+
+// import kernl(ui) baseline styles and functions
+@import "~kernl-ui/src/styles/01.global/variables/colors";
+@import "~kernl-ui/src/styles/01.global/variables/layout";
+@import "~kernl-ui/src/styles/01.global/variables/misc";
+@import "~kernl-ui/src/styles/01.global/variables/sizing";
+@import "~kernl-ui/src/styles/01.global/variables/typography";
+
+// Global Methods
+@import "~kernl-ui/src/styles/01.global/methods/colors";
+@import "~kernl-ui/src/styles/01.global/methods/layout";
+@import "~kernl-ui/src/styles/01.global/methods/media-queries";
+@import "~kernl-ui/src/styles/01.global/methods/misc";
+@import "~kernl-ui/src/styles/01.global/methods/sizing";
+@import "~kernl-ui/src/styles/01.global/methods/typography";
+
+// Baseline
+@import "~kernl-ui/src/styles/02.baseline/document";
+@import "~kernl-ui/src/styles/02.baseline/typography";
+@import "~kernl-ui/src/styles/02.baseline/forms";
+
+// Structure
+@import "~kernl-ui/src/styles/03.structure/form";
+@import "~kernl-ui/src/styles/05.utilities/typography/style-decoration";
+
+// You can't keep DRY *and* satisfy stylelint 'no-descending-specificity'
+// so we disable stylelint for these styles
+
+/* stylelint-disable no-descending-specificity */
+body.login {
+  background-color: #a19994;
+  font-family: $type-sans;
+
+  * { box-sizing: border-box; }
+
+  p {
+    &#nav {
+      padding: 1rem 0;
+      text-align: center;
+
+      a {
+        color: $red;
+
+        &:hover {
+          color: $red-dark;
+        }
+      }
+    }
+  }
+
+  div#login {
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto 0.5rem;
+    padding: 1.5rem;
+    width: 95%;
+    max-width: 23rem;
+    background-color: $white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: top 0.5s ease;
+
+    h1 {
+      margin-top: 1rem;
+
+      a {
+        background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100%" viewBox="0 0 465 50"><path d="M449.9,35.8l7.5-16.7c1.5-3.3,2-4,3.5-4.4l0-1.1l-7.9,0l0,1.1c2.6,0.6,2.9,1.9,1.7,4.7l-3,7.2l-3.8-8.5 c-0.8-1.9-0.7-3,2.1-3.3l0-1.2l-10.5,0l0,1.2c1.2,0.3,1.7,0.8,2.8,3.1l6.7,14.4l-1.1,2.4c-0.6,1.4-1.2,2.4-1.9,3 c-0.5-1.6-1.4-2.5-2.8-2.5c-1.4,0-2.7,1-2.7,2.8s1.5,3.3,3.3,3.3C446.3,41.3,447.9,40,449.9,35.8 M439.2,30.7l-0.6-1.3 c-1.1,0.5-2,0.7-2.9,0.7c-1.9,0-2.4-1-2.4-2.3l0-12l5.1,0l0-2.3l-5.1,0l0-3.7l-0.7,0l-7.2,4.7l0,1.3l2.9,0l0,13.1 c0,2.6,1.5,4,4.4,4C435,32.9,437.3,32.2,439.2,30.7 M424,31.3c-2.5-0.4-2.8-0.9-2.8-3.1l0-15.3l-2,0l-5.9,3.9l0,0.9l2.8,0l0,10.6 c0,2.2-0.4,2.7-2.8,3.1l0,1.2l10.7,0L424,31.3z M418.3,9.9c1.7,0,3-1.4,3-3.1c0-1.5-1.2-2.8-2.7-2.8c-1.8,0-3.1,1.4-3.1,3 C415.5,8.7,416.7,9.9,418.3,9.9 M411.3,26.7c0-3.7-3.1-4.9-6-5.8c-2.8-0.9-4.8-1.5-4.8-3.6c0-1.1,0.8-2.2,2.5-2.2 c2,0,3.8,1.2,6,3.7l1-0.5l-1.5-5l-0.6,0l-0.7,0.6c-1.1-0.5-2.4-0.8-3.8-0.8c-4.2,0-7,2.5-7,6.1c0,3.7,3.1,4.8,6,5.7 c2.8,1,4.8,1.5,4.8,3.6c0,1.3-1,2.3-2.9,2.3c-2.7,0-4.7-1.8-7.2-4.9l-1.1,0.4l1.6,6.2l0.7,0l1.2-0.8c1.3,0.6,2.8,1,4.4,1 C407.9,33,411.3,30.6,411.3,26.7 M390.5,31.4c-2.6-0.4-3-1-3-3.4l0-8.2c0.8-1.4,1.6-2.5,2.4-3.2c0,1.6,1.1,2.6,2.4,2.6 s2.7-1.1,2.7-3.2c0-1.8-1-2.8-2.8-2.8c-2,0-3.5,1.6-4.9,4l0-4l-1.8,0l-5.8,3.8l0,0.9l2.8,0l0,10.6c0,2.2-0.4,2.8-2.6,3.1l0,1.2 l10.6,0L390.5,31.4z M365.4,20.5c0-3.2,1.4-5.2,4-5.2c1.8,0,3,1.3,3.5,3.9l-7.4,2.6C365.4,21.4,365.4,21,365.4,20.5 M377.9,29 l-1.1-0.8c-1.1,1.2-2.7,2.1-4.6,2.1c-3.7,0-5.8-2.8-6.5-6.4l12-4c-0.2-4.2-3.4-6.6-7.3-6.5c-5.6,0-9.6,4.5-9.6,10.1 c0,5.5,3.5,9.7,9.7,9.7C374.3,33,376.6,31.4,377.9,29 M357,19.2c1.5-3.3,2-4,3.5-4.4l0-1.1l-7.9,0l0,1.1c2.6,0.6,2.9,1.9,1.7,4.7 l-3,7.2l-3.8-8.5c-0.8-1.9-0.7-3,2.1-3.3l0-1.2l-10.5,0l0,1.2c1.2,0.3,1.8,0.8,2.8,3.1l6.9,14.8l2.1,0L357,19.2z M338.7,31.5 c-2.5-0.4-2.8-0.9-2.8-3.1l0-15.3l-2,0l-5.9,3.9l0,0.9l2.8,0l0,10.6c0,2.2-0.4,2.7-2.8,3.1l0,1.2l10.7,0L338.7,31.5z M333,10.1 c1.7,0,3-1.4,3-3.1c0-1.5-1.2-2.8-2.7-2.8c-1.8,0-3.1,1.4-3.1,3C330.2,8.8,331.4,10.1,333,10.1 M312.8,31.5 c-2.3-0.3-2.6-0.9-2.6-3.1l0-9.2c2-1.8,3.6-2.7,5.1-2.7c2,0,2.5,1,2.5,2.8l0,9.1c0,2.2-0.4,2.8-2.6,3.1l0,1.2l10.3,0l0-1.2 c-2.3-0.3-2.6-0.9-2.6-3.1l0-9.6c0-3.2-1.4-5.5-5.4-5.5c-2.5,0-4.9,1.5-7.3,3.6l0-3.8l-1.8,0l-5.8,3.8l0,0.9l2.8,0l0,10.6 c0,2.2-0.4,2.8-2.6,3.1l0,1.2l10.3,0L312.8,31.5z M269.2,8.1l0,12c0,7.8,4.1,13.2,14.3,13.1c10.2,0,14.2-5.4,14.2-13l0-9.6 c0-4.7,1.3-5.9,3.6-6.5l0-1.2l-9.7,0l0,1.2c2.3,0.6,3.6,1.8,3.6,6.5l0,9.6c0,6.8-3.5,9.9-10.3,9.9c-6.7,0-10.3-3.1-10.3-9.9 l0-12.2c0-3,0.9-3.6,3.4-3.9l0-1.3l-12.2,0l0,1.3C268.4,4.5,269.2,5,269.2,8.1"/><path d="M237.1,31.7c-2.3-0.3-2.6-0.9-2.6-3.1l0-9.2c2-1.8,3.6-2.7,5.1-2.7c2,0,2.5,1,2.5,2.8l0,9.1 c0,2.2-0.4,2.8-2.6,3.1l0,1.2l10.3,0l0-1.2c-2.3-0.3-2.6-0.9-2.6-3.1l0-9.6c0-3.2-1.4-5.5-5.4-5.5c-2.5,0-4.9,1.5-7.3,3.6l0-3.8 l-1.8,0l-5.8,3.8l0,0.9l2.8,0l0,10.6c0,2.2-0.4,2.8-2.6,3.1l0,1.2l10.3,0L237.1,31.7z M221.2,31.7c-2.6-0.4-3-1-3-3.4l0-8.2 c0.8-1.4,1.6-2.5,2.4-3.2c0,1.6,1.1,2.6,2.4,2.6c1.4,0,2.7-1.1,2.7-3.2c0-1.8-1-2.8-2.8-2.8c-2,0-3.5,1.6-4.9,4l0-4l-1.8,0 l-5.8,3.8l0,0.9l2.8,0l0,10.6c0,2.2-0.4,2.8-2.6,3.1l0,1.2l10.6,0L221.2,31.7z M196.2,20.9c0-3.2,1.4-5.2,4-5.2 c1.8,0,3,1.3,3.5,3.9l-7.4,2.6C196.2,21.7,196.2,21.3,196.2,20.9 M208.7,29.4l-1.1-0.8c-1.1,1.2-2.7,2.1-4.6,2.1 c-3.7,0-5.8-2.8-6.5-6.4l12-4c-0.2-4.2-3.4-6.6-7.3-6.5c-5.6,0-9.6,4.5-9.6,10.1c0,5.5,3.5,9.7,9.7,9.7 C205.1,33.4,207.3,31.7,208.7,29.4 M190.2,31.2l-0.6-1.3c-1.1,0.5-2,0.7-2.9,0.7c-1.9,0-2.4-1-2.4-2.3l0-12l5.1,0l0-2.3l-5.1,0 l0-3.7l-0.7,0l-7.2,4.7l0,1.3l2.9,0l0,13.1c0,2.6,1.5,4,4.4,4C186.1,33.4,188.3,32.6,190.2,31.2 M175.1,27.1c0-3.7-3.1-4.9-6-5.8 c-2.8-0.9-4.8-1.5-4.8-3.6c0-1.1,0.8-2.2,2.5-2.2c2,0,3.8,1.2,6,3.7l1-0.5l-1.5-5l-0.6,0l-0.7,0.6c-1.1-0.5-2.4-0.8-3.8-0.8 c-4.2,0-7,2.5-7,6.1c0,3.7,3.1,4.8,6,5.7c2.8,1,4.8,1.5,4.8,3.6c0,1.3-1,2.3-2.9,2.3c-2.7,0-4.7-1.8-7.2-4.9l-1.1,0.4l1.6,6.2 l0.7,0l1.2-0.8c1.3,0.6,2.8,1,4.4,1C171.7,33.4,175.1,31,175.1,27.1 M144.3,27.9c0-2,0.9-3,5.6-4.3l0,5.8 c-1.1,0.9-2.1,1.3-3.1,1.3C145.2,30.7,144.3,29.9,144.3,27.9 M153.1,33.3c1.7,0,3.6-0.8,4.8-1.6l-0.4-1.1c-2,0.4-2.7,0.1-2.7-1.2 l0-10.7c0-3.2-1.4-4.9-5.9-4.9c-5.1,0-8.8,2.7-8.8,5.3c0,1.2,0.8,2.3,2.3,2.3c1.6,0,2.4-1.1,2.7-2.2c0.2-1.2-0.2-2.2-0.8-2.7 c1-0.5,2-0.7,3-0.7c1.7,0,2.6,0.6,2.6,2.2l0,4c-7.2,1.8-10.4,3.3-10.4,7.1c0,2.9,1.9,4.5,4.8,4.5c1.9,0,4-0.8,5.9-2.3 C150.5,32.5,151.4,33.3,153.1,33.3 M124.7,21c0-3.2,1.4-5.2,4-5.2c1.8,0,3,1.3,3.5,3.9l-7.4,2.6C124.7,21.9,124.7,21.4,124.7,21  M137.3,29.5l-1.1-0.8c-1.1,1.2-2.7,2.1-4.6,2.1c-3.7,0-5.8-2.8-6.5-6.4l12-4c-0.2-4.2-3.4-6.6-7.3-6.5c-5.6,0-9.6,4.5-9.6,10.1 c0,5.5,3.5,9.7,9.7,9.7C133.6,33.5,135.9,31.8,137.3,29.5 M105.4,31.9c-2.3-0.3-2.6-0.9-2.6-3.1l0-9.3c1.9-1.8,3.4-2.6,5.1-2.6 c2,0,2.5,1,2.5,2.8l0,9.1c0,2.2-0.4,2.8-2.6,3.1l0,1.2l10.3,0l0-1.2c-2.3-0.3-2.6-0.9-2.6-3.1l0-9.6c0-3.2-1.4-5.5-5.4-5.5 c-2.4,0-4.8,1.4-7.2,3.5l0-15.8l-1.5,0l-6.4,4.2l0,0.9l2.9,0l0,22.4c0,2.2-0.4,2.8-2.6,3.1l0,1.2l10.3,0L105.4,31.9z M93.9,31.4 l-0.6-1.3c-1.1,0.5-2,0.7-2.9,0.7c-1.9,0-2.4-1-2.4-2.3l0-12l5.1,0l0-2.3l-5.1,0l0-3.7l-0.7,0l-7.2,4.7l0,1.3l2.9,0l0,13.1 c0,2.6,1.5,4,4.4,4C89.8,33.6,92,32.8,93.9,31.4 M74.3,31.9c-2.6-0.4-3-1-3-3.4l0-8.2c0.8-1.4,1.6-2.5,2.4-3.2 c0,1.6,1.1,2.6,2.4,2.6s2.7-1.1,2.7-3.2c0-1.8-1-2.8-2.8-2.8c-2,0-3.5,1.6-4.9,4l0-4l-1.8,0l-5.8,3.8l0,0.9l2.8,0l0,10.6 c0,2.2-0.4,2.8-2.6,3.1l0,1.2l10.6,0L74.3,31.9z M45.4,21.7c0-3.6,1.5-5.9,4.8-5.9c4.2,0,5.5,5.2,5.5,10c0,3.6-1.5,5.9-4.8,5.9 C46.7,31.7,45.4,26.5,45.4,21.7 M60.8,23.5c0-5.2-3.5-9.6-10-9.6c-6.5,0-10.4,4.7-10.3,10.1c0,5.2,3.5,9.6,10,9.6 C56.9,33.6,60.8,28.9,60.8,23.5 M34.7,11c0-4.7,1.3-5.9,3.6-6.5l0-1.2l-9.7,0l0,1.2c2.3,0.6,3.6,1.8,3.6,6.5l0,14.1L11.8,4.5 c-1.1-1.1-1.6-1.2-2.3-1.2l-7.6,0l0,1.2c1.6,0.2,2.6,0.8,4.5,2.6C7,7.7,7.6,8.4,7.6,9.5l0,16c0,4.7-1.3,5.9-3.6,6.5l0,1.2l9.7,0 l0-1.2c-2.3-0.6-3.6-1.8-3.6-6.5l0-15.1l23,23l1.6,0L34.7,11z"/></svg>');
+        width: 100%;
+        height: 2rem;
+        max-width: 400px;
+        background-size: 100%;
+
+        &:hover {
+          cursor: default;
+        }
+      }
+    }
+
+    p {
+      &#backtoblog {
+        padding: 0.5rem 0 0;
+        text-align: center;
+        margin-bottom: 0.5rem;
+
+        a {
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+
+    form#loginform {
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+      overflow: visible;
+
+      p {
+        order: 1;
+
+        label {
+          display: initial;
+          font-size: $fs-xs;
+          color: $gray-700;
+        }
+
+        &.forgetmenot {
+          padding-top: 10px;
+
+          label { font-size: $fs-sm !important; }
+
+          input#rememberme {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        &.submit {
+          input#wp-submit.button-primary {
+            background-color: $black;
+            border: 0 none;
+            padding: 0.5rem 1.5rem;
+            height: auto;
+            box-shadow: none;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: none;
+            border-radius: 0;
+            font-size: $fs-root;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+              background-color: $gray-800;
+              border: 0 none;
+            }
+          }
+        }
+      }
+
+      input {
+        font-size: $fs-root;
+        padding: 0.5rem 0.75rem;
+
+        &#user_login { border: 1px solid rgba(0, 0, 0, 0.225); }
+
+        &#user_pass {
+          border: 1px solid rgba(0, 0, 0, 0.225);
+          margin-bottom: 1.5rem;
+        }
+
+        &:focus { box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); }
+      }
+
+      #shibboleth-wrap {
+        order: 0;
+        display: flex;
+        flex-flow: column nowrap;
+      }
+
+      .shibboleth-button {
+        order: 0;
+        float: none;
+        margin-bottom: 1.75rem;
+        padding: 0.5rem;
+        background: $red;
+        border-color: $red;
+        box-shadow: none;
+        height: auto;
+        color: #fff;
+        text-decoration: none;
+        text-shadow: none;
+        border-radius: 0;
+        font-size: $fs-root;
+        transition: background-color $transition;
+
+        &:hover {
+          background-color: $red-dark;
+          border-color: $red-dark;
+        }
+      }
+
+      .shibboleth-or {
+        margin-bottom: 1.25rem;
+        order: 1;
+
+        span {
+          color: $gray;
+          letter-spacing: 1;
+          font-size: $fs-xs;
+        }
+      }
+      .shibboleth-clear { order: 5; }
+    }
+
+    @include mqbp-up(t) {
+      position: absolute;
+      top: 48%;
+      margin: 0 auto;
+      padding: 3rem 4rem;
+      max-width: 30rem;
+      transform: translateY(-50%);
+      transition: top 0.5s ease;
+    }
+
+    @include mqbp-up(d) {
+      padding: 3rem 5rem;
+    }
+
+    input[type="checkbox"] {
+      &:checked::before {
+        color: #c00;
+        margin: -3px 0 0 -4px;
+        font-size: 21px;
+
+        @include mqbp-up(t) {
+          margin: -3px 0 0 -4px;
+        }
+      }
+
+      &:focus { border-color: $red; }
+    }
+  }
+
+  .message {
+    padding-left: 1rem;
+    border-left-color: #a3874a;
+    background-color: rgba(236, 230, 213, 0.4);
+    font-style: italic;
+  }
+
+  .success {
+    border-left-color: #73bea8;
+    background-color: rgba(134, 167, 157, 0.1);
+  }
+
+  #login_error {
+    border-left-color: #c00;
+    background-color: rgba(191, 103, 103, 0.1);
+  }
+}
+
+/* stylelint-enable */

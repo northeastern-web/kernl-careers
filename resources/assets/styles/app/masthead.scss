@@ -1,0 +1,7 @@
+// kernl/app
+// masthead
+
+// Adjust Banner when masthead is overlaying content
+.masthead.\--overlay ~ main .\--banner {
+  padding-top: 10rem;
+}

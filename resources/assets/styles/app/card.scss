@@ -1,0 +1,24 @@
+// kernl/app
+// card
+
+.card.hover\:bb--2-red {
+  .__footer {
+    .__column {
+      width: auto;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition:
+        border-bottom-color $transition,
+        color $transition;
+    }
+  }
+
+  &:hover {
+    .__footer {
+      .__column {
+        border-bottom-color: $red;
+        color: $gray-800;
+      }
+    }
+  }
+}
