@@ -1,0 +1,62 @@
+{
+    "key": "group_59a982dc629e3",
+    "title": "__ Article Contact",
+    "fields": [
+        {
+            "key": "field_59a984f4ae597",
+            "label": "Contact",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59a982e44636f",
+            "label": "Contact",
+            "name": "rel_contact",
+            "type": "post_object",
+            "instructions": "<a href=\"http:\/\/registrar.northeastern.dev\/wp\/wp-admin\/edit.php?post_type=contact\" target=\"blank\">Add a new contact 🕵️<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "directory"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 6,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1541529101
+}
