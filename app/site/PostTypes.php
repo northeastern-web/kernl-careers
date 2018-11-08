@@ -6,14 +6,14 @@ class PostTypes
 {
     public function __construct()
     {
-        $this->register();
+        // $this->register();
     }
 
 
     protected function register()
     {
-        add_action('init', function() {
-            register_post_type('article', [
+        add_action('init', function () {
+            register_post_type('example', [
                 'labels'                => [
                     'name'                => __('Articles'),
                     'singular_name'       => __('Article'),
