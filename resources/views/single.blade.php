@@ -13,7 +13,7 @@
           </div>
         </div>
 
-        @if(members_has_post_permissions() && !is_user_logged_in())
+        @if(function_exists('members_has_post_permissions') && members_has_post_permissions() && !is_user_logged_in())
           @include('templates.single._sharing')
         @endif
       </section>
