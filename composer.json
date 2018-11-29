@@ -3,16 +3,15 @@
   "type": "wordpress-theme",
   "license": "MIT",
   "description": "Northeastern WP starter theme",
-  "homepage": "http://nuweb28dev.neu.edu/kernl-docs/wp",
+  "homepage": "https://assets.provost.northeastern.edu/kernl/wp/",
   "authors": [
     {
       "name": "NU PODS",
-      "email": "provost-digital@northeastern.edu",
-      "homepage": "http://nuweb28dev.neu.edu/kernl-docs"
+      "email": "provost-digital@northeastern.edu"
     }
   ],
   "support": {
-    "documentation": "http://nuweb28dev.neu.edu/kernl-docs/wp"
+    "documentation": "https://assets.provost.northeastern.edu/kernl/wp/"
   },
   "repositories": [
     {
