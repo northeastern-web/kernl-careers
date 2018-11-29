@@ -39,16 +39,22 @@ class Site
         });
     }
 
-    public static function getTaxHierarchy($post_id, $taxonomy)
+    public static function getTaxTerms($post_id, $taxonomy)
     {
-        $terms = [];
-        $child = wp_get_post_terms($post_id, $taxonomy)[0];
-        $parent = get_term(get_ancestors($child->term_id, $taxonomy, 'taxonomy')[0], $taxonomy);
-        if ($parent) {
-            $terms[] = $parent;
+        $output = [];
+        $terms = wp_get_post_terms($post_id, $taxonomy);
+        $i = 0;
+        foreach ($terms as $term) {
+            $output[$i]['item'] = $term;
+            if ($term->parent) {
+                $ancestors = get_ancestors($term->term_id, $taxonomy, 'taxonomy');
+                foreach ($ancestors as $ancestor) {
+                    $output[$i]['ancestors'][] = get_term($ancestor);
+                }
+            }
+            $i++;
         }
-        $terms[] = $child;
-        return $terms;
+        return $output;
     }
 
     public static function getMenu($menu)

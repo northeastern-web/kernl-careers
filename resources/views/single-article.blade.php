@@ -12,6 +12,7 @@
           </div>
           <div class="col w--1/3@t">
             @include('templates.article._related')
+            @include('templates.article._actions')
           </div>
         </div>
       </section>
