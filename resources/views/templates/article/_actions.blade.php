@@ -2,12 +2,12 @@
   <aside>
     @while(have_rows('lay_actions_group'))
       @php(the_row())
-      <div class="card --action bs--none mb--0 bg--none">
-        <div class="__header px--0 py--1 fs--sm tt--caps">
-          <div class="__column">{{ get_sub_field('txt_group_title') }}</div>
+      <div class="--action mb--0 pr--1">
+        <div class="__header pa--0 fs--sm tt--caps tc--gray-500">
+          {{ get_sub_field('txt_group_title') }}
         </div>
         <div class="__body mt--0h px--0 pb--1">
-          <ul class="fs--sm mb--0 ls--none">
+          <ul class="fs--xs mb--0 ls--none">
             @while(have_rows('lay_actions'))
               @php(the_row())
               <li>
