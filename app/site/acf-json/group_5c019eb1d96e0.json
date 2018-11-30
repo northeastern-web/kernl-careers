@@ -44,9 +44,10 @@
                 "id": ""
             },
             "choices": {
-                "!! Assign Status !!": "!! Assign Status !!,",
-                "Incomplete (needs editing)": "Incomplete (needs editing),",
-                "Complete (needs review)": "Complete (needs review),",
+                "!! Assign Status !!": "!! Assign Status !!",
+                "Incomplete (needs editing)": "Incomplete (needs editing)",
+                "Verify (keep or delete)": "Verify (keep or delete)",
+                "Complete (needs review)": "Complete (needs review)",
                 "Finalized (no further review needed)": "Finalized (no further review needed)"
             },
             "default_value": [],
@@ -75,5 +76,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543610686
+    "modified": 1543611414
 }
