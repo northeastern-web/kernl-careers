@@ -7,12 +7,16 @@
 
       <section class="section">
         <div class="row">
-          <div class="col w--2/3@t">
+          @if(have_rows('lay_actions_group'))
+            <div class="col w--30@t w--20@w">
+              @include('templates.article._actions')
+            </div>
+          @endif
+          <div class="col w--70@t w--60@w">
             @include('templates._section')
-          </div>
-          <div class="col w--1/3@t">
-            @include('templates.article._related')
-            @include('templates.article._actions')
+            <section class="section">
+              @include('templates.article._related')
+            </section>
           </div>
         </div>
       </section>
