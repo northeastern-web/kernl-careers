@@ -39,7 +39,10 @@
     <div class="list-group --indent">
       @while ($q->have_posts())
         @php($q->the_post())
-        @include('templates.article.list-item')
+        @include('templates.article.list-item', [
+          'excerpt_class' => 'tc--gray-600 fs--sm pr--1',
+          'hide_excerpt' => false
+          ])
       @endwhile
       @php(wp_reset_postdata())
     </div>

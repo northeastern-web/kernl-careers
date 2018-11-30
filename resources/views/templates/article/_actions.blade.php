@@ -2,7 +2,7 @@
   <aside>
     @while(have_rows('lay_actions_group'))
       @php(the_row())
-      <div class="card --action bs--none mb--0">
+      <div class="card --action bs--none mb--0 bg--none">
         <div class="__header px--0 py--1 fs--sm tt--caps">
           <div class="__column">{{ get_sub_field('txt_group_title') }}</div>
         </div>

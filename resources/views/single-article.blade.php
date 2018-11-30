@@ -18,6 +18,11 @@
               @include('templates.article._related')
             </section>
           </div>
+          {{-- placeholder for third column --}}
+            <div class="col w--30@t w--20@w">
+              
+            </div>
+          {{-- end placeholder --}}
         </div>
       </section>
     </article>
