@@ -48,7 +48,10 @@
           <div class="list-group --indent">
             @while (have_posts())
               @php(the_post())
-              @include('templates.search.list-group-item')
+              @include('templates.article.list-item', [
+                'excerpt_class' => 'tc--gray-600 fs--xs pr--1',
+                'hide_excerpt' => false
+                ])
             @endwhile
           </div>
 
