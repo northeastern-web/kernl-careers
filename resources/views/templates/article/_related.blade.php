@@ -14,6 +14,8 @@
           'hide_excerpt' => false
           ])
       @endforeach
+
+      @php(wp_reset_postdata())
     </div>
   </aside>
 @endif
