@@ -1,7 +1,23 @@
 <?php /** (Hero) */ ?>
 
+@php
+  $trending = new \WP_Query([
+    'posts_per_page' => 4,
+    'tax_query' => [
+      ['taxonomy' => 'collection', 'field' => 'name', 'terms' => 'featured']
+    ]
+  ]);
+  $trending2 = new \WP_Query([
+    'posts_per_page' => 4,
+    'offset' => 4,
+    'tax_query' => [
+      ['taxonomy' => 'collection', 'field' => 'name', 'terms' => 'featured']
+    ]
+  ]);
+@endphp
+
 <div class="__header px--2">
-  <div class="card bg--black">
+  <div class="card bg--black mb--0">
     <div class="__body">
       <h2 class="fs--d2 d--inline">Find Tools for Your Career</h2>
       <a class="btn bg--red --sm f--r" href="#">Personalize</a>
@@ -17,23 +33,23 @@
       <div class="row">
         <div class="col w--50@d">
           <ul class="ls--none fs--xs ta--c ta--l@d ml--0">
-              <li><a href="#">Etiam Tristique Malesuada Amet</a></li>
-              <li><a href="#">Commodo Sit Tristique Egestas</a></li>
-              <li><a href="#">Bibendum Purus Quam Ridiculus Elit</a></li>
-              <li><a href="#">Lorem Vehicula Aenean Bibendum Pharetra</a></li>
+            @while ($trending->have_posts())
+              @php($trending->the_post())
+              <li><a href="{{ the_permalink() }}">{{ the_title() }}</a></li>
+            @endwhile @php(wp_reset_postdata())
           </ul>
         </div>
         <div class="col w--50@d">
           <ul class="ls--none fs--xs ta--c ta--l@d">
-              <li><a href="#">Sit Purus Ligula Tellus</a></li>
-              <li><a href="#">Purus Fermentum Euismod Nullam</a></li>
-              <li><a href="#">Tortor Pharetra Nibh Sit Parturient</a></li>
-              <li><a href="#">Aenean Etiam Egestas Ipsum Magna</a></li>
+            @while ($trending2->have_posts())
+              @php($trending2->the_post())
+              <li><a href="{{ the_permalink() }}">{{ the_title() }}</a></li>
+            @endwhile @php(wp_reset_postdata())
           </ul>
         </div>
       </div>
       <div class="bwa--0 bwt--2 bc--red mt--1 pt--1">
-        <a href="#"><span class="tt--caps">Employers</span>: Hire, train and onboard talent</a>
+        <a href="{{ get_permalink(137) }}"><span class="tt--caps">Employers</span>: Hire, train and onboard talent</a>
       </div>
     </div>
   </div>
