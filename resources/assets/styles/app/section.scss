@@ -2,3 +2,19 @@
 // section
 
 .section .section { padding-bottom: 1rem; }
+
+.article {
+  .section {
+    > .__header {
+      .__title { font-size: 2.5rem; }
+    }
+
+    &.\--banner {
+      padding: 3rem 0;
+
+      > .__header {
+        .__title { font-size: $fs-d4 * 1.125; }
+      }
+    }
+  }
+}

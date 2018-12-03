@@ -3,26 +3,25 @@
 @section('content')
   <article class="article --single --kb-article">
     @while(have_posts()) @php(the_post())
-      @include('templates.article.banner')
+      @include('templates.article.banner', ['class' => 'bg--black pl--3@t'])
 
-      <section class="section">
+      <section class="section bg--gray-50 pt--0@t pr--0@t pl--3@t">
         <div class="row">
           @if(have_rows('lay_actions_group'))
-            <div class="col w--30@t w--20@w">
-              @include('templates.article._actions')
+            <div class="col w--25@t w--20@w pt--1 pt--2h@t">
+                @include('templates.article._actions')
             </div>
           @endif
-          <div class="col w--70@t w--60@w">
-            @include('templates._section')
+          <div class="col w--75@t w--80@w bg--white pa--1 pa--2@t">
+            <div class="measure--wide">
+              @include('templates._section')
+            </div>
             <section class="section">
-              @include('templates.article._related')
+            <div class="measure--wide">
+                @include('templates.article._related')
+            </div>
             </section>
           </div>
-          {{-- placeholder for third column --}}
-            <div class="col w--30@t w--20@w">
-              
-            </div>
-          {{-- end placeholder --}}
         </div>
       </section>
     </article>

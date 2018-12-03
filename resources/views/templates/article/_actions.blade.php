@@ -3,7 +3,7 @@
     @while(have_rows('lay_actions_group'))
       @php(the_row())
       <div class="--action mb--0 pr--1">
-        <div class="__header pa--0 fs--sm tt--caps tc--gray-500">
+        <div class="__header pa--0 fs--sm tt--caps tc--black">
           {{ get_sub_field('txt_group_title') }}
         </div>
         <div class="__body mt--0h px--0 pb--1">
