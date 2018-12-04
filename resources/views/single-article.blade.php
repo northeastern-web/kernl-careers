@@ -3,9 +3,9 @@
 @section('content')
   <article class="article --single --kb-article">
     @while(have_posts()) @php(the_post())
-      @include('templates.article.banner', ['class' => 'bg--black pl--3@t'])
+      @include('templates.article.banner', ['class' => 'bg--black'])
 
-      <section class="section bg--gray-50 pt--0@t pr--0@t pl--3@t">
+      <section class="section bg--gray-50 pt--0@t pr--0@t">
         <div class="row">
           @if(have_rows('lay_actions_group'))
             <div class="col w--25@t w--20@w pt--1 pt--2h@t">

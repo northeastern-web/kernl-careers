@@ -7,17 +7,17 @@
           {{ get_sub_field('txt_group_title') }}
         </div>
         <div class="__body mt--0h px--0 pb--1">
-          <ul class="fs--xs mb--0 ls--none">
+          <ul class="__list fs--xs mb--0 ls--none">
             @while(have_rows('lay_actions'))
               @php(the_row())
-              <li>
-                <a class="py--1 tc--gray-700" {!! (get_sub_field('opt_type') == 'File' ? 
+              <li class="__item">
+                <a class="__link tc--gray-800" {!! (get_sub_field('opt_type') == 'File' ? 
                   'href="' . get_sub_field('med_file')['url'] . '"' : 
                   'href="' . get_sub_field('txt_url') . '" target="_blank" rel="noopener"') !!}>
 
                   {!! (get_sub_field('opt_type') == 'File' ? 
-                  '<i class="--sm" data-feather="file-text"></i>' : 
-                  '<i class="--sm" data-feather="external-link"></i>') !!}
+                  '<i class="--sm --thin" data-feather="file-text"></i>' : 
+                  '<i class="--sm --thin" data-feather="external-link"></i>') !!}
 
                   {{ get_sub_field('txt_title') }}
                 </a>
