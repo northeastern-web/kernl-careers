@@ -1,5 +1,5 @@
 @if(get_field('rel_related'))
-  <aside class="related mt--3">
+  <aside class="--related mt--3">
     <header class="__header --archive" role="banner">
       <h2 class="__title fw--700 fs--d2 tc--gold">Related Articles</h2>
     </header>

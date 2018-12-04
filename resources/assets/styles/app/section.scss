@@ -28,6 +28,10 @@
       }
     }
 
+    .\--related {
+      .__title { font-weight: 400; }
+    }
+
     .__content {
       h2 {
         font-size: $fs-d1;
@@ -48,6 +52,19 @@
         @include mqbp-up(d) {
           font-size: $fs-d1;
         }
+      }
+
+      .card {
+        &.bg--beige {
+          background-color: lighten($beige, 15%);
+
+          a {
+            color: darken($gold, 15%);
+            border-bottom: 1px dotted lighten($gold, 15%);
+          }
+        }
+
+        .__title { font-size: $fs-d1; }
       }
     }
 
