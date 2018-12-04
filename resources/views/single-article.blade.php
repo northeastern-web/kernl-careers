@@ -12,7 +12,7 @@
                 @include('templates.article._actions')
             </div>
           @endif
-          <div class="col w--75@t w--80@w bg--white pa--1 pa--2@t">
+          <div class="col w--75@t w--80@w __content bg--white pa--1 pa--2@t">
             <div class="measure--wide">
               @include('templates._section')
             </div>

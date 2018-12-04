@@ -8,9 +8,45 @@
     > .__header {
       .__title {
         font-size: $fs-d2;
+        margin-top: 2rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 3rem;
+          height: 3px;
+          background-color: $red;
+          top: -2rem;
+          left: 0;
+        }
 
         @include mqbp-up(d) {
           font-size: $fs-d3;
+          text-indent: unset !important;
+        }
+      }
+    }
+
+    .__content {
+      h2 {
+        font-size: $fs-d1;
+        font-weight: 300;
+
+        @include mqbp-up(d) {
+          font-size: $fs-d2;
+        }
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: $fs-root*1.1;
+        font-weight: 300;
+
+        @include mqbp-up(d) {
+          font-size: $fs-d1;
         }
       }
     }
@@ -23,6 +59,11 @@
         .__title {
           font-size: $fs-d4 * 1.125;
           line-height: 1.1;
+          margin-top: 0;
+
+          &::before {
+            display: none;
+          }
         }
       }
     }
