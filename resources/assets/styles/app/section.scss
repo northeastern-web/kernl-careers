@@ -49,8 +49,9 @@
       }
 
       h2 {
+        @extend .fw--300;
+
         font-size: $fs-d1;
-        font-weight: 300;
 
         @include mqbp-up(d) {
           font-size: $fs-d2;
@@ -61,8 +62,9 @@
       h4,
       h5,
       h6 {
+        @extend .fw--300;
+
         font-size: $fs-root*1.1;
-        font-weight: 300;
 
         @include mqbp-up(d) {
           font-size: $fs-d1;

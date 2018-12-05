@@ -3,7 +3,7 @@
     <header class="__header --archive" role="banner">
       <h2 class="__title fs--sm tt--caps tc--gold">Related Articles</h2>
     </header>
-    <div class="list-group --indent w--100 fs--sm">
+    <div class="list-group --indent w--100">
       @php
         global $post;
       @endphp

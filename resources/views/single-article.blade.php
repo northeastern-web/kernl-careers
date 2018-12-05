@@ -17,9 +17,9 @@
               @include('templates._section')
             </div>
             <section class="section">
-            <div class="measure--wide">
-                @include('templates.article._related')
-            </div>
+              <div class="measure--wide">
+                  @include('templates.article._related')
+              </div>
             </section>
           </div>
         </div>
