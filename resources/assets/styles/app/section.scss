@@ -73,6 +73,7 @@
 
       .card {
         &.bg--beige {
+          max-width: 80%;
           background-color: lighten($beige, 15%);
 
           a {
