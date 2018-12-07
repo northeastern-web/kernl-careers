@@ -87,9 +87,9 @@ class Site
         elseif (
             $status == "Complete (needs review)") : $status_class = "--complete"; 
         elseif (
-            $status == "Finalized (no further review needed)") : $status_class = "--verify"; 
+            $status == "Finalized (no further review needed)") : $status_class = "--finalized"; 
         elseif (
-            $status == "Verify (keep or delete)") : $status_class = "--finalized"; 
+            $status == "Verify (keep or delete)") : $status_class = "--verify"; 
         else : $status_class = "--assign";
         endif;
 
