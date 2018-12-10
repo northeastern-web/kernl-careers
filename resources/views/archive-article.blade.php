@@ -78,6 +78,9 @@
                       <i class="tc--red" data-feather="x"></i>
                     @endif
                   </td>
+                  <td class="">
+                    {{ the_sub_field('txt_notes') }}
+                  </td>
                 </tr>
               @endwhile @php(wp_reset_postdata())
             </tbody>
