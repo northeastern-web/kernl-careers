@@ -136,6 +136,16 @@
   &.\+nav { align-items: initial; }
 }
 
+.masthead {
+  .\+children {
+    &:focus {
+      .__submenu {
+        display: block;
+      }
+    }
+  }
+}
+
 // --
 // end move to kernl(ui)
 
