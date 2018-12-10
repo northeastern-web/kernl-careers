@@ -16,7 +16,7 @@
   ]);
 @endphp
 
-<div class="__header px--2">
+<div class="__header">
   <div class="card bg--black mb--0">
     <div class="__body">
       <h2 class="fs--d2 d--inline">Find Tools for Your Career</h2>
