@@ -110,9 +110,9 @@
           </aside>
         @endif
 
-        @if(get_field('txt_ad', get_queried_object()))
+        @if(get_field('txt_adspace', get_queried_object()))
           <aside>
-            {!! get_field('txt_ad', get_queried_object()) !!}
+            {!! get_field('txt_adspace', get_queried_object()) !!}
           </aside>
         @endif
       </div>

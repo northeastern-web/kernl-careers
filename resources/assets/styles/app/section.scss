@@ -3,8 +3,17 @@
 
 .section .section { padding-bottom: 1rem; }
 
+// You can't keep DRY *and* satisfy stylelint 'no-descending-specificity'
+// so we disable stylelint for these styles
+
+/* stylelint-disable no-descending-specificity */
+
 .\--kb-article {
   .section {
+    .\--related {
+      .__title { font-weight: 400; }
+    }
+
     > .__header {
       .__title {
         font-size: $fs-d2;
@@ -28,14 +37,21 @@
       }
     }
 
-    .\--related {
-      .__title { font-weight: 400; }
-    }
-
     .__content {
+      .section:first-child {
+        > .__header {
+          .__title {
+            margin-top: 0;
+
+            &::before { display: none; }
+          }
+        }
+      }
+
       h2 {
+        @extend .fw--300;
+
         font-size: $fs-d1;
-        font-weight: 300;
 
         @include mqbp-up(d) {
           font-size: $fs-d2;
@@ -46,8 +62,9 @@
       h4,
       h5,
       h6 {
+        @extend .fw--300;
+
         font-size: $fs-root*1.1;
-        font-weight: 300;
 
         @include mqbp-up(d) {
           font-size: $fs-d1;
@@ -56,6 +73,7 @@
 
       .card {
         &.bg--beige {
+          max-width: 80%;
           background-color: lighten($beige, 15%);
 
           a {
@@ -89,9 +107,13 @@
   .\--action {
     .__link {
       display: block;
-      padding: 0.125rem 0 0.125rem 1.25rem;
+      padding: 0.25rem 0 0.25rem 1.25rem;
       position: relative;
       transition: all $transition;
+
+      @include mqbp-up(t) {
+        padding: 0.125rem 0 0.125rem 1.25rem;
+      }
 
       .feather {
         position: absolute;
@@ -106,3 +128,5 @@
     }
   }
 }
+
+/* stylelint-enable */

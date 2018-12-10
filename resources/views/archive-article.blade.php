@@ -66,16 +66,16 @@
                   </td>
                   <td class="ta--c --related">
                     @if (get_field('rel_related'))
-                      <i class="text--green-dark" data-feather="check"></i>
+                      <i class="text--green" data-feather="check"></i>
                     @else
-                      <i class="text--red-light" data-feather="x"></i>
+                      <i class="text--red" data-feather="x"></i>
                     @endif
                   </td>
                   <td class="ta--c --related">
                     @if (get_sub_field('rel_contact'))
-                      <i class="text--green-dark" data-feather="check"></i>
+                      <i class="tc--green" data-feather="check"></i>
                     @else
-                      <i class="text--red-light" data-feather="x"></i>
+                      <i class="tc--red" data-feather="x"></i>
                     @endif
                   </td>
                   <td class="">
