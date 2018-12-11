@@ -32,11 +32,11 @@
         </div>
       </form>
 
-      <h3 class="fs--root --popular">
+      <h3 class="fs--root tt--u">
         @if(!$segment)
           Trending Resources
         @else
-          Resources for Joe
+          Resources for <i>Joe</i>
         @endif
       </h3>
       <div class="row">
@@ -50,9 +50,11 @@
         </div>
       </div>
 
-      <div class="bwa--0 bwt--2 bc--red mt--1 pt--1">
-        <a href="{{ get_permalink(137) }}"><span class="tt--caps">Employers</span>: Hire, train and onboard talent</a>
-      </div>
+      @if(!$segment)
+        <div class="bwa--0 bwt--2 bc--red mt--1 pt--1">
+          <a href="{{ get_permalink(137) }}"><span class="tt--caps">Employers</span>: Hire, train and onboard talent</a>
+        </div>
+      @endif
     </div>
   </div>
 </div>
