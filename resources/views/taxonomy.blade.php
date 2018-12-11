@@ -2,27 +2,30 @@
 
 @section('content')
   @php
+    // grab all the current details
     $current_taxonomy = get_query_var('taxonomy');
     $current_term = get_term_by('slug', get_query_var('term'), $current_taxonomy);
     $current_term_children = get_term_children($current_term->term_id, $current_taxonomy);
     $type = get_query_var('type');
 
+    // set stage for query
     $segment = null;
     $orderby = 'menu_order title';
     $count = 5;
+    $collection = (isset($_GET['collection']) ? sanitize_text_field($_GET['collection']) : false);
 
-    if (is_tax('type','form') || is_tax('audience','faculty-staff')) {
+    // for specific terms
+    if (is_tax('collection') || is_tax('audience')) {
       $count = 20;
       $taxonomy = 'group';
       $term_children = get_terms('group', ['parent' => 0, 'fields' => 'ids', 'exclude' => [18]]);
       $segment = ['taxonomy' => $current_taxonomy, 'field' => 'term_id', 'terms' => $current_term];
       $orderby = 'title';
+
     } else {
+      // for everything else
       $taxonomy = $current_taxonomy;
       $term_children = $current_term_children;
-      if ($type) {
-        $segment = ['taxonomy' => 'type', 'field' => 'slug', 'terms' => $type];
-      }
     }
   @endphp
 
@@ -31,20 +34,10 @@
   <div class="section">
     <div class="row">
       <div class="col w--2/3@t w--3/4@w --content">
-        @if(isset($_GET['type']) || isset($_GET['audience']))
-          <div class="alert --btn --yellow">
-            <div class="__body">
-              <div class="__excerpt">
-                <ul class="list--inline">
-                  <li>You are filtering by: </li>
-                  {!! (isset($_GET['type']) ? '<li>'. $_GET['type'] .'</li>' : '') !!}
-                  {!! (isset($_GET['audience']) ? '<li>'. $_GET['audience'] .'</li>' : '') !!}
-                </ul>
-              </div>
-            </div>
-            <footer class="__footer">
-              <a href="#" class="__footer__link --xs --gray-dark">Clear</a>
-            </footer>
+        @if($collection)
+          <div class="bg--gray-warm-light pa--1 cf items--center">
+            <span class="tt--u">Results filtered by:</span> {{ $collection }}
+            <a href="{{ esc_url(remove_query_arg('collection')) }}" class="btn bg--red --sm f--r">Clear</a>
           </div>
         @endif
 
@@ -81,8 +74,16 @@
 
         @else
           <section class="section px--0 pt--0">
+            @if(!have_posts())
+              <div class="bg--yellow pa--1 my--2 ta--c">
+                <div class="__body">
+                  Sorry, no results were returned.
+                </div>
+              </div>
+            @endif
+
             <div class="list-group --indent --right">
-              @while (have_posts())
+              @while(have_posts())
                 @php(the_post())
                 @include('templates.article.list-item', [
                   'excerpt_class' => 'tc--gray-600 fs--xs pr--1',
