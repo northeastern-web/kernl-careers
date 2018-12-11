@@ -32,11 +32,11 @@
         </div>
       </form>
 
-      <h3 class="fs--root --popular">
+      <h3 class="fs--root tt--u">
         @if(!$segment)
           Trending Resources
         @else
-          Resources for Joe
+          Resources for <i>Joe</i>
         @endif
       </h3>
       <div class="row">
