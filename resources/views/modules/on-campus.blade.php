@@ -42,7 +42,7 @@ $companies = [
   @foreach($companies as $company)
   <div class="card">
     <div class="__body">
-      <img class="mb--1" src="app/uploads/2018/12/{{ $company[1] }}-logo.png" alt="{{ $company[1] }}">
+      <img class="mb--1" src="app/uploads/{{ $company[1] }}-logo.png" alt="{{ $company[1] }}">
       <h4 class="__title">{{ $company[0] }}</h4>
       <p class="mb--0h">{{ $company[2]  ? 'Private: ' : '' }}{{ $company[3] }}</p>
       <p class="fs--xs">{{ date('F j, Y', strtotime($company[5])) }}<br>
