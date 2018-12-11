@@ -20,7 +20,7 @@
           <a class="btn bg--red --sm" href="?college=coe">Personalize</a>
         @else
           <div class="fs--sm mt--0h" href="#">
-            <i>Welcome Joe (logout)</i>
+            <i>Welcome Becky Collet (logout)</i>
           </div>
         @endif
       </div>
@@ -36,7 +36,7 @@
         @if(!$segment)
           Trending Resources
         @else
-          Resources for <i>Joe</i>
+          Resources for <i>Becky Collet</i>
         @endif
       </h3>
       <div class="row">

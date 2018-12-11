@@ -13,6 +13,7 @@
     $orderby = 'menu_order title';
     $count = 5;
     $collection = (isset($_GET['collection']) ? sanitize_text_field($_GET['collection']) : false);
+    $audience = (isset($_GET['audience']) ? sanitize_text_field($_GET['audience']) : false);
 
     // for specific terms
     if (is_tax('collection') || is_tax('audience')) {
@@ -34,10 +35,10 @@
   <div class="section">
     <div class="row">
       <div class="col w--2/3@t w--3/4@w --content">
-        @if($collection)
+        @if($collection || $audience)
           <div class="bg--gray-warm-light pa--1 cf items--center">
-            <span class="tt--u">Results filtered by:</span> {{ $collection }}
-            <a href="{{ esc_url(remove_query_arg('collection')) }}" class="btn bg--red --sm f--r">Clear</a>
+            <span class="tt--u fw--700">Filtered by:</span> {{ ($collection ? $collection : $audience) }}
+            <a href="{{ esc_url(remove_query_arg(($collection ? 'collection' : 'audience'))) }}" class="btn bg--red --sm f--r">Clear</a>
           </div>
         @endif
 
