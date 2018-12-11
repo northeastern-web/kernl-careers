@@ -146,6 +146,32 @@
   }
 }
 
+.fs-carousel-enabled .fs-carousel-controls {
+  height: 0;
+}
+
+.fs-carousel-enabled .fs-carousel-control {
+  // pods
+  height: 30px;
+  top: 40px;
+  margin-top: auto;
+  transform: none;
+
+  &::before {
+    right: -2px;
+    left: -2px;
+  }
+
+  &.fs-carousel-control_previous {
+    left: 10px;
+  }
+
+  &.fs-carousel-control_next {
+    right: 10px;
+  }
+  // end pods
+}
+
 // --
 // end move to kernl(ui)
 
