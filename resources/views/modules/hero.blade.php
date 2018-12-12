@@ -41,10 +41,10 @@
       </h3>
       <div class="row">
         <div class="col w--100@d">
-          <ul class="ls--inline fs--xs ta--c ta--l@d ml--0">
+          <ul class="columns--2 ls--none fs--xs ta--c ta--l@d">
             @while ($trending->have_posts())
               @php($trending->the_post())
-              <li class="w--40@d mr--2@d"><a href="{{ the_permalink() }}">{{ the_title() }}</a></li>
+              <li class=""><a href="{{ the_permalink() }}">{{ the_title() }}</a></li>
             @endwhile @php(wp_reset_postdata())
           </ul>
         </div>
