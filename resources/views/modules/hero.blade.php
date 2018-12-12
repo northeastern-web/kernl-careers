@@ -20,7 +20,7 @@
           <a class="btn bg--red --sm" href="?college=coe">Personalize</a>
         @else
           <div class="fs--sm mt--0h" href="#">
-            <i>Welcome Becky Collet (logout)</i>
+            <i>Welcome Becky Collet</i> <a href="./" class="tc--gray-500 fs--xs tt--caps fw--300">logout</a>
           </div>
         @endif
       </div>
