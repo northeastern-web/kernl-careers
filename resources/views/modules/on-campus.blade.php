@@ -40,7 +40,7 @@ $companies = [
 
 <div class="carousel">
   @foreach($companies as $company)
-  <div class="card">
+  <div class="card mb--0">
     <div class="__body">
       <img class="mb--1" src="app/uploads/{{ $company[1] }}-logo.png" alt="{{ $company[1] }}">
       <h4 class="__title">{{ $company[0] }}</h4>
