@@ -2,6 +2,16 @@
 // masthead
 
 // Adjust Banner when masthead is overlaying content
-.masthead.\--overlay ~ main .\--banner {
-  padding-top: 10rem;
+.masthead {
+  &.\--overlay ~ main .\--banner {
+    padding-top: 10rem;
+  }
+  
+  .\+children {
+    &:focus {
+      .__submenu {
+        display: block;
+      }
+    }
+  }
 }

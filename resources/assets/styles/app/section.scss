@@ -136,16 +136,6 @@
   &.\+nav { align-items: initial; }
 }
 
-.masthead {
-  .\+children {
-    &:focus {
-      .__submenu {
-        display: block;
-      }
-    }
-  }
-}
-
 .fs-carousel-enabled .fs-carousel-controls {
   height: 0;
 }
