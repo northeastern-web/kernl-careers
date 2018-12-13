@@ -2,6 +2,18 @@
 // masthead
 
 // Adjust Banner when masthead is overlaying content
-.masthead.\--overlay ~ main .\--banner {
-  padding-top: 10rem;
+.masthead {
+  .__logo__image { max-height: 3.75rem; }
+
+  &.\--overlay ~ main .\--banner {
+    padding-top: 10rem;
+  }
+
+  .\+children {
+    &:focus {
+      .__submenu {
+        display: block;
+      }
+    }
+  }
 }
