@@ -35,7 +35,7 @@ const routes = new Router({
   const randomImages = Math.floor(Math.random() * images.length)
   const selectedImg = images.splice(randomImages,1)
 
-  $('.home #section-1').addClass('testing').attr("style",`background-image: url(${path}${selectedImg});`)
+  $('.home #section-1').attr("style",`background-image: url(${path}${selectedImg});`)
 
 // end career design
 //
