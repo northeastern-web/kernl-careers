@@ -3,6 +3,49 @@
 
 .section .section { padding-bottom: 1rem; }
 
+.section.\--hero {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+
+  > .row { width: 90%; }
+
+  .form__enclosed {
+    background-color: rgba($white, 0.9);
+
+    .btn {
+      background-color: transparent;
+
+      &:hover { background-color: $white; }
+    }
+  }
+
+  @include mqbp-up(d) {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+
+    > .row { width: 70%; }
+  }
+
+  @include mqbp-up(w) {
+    padding-top: 10rem;
+
+    > .row { width: 60%; }
+  }
+}
+
+// sub-hero audience-feature
+.audience-feature {
+  .ls--none li { margin-bottom: 0.5rem; }
+
+  @include mqbp-up(t) {
+    margin-top: -6rem;
+  }
+
+  @include mqbp-up(d) {
+    margin-top: -9rem;
+  }
+}
+
 // You can't keep DRY *and* satisfy stylelint 'no-descending-specificity'
 // so we disable stylelint for these styles
 
@@ -129,15 +172,7 @@
   }
 }
 
-// .audience-feature {}
-
-// --
-// move to kernl(ui) when ready
-
-.section.\--banner {
-  &.\+nav { align-items: initial; }
-}
-
+// carousel controls {}
 .fs-carousel-enabled .fs-carousel-controls {
   height: 0;
   top: auto;
@@ -165,8 +200,5 @@
   }
   // end pods
 }
-
-// --
-// end move to kernl(ui)
 
 /* stylelint-enable */
