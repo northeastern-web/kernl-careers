@@ -17,7 +17,8 @@ if (tribe_event_is_multiday()) {
   <div class="row">
     <div class="col w--1/2@d">
       {{ tribe_the_notices() }}
-      @include('templates._section')
+
+      {!! the_content() !!}
 
       @if(tribe_get_event_website_url())
         <p><a target="_blank" class="btn --right bg--black" href="<?= tribe_get_event_website_url(); ?>">Register <i data-feather="arrow-right"></i></a></p>
