@@ -3,47 +3,49 @@
 
 .section .section { padding-bottom: 1rem; }
 
-.section.\--hero {
-  padding-top: 5rem;
-  padding-bottom: 3rem;
+.home {
+  .section.\--hero {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
 
-  > .__header .__title {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-
-  > .row { width: 90%; }
-
-  .form__enclosed {
-    background-color: rgba($white, 0.9);
-
-    .btn {
-      background-color: transparent;
-
-      &:hover { background-color: $white; }
+    > .__header .__title {
+      font-size: 2.5rem;
+      line-height: 1.2;
     }
-  }
 
-  @include mqbp-up(d) {
-    padding-top: 8rem;
-    padding-bottom: 6rem;
+    > .row { width: 90%; }
 
-    > .row { width: 70%; }
-  }
+    .form__enclosed {
+      background-color: rgba($white, 0.9);
 
-  @include mqbp-up(w) {
-    padding-top: 10rem;
+      .btn {
+        background-color: transparent;
 
-    > .row { width: 60%; }
-  }
+        &:hover { background-color: $white; }
+      }
+    }
 
-  .btn.\--m {
-    &:hover {
-      border-bottom-color: $white;
-      padding-right: 0.5rem;
-      padding-left: 0.5rem;
+    @include mqbp-up(d) {
+      padding-top: 8rem;
+      padding-bottom: 6rem;
 
-      .feather { opacity: 0.7; }
+      > .row { width: 70%; }
+    }
+
+    @include mqbp-up(w) {
+      padding-top: 10rem;
+
+      > .row { width: 60%; }
+    }
+
+    .btn.\--m {
+      &:hover {
+        border-bottom-color: $white;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+
+        .feather { opacity: 0.7; }
+      }
     }
   }
 }
