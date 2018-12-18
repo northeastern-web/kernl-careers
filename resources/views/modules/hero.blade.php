@@ -11,16 +11,10 @@
   ]);
 @endphp
 
-<form action="" method="GET" class="my--3 mx--auto">
+<form action="" method="GET" class="mt--3 mb--2 mx--auto">
   <div class="form__enclosed --search">
     <label class="sr--only">Search by keyword</label>
     <input class="fs--sm" name="s" type="text" placeholder="Search by keyword" autocomplete="off" aria-label="Search" />
     <button class="btn" type="submit">Go</button>
   </div>
 </form>
-
-<div class="row">
-  <div class="col w--1/3@t mb--1"><a class="btn --m tt--caps --right" href="./students/">Students <i data-feather="arrow-right"></i></a></div>
-  <div class="col w--1/3@t mb--1"><a class="btn --m tt--caps --right" href="./employers/">Employers <i data-feather="arrow-right"></i></a></div>
-  <div class="col w--1/3@t mb--1"><a class="btn --m tt--caps --right" href="./alumni/">Alumni <i data-feather="arrow-right"></i></a></div>
-</div>
