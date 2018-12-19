@@ -5,7 +5,7 @@
     // grab all the current details
     $current_taxonomy = get_query_var('taxonomy');
     $current_term = get_term_by('slug', get_query_var('term'), $current_taxonomy);
-    $current_term_children = get_term_children($current_term->term_id, $current_taxonomy);
+    $current_term_children = get_terms(['taxonomy' => $current_taxonomy, 'parent' => $current_term->term_id, 'orderby' => 'order', 'order' => 'ASC', 'fields' => 'ids']);
     $type = get_query_var('type');
 
     // set stage for query
