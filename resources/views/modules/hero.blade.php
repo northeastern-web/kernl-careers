@@ -11,15 +11,10 @@
   ]);
 @endphp
 
-<div class="__header">
-  <div class="__body">
-    <h2 class="fs--d4 fw--300">Design Your Tomorrow Today</h2>
-    <form action="" method="GET" class="my--3 w--80@d mx--auto">
-      <div class="form__enclosed --search bg--white-alpha">
-        <label class="sr--only">Search by keyword</label>
-        <input class="fs--sm" name="s" type="text" placeholder="Search by keyword" autocomplete="off" aria-label="Search" />
-        <button class="btn bg--none bc--black" type="submit">Go</button>
-      </div>
-    </form>
+<form action="" method="GET" class="mt--3 mb--2 mx--auto">
+  <div class="form__enclosed --search">
+    <label class="sr--only">Search by keyword</label>
+    <input class="fs--sm" name="s" type="text" placeholder="Search by keyword" autocomplete="off" aria-label="Search" />
+    <button class="btn" type="submit">Go</button>
   </div>
-</div>
+</form>
