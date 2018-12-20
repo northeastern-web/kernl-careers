@@ -7,7 +7,8 @@
   // elements to hide
   #tribe-bar-collapse-toggle,
   .tribe-bar-views-select,
-  .tribe-events-visuallyhidden { display: none; }
+  .tribe-events-visuallyhidden,
+  .tribe-bar-views-toggle { display: none; }
 
   // elements to show only for screen readers
   label,
@@ -44,10 +45,17 @@
   .tribe-bar-views-list {
     padding: 0;
     margin: 0;
+    display: block !important;
     position: relative;
     z-index: 1;
 
-    li { display: inline; }
+    li {
+      @extend .btn;
+      @extend .btn.\--sm;
+
+      display: inline;
+      border-radius: 0;
+    }
 
     a {
       @extend .btn;
