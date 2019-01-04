@@ -11,8 +11,8 @@
       "./styles/login.scss"
     ]
   },
-  "publicPath": "/app/themes/kernl-wp",
-  "devUrl": "https://kernl-bedrock.test",
+  "publicPath": "/app/themes/kernl-careers",
+  "devUrl": "https://careers.northeastern.test",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
