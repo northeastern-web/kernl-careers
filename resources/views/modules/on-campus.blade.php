@@ -1,56 +1,46 @@
-<?php /** (Hero) */ ?>
+<?php /** (On Campus Employers carousel) */ ?>
 
 @php
-$companies = [
-  [
-    $business_full = "Raytheon Corporation",
-    $business_short = "Raytheon",
-    $private = true,
-    $type = "Info Session",
-    $location = "Stearns Center, Room G12",
-    $date_start = "2019-01-12 11:00:00",
-    $date_end = "2019-01-12 13:30:00",
-    $link_url = "#",
-    $link_label = "Register"
-  ],
-  [
-    $business_full = "Bose Corporation",
-    $business_short = "Bose",
-    $private = true,
-    $type = "Info Session",
-    $location = "Stearns Center, Room G12",
-    $date_start = "2019-02-10 09:00:00",
-    $date_end = "2019-02-10 11:30:00",
-    $link_url = "#",
-    $link_label = "Learn more"
-  ],
-  [
-    $business_full = "Insight Education Services",
-    $business_short = "Insight",
-    $private = false,
-    $type = "Employer in Residence",
-    $location = "Stearns Center, Room G12",
-    $date_start = "2019-02-26 10:30:00",
-    $date_end = "2019-02-26 13:30:00",
-    $link_url = "#",
-    $link_label = "Register"
+$oncampus = new \WP_Query([
+  'posts_per_page' => 4,
+  'post_type' => 'tribe_events',
+  'tax_query' => [
+    ['taxonomy' => 'tribe_events_cat', 'field' => 'slug', 'terms' => ['information-session', 'employer-in-residence']]
   ]
-]
+]);
 @endphp
 
 <div class="carousel">
-  @foreach($companies as $company)
-  <div class="card mb--0">
-    <div class="__body">
-      <img class="mb--1" src="app/uploads/{{ $company[1] }}-logo.png" alt="{{ $company[1] }}">
-      <h4 class="__title">{{ $company[0] }}</h4>
-      <p class="mb--0h">{{ $company[2]  ? 'Private: ' : '' }}{{ $company[3] }}</p>
-      <p class="fs--xs">{{ date('F j, Y', strtotime($company[5])) }}<br>
-        {{ date('h:i a', strtotime($company[5])) }}{!! $company[6] ? '&ndash;' . date('h:i a', strtotime($company[6])) : '' !!}<br>
-        {{ $company[4] }}
-      </p>
-      {!! $company[7] && $company[8] ? '<a class="btn --sm" href="' . $company[7] . '">' . $company[8] . '</a>' : '' !!}
-    </div>
-  </div>
-  @endforeach
+  @if ($oncampus->have_posts())
+    @while ($oncampus->have_posts())
+      @php($oncampus->the_post())
+      <div class="card mb--0 bg--black">
+        <div class="__body">
+          @if(has_post_thumbnail())
+            <div class="__graphic ar--1x1 mb--1">
+              <img class="__graphic__img" alt="{{ the_title() }}"
+                src="{{ the_post_thumbnail_url('large') }}"
+                data-src="{{ the_post_thumbnail_url('large') }}">
+            </div>
+          @endif
+          <h2 class="__title">{{ the_title() }}</h2>
+          <ul class="ls--none fs--xs mb--0">
+            <li class="mb--0h">{!! \Kernl\Utility::getTribeDate(get_the_id()) !!}</li>
+            <li><b>{!! wp_get_post_terms(get_the_id(), 'tribe_events_cat')[0]->name !!}</b></li>
+            @if(tribe_has_venue())
+              <li>
+                <i>{!! tribe_get_venue() !!}</i>
+                @if(tribe_address_exists())
+                  <div>
+                    {{ tribe_get_address() }}, {{ tribe_get_city() }}, {{ tribe_get_region() }}
+                  </div>
+                @endif
+              </li>
+            @endif
+          </ul>
+          <a class="btn --sm --block bg--white mt--1" href="{{ get_permalink() }}">More Info</a>
+        </div>
+      </div>
+    @endwhile @php(wp_reset_postdata())
+  @endif
 </div>
