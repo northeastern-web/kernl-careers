@@ -11,12 +11,12 @@
             @while(have_rows('lay_actions'))
               @php(the_row())
               <li class="__item">
-                <a class="__link tc--gray-800" {!! (get_sub_field('opt_type') == 'File' ? 
-                  'href="' . get_sub_field('med_file')['url'] . '"' : 
-                  'href="' . get_sub_field('txt_url') . '" target="_blank" rel="noopener"') !!}>
+                <a class="__link tc--gray-800" {!! (get_sub_field('opt_type') == 'File' ?
+                  'href="' . get_sub_field('med_file')['url'] . '"' :
+                  'href="' . get_sub_field('txt_url') . '"') !!}>
 
-                  {!! (get_sub_field('opt_type') == 'File' ? 
-                  '<i class="--sm --thin" data-feather="file-text"></i>' : 
+                  {!! (get_sub_field('opt_type') == 'File' ?
+                  '<i class="--sm --thin" data-feather="file-text"></i>' :
                   '<i class="--sm --thin" data-feather="external-link"></i>') !!}
 
                   {{ get_sub_field('txt_title') }}
