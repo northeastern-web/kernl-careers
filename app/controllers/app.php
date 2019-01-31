@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Controllers;
 
 use Sober\Controller\Controller;
 
@@ -73,7 +73,23 @@ class App extends Controller
     public static function subtitle()
     {
         if (is_singular('tribe_events')) {
-            return '<i data-feather="clock" class="tc--red --thin pos--relative" style="top: 2px"></i> ' . \Kernl\Utility::getTribeDate(get_the_id());
+            $events_label_singular = tribe_get_event_label_singular();
+            $events_label_plural = tribe_get_event_label_plural();
+
+            $start_date = tribe_get_start_date(get_the_id(), false, 'M j');
+            $start_time = tribe_get_start_date(get_the_id(), false, 'g:i a');
+            $end_date = tribe_get_end_date(get_the_id(), false, 'M j');
+            $end_time = tribe_get_end_date(get_the_id(), false, 'g:i a');
+
+            if (tribe_event_is_multiday()) {
+                $event_date = '<i data-feather="clock" class="tc--red --thin pos--relative" style="top: 2px"></i> ' . $start_date .' &mdash; '. $end_date;
+            } elseif (tribe_event_is_all_day()) {
+                $event_date = '<i data-feather="clock" class="tc--red --thin pos--relative" style="top: 2px"></i> ' . $start_date .' &bull; All Day';
+            } else {
+                $event_date = '<i data-feather="clock" class="tc--red --thin pos--relative" style="top: 2px"></i> ' . $start_date .' &bull; '. $start_time .' - '. $end_time;
+            }
+
+            return $event_date;
         }
 
         if (is_post_type_archive('tribe_events')) {

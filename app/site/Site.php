@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Kernl;
 
 class Site
 {
@@ -83,14 +83,10 @@ class Site
         $status_class = '';
 
         if (
-            $status == "Incomplete (needs editing)") : $status_class = "--incomplete"; 
-        elseif (
-            $status == "Complete (needs review)") : $status_class = "--complete"; 
-        elseif (
-            $status == "Finalized (no further review needed)") : $status_class = "--finalized"; 
-        elseif (
-            $status == "Verify (keep or delete)") : $status_class = "--verify"; 
-        else : $status_class = "--assign";
+            $status == "Incomplete (needs editing)") : $status_class = "--incomplete"; elseif (
+            $status == "Complete (needs review)") : $status_class = "--complete"; elseif (
+            $status == "Finalized (no further review needed)") : $status_class = "--finalized"; elseif (
+            $status == "Verify (keep or delete)") : $status_class = "--verify"; else : $status_class = "--assign";
         endif;
 
         return [$status, $status_class];

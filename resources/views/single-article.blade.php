@@ -24,6 +24,6 @@
           </div>
         </div>
       </section>
-    </article>
-  @endwhile
+    @endwhile
+  </article>
 @endsection

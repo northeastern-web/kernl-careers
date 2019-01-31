@@ -49,8 +49,8 @@
               @while($q->have_posts())
                 @php($q->the_post())
                 <tr>
-                  <td class="fs--xs edit-status {{ \App\Site::articleStatus()[1] }}">
-                    {{ \App\Site::articleStatus()[0] }}
+                  <td class="fs--xs edit-status {{ \Kernl\Site::articleStatus()[1] }}">
+                    {{ \Kernl\Site::articleStatus()[0] }}
                   </td>
                   <td class="pr--3@xs">
                     <a href="{{ the_permalink() }}"><b>{{ the_title() }}</b></a><br>

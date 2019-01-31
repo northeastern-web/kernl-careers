@@ -36,9 +36,9 @@
     <div class="row">
       <div class="col w--2/3@t w--3/4@w --content">
         @if($collection || $audience)
-          <div class="bg--gray-warm-light pa--1 cf items--center">
-            <span class="tt--u fw--700">Filtered by:</span> {{ ($collection ? $collection : $audience) }}
-            <a href="{{ esc_url(remove_query_arg(($collection ? 'collection' : 'audience'))) }}" class="btn bg--red --sm f--r">Clear</a>
+          <div class="bg--gray-warm-light pa--1 d--flex items--center justify--between mb--1">
+            <div><span class="tt--u fw--700 mr--0h">Filtered by:</span> {{ ($collection ? $collection : $audience) }}</div>
+            <a href="{{ esc_url(remove_query_arg(($collection ? 'collection' : 'audience'))) }}" class="btn bg--red --sm mb--0">Clear</a>
           </div>
         @endif
 
