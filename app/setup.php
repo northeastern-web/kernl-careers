@@ -13,7 +13,7 @@ use Roots\Sage\Template\BladeProvider;
 
 if (class_exists('Kernl\\Config')) {
     new \Kernl\Config(); // kernl(lib)
-    new \Kernl\Site(); // kernl(wp)
+    new \Kernl\Site(); // Kernlnl(wp)
 }
 
 /**
