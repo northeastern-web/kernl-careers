@@ -5,12 +5,16 @@ $oncampus = new \WP_Query([
   'posts_per_page' => 4,
   'post_type' => 'tribe_events',
   'tax_query' => [
-    ['taxonomy' => 'tribe_events_cat', 'field' => 'slug', 'terms' => ['information-session', 'employer-in-residence']]
+    ['taxonomy' => 'tribe_events_cat', 'field' => 'slug', 'terms' => [
+      'employer-in-residence',
+      'employer-connection-session',
+      'information-session'
+    ]]
   ]
 ]);
 @endphp
 
-<div class="carousel">
+<div class="carousel" data-carousel-options='{"autoAdvance":"true","infinite":"true"}'>
   @if ($oncampus->have_posts())
     @while ($oncampus->have_posts())
       @php($oncampus->the_post())
