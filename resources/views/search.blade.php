@@ -16,7 +16,7 @@
       <div class="col w--2/3@t ow--1/6@t">
         <form action="{{ home_url() }}" method="GET" class="form mb--1">
           <div class="form__enclosed --search mb--0">
-            <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off">
+            <input name="s" type="text" class="__control" placeholder="Search by keyword" value="{{ get_search_query() }}" autocomplete="off" {{ ($count ? 'autofocus' : '') }}>
             <button type="submit" class="btn btn--primary">Go</button>
           </div>
           <small class="fs--xs tc--gray-500"><i>Returning {{ $count }} result{{ ($count == 1) ? '' : 's' }}</i></small>

@@ -2,7 +2,7 @@
   <a class="__link" href="#" data-toggle="modal" data-target="#modal_profile-{{ get_the_ID() }}">
     <div class="__graphic ar--1x1">
       @if(get_field('med_headshot'))
-        <img class="__graphic__img" src="{{ get_field('med_headshot')['url'] }}" alt="{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}">
+        <img class="__graphic__img" src="{{ get_field('med_headshot')['url'] }}" alt="">
       @endif
     </div>
 

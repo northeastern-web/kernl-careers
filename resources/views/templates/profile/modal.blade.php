@@ -1,4 +1,4 @@
-<div class="modal" id="modal_profile-{{ get_the_ID() }}" tabindex="-1" role="dialog" aria-labelledby="modal_base_label" aria-hidden="true">
+<div class="modal" id="modal_profile-{{ get_the_ID() }}" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="__screen" data-dismiss="modal"></div>
 
   <div class="__content bg--white pa--0 section --nogutters">
@@ -11,7 +11,7 @@
         @endif
 
         <div class="__body">
-          <h2>{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}</h2>
+          <h2 class="mb--0">{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}</h2>
 
           @if(get_field('txt_title'))
             <h3 class="fs--d1 fs--italic">{{ the_field('txt_title') }}</h3>
