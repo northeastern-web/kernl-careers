@@ -1,30 +1,20 @@
 {
-  "name": "nupods/kernl-careers",
+  "name": "nupods/kernl-registrar",
   "type": "wordpress-theme",
   "license": "MIT",
   "description": "Northeastern WP starter theme",
-  "homepage": "https://assets.provost.northeastern.edu/kernl/wp/",
-  "authors": [
-    {
-      "name": "NU PODS",
-      "email": "provost-digital@northeastern.edu"
-    }
-  ],
-  "support": {
-    "documentation": "https://assets.provost.northeastern.edu/kernl/wp/"
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://nupods@bitbucket.org/nupods/kernl-lib.git"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "App\\": "app/",
       "Kernl\\": "app/Site"
     }
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:northeastern-web/kernl-theme-lib.git"
+    }
+  ],
   "require": {
     "php": ">=7.1",
     "composer/installers": "~1.0",
@@ -32,13 +22,16 @@
     "roots/sage-lib": "~9.0.7",
     "soberwp/controller": "~2.1.0",
     "stoutlogic/acf-builder": "~1.5",
-    "nupods/kernl-lib": "~1.3"
+    "northeastern-web/kernl-theme-lib": "dev-master",
+    "northeastern-web/support": "dev-master"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.8.0",
     "roots/sage-installer": "~1.6"
   },
   "scripts": {
-    "test": ["phpcs"]
+    "test": [
+      "phpcs"
+    ]
   }
 }
