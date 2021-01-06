@@ -29,7 +29,7 @@ $oncampus = new \WP_Query([
           @endif
           <h2 class="__title">{{ the_title() }}</h2>
           <ul class="ls--none fs--xs mb--0">
-            <li class="mb--0h">{!! \Kernl\Lib\Utility::getTribeDate(get_the_id()) !!}</li>
+            <li class="mb--0h">{!! \Kernl\Utility::getTribeDate(get_the_id()) !!}</li>
             <li><b>{!! wp_get_post_terms(get_the_id(), 'tribe_events_cat')[0]->name !!}</b></li>
             @if(tribe_has_venue())
               <li>

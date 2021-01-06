@@ -1,6 +1,6 @@
-<header class="{{ \Kernl\Lib\Masthead::getClass() }} {{ (has_nav_menu('utility_navigation') ? '+utility' : '') }}" role="banner">
+<header class="{{ \Kernl\Masthead::getClass() }} {{ (has_nav_menu('utility_navigation') ? '+utility' : '') }}" role="banner">
   <a class="__logo" href="{{ home_url('/') }}">
-    <img class="__logo__image" src="{{ \Kernl\Lib\Masthead::getLogo() }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
+    <img class="__logo__image" src="{{ \Kernl\Masthead::getLogo() }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
   </a>
 
   <button class="__toggler hidden--up@d" aria-label="Open"><i data-feather="menu"></i></button>
@@ -20,15 +20,15 @@
           'depth' => 10,
           'menu_id' => 'masthead-primary',
           'menu_class' => '__list',
-          'walker' => new \Kernl\Lib\Masthead()
+          'walker' => new \Kernl\Masthead()
         ]);
       @endphp
     @endif
 
     @if (has_nav_menu('utility_navigation'))
       <ul class="__list --utility">
-        @foreach (\Kernl\Lib\Masthead::getMenu('Utility Navigation') as $item)
-          <li class="__item {{ (\Kernl\Lib\Masthead::isActiveMenu('Utility Navigation', $item) ? '--active' : '') }}">
+        @foreach (\Kernl\Masthead::getMenu('Utility Navigation') as $item)
+          <li class="__item {{ (\Kernl\Masthead::isActiveMenu('Utility Navigation', $item) ? '--active' : '') }}">
             <a class="__link" href="{{ $item->url }}">{{ $item->title }}</a>
           </li>
         @endforeach

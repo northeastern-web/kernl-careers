@@ -1,6 +1,6 @@
 @php
   $option = (is_singular() ? get_the_ID() : get_queried_object());
-  $layout = new Kernl\Lib\Layout($option);
+  $layout = new Kernl\Layout($option);
   $pretitle = '<nav class="breadcrumb +icon +chevron mb--0h fs--sm">';
   foreach (\Kernl\Site::getTaxTerms(get_the_ID(), 'group') as $term) {
     if ($term['ancestors']) {

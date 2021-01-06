@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'compiled' => (function_exists('is_wpe') && is_wpe()) ? '/tmp/sage-cache' : wp_upload_dir()['basedir'].'/cache',
+    'compiled' => wp_upload_dir()['basedir'].'/cache',
 
 
     /*

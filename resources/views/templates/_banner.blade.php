@@ -1,6 +1,6 @@
 @php
   $option = (is_singular() ? get_the_ID() : get_queried_object());
-  $layout = new Kernl\Lib\Layout($option);
+  $layout = new Kernl\Layout($option);
   $args = [
     'title' => (isset($title) ? $title : App::title()),
     'pretitle' => (isset($pretitle) ? $pretitle : App::pretitle()),
