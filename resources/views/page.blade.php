@@ -4,8 +4,8 @@
   <article class="article --page">
       @include('templates._banner')
 
-      @if(\Kernl\Navigation::display())
-        @if(\Kernl\Navigation::isBanner() && !\Kernl\Navigation::isBannerSubnav())
+      @if(\Kernl\Lib\Navigation::display())
+        @if(\Kernl\Lib\Navigation::isBanner() && !\Kernl\Lib\Navigation::isBannerSubnav())
           @include('templates._section')
 
         @else

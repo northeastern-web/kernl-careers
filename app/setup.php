@@ -11,9 +11,9 @@ use Roots\Sage\Template\BladeProvider;
  * Kernl setup
  */
 
-if (class_exists('Kernl\\Config')) {
-    new \Kernl\Config(); // kernl(lib)
-    new \Kernl\Site(); // Kernlnl(wp)
+if (class_exists('Kernl\\Lib\\Config')) {
+    new \Kernl\Lib\Config(); // kernl(lib)
+    new \Kernl\Site(); // kernl(wp)
 }
 
 /**

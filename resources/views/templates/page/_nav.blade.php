@@ -6,11 +6,11 @@
 
 <nav id="nav-interior" class="nav --interior">
   <ul class="__list">
-    @if(\Kernl\Navigation::isBanner())
-      {!! \Kernl\Navigation::display('', 2) !!}
+    @if(\Kernl\Lib\Navigation::isBanner())
+      {!! \Kernl\Lib\Navigation::display('', 2) !!}
 
     @else
-      {!! \Kernl\Navigation::display('top', 1, false, 'parent') !!}
+      {!! \Kernl\Lib\Navigation::display('top', 1, false, 'parent') !!}
 
     @endif
   </ul>
