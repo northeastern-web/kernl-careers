@@ -17,7 +17,7 @@
     </div>
 
     <div class="py--2">
-      <?= \Kernl\Pagination::display(); ?>
+      {!! \Kernl\Lib\Pagination::display() !!}
     </div>
   </section>
 @endsection

@@ -56,7 +56,7 @@
           </div>
 
           <div class="py--2">
-            {!! \Kernl\Pagination::display() !!}
+            {!! \Kernl\Lib\Pagination::display() !!}
           </div>
 
           @php(wp_reset_postdata())

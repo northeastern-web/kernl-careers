@@ -1,9 +1,12 @@
+
 <header class="{{ \Kernl\Lib\Masthead::getClass() }} {{ (has_nav_menu('utility_navigation') ? '+utility' : '') }}" role="banner">
   <a class="__logo" href="{{ home_url('/') }}">
     <img class="__logo__image" src="{{ \Kernl\Lib\Masthead::getLogo() }}" alt="<?= get_bloginfo('name', 'display'); ?> logo">
   </a>
 
-  <button class="__toggler hidden--up@d" aria-label="Open"><i data-feather="menu"></i></button>
+  @if (has_nav_menu('primary_navigation') || has_nav_menu('utility_navigation'))
+    <button class="__toggler hidden--up@d" aria-label="Open"><i data-feather="menu"></i></button>
+  @endif
 
   <nav class="__drawer" role="navigation">
     <div class="w--100 d--flex justify--between hidden--up@d">
