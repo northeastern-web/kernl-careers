@@ -92,3 +92,12 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+add_action( 'http_api_curl', function ( $handle, $parsed_args, $url ) {
+    if ( strpos( $url, 'https://coopstatus.neu.edu/nu_api/calendar_event/?cal=nuworks' ) !== false ) {
+		$headers = array();
+        $headers[] = 'Content-Type: : application/json';
+		$headers[] = 'Token: 0f52a76e-d3cf-46c8-b3d5-de9dd4ea1865';
+		curl_setopt( $handle, CURLOPT_HTTPHEADER, $headers );    				
+	}
+}, 10, 3 );
