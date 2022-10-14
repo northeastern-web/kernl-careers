@@ -104,7 +104,7 @@
         @endif
 
         @if ($term_children)
-          <aside class="card pos--sticky tt--caps bs--none">
+          <nav class="card pos--sticky tt--caps bs--none">
             <div class="__header pa--1 fs--xs bg--gray-900 tc--gray-100">
               <div class="__column">On this page</div>
             </div>
@@ -115,7 +115,7 @@
                 @endforeach
               </div>
             </div>
-          </aside>
+          </nav>
         @endif
       </div>
     </div>

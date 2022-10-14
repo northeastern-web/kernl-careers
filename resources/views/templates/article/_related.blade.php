@@ -1,6 +1,6 @@
 @if(get_field('rel_related'))
-  <aside class="--related mt--3 w--80@d">
-    <header class="__header --archive" role="banner">
+  <nav class="--related mt--3 w--80@d">
+    <header class="__header --archive">
       <h2 class="__title fs--sm tt--caps tc--gold">Related Content</h2>
     </header>
     <div class="list-group --indent --right w--100">
@@ -17,5 +17,5 @@
 
       @php(wp_reset_postdata())
     </div>
-  </aside>
+  </nav>
 @endif

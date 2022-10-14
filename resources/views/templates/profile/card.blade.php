@@ -1,4 +1,4 @@
-<article class="card --profile">
+<article class="card --profile" aria-label="{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}">
   <a class="__link" href="#" data-toggle="modal" data-target="#modal_profile-{{ get_the_ID() }}">
     <div class="__graphic ar--1x1">
       @if(get_field('med_headshot'))
@@ -7,7 +7,7 @@
     </div>
 
     <div class="__body py--1">
-      <h2 class="__title">{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}</h2>
+      <h3 class="__title">{{ the_field('txt_fname') }} {{ the_field('txt_lname') }}</h3>
       @if(get_field('txt_title'))
         <div class="__subtitle">{{ the_field('txt_title') }}</div>
       @endif

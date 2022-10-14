@@ -3,7 +3,7 @@
   $has_excerpt = (!empty($hide_excerpt) ? false : true);
 @endphp
 
-<article class="card fs--xs hover:bb--2-red {{ (isset($class) ? $class : '') }}">
+<article class="card fs--xs hover:bb--2-red {{ (isset($class) ? $class : '') }}" aria-label="Event: {{ the_title() }}">
   <a href="{{ the_permalink() }}" class="__link">
     @if(get_the_category() && $has_badge)
       <header class="__header{{ has_post_thumbnail() ? '' : ' pa--1' }}">
@@ -17,28 +17,28 @@
 
     @if(has_post_thumbnail())
       <div class="__graphic ar--16x9">
-        <img class="__graphic__img" alt="{{ the_title() }}"
+        <img class="__graphic__img" alt=""
           src="{{ the_post_thumbnail_url('large') }}"
           data-src="{{ the_post_thumbnail_url('large') }}">
       </div>
     @endif
 
     <section class="__body">
-      <div class="mb--0h tt--u fs--xs">
+      <h3 class="__title">{{ the_title() }}</h3>
+
+      <div class="mb--0h fs--xs">
         {{ tribe_get_start_date(get_the_id(), false, 'M j') }} at {{ tribe_get_start_time() }}
       </div>
-
-      <h2 class="__title">{{ the_title() }}</h2>
 
       @if($has_excerpt)
         {!! (has_excerpt() ? get_the_excerpt() : wp_trim_words(get_the_content(), 15)) !!}
       @endif
     </section>
 
-    <footer class="__footer">
-      <div class="__column tc--gray">
+    <div class="__footer">
+      <div class="__column tc--gray-600">
         View Event <i data-feather="arrow-right" class="--sm"></i>
       </div>
-    </footer>
+    </div>
   </a>
 </article>

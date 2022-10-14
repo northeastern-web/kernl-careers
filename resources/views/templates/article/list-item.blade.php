@@ -6,7 +6,7 @@
 <a class="__item {{ ($has_icon ? '--right' : '') }}" href="{{ the_permalink() }}">
     {!! the_title() !!}
     @if ($has_icon)
-      <i class="__icon tc--gray-300" data-feather="{{ $has_icon }}"></i>
+      <i class="__icon tc--gray-300" data-feather="{{ $has_icon }}" aria-label="Includes video content"></i>
     @endif
   @if($has_excerpt)
     <div class="__excerpt {{ (isset($excerpt_class) ? $excerpt_class : 'tc--gray-600 fs--xs pr--1') }}">

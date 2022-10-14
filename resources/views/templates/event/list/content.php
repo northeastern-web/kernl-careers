@@ -20,7 +20,7 @@ if (! defined('ABSPATH')) {
 <?php tribe_the_notices() ?>
 
 <?php if (have_posts()) : ?>
-  <div class="row">
+  <section class="row" aria-label="Calendar of Events">
     <?php do_action('tribe_events_before_loop'); ?>
 
     <?php while (have_posts()) : the_post(); ?>
@@ -36,5 +36,5 @@ if (! defined('ABSPATH')) {
     <?php endwhile; ?>
 
     <?php do_action('tribe_events_after_loop'); ?>
-  </div>
+  </section>
 <?php endif; ?>
